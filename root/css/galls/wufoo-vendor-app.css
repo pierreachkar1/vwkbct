@@ -1,0 +1,39 @@
+.wufoo {
+    background-color: #111;
+    font-family: "Helvetica", Arial, serif;
+    font-size: 14px; 
+}
+.wufoo .info{
+    border-bottom: 1px solid #f5f5f5;
+}
+.wufoo #errorLi {
+	display: none;
+}
+.wufoo .info div {
+    color: #cccccc !important;
+}
+.wufoo .info h2{
+    color: #f5f5f5 !important;
+    font-weight: 600;
+    font-size: 20px !important;
+}
+.wufoo label.desc {
+    color: #cccccc !important;
+    font-weight: normal;
+}
+.wufoo input {
+    width: 100%;
+}
+.wufoo input.text, .wufoo textarea.textarea {
+    font-weight: 450;
+}
+.wufoo .submit {
+    background-color: #007ac2;
+    border: 0px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Helvetica", Arial, serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+

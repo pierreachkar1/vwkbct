@@ -1,0 +1,446 @@
+<!--Seg:openPage-->
+<style>
+  #message {
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#message p {
+  padding: 0px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2714";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #a94442;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\2716";
+}
+</style>
+
+<main class="checkout">
+  <div class="container">
+   <div class="row">  
+   <form name="f" method="POST" action="@&PGM " onsubmit="showWait()">
+  <input type="hidden" name="SIACTN" id="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIPUNO" value="@&SIPUNO ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIMENU" value="@&SIMENU ">
+  <input type="hidden" name="SIEMALI" value="@&SIEMALI ">
+  <input type="hidden" name="SIANON" value="@&SIANON ">
+  <input type="hidden" name="SISPSW" value="@&SISPSW ">
+  <input type="hidden" name="SICONF" value="@&SICONF ">
+  <input type="hidden" name="SIALRTB" value="@&SIALRTB ">
+  <input type="hidden" name="SIALRTS" value="@&SIALRTS ">
+  <input type="hidden" name="SIPOB" value="@&SIPOB ">
+  <input type="hidden" name="SIPOS" value="@&SIPOS ">
+  <input type="hidden" name="SITYPE" value="@&SITYPE ">
+  <input type="hidden" name="SIPANO" id="SIPANO" value="@&SIPANO ">
+  <input type="hidden" name="SIPANB" id="SIPANB" value="@&SIPANB ">
+  <input type="hidden" name="SIPANO" id="showups" value="@&SHOWUPS ">
+  <!--Address Book-->
+  <div class="modal about in" id="addrBook" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Shipping Addresses</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">@&ADBOOK </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Address Message-->
+  <div class="modal about in" id="upsMessage" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Shipping Addresses</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">@&UPSMSG </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--found email address as guest checkout-->
+    <div class="modal about in" id="fndEmail" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel" style="display: none;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg class="icon close--modal">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+              </svg>
+            </button>
+            <h4 class="modal-title" id="brandAboutModalLabel">Email registered to Account</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-8">
+                <p>This email address is associated with a registered account. Do you wish to sign in now so this purchase is available in order history? You'll also be able to quickly access saved billing and shipping address information</p>
+              </div>
+            </div>
+            <div class="row" style="padding-top:15px;">
+              <div class="col-sm-12 col-md-4 col-md-offset-2" style="margin-top:10px">
+                <a href="javascript:void(0)" onclick="submit_form('f', 'LOGIN')" class="btn btn-primary btn-block btn_continue">Login</a>
+              </div>
+              <div class="col-sm-12 col-md-4" style="margin-top:10px">
+                <a href="javascript:void(0)" onclick="submit_form('f', 'SAVE')" class="btn btn-block btn--orange btn_continue">Continue as Guest</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <div class="col-md-4 col-md-push-8">
+          <div class="checkout__right">
+            <div class="row checkout__right--buttons-top hidden-xs-sm">
+              <div class="col-md-12 ta-r">
+                <a href="/" class="btn btn_sm btn--link-gray btn_no-outline">Back to Shopping</a>
+                <a class="btn btn_xs btn--orange btn_continue" href="javascript:void(0)" onclick="submit_form('f', 'SAVE')">Continue</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h6 class="checkout__right--title">Pricing</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-8">
+                <p style="@&DSPSRCE " class="sam--promocode--p"><strong>PROMO:</strong> (@&SRCE )<span class="sam--promocode--text"></span></p>
+                <p style="display:@&DSPSV "><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+                <p><strong>Subtotal: @&SUBT </strong> (@&UNIT )</p>
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive fl-r" src="images/vseal.png" alt="Norton Secured">
+              </div>
+            </div>
+            <div class="row checkout__subtotal">
+              <div class="col-md-12">
+                <h6 class="checkout__right--title">Subtotal</h6>
+              </div>
+            </div>
+            <div class="row checkout__subtotal--row">
+              <div class="col-xs-9">Subtotal</div>
+              <div class="col-xs-3 ta-r">@&SUBT </div>
+            </div>
+            <div class="row checkout__subtotal--row">
+              <div class="col-xs-9">Estimate Taxes with Zip Code &nbsp;<a href="javascript:void(0)" onclick="getTax()" type="button" class="btn btn-primary" id="getTaxbtn" style="padding: 5px 5px 3px 5px;">Calc</a> </div>
+              <div class="col-xs-3 ta-r input-group">
+                <input type="tel" class="form__input no-outline checkout__subtotal--zip" name="SIXZIP" id="SIXZIP" value="@&SZIP "  autocomplete="off">
+                <div id="errorZip" style="color:red;font-weight:bold;display:none;"></div> 
+                <div id="successZip" style="color:green;font-weight:bold;display:none;"></div>
+              </div>
+            </div>
+            <div class="row checkout__subtotal--total">
+              <div class="col-xs-9">Total After Shipping & Taxes</div>
+              <div class="col-xs-3 ta-r" id="totalincTax">@&TOTL </div>
+            </div>
+            <div class="row checkout__right--buttons-bottom hidden-xs-sm">
+              <div class="col-md-12 ta-r">
+                <a href="/" class="btn btn_sm btn--link-gray btn_no-outline">Back to Shopping</a>
+                <a class="btn btn_xs btn--orange btn_continue" href="javascript:void(0)" onclick="submit_form('f', 'SAVE')">Continue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-md-8 col-md-pull-4">
+         <div class="checkout__left">
+          <div class="checkout__express">
+            Express Checkout
+            <!--<a href="checkout-sign-in.html" class="btn btn_xs btn--blue">Sign In</a>-->
+            </div>
+            <div class="checkout__step checkout__step-one active" id="stepOne">
+              <div class="step__header">
+                <a href="#stepOne" class="step__edit" data-step-edit="#stepOne">Edit</a>
+                <h4 class="step__title">1. Billing Address</h4>
+              </div>
+<!--End:openPage-->
+
+<!--Seg:country-->
+<div class="row form-group">
+  <div class="col-md-12"><label class="form__label">*Country<br>@&CTRY </div>
+</div>           
+<!--End:country-->
+
+<!--Seg:Billing-->
+<div class="step__body">
+                <div class="step__body--inner">
+                  @&BCTR <div class="row form-group">
+                      <div class="col-xs-10 col-md-5"><label class="form__label">First Name*<input class="form__input full no-outline" type="text" name="SIFSNM" id="SIFSNM" value="@&SIFSNM " autocomplete="given-name"  required="" ></label></div>
+                      <div class="col-xs-2 col-md-2"><label class="form__label">MI<input class="form__input full no-outline" type="text" name="SIMINM" id="additional-name" value="@&SIMINM " autocomplete="additional-name" ></label></div>
+                      <div class="col-xs-12 col-md-5"><label class="form__label">Last Name*<input class="form__input full no-outline" type="text" name="SILSNM" id="SILSNM" value="@&SILSNM " required="" autocomplete="family-name"></label></div>
+                    </div>
+                    <!--<div class="row form-group">
+                      <div class="col-md-12"><label class="form__label">Business Name (for companies, agencies or depts.)<input class="form__input full no-outline" type="text" autocomplete="noauto-complete" name="SIBBNM" value="@&SIBBNM "></label></div>
+                    </div>-->
+                    <div class="row form-group">
+                      <div class="col-md-12"><label class="form__label">Street Address*<input class="form__input full no-outline" type="text" name="SIBAD1" value="@&SIBAD1 " id="SIBAD1" required="" autocomplete="billing address-line1"></label></div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-7"><label class="form__label">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="SIBAD2" id="SIBAD2" value="@&SIBAD2 " autocomplete="billing address-line2"></label></div>
+                      <div class="col-md-4 col-md-offset-1"><label class="form__label">Zip Code*<input class="form__input full no-outline" type="text" name="SIBZIP" value="@&SIBZIP " id="SIBZIP" required="" autocomplete="billing postal-code"></label></div>
+                    </div>
+                     <div class="row form-group">
+                      <div class="col-md-6"><label class="form__label">City*<input class="form__input full no-outline" type="text" name="SIBCTY" id="SIBCTY" value="@&SIBCTY " required="" autocomplete="billing address-level2"></label></div>
+                      <div class="col-md-6"><label class="form__label">State*<br>@&BSTA </label></div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-6"><label class="form__label">Email*<input class="form__input full no-outline" type="email" name="SIEMAL" value="@&SIEMAL " id="SIEMAL" required=""></label></div>
+                      <div class="col-md-6"><label class="form__label">Daytime Phone*<input class="form__input full no-outline" type="tel" name="SITELB" id="SITELB" value="@&SITELB " required="" autocomplete="home tel"></label></div>
+                      <!--<div class="col-md-6"><label class="form__label">Evening Phone<input class="form__input full no-outline" type="tel" name="SIFAXB" id="SIFAXB" value="@&SIFAXB "></label></div>-->
+                      <!--
+                      <div class="col-md-6"><label class="form__label">Confirm Email*<input class="form__input full no-outline" type="email" name="SIEMALC" id="SIEMALC" value="@&SIEMALC " data-parsley-equalto="#email" data-parsley-error-message="Emails do not match" required=""></label></div>-->
+                    </div>
+					<div class="row form-group">
+                      <div class="col-md-12"><label class="form__checkbox">@&SISIGNUP <span class="fake-checkbox"></span>
+						Get notified of exclusive offers and the best prices!
+					  </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-6">
+                       <label class="form__label">
+                        Profession*<br>
+                           @&PTNO </label>
+                      </div>
+                    </div>
+                    <div class="row form-group" style="display:@&DSPSWD ">
+                      <p id="passerrorsp" style="display:none;">Correct the following items to continue:</p>
+                      <ul id="passerrorsu" style="display:none;">
+                        <li id="errorinval" style="display:none;"><u>Please enter a valid password.</u></li>
+                        <li id="errormatch" style="display:none;"><u>The passwords you entered do not match.</u></li>
+                      </ul>
+                      <div class="col-md-6"><label class="form__label">Password*<input class="form__input full no-outline" type="email" name="SIPSWD" value="@&SIPSWD " id="SIPSWD" onkeypress="handleEnterEventPass(this, event, 'SAVE')" onkeyup="validPass('')" onblur="checkValidPass('N')"></label>
+                        <span class="fldError" id="invalpass" style="width:100%; font-weight:bold; color: red; display:none;"><small>Please enter a valid password</small></span>
+                      </div>
+                      <div class="col-md-6"><label class="form__label">Confirm Password*<input class="form__input full no-outline" type="email" name="SIPSWDC" value="@&SIPSWDC " id="SIPSWDC" data-parsley-equalto="#email" data-parsley-error-message="Emails do not match" onkeypress="handleEnterEventPass(this, event, 'SAVE')" onkeyup="validPass('')"></label></div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <div id="message">
+                            <h5 style="margin-bottom:5px">Password rules:</h5>
+                            <p id="haslow" class="invalid" >A <b>lowercase</b> letter</p>
+                            <p id="hascap" class="invalid" >A <b>capital (uppercase)</b> letter</p>
+                            <p id="hasnum"class="invalid" >A <b>number</b></p>
+                            <p id="hasspcl"class="invalid" >A <b>special character</b></p>
+                            <p id="haschr8" class="invalid" >Minimum <b>8 characters</b></p>
+                            <p id="matchp" class="invalid" ><b>Confirm</b> password</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+<!--End:Billing-->
+
+<!--Seg:Shipping-->
+        <div class="row form-group">
+          <div class="col-md-6">
+            <label class="form__checkbox">@&SISAME <span class="fake-checkbox"></span>
+              Use this address for shipping 
+            </label>
+          </div>
+          <div class="col-md-6">
+            <a href="javascript:void(0)" onclick="$('#addrBook').modal()" style="display:@&DSPHBK " ><b>Address Book</b></a>
+          </div>
+        </div>
+        <div id="hideShow" style="@&DSPLS ">
+          @&SCTR <div class="row form-group shipSectn">
+
+            <!--Brossam - Add this Shipping Label-->
+            <div class="col-12"><h4 style="margin-top: -10px; padding-left: 8px">Shipping Address</h4></div>
+            <!--END Brossam - Add this Shipping Label-->
+
+            <div class="col-xs-10 col-md-5"><label class="form__label">First Name*<input class="form__input full no-outline toggleReq" type="text" name="SISFNM" id="SISFNM" value="@&SISFNM " autocomplete="given-name" ></label></div>
+            <div class="col-xs-2 col-md-2"><label class="form__label">MI<input class="form__input full no-outline" type="text" name="SIXTR1" value="@&SIXTR1 " id="additional-names" autocomplete="additional-name"></label></div>
+            <div class="col-xs-12 col-md-5"><label class="form__label">Last Name*<input class="form__input full no-outline toggleReq" type="text" name="SISLNM" id="SISLNM" value="@&SISLNM " autocomplete="family-name" ></label></div>
+          </div><!--
+          <div class="row form-group shipSectn">
+            <div class="col-md-12"><label class="form__label">Business Name (for companies, agencies ro depts.)<input class="form__input full no-outline" type="text" name="SIBSNM" id="SIBSNM" value="@&SIBSNM " autocomplete="off"></label></div>
+          </div>-->
+          <div class="row form-group shipSectn">
+            <div class="col-md-12"><label class="form__label">Street Address*<input class="form__input full no-outline toggleReq" type="text" name="SISAD1" value="@&SISAD1 " id="SISAD1" autocomplete="shipping address-line1"></label></div>
+          </div>
+          <div class="row form-group shipSectn">
+            <div class="col-md-7"><label class="form__label">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="SISAD2" id="SISAD2" value="@&SISAD2 " autocomplete="shipping address-line2"></label></div>
+            <div class="col-md-4 col-md-offset-1"><label class="form__label">Zip Code*<input class="form__input full no-outline toggleReq" type="text" name="SISZIP" value="@&SISZIP " id="SISZIP" autocomplete="shipping postal-code"></label></div>
+          </div>
+          <div class="row form-group shipSectn">
+            <div class="col-md-6"><label class="form__label">City*<input class="form__input full no-outline toggleReq" type="text" name="SISCTY" id="SISCTY" value="@&SISCTY " autocomplete="shipping address-level2"></label></div>
+            <div class="col-md-6"><label class="form__label">State*<br>@&SSTA </label></div>
+          </div>
+          <div class="row form-group shipSectn">
+            <div class="col-md-12"><label class="form__label">Daytime Phone*<input class="form__input full no-outline toggleReq" type="tel" name="SITELS" id="SITELS" value="@&SITELS "  autocomplete="home tel"></label></div>
+            <!--
+            <div class="col-md-6"><label class="form__label">Evening Phone<input class="form__input full no-outline" type="tel" name="SIFAXS" id="SIFAXS" value="@&SIFAXS "></label></div>-->
+          </div>
+        </div>
+        
+        <div class="row form-group">
+          <div class="col-xs-12">
+            <a class="btn btn_xs btn--orange btn_continue" style="margin-top:10px" href="javascript:void(0)" onclick="submit_form('f', 'SAVE')">Continue</a>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+            
+<!--End:Shipping-->
+
+
+<!--Seg:closePage-->
+<div class="checkout__step checkout__step-two" id="stepTwo">
+              <div class="step__header">
+                
+                <h4 class="step__title">2. Shipping Options &amp; payment</h4>
+              </div>
+            </div>
+            <div class="checkout__step checkout__step-three" id="stepThree">
+              <div class="step__header">
+               
+                <h4 class="step__title">3. Review &amp; order</h4>
+                
+              </div>              
+            </div>
+         </div>
+        </div>
+        </form>
+      </div>
+     </div>
+  </main>   
+  <script>
+  function geoFmt(city,sta,cnty,geo,zip){
+
+	if($("#SIBZIP").is(":focus"))
+    {
+     document.f.SIBCTY.value=city;
+     document.f.SIBSTA.value=sta;
+     document.f.SIBZIP.value=zip;
+     if ($("#chkmybill").attr('checked'))
+	 {document.f.SISCTY.value=city;
+     document.f.SISSTA.value=sta;
+     document.f.SISZIP.value=zip;
+     $("#addShip").slideDown(); 
+	 }
+    $("#addBill").slideDown(); }
+      else
+    {
+     document.f.SISCTY.value=city;
+     document.f.SISSTA.value=sta;
+     document.f.SISZIP.value=zip;
+     $("#addShip").slideDown();
+     }
+}
+
+  function toggleReq(){
+    var elements = document.querySelectorAll('.toggleReq');
+    var isChecked = document.getElementById('SISAMEBOX');
+    for (var i=0;i<elements.length;i+=1){
+      if (isChecked.checked === true){
+        elements[i].removeAttribute('required');
+      } else {
+        elements[i].setAttribute('required','');
+      }
+    }
+  }
+
+  function toggleShip(){
+    var chkbox = document.getElementById("SISAME").checked;
+    if(!chkbox) {
+      document.getElementById("hideShow").style.display="block";
+    } else {
+      document.getElementById("hideShow").style.display="none";
+    }
+  }
+
+  function showNotif(){
+    $('#fndEmail').modal('show');
+  }
+  </script>           
+<!--End:closePage-->
+
+
+
+<!--Seg:CartTracking-->
+
+
+
+<script type="text/javascript">
+/********** Begin Custom Code **********/
+
+/********** End Custom Code **********/
+
+/********** Begin Custom Code **********/
+
+/********** End Custom Code **********/
+
+</script>
+
+<!-- Google Code for Checkout Funnel Abandoned Customers Remarketing List -->
+
+<!-- end Google Code Remarketing List -->
+
+<!--End:CartTracking-->
+
+<!--Seg:UPSMessage1-->
+<div style="color:red">The @&TYPE  address you entered couldn't be verified, and no suitable alternatives could be matched.</div>
+<br><b>Suggestions:</b><ul>
+                   <li style="padding:5px;">Is the primary number correct?</li>
+                   <li style="padding:5px;">Make sure the city state and ZIP code don't conflict.</li>
+                   <li style="padding:5px;">The address should be free of major typos/misspellings.</li>
+                   <li style="padding:5px;">Make sure the address is basically formated correctly.</li>
+                   <li style="padding:5px;">If the address isn't all there, try making it more complete.</li>
+                 </ul>
+<br><div style="padding:10px 0px"><b>We could not find a suitable address match:</b></div><ul>
+                                                        <li style="padding:10px;"><a href="javascript:void(0)" onclick="$('#upsMessage').modal('hide');">Please check your entry for possible mistakes</a></li>
+                                                      </ul>                 
+
+<!--End:UPSMessage1-->
+
+<!--Seg:UPSMessageM-->
+<div style="color:red">The @&TYPE  address you entered couldn't be verified, and no suitable alternatives could be matched.</div>
+<br><div style="padding:10px 0px"><b>Suggestions:</b></div><ul>
+                   <li style="padding:5px;">Is the primary number correct?</li>
+                   <li style="padding:5px;">Make sure the city state and ZIP code don't conflict.</li>
+                   <li style="padding:5px;">The address should be free of major typos/misspellings.</li>
+                   <li style="padding:5px;">Make sure the address is basically formated correctly.</li>
+                   <li style="padding:5px;">If the address isn't all there, try making it more complete.</li>
+                 </ul>
+<br><div style="padding:10px 0px"><b>We found these addresses. Please consider using one of these verified addresses:</b></div><ul>@&SUGG <li style="list-style-type: none;">&nbsp;</li>
+                                                      <li style="padding:10px;"><a href="javascript:void(0)" onclick="$('#upsMessage').modal('hide');submit_form('f', 'SAVE');">No thanks, leave address as entered</a></li>
+                                                      </ul>                 
+
+<!--End:UPSMessageM-->
+
+
+
+ 

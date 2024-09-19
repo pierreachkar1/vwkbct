@@ -1,0 +1,509 @@
+<!--Seg:Open-->
+  
+<script>
+  function geoFmt(city,sta,cnty,geo,zip){
+
+	if($("#SISZIPB").is(":focus"))
+    {
+	 $('#SISCTYB').val(city);
+	 $('#SISSTAB').val(sta);
+	 $('#SISZIPB').val(zip);
+	 $("#accountBillingInformation").slideDown();}
+      else
+    {
+     $('#SISCTYS').val(city);
+	 $('#SISSTAS').val(sta);
+	 $('#SISZIPS').val(zip);
+     $("#accountShippingInformation").slideDown();}
+}
+
+function shipCountry(){
+	
+	$("#SISAD1S").val("");
+	$("#SISAD2S").val("");
+	$("#SISZIPS").val("");
+	$("#SISCTYS").val("");
+	$("#SISSTAS").val("");
+	$("#SICNTYS").val("");
+	
+	$.ajax({    url:"/cgi/CGBCACC",
+                    async: true,
+                     type: "POST",
+                 dataType: "html",
+                    data : "SIAJAXACTN=SHIPCTID&SIAJAXMODE=Y&SIAJAXCTID="+$("#SISCTRS").val() ,
+					success: function (html) { $("#SHIPSTATE").html(html); }
+					});
+}
+
+function billCountry(){
+	
+	$("#SISAD1B").val("");
+	$("#SISAD2B").val("");
+	$("#SISZIPB").val("");
+	$("#SISCTYB").val("");
+	$("#SISSTAB").val("");
+	$("#SICNTYB").val("");
+	
+	$.ajax({    url:"/cgi/CGBCACC",
+                    async: true,
+                     type: "POST",
+                 dataType: "html",
+                    data : "SIAJAXACTN=BILLCTID&SIAJAXMODE=Y&SIAJAXCTID="+$("#SISCTRB").val() ,
+					success: function (html) { $("#BILLSTATE").html(html); }
+					});
+}
+
+</script>
+
+<style>
+  #message {
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#message p {
+  padding: 0px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2714";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #a94442;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\2716";
+}
+</style>
+
+  
+  <main class="account">
+    <div class="container">
+      <div class="account__header">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="account__headline">Welcome @&FNAM &nbsp;@&LNAM !</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <p class="account__description">@&FNAM , from this page you can review order status and history and make updates to your account. All fields are required below even if you choose to keep your current password, current email, or current user name.</p>
+          </div>
+        </div>
+      </div>
+      <div class="account__body" style="margin:0px;">
+        <div class="row account__body--tabs">
+          <div class="col-xs-12" style="padding:0px 10px;">
+            <ul class="list-tabs">
+              <li><a href="/CGBCMRSL"><span class="hidden-xs-sm">Your </span>Shopping Lists</a></li>
+              <li><a href="/order-status">Order History<span class="hidden-xs-sm"></span></a></li>
+              <li class="active"><a href="/CGBCACC"><span class="hidden-xs-sm">Your </span>Profile</a></li>
+			  <li @&HIDEFR ><a href="/CGBCLMFR">Fittings Request</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountProfession" aria-expanded="false" aria-controls="accountProfession" data-visibility="#mobileProfessionValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Profession</h4>
+              <p class="account__row--subtitle">Select your profession for your account</p>
+              <p class="account__value--mobile" id="mobileProfessionValue">@&PROF </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountProfession" aria-expanded="false" aria-controls="accountProfession" data-visibility="#desktopProfessionValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopProfessionValue">@&PROF </p>
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountProfession">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountProfessionForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" name="SIACTN" value="SAVEPR">
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">
+                    Choose your new profession<br>@&PTNO <!--Profestion-->             
+                  </label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" >Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountEmailAddress" aria-expanded="false" aria-controls="accountEmailAddress" data-visibility="#mobileEmailAddressValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Email address</h4>
+              <p class="account__row--subtitle">Add or remove email addresses on your account</p>
+              <p class="account__value--mobile" id="mobileEmailAddressValue">@&EMAL </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountEmailAddress" aria-expanded="false" aria-controls="accountEmailAddress" data-visibility="#desktopEmailAddressValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopEmailAddressValue">@&EMAL </p>
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountEmailAddress">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountEmailAddressForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" name="SIACTN" value="SAVEE">
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current email <input class="form__input full no-outline" type="email" name="SIEMAL" id="SIEMAL" value="@&EMAL " required=""></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new email <input class="form__input full no-outline" type="email" name="SIEMALB" id="SIEMALB" value="" required=""></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Confirm your new email <input class="form__input full no-outline" type="email" name="SIEMALC" id="SIEMALC" value="" required=""></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountPassword" aria-expanded="false" aria-controls="accountEmailAddress" data-visibility="#mobilePassword">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Password</h4>
+              <p class="account__row--subtitle">Update your account password</p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountPassword" aria-expanded="false" aria-controls="accountPassword" data-visibility="#desktopPassword">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountPassword">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountPasswordForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" name="SIACTN" value="SAVEP">
+                <p id="passerrorsp" style="display:none;">Correct the following items to continue:</p>
+                <ul id="passerrorsu" style="display:none;">
+                  <li id="errorinval" style="display:none;"><u>Please enter a valid password.</u></li>
+                  <li id="errormatch" style="display:none;"><u>The passwords you entered do not match.</u></li>
+                </ul> 
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current password <input class="form__input full no-outline" type="password" name="SIPSWDB" id="SIPSWDB" value="" required=""></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new password <input class="form__input full no-outline" type="password" name="SIPSWD" id="SIPSWD" value="" required="" minlength="8" maxlength="50" onkeypress="handleEnterEventPassB(this, event)" onkeyup="validPass('')" onblur="checkValidPass('N')"></label>
+                  <span class="fldError" id="invalpass" style="width:100%; font-weight:bold; color: red; display:none;"><small>Please enter a valid password</small></span>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Confirm your new password <input class="form__input full no-outline" type="password" name="SIPSWDC" id="SIPSWDC" value="" required="" minlength="8" maxlength="50" onkeypress="handleEnterEventPassB(this, event)" onkeyup="validPass('')"></label>
+                </div>
+                <div class="form-group">
+                  <div id="message">
+                    <h5 style="margin-bottom:5px">Password rules:</h5>
+                    <p id="haslow" class="invalid" >A <b>lowercase</b> letter</p>
+                    <p id="hascap" class="invalid" >A <b>capital (uppercase)</b> letter</p>
+                    <p id="hasnum"class="invalid" >A <b>number</b></p>
+                    <p id="hasspcl"class="invalid" >A <b>special character</b></p>
+                    <p id="haschr8" class="invalid" >Minimum <b>8 characters</b></p>
+                    <p id="matchp" class="invalid" ><b>Confirm</b> password</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn_md btn--blue" id="updatePSWD" onclick="resetPasswordB();">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountUsername" aria-expanded="false" aria-controls="accountUsername" data-visibility="#mobileUsernameValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Username</h4>
+              <p class="account__row--subtitle">Create a unique username to protect your account</p>
+              <p class="account__value--mobile" id="mobileUsernameValue">@&USER </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountUsername" aria-expanded="false" aria-controls="accountUsername" data-visibility="#desktopUsernameValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopUsernameValue">@&USER </p>
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountUsername">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountUsernameForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" name="SIACTN" value="SAVEU">
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current username <input class="form__input full no-outline" type="text" name="SIUSER" id="SIUSER" value="@&USER " required=""></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new username <input class="form__input full no-outline" type="text" name="SIUSERB" id="SIUSERB" value="" required=""></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Confirm your new username <input class="form__input full no-outline" type="text" name="SIUSERC" id="SIUSERC" value="" required=""></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left" id="mobileShp">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountShippingInformation" aria-expanded="false" aria-controls="accountShippingInformation" data-visibility="#mobileShippingInformationValue">
+                <span class="collapsed" onclick="addNewShipping()">Add New</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Shipping Information</h4>
+              <p class="account__row--subtitle">Manage your shipping addresses</p>
+              @&SHIPM <!--MOBILE-->
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm" id="fullShp">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountShippingInformation" aria-expanded="false" aria-controls="accountShippingInformation" data-visibility="#desktopShippingInformationValue">
+                <span class="collapsed" onclick="addNewShipping()" id="addNewShippingbtn">Add New</span>
+                <span class="expanded" id="closeShippingbtn">Close</span>
+              </a>
+              @&SHIPF <!--FULL-->
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountShippingInformation">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" name="accountShippingInformationForm" id="accountShippingInformationForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" value="SI" name="SITYPE" >
+                <input type="hidden" value="" name="SIPANO" id="SIPANOS" >
+                <input type="hidden" value="" name="SIACTN" id="SIACTNPANOS" >
+                @&SCTR <div class="row form-group">
+                  <div class="col-xs-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Name<input class="form__input full no-outline" type="text" name="SINAME" id="SINAMES" ></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Street Address*<input class="form__input full no-outline" type="text" name="SISAD1" id="SISAD1S" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="SISAD2" id="SISAD2S"></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Zip Code*<input class="form__input full no-outline" type="text" name="SISZIP" id="SISZIPS" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">City/APO/FPO*<input class="form__input full no-outline" type="text" name="SISCTY" id="SISCTYS"></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">State*<span id="SHIPSTATE">@&SSTA </span></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">County<input class="form__input full no-outline" type="text" name="SICNTY" id="SICNTYS" autocomplete="county"></label></div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" id="saveNewShipping" >save</button>
+          <a href="javascript:void(0)" onclick="deletePanos()" class="btn btn-danger btn_md" id="deletePanos" style="display:none">Delete</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountBillingInformation" aria-expanded="false" aria-controls="accountBillingInformation" data-visibility="#mobileBillingInformationValue">
+                <span class="collapsed editpanob">@&EDIT </span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Billing Information</h4>
+              <p class="account__row--subtitle">Edit your billing address</p>
+              <p class="account__value--mobile" id="mobileBillingInformationValue">@&BADR1 , @&BCITY  @&BSTA  @&BZIP  @&BCTID </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountBillingInformation" aria-expanded="false" aria-controls="accountBillingInformation" data-visibility="#desktopBillingInformationValue">
+                <span class="collapsed editpanob">@&EDIT </span>
+                <span class="expanded" id="closeBillingbtn">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopBillingInformationValue">@&BADR1 , @&BCITY  @&BSTA  @&BZIP  @&BCTID </p>
+            </div>
+          </div>
+          <div class="collapse account__collapse" id="accountBillingInformation">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountShippingInformationForm" data-parsley-validate="" class="diffForms">
+                <input type="hidden" value="@&BPANO " name="SIPANO" id="BPANO">
+                <input type="hidden" value="BI" name="SITYPE" >
+        <input type="hidden" value="EDITPANOB" name="SIACTN" id="BPANOACTN">
+                @&BCTR <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Street Address*<input class="form__input full no-outline" type="text" name="SISAD1" value="@&BADR1 " id="SISAD1B" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="SISAD2" value="@&BADR2 "></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Zip Code*<input class="form__input full no-outline" type="text" name="SISZIP" id="SISZIPB" required="" value="@&BZIP "></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">City/APO/FPO*<input class="form__input full no-outline" type="text" name="SISCTY" value="@&BCITY " id="SISCTYB"></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">State*<span id="BILLSTATE">@&BSTAD </span></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">County<input class="form__input full no-outline" type="text" name="SICNTY"  value="@&BCNTY " autocomplet="county"></label></div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="account__row--header2">
+            <div class="col-xs-12 col-md-9 account__row--left" id="mobilePhn">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountPhoneNumber" aria-expanded="false" aria-controls="accountPhoneNumber" data-visibility="#mobilePhoneNumberValue">
+                <span class="collapsed">Add New</span>
+                <span class="expanded">Close</span>
+              </a>
+              @&TELM <!--MOBILE-->
+              <h4 class="account__row--title">Phone Number</h4>
+              
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm" id="fullPhn">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountPhoneNumber" aria-expanded="false" aria-controls="accountPhoneNumber" data-visibility="#desktopPhoneNumberValue">
+                <span class="collapsed" onclick="addNewPhone()" id="addNewPhonebtn">Add New</span>
+                <span class="expanded" id="closePhonebtn" >Close</span>
+              </a>
+              @&TELF <!--FULL-->
+            </div>
+          </div>
+        </div>
+          <div class="row collapse account__collapse" id="accountPhoneNumber">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountPhoneNumberForm" data-parsley-validate="" class="diffForms">
+        <input type="hidden" value="" name="SIPNNO" id="SIPNNO" >
+                <input type="hidden" value="" name="SIACTN" id="SIACTNPNNO" >
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Phone type* <br>
+                    <select name="SITYPE" class="form__select" id="SITYPE" >
+                      <option value="M">Mobile</option>
+                      <option value="L">Land</option>
+                      <option value="F">Fax</option>
+                    </select></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Phone number*<input class="form__input full no-outline" type="tel" name="SITEL" id="SITEL" value="" required="" data-parsley-type="number"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Extn<input class="form__input full no-outline" type="tel" name="SIEXT" id="SIEXT" value="" data-parsley-type="number"></label>
+                </div>
+                <div class="form-group">
+           <button class="btn btn_md btn--blue" id="saveNewPhone" >save</button>
+          <a href="javascript:void(0)" onclick="deletePnno()" class="btn btn-danger btn_md" id="deletePnno" style="display:none">Delete</a>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+
+<script>
+  function resetPasswordB(){
+    var match = "";
+    validPass(match);
+    var check = validPass(match);
+    
+    if (check=='Y'){
+      $('#accountPasswordForm').trigger('submit');
+    }else if (check=='I'){
+      document.getElementById("passerrorsp").style.display= '';
+      document.getElementById("passerrorsu").style.display= '';
+      document.getElementById("errorinval").style.display= '';
+      document.getElementById("errormatch").style.display= 'none';
+    }else if (check=='M'){
+      document.getElementById("passerrorsp").style.display= '';
+      document.getElementById("passerrorsu").style.display= '';
+      document.getElementById("errorinval").style.display= 'none';
+      document.getElementById("errormatch").style.display= '';
+    }else if (check=='B'){
+      document.getElementById("passerrorsp").style.display= '';
+      document.getElementById("passerrorsu").style.display= '';
+      document.getElementById("errorinval").style.display= '';
+      document.getElementById("errormatch").style.display= '';
+    }
+  }
+  
+  function handleEnterEventPassB(inField, e) {
+      var charCode;
+      if(e && e.which){
+          charCode = e.which;
+      }else if(window.event){
+          e = window.event;
+          charCode = e.keyCode;
+      }
+  
+      if(charCode == 13) {
+        resetPasswordB()
+      }
+  }
+
+</script>
+
+
+<!--End:Open-->
+
+<!--Seg:country-->  
+				<div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Country*<br>@&CTRY </label></div>
+                </div>
+<!--End:country-->
+
+
+<!--Seg:PhoneFull-->
+<p class="account__value--desktop clickablePhone"id="phoneF@&PNNO " title="Edit" onclick="editPhone('@&TYPE ','@&TEL ','@&EXT ','@&PNNO ')" >@&TEL  - @&TYPED <span class="icon edit"></span></p>
+<!--End:PhoneFull-->
+
+<!--Seg:PhoneMobile-->
+<p class="account__value--mobile clickablePhone" id="phoneM@&PNNO " title="Edit" onclick="editPhone('@&TYPE ','@&TEL ','@&EXT ','@&PNNO ')" >@&TEL  - @&TYPED <span class="icon edit"></span></p>
+<!--End:PhoneMobile-->
+
+<!--Seg:ShippingFull-->
+<p class="account__value--desktop clickableAddress" id="shippingF@&PANO " title="Edit" onclick="editShipping('@&NAME ','@&ADR1 ','@&ADR2 ','@&CITY ','@&STA ','@&ZIP ','@&CNTY ','@&PANO ','@&CTID ')" >@&ADR1 , @&CITY  @&STA  @&ZIP  <span class="icon edit"></span></p>
+<!--End:ShippingFull-->
+
+<!--Seg:ShippingMobile-->
+<p class="account__value--mobile clickableAddress" id="shippingM@&PANO " title="Edit" onclick="editShipping('@&NAME ','@&ADR1 ','@&ADR2 ','@&CITY ','@&STA ','@&ZIP ','@&CNTY ','@&PANO ','@&CTID ')">@&ADR1 , @&CITY  @&STA  @&ZIP  <span class="icon edit"></span></p>
+<!--End:ShippingMobile-->
+
+<!--Seg:ShippingFullInt-->
+<p class="account__value--desktop clickableAddress" id="shippingF@&PANO " title="Edit" onclick="editShippingInt('@&NAME ','@&ADR1 ','@&ADR2 ','@&CITY ','@&STA ','@&ZIP ','@&CNTY ','@&PANO ','@&CTID ')" >@&ADR1 , @&CITY  @&STA  @&ZIP  @&CTID <span class="icon edit"></span></p>
+<!--End:ShippingFullInt-->
+
+<!--Seg:ShippingMobileInt-->
+<p class="account__value--mobile clickableAddress" id="shippingM@&PANO " title="Edit" onclick="editShippingInt('@&NAME ','@&ADR1 ','@&ADR2 ','@&CITY ','@&STA ','@&ZIP ','@&CNTY ','@&PANO ','@&CTID ')">@&ADR1 , @&CITY  @&STA  @&ZIP  @&CTID <span class="icon edit"></span></p>
+<!--End:ShippingMobileInt-->

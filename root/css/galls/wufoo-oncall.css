@@ -1,0 +1,108 @@
+
+.wufoo {
+    background-color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px; 
+}
+.wufoo #header {
+    background-color: #007ac2;
+    padding: 20px 0;
+    text-align: center;
+    border: 0px;
+}
+.confirm h2 {
+    font-family: inherit;
+    color: #000;
+}
+.wufoo #header h2 {
+    color: #ffffff !important;
+	text-transform: uppercase;
+	font-size: 28px !important;
+}
+.wufoo #header div {
+    color: #ccc !important;
+}
+.wufoo ul {
+    padding: 10px 35px 20px 30px;
+}
+.wufoo ul li {
+	padding: 20px 0;
+}
+.wufoo label.desc, .wufoo legend.desc, .likert caption {
+    color: #000 !important;
+}
+.wufoo li.focused {
+    background-color: #fff !important;
+}
+.wufoo label.desc, .wufoo legend.desc, .likert caption {
+    color: #000 !important;
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select {
+    background: #FFFFFF url(/images/fieldbg.gif) repeat-x top;
+}
+.wufoo li div, .wufoo li span, .wufoo li div label, .wufoo li span label {
+    font-family: inherit;
+    color: #666;
+}
+#saveForm {
+	height: 35px;
+    padding: 0;
+    margin-top: 20px;
+    width: 100px;
+    background-color: #007ac2;
+    color: #fff;
+    border: 0;
+	border-radius: 0px;
+}
+#container, html.embed {
+    background-color: #fff;
+}
+#errorLi, .error-container {
+	display: none;
+}
+form li.error {
+    display: block !important;
+    background-color: #fff !important;
+    margin-bottom: 3px !important; 
+}
+form li.error p.error {
+    display: none;
+}
+
+@media (max-width: 834px) {
+	.wufoo {
+	    font-size: 15px; 
+	}
+	.wufoo #header {
+	    padding: 15px 0;
+	}
+	.wufoo #header h2 {
+		font-size: 24px !important;
+	}
+	.wufoo ul {
+		padding: 5px 25px 20px 25px;
+	}
+	.wufoo ul li {
+		padding: 10px 0;
+	}
+}
+@media (max-width: 500px) {
+	.wufoo {
+	    font-size: 14px; 
+	}
+	.wufoo #header {
+	    padding: 10px 0;
+	}
+	.wufoo #header h2 {
+		font-size: 20px !important;
+	}
+	.wufoo ul {
+		padding: 5px 15px 20px 15px;
+	}
+	.wufoo ul li {
+		padding: 5px 0;
+	}
+	form li.leftHalf, form li.rightHalf {
+	  width: 100% !important; 
+	}
+}

@@ -1,0 +1,1613 @@
+<!--Seg:Open-->
+  <div class="modal" id="generalModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="sizeChartModalLabel" id="modalTitle">Credentials upload</h4>
+        </div>
+        <div class="modal-body" id="popup"></div>
+      </div>
+    </div>
+  </div>
+
+<!--CCFraud-->
+<div class="modal" id="fraudInfo" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">We cannot process this order!</h4>
+        </div>
+        <div class="modal-body" >We apologize for the inconvenience. Please call our Customer Service Specialist to complete your order. 866-673-7643</div>
+      </div>
+    </div>
+  </div>
+<!--Free Item-->
+<div class="modal" id="freeItem" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Select your item</h4>
+        </div>
+        <div class="modal-body" id="freeItemBody"></div>
+      </div>f
+    </div>
+  </div>
+   <script>  
+ window.onpageshow = function (event) {
+        if (event.persisted) {
+            hideWait();
+        }
+    };
+</script>
+
+<main class="@&MDEO ">
+  <div class="container">
+   <div class="row">
+    <form name="f" method="POST" action="@&PGM " novalidate >
+    <input type="hidden" name="SIACTN" value="" id="SIACTN">
+    <input type="hidden" name="SIMODE" value="@&SIMODE ">
+    <input type="hidden" name="SIMENU" value="@&SIMENU ">
+    <input type="hidden" name="SICHNO" id="SICHNO" value="@&SICHNO ">
+    <input type="hidden" name="SIFNAM" value="@&SIFNAM ">
+    <input type="hidden" name="SILNAM" value="@&SILNAM ">
+    <input type="hidden" name="SIPUNO" id="SIPUNO" value="@&SIPUNO ">
+    <input type="hidden" name="SIACNO" value="@&SIACNO ">
+    <input type="hidden" name="SIALOA" value="@&SIALOA ">
+    <input type="hidden" name="SIPYMT" value="@&SIPYMT ">
+    <input type="hidden" name="SICONFIRM" value="@&SICONFIRM ">
+    <input type="hidden" name="SIRFNO" value="">
+    <input type="hidden" name="SIRQPO" id="SIRQPO" value="@&SIRQPO ">
+    <input type="hidden" name="SIRQKF" id="SIRQKF" value="@&SIRQKF ">
+    <input type="hidden" name="SIRQPA" id="SIRQPA" value="@&SIRQPA ">
+    <input type="hidden" name="SIRSTRCHK" value="">
+    <input type="hidden" name="SICNNOTMP" id="SICNNOTMP" value="@&SICNNOTMP ">
+    <input type="hidden" name="SISTEP" id="SISTEP" value="@&SISTEP ">
+<!--End:Open-->
+
+
+<!--Seg:topcartbuttons-->
+    <style>
+      .shopping-cart__header {height:auto !important;}
+      .backBtn, .chkBtn {width:100%;}
+      .noLRP {padding-left:0;padding-right:0;}
+      .chkBtns {padding-top:30px;}
+      .backBtn {background-color:#fff !important;}
+     /* @media screen and (max-width: 767px){
+        .backBtn {background-color:#fff !important;}
+      }*/
+      @media only screen and (max-width: 991px) and (min-width: 768px){
+        .shopping-cart__header {padding-top:0 !important;}
+      }
+    </style>
+    </div>
+      <div class="row shopping-cart__header">
+        <div class="col-xs-7 col-md-9">
+          <h3 class="shopping-cart__header--title">Shopping Cart</h3>
+        </div>
+        <div class="col-xs-5 col-md-3" id="cartheadersub">
+          <div class="shopping-cart__header--count visible-xs-sm">
+            (@&QTY ): @&SUBT </div>
+        </div>
+        <div class="col-xs-4 col-md-3 ta-r hidden-xs-sm">
+        	<a href="javascript:window.history.go(-1);" class="btn btn_sm btn--light-gray btn_no-outline hidden-xs-sm ">Back to Shopping</a>
+        	<a href="javascript:void(0)" onclick="submit_form('f', 'CHECKOUT')" class="btn btn_sm btn--orange">Checkout</a>
+        </div>
+        <div class="chkBtns">
+          <div class="col-xs-6 visible-xs-sm noLRP"><a href="javascript:window.history.go(-1);" class="btn btn_sm btn--light-gray btn_no-outline backBtn">Keep Shopping</a></div>
+          <div class="col-xs-6 visible-xs-sm noLRP"><a href="javascript:void(0)" onclick="submit_form('f', 'CHECKOUT')" class="btn btn_sm btn--orange chkBtn">Checkout</a></div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:20px">
+        <div class="col-xs-12">
+          <div class="shopping-cart__gift-card-mobile visible-xs-sm" style="padding-top:30px">
+            <h6 class="shopping-cart__sidebar--title">Coupon or Promo Code</h6>
+              <div class="input__group">
+                <div class="input__group--field">
+                  <input id="SISRCE" name="SISRCE" value="@&SISRCE " autocomplete="off" type="text" class="form__input" placeholder="enter code" onkeyup="THIShandleEnterKeySrce(this,event)">
+
+                </div>
+                <div class="input__group--btn">
+                  <button class="btn btn--blue" type="button" onclick="submit_form('f', 'APPLYSRCE')">apply</button>
+                </div>
+              </div>
+              <div style="margin-top:6px;">@&ERRB </div>
+
+              <div style="margin-top:10px;display:@&DSPSV ">
+                <p ><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+              </div>
+          </div>
+        </div>
+      </div>
+<!--End:topcartbuttons-->
+
+<!--Seg:opencart-->
+      <div class="row" style="margin-top:6px;@&SHMSG ">
+            <div class="col-xs-12">
+               <div class="alert alert-info alert-dismissable fade in">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <p class="toQualify">@&TOQUAL </p>
+               </div>
+            </div>
+        </div>
+      <div class="row row-eq-height">
+
+      	<div class="col-md-9">
+      		<div class="shopping-cart__table">
+      			<div class="row shopping-cart__table--header hidden-xs-sm">
+              <div class="col-md-10 col-md-offset-2">
+                <div class="row">
+                  <div class="col-md-6"><h6 class="shopping-cart__table--th">Items</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Unit price</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th" style="padding-left:30%;">QTY</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Total price</h6></div>
+                </div>
+              </div>
+      			</div>
+<!--End:opencart-->
+
+<!--Seg:cartrow-->
+<style>
+  .mobileUpdate{text-align:center;}
+  .mobilePadding{padding:10px 15px 7px 10px !important;}
+</style>
+<div class="row shopping-cart__table--row">
+  <div class="shopping-cart__item">
+
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <div class="shopping-cart__item--thumbnail">
+          <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'" style="margin:auto;">
+        </div>
+        <div class="visible-xs-sm" style="text-align:center;">
+          @&QTY <input type="hidden" class="form__input shopping-cart__qty" name="SIINFO@&R " id="SIINFO@&R " value="@&CDNO ">
+        </div>
+        <div class="visible-xs-sm mobileUpdate" style="display:@&DISP ">
+          <a href="javascript:void(0)" onclick="submit_form('f', 'SAVE')" title="Update Cart" class="btn btn_xs btn--link--no-outline mobilePadding">Update Cart</a>
+        </div>
+      </div>
+      <div class="col-xs-8 col-sm-9 col-md-10">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row shopping-cart__item--details">
+              <div class="col-xs-12"><a href="@&HREF " class="shopping-cart__item--name"><h6>@&DESC </h6></a></div>
+              <div class="col-xs-12"><ul class="shopping-cart__item--info list-separator">@&ITEM </ul></div>
+              <div class="col-xs-12"><ul class="shopping-cart__item--options list-inline">@&OPTN </ul></div>
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-8 visible-xs-sm shopping-cart__item--price">@&PRIC &nbsp;</div>
+                  <div class="col-xs-4 visible-xs-sm shopping-cart__item--price"><strong>@&EXTP &nbsp;</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 hidden-xs-sm">
+            <div class="shopping-cart__item--price">@&PRIC &nbsp;</div>
+          </div>
+          <div class="col-md-2 hidden-xs-sm">
+            <div style="text-align:center;"><b>@&MQTY </b><input class="form__input shopping-cart__qty @&HDINP " type="number" id="GSIQTY@&R " value="@&CDQTY " min="1"  oninput="syncQty(@&R )" maxlength="5" onkeyup="syncQty(@&R );THIShandleEnterKeyQty(this,event)" style="padding:0 5px;width:60px;"></div>
+          </div>
+          <div class="col-md-2 hidden-xs-sm">
+            <div><strong>@&EXTP &nbsp;</strong></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">@&OPDS @&WHNO </div>
+          <div class="col-xs-12 @&DRSTR ">@&RSTR </div>
+          <div class="col-xs-12">@&VAS </div>
+          <div class="col-xs-12">@&KIT </div>
+          <div class="col-xs-12" style="padding:15px 0;">
+            <div class="shopping-cart__item--cta">
+              <a  href="javascript:void(0)" onclick="addToList('I','','@&STYL ')"  class="btn btn_xs btn--light-gray">Add to list</a>&nbsp;
+              <a href="@&EDITURL " class="btn btn_xs btn--light-gray hidden-xs-sm @&HDINP ">Edit Item</a>&nbsp;
+              @&DELT &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>    
+  </div>
+</div>
+<!--End:cartrow-->
+
+<!--Seg:closeCart-->
+          <div class="row shopping-cart__table--ctas ta-r hidden-xs-sm">
+            <div class="col-md-12">
+  			      	<a href="javascript:window.history.go(-1);" class="btn btn_sm btn--link-gray hidden-xs-sm">Back to Shopping</a>
+                <a href="javascript:void(0)" onclick="submit_form('f', 'SAVE')" class="btn btn_sm btn--blue">Update Cart</a>
+  			    	  <a href="javascript:void(0)" onclick="submit_form('f', 'CHECKOUT')" class="btn btn_sm btn--orange hidden-xs-sm">Checkout</a>
+            </div>
+      		</div>
+    </div>
+</div>
+<div class="col-md-3 hidden-xs-sm">
+      		<div class="shopping-cart__sidebar">
+      			<div class="row hidden-xs-sm">
+      				<div class="col-xs-12">
+      					<h6 class="shopping-cart__sidebar--title underline">Coupon or Promo Code</h6>
+      					<div class="shopping-cart__gift-card">
+      						<div class="form-group">
+      							<div class="input__group">
+                        <div class="input__group--field">
+          								<input type="text" class="form__input" placeholder="enter code" id="SISRCEI" name="SISRCEI"  value="@&SISRCE " onkeyup="syncSrce();THIShandleEnterKeySrce(this,event)">
+                        </div>
+    									 <div class="input__group--btn">
+                        <a class="btn btn--blue" type="button" href="javascript:void(0)" onclick="applySrce()">apply</a>
+                      </div>
+      							</div>
+                    <div style="margin-top:6px;">@&ERRB </div>
+    							</div>
+      					</div>
+      				</div>
+      			</div>
+            <div class="row">
+              <div class="col-md-12">
+                  <h6 style="margin-top: 20px;" class="shopping-cart__sidebar--title underline">Pricing</h6>
+              </div>
+            <div class="col-xs-12" style="display:@&DSPSV ">
+                <p ><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+             </div>
+              <div class="col-xs-12">
+                <p><strong>Subtotal: @&SUBT </strong> (@&UNIT )</p>
+              </div>
+            </div>
+      			<div class="row">
+      				<div class="col-xs-12">
+      					<h6 style="margin-top: 20px;" class="shopping-cart__sidebar--title underline">You May Also like</h6>
+      		      <ul class="list-unstyled shopping-cart__also" data-ltk-merchandiseblock="50c30e2a-d58a-4bc0-b97a-5f31c5b0bab8">
+                <script type="text/html">
+                  <li>
+                    <div class="shopping-cart__also-item">
+                      <div class="shopping-cart__also-item--thumbnail">
+                        <img alt="@Recommendation.Title" src="@(imageRoot + Recommendation.ImageUrl)" class="img-responsive">
+                      </div>
+                      <div class="shopping-cart__also-item--details">
+                        <a href="@Recommendation.LinkUrl"><h6 class="shopping-cart__also-item--name">@Recommendation.Title</h6></a>
+                        <div class="shopping-cart__also-item--price">$@(Recommendation.Price || ' ')</div>
+                        <div class="shopping-cart__also-item--cta"><a href="Javascript:void(0)" onclick="Quickview('@Recommendation.MasterSku')" class="btn btn_xs btn--link-gray-blue">Add to cart</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  </script>
+                </ul>
+          <script type="text/javascript">
+            (function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+            else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+            if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+                /********** Begin Custom Code **********/
+                _ltk.Recommender.AddField("Brand");
+                _ltk.Recommender.AddField("Price");
+                _ltk.Recommender.AddField("SalePrice");
+                _ltk.Recommender.AddField("StarRating");
+                _ltk.Recommender.AddField("RatingCount");
+                _ltk.Recommender.AddField("MasterSku");
+                _ltk.Recommender.Render();
+                /********** End Custom Code **********/
+            });
+          </script>
+          <script type="text/javascript">
+            var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            (function (d, s, id, tid, vid) {
+                var js, ljs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+                js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+                ljs.parentNode.insertBefore(js, ljs);
+            })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+          </script>
+          <script type="text/javascript">
+            var imageRoot ="https://www.galls.com/";
+          </script>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+    </div>  
+<!--End:closeCart-->
+
+<!--Seg:cartrowC-->
+<div class="row review__table--row">
+  <div class="col-xs-4 col-sm-3 col-md-2">
+    <div>
+      <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'" style="margin:auto">
+    </div>
+    <div class="visible-xs-sm" style="text-align:center;">
+      <strong class="form__input shopping-cart__qty">@&QTY </strong>
+    </div>
+  </div>
+  <div class="col-xs-8 col-sm-9 col-md-10">
+    <div class="row">
+      <div class="col-md-6 review__table--td review__item">
+        <div class="row">
+          <div class="col-xs-12"><a href="@&HREF " class="review__item--name">@&DESC </a></div>
+          <div class="col-xs-12"><ul class="review__item--info list-separator">@&ITEM </ul></div>
+          <div class="col-xs-12"><ul class="review__item--options list-inline">@&OPTN </ul></div>
+          <div class="col-xs-8 visible-xs-sm">@&PRIC </div>
+          <div class="col-xs-4 visible-xs-sm"><strong>@&EXTP </strong></div>
+        </div>
+      </div>
+      <div class="col-md-2 hidden-xs-sm review__table--td">
+        <div class="review__item--price">@&PRIC </div>
+      </div>
+      <div class="col-md-2 hidden-xs-sm review__table--td">
+        <div style="text-align:center;"><b style="padding-left:5px;">@&QTY </b><input type="hidden" name="SIINFO@&R " id="SIINFO@&R " value="@&CDNO "></div>
+      </div>
+      <div class="col-md-2 hidden-xs-sm review__table--td">
+        <div><strong>@&EXTP </strong></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">@&OPDS </div>
+      <div class="col-xs-12 @&DSPRSTR ">@&RSTR </div>
+      <div class="col-xs-12">@&VAS </div>
+      <div class="col-xs-12">@&KIT </div>
+      <div class="col-xs-12">
+        <div class="review__item--cta">
+          <a  href="javascript:void(0)" onclick="addToList('I','','@&STYL ')" class="btn btn_xs btn--light-gray" >Add to list</a>&nbsp;
+          <a href="@&EDITURL " class="btn btn_xs btn--light-gray hidden-xs-sm @&HDINP ">Edit Item</a>&nbsp;
+          @&DELT &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End:cartrowC-->
+
+<!--Seg:cartrowS-->
+<div class="container custPrint" style="background-color:#fff; padding-bottom:20px;" unbxdattr="order" unbxdparam_sku="@&STYL " unbxdparam_price="@&UPRC " unbxdparam_qty="@&UQTY ">
+  <div class="row">
+    <div class="col-xs-4 col-sm-3 col-md-2">
+      <div>
+        <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'" style="margin:auto;">
+      </div>
+      <div class="visible-xs-sm" style="text-align:center;">
+        <strong class="form__input shopping-cart__qty">@&QTY </strong>
+      </div>
+    </div>
+    <div class="review__table--td col-xs-8 col-sm-9 col-md-10 review__item">
+      <div class="row">
+        <div class="col-md-6 review__item--details">
+          <div class="row">
+            <div class="col-xs-12"><a href="@&HREF " class="review__item--name">@&DESC </a></div>
+            <div class="col-xs-12"><ul class="review__item--info list-separator">@&ITEM </ul></div>
+            <div class="col-xs-12"><ul class="review__item--options list-inline">@&OPTN </ul></div>
+            <div class="col-xs-8 visible-xs-sm">@&PRIC </div>
+            <div class="col-xs-4 visible-xs-sm"><strong>@&EXTP </strong></div>
+          </div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint" style="text-align:center;">
+          <div class="review__item--price">@&PRIC </div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint" style="text-align:center;">
+          <div><b>@&QTY </b><input type="hidden" name="SIINFO@&R " id="SIINFO@&R " value="@&CDNO "></div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint">
+          <div><strong>@&EXTP </strong></div>
+        </div>
+        <div class="col-md-12 hidden showPrint">
+          <div><strong>Qty: @&QTY </strong>&nbsp;&nbsp;<strong>Total: @&EXTP </strong></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">@&OPDS </div>
+        <div class="col-xs-12 @&DSPRSTR ">@&RSTR </div>
+        @&WHNO <div class="col-xs-12">@&VAS </div>
+        <div class="col-xs-12">@&KIT </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End:cartrowS-->
+
+<!--Seg:noitems-->
+    <div class="container account__header">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="account__headline">Your shopping cart is currently empty.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-7">
+          <p class="account__description"><a href="javascript:void(0)" onclick="history.go(-1)">Back to previous page</a></p>
+        </div>
+      </div>
+    </div>
+<!--End:noitems-->
+
+<!--Seg:confirmStep-->
+<div class="col-md-4 col-md-push-8">
+          <div class="checkout__right">
+            <div class="row checkout__right--buttons-top hidden-xs-sm">
+              <div class="col-md-12 ta-r">
+                <a href="/" class="btn btn_sm btn--link-gray btn_no-outline">Back to Shopping</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h6 class="checkout__right--title">Pricing</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-8">
+                <p style="@&DSPSRCE "><strong>PROMO:</strong> (@&SRCE )</p>
+                <p style="display:@&DSPSV "><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+                <p><strong>Subtotal: @&SUBT </strong> (@&UNIT )</p>
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive fl-r" src="images/vseal.png" alt="Norton Secured">
+              </div>
+            </div>
+            <div class="row checkout__subtotal">
+              <div class="col-md-12">
+                <h6 class="checkout__right--title">Subtotal</h6>
+              </div>
+            </div>
+            <div class="row checkout__subtotal--row">
+              <div class="col-xs-9">Before Taxes</div>
+              <div class="col-xs-3 ta-r">@&SUBT </div>
+            </div>
+            <div class="row checkout__subtotal--row">
+              <div class="col-xs-9">Shipping</div>
+              <div class="col-xs-3 ta-r">@&FAMT </div>
+            </div>
+            <div class="row checkout__subtotal--row">
+              <div class="col-xs-9">Taxes</div>
+              <div class="col-xs-3 ta-r">@&STAX </div>
+            </div>
+            <div class="row checkout__subtotal--total">
+              <div class="col-xs-9">Total After Taxes</div>
+              <div class="col-xs-3 ta-r">@&TOTL </div>
+            </div>
+            <div class="row checkout__right--buttons-bottom hidden-xs-sm">
+              <div class="col-md-12 ta-r">
+                <a href="/" class="btn btn_sm btn--link-gray btn_no-outline">Back to Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-md-8 col-md-pull-4">
+         <div class="checkout__left">
+          <div class="checkout__express">
+            Express Checkout
+            </div>
+            <div class="checkout__step checkout__step-one" id="stepOne">
+              <div class="step__header">
+                <a href="javascript:void(0)" onclick="submit_form('f','EDITADDR')" class="step__edit" >Edit</a>
+                <h4 class="step__title" style="float:left">1. Delivery &amp; billing</h4>
+                <div class="step__info" style="float:left;clear:left;padding:10px 0">
+                  @&PANB (Billing)<br>@&PANS (Shipping)</div>
+                  <input type="hidden" name="SIPANO" value="@&SIPANO ">
+                  <input type="hidden" name="SIPANB" value="@&SIPANB ">
+                  <input type="hidden" name="SIPNNO" value="@&SIPNNO ">
+                  <input type="hidden" name="SIEMAL" value="@&SIEMAL ">
+              </div>
+            </div>
+            <div class="checkout__step checkout__step-two @&ACTV2 " id="stepTwo">
+              <div class="step__header">
+                <a href="#stepTwo" class="step__edit" data-step-edit="#stepTwo">Edit</a>
+                <h4 class="step__title">2. shipping &amp; payment</h4>
+                <div class="step__info">
+                  <ul class="list-separator">
+                    <li id="paymentDesc">@&PAYMENT @&PYMTGC </li>
+                  </ul>
+                </div>
+              </div>
+              @&ERRORB <!--Errors-->
+              <div class="step__body">
+                <div class="step__shipping">
+                <!--Shipping 1-->
+                  <div class="row form-group" style="@&DSPL1 ">
+                    <div class="col-xs-8 col-md-10">
+                      <label class="form__radio" onclick="javascript:submit_form('f','CHNGSHMT')">
+                        <input class="shipping__radio" type="radio" name="SISHMT" value="UPS_L_GND" @&CKSM1 @&DSBL1 >
+                        <span class="fake-radio"></span>
+                        <span>Standard Ground&nbsp;<a class="tipClass" style="float:none" title="@&TIP1 " href="javascript:void(0);"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a></span>
+                      </label>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <span class="shipping__price selected" id="shipping__price--standard">@&SMPC1 </span>
+                    </div>
+                  </div>
+                  <!--Shipping 2-->
+                  <div class="row form-group" style="@&DSPL2 ">
+                    <div class="col-xs-8 col-md-10">
+                      <label class="form__radio" onclick="javascript:submit_form('f','CHNGSHMT')">
+                        <input class="shipping__radio" type="radio" name="SISHMT" value="UPS_A_2DA" @&CKSM2 @&DSBL2 >
+                        <span class="fake-radio"></span>
+                        <span>UPS 2nd day Air&nbsp;<a class="tipClass" style="float:none" title="@&TIP2 " href="javascript:void(0);"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a> </span>
+                      </label>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <span class="shipping__price" id="shipping__price--ups">@&SMPC2 </span>
+                    </div>
+                  </div>
+                  <!--Shipping 3-->
+                  <div class="row form-group" style="@&DSPL3 ">
+                    <div class="col-xs-8 col-md-10">
+                      <label class="form__radio" onclick="javascript:submit_form('f','CHNGSHMT')">
+                        <input class="shipping__radio" type="radio" name="SISHMT" value="UPS_A_1DP" @&CKSM3 @&DSBL3 >
+                        <span class="fake-radio"></span>
+                        <span>Next Day&nbsp;<a class="tipClass" style="float:none" title="@&TIP3 " href="javascript:void(0);"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a> </span>
+                      </label>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <span class="shipping__price" id="shipping__price--next-day">@&SMPC3 </span>
+                    </div>
+                  </div>
+                  <!--Shipping 4-->
+                  <div class="row form-group" style="@&DSPL4 ">
+                    <div class="col-xs-8 col-md-10">
+                      <label class="form__radio" onclick="javascript:submit_form('f','CHNGSHMT')">
+                        <input class="shipping__radio" type="radio" name="SISHMT" value="UPS_A_1DA" @&CKSM4 @&DSBL4 >
+                        <span class="fake-radio"></span>
+                        <span>Expedited Next Day&nbsp;<a class="tipClass" style="float:none" title="@&TIP4 " href="javascript:void(0);"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a></span>
+                      </label>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <span class="shipping__price" id="shipping__price--expedited-next-day">@&SMPC4 </span>
+                    </div>
+                  </div>
+                  <!--Shipping 5-->
+                  <div class="row form-group" style="@&DSPL5 ">
+                    <div class="col-xs-8 col-md-10">
+                      <label class="form__radio" onclick="javascript:submit_form('f','CHNGSHMT')">
+                        <input class="shipping__radio" type="radio" name="SISHMT" value="UPS_L_LTL " @&CKSM5 @&DSBL5 >
+                        <span class="fake-radio"></span>
+                        <span>Saturday&nbsp;<a class="tipClass" style="float:none" title="@&TIP5 " href="javascript:void(0);"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a> </span>
+                      </label>
+                    </div>
+                    <div class="col-xs-4 col-md-2">
+                      <span class="shipping__price" id="shipping__price--saturday">@&SMPC5 </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step__payment">
+                  <h6>Select payment type <span class="pull-right"> $<input type="text" readonly name="SICHCC" id="SICHCC" value="@&CHRG "  class="form__input full no-outline" style="width:100px;"></span></h6>
+                  <div class="row form-group ">
+                    <div class="col-xs-12 text-left">
+                    <div class="col-xs-1">
+                        <label class="form__radio" style="margin-top:12px">
+                          <input class="shipping__radio" type="radio" name="SISLPI" id="paymethodC"  onclick="radioPayment()" value="C" @&PYMTCHKC >
+                          <span class="fake-radio"></span>
+                      </label>
+                     </div>
+                     <div class="col-xs-11" >
+                     <label for="paymethodC" style="cursor:pointer">
+                      <img class="credit-card" src="images/card-amex.png" alt="American Express">
+                      <img class="credit-card" src="images/card-discover.png" alt="Discover">
+                      <img class="credit-card" src="images/card-visa.png" alt="Visa">
+                      <img class="credit-card" src="images/card-mastercard.png" alt="MasterCard">
+                     </label>
+                     </div>
+                    </div>
+                  @&USECC </div>
+                  <div class="row form-group ccSection ccFields" style="@&DSPCC ">
+
+                    <div class="col-md-6">
+                     <label class="form__label">Name on Card*<input class="form__input full no-outline SICCRF" type="text" name="SICCRF" id="SICCRF" value="@&SICCRF "  @&DSBLC  maxlength="50" autocomplete="cc-name"></label>
+                    </div>
+                    <div class="col-md-6">
+                     <label class="form__label">Credit Card #*<input class="form__input full no-outline" type="tel" name="SICCNO" id="SICCNO" value="@&SICCNO " @&REQCC  maxlength="20" autocomplete="cc-number"></label>
+                    </div>
+                  </div>
+                  <div class="row form-group ccSection ccFields" style="@&DSPCC ">
+                    <div class="col-md-6">
+                     <div class="form__label">
+                        Expiration*<br>
+                        @&CCMO <!--Expiration Month-->
+                        @&CCYR <!--Expiration Year-->
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                     <label class="form__label">
+                      Card Security Code*<br><input class="form__input no-outline card-number" type="tel" name="SICCV" id="SICCV" value="@&SICCV " maxlength="4" @&REQCC  data-parsley-cvv="" autocomplete="cc-csc">
+                    </div>
+                  @&SAVECC </div>
+                  <div class="row form-group">
+                    <div class="col-xs-12 text-left">
+                      <div class="step__payment--or">OR</div>
+                    </div>
+                    <div class="col-xs-12 text-left">
+                      <div class="col-xs-1">
+                        <label class="form__radio" style="margin-top:12px">
+                          <input class="shipping__radio" type="radio" name="SISLPI" id="paymethodP"  onclick="radioPayment()" value="P" @&PYMTCHKP  @&DSBLP  >
+                          <span class="fake-radio"></span>
+                        </label>
+                       </div>
+                       <div class="col-xs-11">
+                       <label for="paymethodP" style="cursor:pointer"><input type="hidden" name="SICHPP" id="SICHPP" value="@&SICHPP ">
+                          <img class="img-responsive" src="images/paypal.png" alt="PayPal" style="@&OPAC ">
+                          <em style="font-size:12px;padding:5px;display:inline-block;">PayPal restricts certain items from using PayPal as a form of payment.<br class="hidden-xs-sm"> Click <a href="https://www.paypal.com/us/webapps/mpp/ua/acceptableuse-full" target="_blank">here</a> for more details.</em>
+                        </label>
+                       </div>
+                    </div>
+                  </div>
+                  <div class="row form-group" style="@&DSPOA " >
+                    <div class="col-xs-12 text-left">
+                      <div class="step__payment--or">OR</div>
+                    </div>
+                    <div class="col-xs-12 text-left">
+                      <div class="col-xs-1">
+                        <label class="form__radio" style="margin-top:12px">
+                          <input class="shipping__radio" type="radio" name="SISLPI" id="paymethodO"  onclick="radioPayment()" value="O" @&PYMTCHKO >
+                          <span class="fake-radio"></span>
+                        </label>
+                       </div>
+                       <div class="col-xs-11">
+                       <label for="paymethodO" style="cursor:pointer;font-size:16px;font-family: industry-inc-base,sans-serif;font-style: normal;font-weight: 400;margin-top:10px">
+                          Use your account
+                        </label>
+                        </div>
+                        <div class="col-xs-11 col-xs-offset-1 oaSection" style="@&DSPSO ">
+                           PO Number*<br>
+                          <input type="text" name="SICCRF" size="20" maxlength="30" value="@&SICCRF " id="SICCRFO"  class="form__input full no-outline SICCRF"  @&DSBLO  style="width:150px;" ><br>
+                          <em>Approved Corporate Customers may use a purchase order.</em>
+                       </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-6">
+                      <h6>use gift cards</h6>
+
+                      <div class="step__gift-card">
+                        <div class="row form-group">
+                          <div class="col-md-12">
+                            <label class="form__label">
+                              Gift Card # <a href="javascript:void(0)" onclick="validateGc('CHKGC')" class="fl-r">Check Balance</a><span id="available" style="padding: 0 15px;color: green;font-weight: bold;"></span>
+                              <div>
+                                <input class="form__input full no-outline" type="tel" name="SIGCNO" id="SIGCNO" maxlength="16">
+                                <input type="hidden" value="@&GIFT " id="SIGIFT" name="SIGIFT">
+                                <input type="hidden" value="" id="SIGIFTN" name="SIGIFTN">
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row row-eq-height form-group">
+                          <div class="col-md-5">
+                             <label class="form__label">Pin<input class="form__input full no-outline" type="tel" name="SIPIN" id="SIPIN" value="" maxlength="4"></label>
+                          </div>
+                          <div class="col-md-7">
+                             <label class="form__label">Amount</label>
+                             <div class="input__flex">
+                              <div class="input__flex--field">
+                                 <input class="form__input no-outline" type="number" name="SIGAMT" id="SIGAMT" maxlength="7">
+                               </div>
+                              <div class="input__flex--btn">
+                                 <a href="javascript:void(0)" onclick="validateGc('ADDGC');" class="btn btn_xs btn--blue btn_apply">Apply</a>
+                               </div>
+                             </div>
+                           </div>
+                          </div>
+                          <div class="row row-eq-height form-group">
+                           <div class="col-md-12">
+                            <span id="gcerrors" style="font-weight:bold;color:red;"></span>
+                             <table id="giftTable" style="display:none">
+                               <tr>
+                                <th style="width:30px;"></th>
+                                <th style="text-align:left;width:145px;">Gift Card No</th>
+                                <th style="text-align:right;width:75px">Available</th>
+                                <th style="text-align:right;width:60px;">Applied</th>
+                              </tr>
+                            </table>
+                            <input type="hidden" id="cartTotal" value="@&CHRG ">
+                            <input type="hidden" id="numGc" name="SINMGC" value="0">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h6>Promo Code</h6>
+                      <p>Enter promotional code below, just one promo code per order. All discounts are based on order value before shipping charges and sales tax.</p>
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <div class="input__flex">
+
+                            <div class="input__flex--field">
+                              <input class="form__input no-outline" type="text"  name="SISRCE" id="SISRCE" value="@&SISRCE " autocomplete="off" onkeyup="THIShandleEnterKeySrce(this,event)">
+                            </div>
+                            <div class="input__flex--btn">
+                              <a href="javascript:void(0)" onclick="submit_form('f', 'APPLYSRCE')" class="btn btn_xs btn--blue btn_apply">Apply</a>
+                            </div>
+                          </div>
+                         <div style="margin-top:6px;">@&ERRB </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-xs-12">
+                      <a href="javascript:void(0)" onclick="submit_form('f','STEP3')" class="btn btn_xs btn--orange btn_continue">Continue to Review</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__step checkout__step-three @&ACTV3 " id="stepThree">
+              <div class="step__header">
+                <a href="javascript:void(0)" onclick="submit_form('f','STEP3')" class="step__edit" >Edit</a>
+                <h4 class="step__title">3. Review &amp; order</h4>
+              </div>
+              <div class="step__body review__table">
+              <div class="step__body review__table">
+                <div class="row review__table--header hidden-xs-sm">
+                  <div class="col-md-7 review__table--th">Item</div>
+                  <div class="col-md-2 review__table--th">Unit Price</div>
+                  <div class="col-md-1 review__table--th" style="text-align:center;">QTY</div>
+                  <div class="col-md-2 review__table--th">Total price</div>
+                </div>
+                @&ROWS <!--Rows-->
+                <div class="row review__table--ctas ta-r">
+                  <a href="javascript:void(0)" onclick="void(0)" class="btn btn_sm btn--orange btn-place-order"   id="btn-place-order" >Place Order</a>
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+<!--End:confirmStep-->
+
+
+<!--Seg:bogo-->
+	<input type="hidden" id="freeitem" value="@&FREE " styleid="@&FSTYL " freeqty="@&FQTY ">
+	<input type="hidden" id="freeitems" value="@&STYLES " >
+	<input type="hidden" id="freeqtys" value="@&FREEQTY " >
+	<input type="hidden" id="freemrnos" value="@&FREEMRNOS " >
+	<input type="hidden" id="freemrno" value="@&FREEMRNO " >
+	<input type="hidden" id="message" value="@&MESSAGE " >
+	<input type="hidden" id="popGift" value="@&POPGIFT " >
+    @&RECOMMEND &nbsp;
+  <div id="div_selectStyleContainer"></div>
+<!--End:bogo-->
+
+<!--Seg:Close-->
+      </form>
+    </div>
+   </div>
+  </main>
+<!--End:Close-->
+
+<!--Seg:cmpntrow-->
+<style>
+  .vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+</style>
+
+<div class="row" class="cart__kitRow" style="margin-bottom:10px;">
+  <div class="col-md-8">
+    <div class="row vertical-align">
+      <div class="col-md-3">
+        <div class="shopping-cart__item--thumbnail">
+          <img src="@&PATH @&MIMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row shopping-cart__item--details" style="padding:0;color:#818181;font-size:12px;">
+          <div class="col-xs-12"><span>@&DESC </span></div>
+          <div class="col-xs-12"><span>SKU No: @&SKU </span></div>
+          <div class="col-xs-12"><span>@&OPTIONSD </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 hidden-xs-sm" style="text-align:center;">
+    <div>&nbsp;</div>
+    <div>@&QTY </div>
+  </div>
+</div>
+<!--End:cmpntrow-->
+
+<!--Seg:opensplash-->
+<div class="container" id="confirm__container_top">
+  <div class="row hidden showPrint">
+    <div class="col-xs-6">
+      <img src="@&HOST /images/logo.png" alt="Galls">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Your Order Confirmation</h3>
+    </div>
+  </div>
+	<div class="row">
+    <div class="col-xs-10">
+      <p>
+        Thank you for shopping with us today, we have received your order.<br>Below is an order summary. If you need to make changes to your order, please call immediately at <b>@&GBLPH1 </b>.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div><b>Order Number: </b>@&OHNO </div>
+      <div><b>Order Date: </b>@&DATE </div>
+      <div><a class="h-print_link" id="Template_T_Content_a_print" href="javascript:void(0)" onclick="window.print();"><b>Print Order Details</b></a></div>
+    </div>
+  </div>
+</div>
+
+@&SHPBILL <!-- -->
+<div class="container" id="confirm__container_middle" style="padding-bottom: 15px;">
+  <div class="col-md-7 hidden-xs-sm">&nbsp;</div>
+  <div class="col-md-5 hidden-xs-sm">
+    <div class="col-md-4" style="text-align: center;"><strong>Unit Price</strong></div>
+    <div class="col-md-4" style="text-align: center"><strong>Qty</strong></div>
+    <div class="col-md-4"><strong>Total Price</strong></div>
+  </div>
+</div>
+<!--End:opensplash-->
+
+
+<!--Seg:closeconfirm-->
+<div class="container" style="background-color:#fff;padding:30px 50px;">
+  <div class="col-md-4 col-md-push-8">
+    <div class="row" style="border-bottom:1px solid #dcdcdc;margin-bottom:10px;">
+      <div class="col-xs-9">
+        <h4>Your Totals</h4>
+      </div>
+    </div>
+
+    <div class="row" style="display: @&DSP ">
+      <div class="col-xs-9">
+  		  <p style="color:red;"><strong>@&LABL </strong></p>
+      </div>
+      <div class="col-xs-3 ta-r">
+        <p style="color:red;font-weight:bold;">@&SAVINGS </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>Merchandise Total</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SUBT </p>
+  		</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>@&SHMT </p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SHIP </p>
+  		</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>Sub-Total</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SUBT2 </p>
+  		</div>
+    </div>
+    <div class="row">
+			<div class="col-xs-9">
+				<p>Tax</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+				<p>@&STAX </p>
+			</div>
+    </div>
+    <div class="row" style="border-top:1px solid #dcdcdc; padding-top:10px;">
+  		<div class="col-xs-9">
+  			<p><strong>Order Total</strong></p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p style="font-weight: bold;">@&TOTT </p>
+  		</div>
+    </div>
+  </div>
+  <div class="col-xs-12">@&SGNUP &nbsp;</div>
+</div>
+
+<!--End:closeconfirm-->
+
+<!--Seg:openvas-->
+<div class="customizations">
+    <span class="customization-heading">Customizations Added</span>
+<!--End:openvas-->
+
+<!--Seg:vasapp-->
+            <span class="customizable-product">+ @&APPLICATION </span>
+            <ul>@&QUESTIONS </ul>
+<!--End:vasapp-->
+
+<!--Seg:closevas-->
+</div>
+<!--End:closevas-->
+
+<!--Seg:signup-->
+<div class="row">
+  <div class="col-xs-12">
+    <h4>Save time on your next order</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>Enjoy these benefits by creating an account:</p>
+    <ul>
+      <li>Save billing and shipping preferences</li>
+      <li>Access to order status and history</li>
+      <li>Create wish lists for convenient shopping</li>
+      <li>Save proof of occupation & save time on verification process</li>
+    </ul>
+  <div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-8 col-xs-10">
+    <label for="SIPSWD">Password*</label>
+    <input type="password" class="form__input full no-outline" name="SIPSWD" value="@&SIPSWD " id="SIPSWD" autocomplete="off" size="15">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-8 col-xs-10">
+    <label for="SIPSWDC">Confirm Password*</label>
+    <input type="password" class="form__input full no-outline" name="SIPSWDC" value="@&SIPSWDC " id="SIPSWDC" autocomplete="off" size="15">
+  </div>
+</div>
+<div class="row" style="padding-top:10px;">
+  <div class="col-xs-12">
+    <a  class="btn btn--blue btn_md" href="javascript:void(0)" onclick="submit_form('f','SIGNUP');">Sign Up</a>
+  </div>
+</div>
+
+<!--End:signup-->
+
+<!--Seg:useCCOnFile-->
+					<div class="col-md-12 ccSection" style="margin:10px 0 10px 0;@&DSPCC ">
+                      <label class="form__checkbox">
+                        @&SIONFL <span class="fake-checkbox"></span>Use credit card on file (@&XXCCNO )<a href="javascript:void(0)" onclick="submit_form('f','DELETECC')">Delete</a>
+                      </label>
+                    </div>
+<!--End:useCCOnFile-->
+
+<!--Seg:saveCCOnFile-->
+	  <div class="col-md-12 ccSection" style="margin:10px 0 10px 0;@&CCDSP ">
+                      <label class="form__checkbox">
+                        @&SIUPOF <span class="fake-checkbox"></span>@&SAVE &nbsp;Credit Card On File@&HUPOF </label>
+                    </div>
+<!--End:saveCCOnFile-->
+
+
+<!--Seg:Upload-->
+				<div id="closeDialog"><img onclick="javascript:chkRstr();" src="/images/users_icon_delete.jpg"/></div>
+          <div id="uploadBody">
+           <iframe style="border: none;height: 250px;width: 100%;" src="/CGBCUPLD?PAMODE=*ENTR&PMFILE=FPOECNTMP&PMFKEY=@&FKEY "></iframe>
+          </div>
+<!--End:Upload-->
+
+<!--Seg:rstrPopup-->
+<div id="rstrBody">
+     @&ERR <table  border="0" cellpadding="2" cellspacing="2">
+         <tr>
+           <td colspan="2" align="left">
+            <ul style="background:none; list-style: none;">
+             <li>@&FMSG  <a href="/pages/idrestrict" target="_blank">View credential requirements and upload instructions</a></li>
+             <li>&nbsp;</li>
+             <li>&nbsp;</li>
+             <li>@&UPLOAD </li>
+             <li>@&FURL </li>
+             <li>&nbsp;</li>
+             <li><b><u>Uploaded Credentials:</u></b> </li>
+             @&FILES <li>&nbsp;</li>
+             <li><table><tr><td style="vertical-align:top;">@&SIRSTRCHK </td><td>@&FDMS </td></tr></table></li>
+             <li>&nbsp;</li>
+             <li><table><tr><td>&nbsp;&nbsp;</td><td>The ID can be submitted to id@galls.com or by fax to 866-290-3389.</td></tr></table></li>
+             <li>&nbsp;</li>
+             <li style="text-align: center;"><button onclick="setSIRSTRCHK();$('#btn-place-order')[0].click();" class="button2 SUMBIT" title="Confirm and Submit" type="button"><span><span>Confirm and Submit</span></span></button></li>
+            </ul>
+          </td>
+         </tr>
+       </table>
+  </div>
+<!--End:rstrPopup-->
+
+<!--Seg:files-->
+
+          <li>@&X &nbsp;@&DESC </li>
+
+<!--End:files-->
+
+<!--Seg:ajaxStartValues-->
+**STARTVALUES**
+<!--End:ajaxStartValues-->
+
+<!--Seg:ajaxF2V-->
+@&FLD !=!@&VAL $_$
+<!--End:ajaxF2V-->
+
+<!--Scripts.....Scripts.....Scripts.....-->
+
+<!--Seg:kountPixel-->
+<iframe width="1" height="1" frameborder="0" scrolling="no" src="@&HOST /logo.htm?m=@&MRID &s=@&HDID ">
+   <img width="1" height="1" src="@&HOST /logo.gif?m=@&MRID &s=@&HDID ">
+</iframe>
+<!--End:kountPixel-->
+
+<!--Seg:paypalJS-->
+<script>
+window.paypalCheckoutReady = function () {
+  paypal.checkout.setup('@&PPID ', {
+    environment: '@&PPEV ',
+    click: function (event) {
+      event.preventDefault();
+      $.ajax({
+        url: '/CGBCCART?PAMODE=*CHNG&PMACTN=SETEXPCHECKOUT&PMAMT='+$("#SICHPP").val()+'&PMPUNO='+$("#SIPUNO").val()+'&PMPANO='+$("#SIPANO").val(),
+        async: false,
+        success: function(token) {
+          if (token == "ERROR") {
+            paypal.checkout.closeFlow();
+           $(".btn-place-order").attr("disabled",true);
+          }
+          else {
+            var ua = window.navigator.userAgent;
+            var options = new Array();
+            if(ua.indexOf('MSIE ') >= 0 || ua.indexOf('Trident/') >= 0 || ua.indexOf('Edge/') >= 0) {
+              options['showMiniB'] = false;
+            }
+            paypal.checkout.startFlow(token,options);
+          }
+        },
+        error: function() {
+          paypal.checkout.closeFlow();
+          showPlaceOrder();
+        }
+      });
+    },
+    condition: function() {
+
+	  showWait("B");
+	  var chpp = parseFloat($("#SICHPP").val());
+	  var restrict = chkRstr();
+      if (isNaN(chpp)) chpp = 0;
+      if (restrict || $("[name='SISLPI']:checked").val() != "P" || chpp <= 0) {
+        if(restrict)
+			return false;
+		else
+			 placeOrder();
+      } else {
+
+        saveGC();
+        return true;
+      }
+    },
+    button: 'btn-place-order'
+  });
+}
+</script>
+<script src="//www.paypalobjects.com/api/checkout.js" async></script>
+<!--End:paypalJS-->
+
+
+<!--Seg:CartJS-->
+  resx.event="shopping+cart";
+  resx.itemid='@&STYLES1';
+<!--End:CartJS-->
+
+<!--Seg:CartTracking-->
+<!-- Listrak Analytics Script Source-->
+<script type="text/javascript">
+        var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+        (function (d, s, id, tid, vid) {
+            var js, ljs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+            js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+            ljs.parentNode.insertBefore(js, ljs);
+        })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+</script>
+
+ <!-- Listrak Analytics Submit Tracking Click -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+	_ltk.Click.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+
+<!-- Listrak Shopping Cart Abandonment -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+		_ltk.SCA.Stage = @&STAG ;
+		@&STYLES2 var u = window.location.href.replace(/http[s]?\:\/\/[a-zA-Z0-9\.\:]+\//,'');
+	    u = (u.indexOf('/')<0)?'':'/'+u.substring(0,u.indexOf('/'));
+	    _ltk.SCA.Source = u;
+		_ltk.SCA.CaptureEmail('SIEMAL');
+	    _ltk.SCA.SetCustomer('@&EMAL ', '@&FNAM ', '@&LNAM ');
+    	_ltk.SCA.CartLink = '@&CHNO ';
+    	_ltk.SCA.Meta1 = '@&QTY ';
+	    _ltk.SCA.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+<!-- end Listrak Shopping Cart Abandonment -->
+
+<!--End:CartTracking-->
+
+<!--Seg:CartTracking0-->
+<!-- Listrak Analytics Script Source-->
+<script type="text/javascript">
+        var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+        (function (d, s, id, tid, vid) {
+            var js, ljs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+            js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+            ljs.parentNode.insertBefore(js, ljs);
+        })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+</script>
+ <!-- Listrak Analytics Submit Tracking Click -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+	_ltk.Click.Submit();
+        });
+</script>
+<!-- Listrak Shopping Cart Abandonment -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+		@&STYLES2 });
+</script>
+<!-- end Listrak Shopping Cart Abandonment -->
+
+<!--End:CartTracking0-->
+
+<!--Seg:OpenTracking-->
+<script src="/js/vendor.js" type="text/javascript"></script>
+<script>
+function getGoogle(ohno){
+   $.ajax({
+                 url: '/cgi/CGBCCART',
+			          type: 'post',
+            dataType: 'html',
+               async: false,
+                data: {
+                      SIAJAXMODE: 'Y' ,
+                      SIAJAXACTN: 'GOOGLE',
+                      SIOHNO: ohno
+                      },
+             success: function (html) {
+                      if(html=='found')
+                        fireGoogle = false;
+                      else
+                        fireGoogle = true;
+                      }
+           })
+
+   }
+</script>
+<script type="text/javascript">
+   var fireGoogle;
+   getGoogle('@&OHNO ');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '@&GAID ', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview'@&PGVW );
+
+  ga('require', 'ecommerce');
+  ga('ecommerce:addTransaction', {
+  'id': '@&OHNO ',                                  // Transaction ID. Required.
+  'affiliation': '@&URL ',                                 // Affiliation or store name.
+  'revenue': '@&TOT ',                        // Grand Total.
+  'shipping': '@&FRT ',                             // Shipping.
+  'tax': '@&TAX '                       // Tax.
+  });
+<!--End:OpenTracking-->
+
+<!--Seg:ItemTracking-->;
+   ga('ecommerce:addItem', {
+  'id': '@&OHNO ',                                  // Transaction ID. Required.
+  'name': '@&DESC ',    // Product name. Required.
+  'sku': '@&SKU ',                       // SKU/code.
+  'category': '@&CATG ',  // Category or variation, should be category purchased from, not necessarily primary category.
+  'price': '@&PRIC ',                               // Unit price.
+  'quantity': '@&QTY '                   // Quantity.
+  });
+<!--End:ItemTracking-->
+
+<!--Seg:CloseTracking-->
+ 	if(fireGoogle){
+ 	ga('ecommerce:send');
+ 	}
+</script>
+<!--End:CloseTracking-->
+
+<!--Seg:OpenTurnToTracking-->
+  TurnToFeed.addFeedPurchaseOrder( {
+  'orderId': '@&OHNO ',                                  // order ID. Required.
+  'email': '@&EMAL ',                                 // Cust Email. Required
+  'firstName': '@&FNAM ',                        // Cust First Name. Required
+  'lastName': '@&LNAM ',                        // Cust Last Name. Required
+  'deliveryDate': '@&DLDT ',                        // delivery date
+  'postalCode': '@&ZIP '                             // zip
+  });
+</script>
+<!--End:OpenTurnToTracking-->
+
+<!--Seg:ItemTurnToTracking-->
+  <script type="text/javascript">
+   TurnToFeed.addFeedLineItem( {
+  'title': '@&DESC ',                                  // Product name. Required.
+  'url': '@&URL ',                           // Product url. Required.
+  'sku': '@&STYL ',                       // SKU/code. Required.
+  'price': '@&PRIC ',                               // Unit price. Required.
+  'itemImageUrl': '@&IMG ',                   // item image url.
+  'lineItemId': '@&ODNO '                   // line item id.
+  });
+</script>
+<!--End:ItemTurnToTracking-->
+
+<!--Seg:turnToOBJ-->
+<link rel="stylesheet" href="//static.www.turnto.com/tra4_3/tra.css" />
+<script type="text/javascript">
+   var turnToConfig = {
+      siteKey: "@&SITEKEY ",
+      orderConfFlowPauseSeconds:3,
+      commentCaptureShowUsername: true,
+      postPurchaseFlow:true
+};
+
+</script>
+<script type="text/javascript" src="//static.www.turnto.com/tra4_3/turntoFeed.js"></script>
+<script type="text/javascript" src="//static.www.turnto.com/traServer4_3/trajs/@&SITEKEY /tra.js"></script>
+<!--End:turnToOBJ-->
+
+<!--Seg:CloseTurnToTracking-->
+  <script type="text/javascript">
+ 	  TurnToFeed.sendFeed();
+  </script>
+  <script type="text/javascript">
+<!--End:CloseTurnToTracking-->
+
+
+<!--Seg:OpenNetElixir-->
+  resx.event="purchase+confirmation";
+  resx.itemid='@&STYLES1';
+  resx.qty='@&QTY1';
+  resx.price='@&EXTP1';
+  resx.total='@&TOT ';
+  resx.customerid='@&EMAL ';
+  resx.transactionid='@&OHNO ';
+</script>
+
+<!-- Listrak Analytics Script Source-->
+<script type="text/javascript">
+        var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+        (function (d, s, id, tid, vid) {
+            var js, ljs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+            js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+            ljs.parentNode.insertBefore(js, ljs);
+        })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+</script>
+
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+		_ltk.Click.Submit();
+/********** End Custom Code **********/
+        });
+
+</script>
+
+<!-- Listrak Conversion Tracking -->
+  <script type="text/javascript">
+  (function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+  else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+  if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+    _ltk.Order.SetCustomer('@&EMAL ', '@&FNAM ', '@&LNAM ');
+    _ltk.Order.OrderNumber = '@&OHNO ';
+    _ltk.Order.ItemTotal = @&SUBT ;
+    _ltk.Order.ShippingTotal = @&FRT ;
+    _ltk.Order.TaxTotal = @&TAX ;
+    _ltk.Order.HandlingTotal = 0;
+    _ltk.Order.OrderTotal = @&TOT ;
+    @&LISTITEM _ltk.Order.Submit();
+  /********** End Custom Code **********/
+  });
+  </script>
+<!-- Listrak Conversion Tracking -->
+
+<!-- Listrak Shopping Cart Abandonment -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+    _ltk.SCA.Stage = @&STAG ;
+    _ltk.SCA.OrderNumber = '@&OHNO ';
+	_ltk.SCA.CaptureEmail('SIEMAL');
+    _ltk.SCA.SetCustomer('@&EMAL ', '@&FNAM ', '@&LNAM ');
+    _ltk.SCA.CartLink = '@&CHNO ';
+    _ltk.SCA.Meta1 = '@&QTY ';
+    _ltk.SCA.Submit();
+/********** End Custom Code **********/
+ });
+</script>
+<!-- end Listrak Shopping Cart Abandonment -->
+
+
+<!-- CJ Conversion Tracking Code -->
+<img src='//www.emjcd.com/u?CID=1519052&OID=@&OHNO &TYPE=340156@&STYLES2&CURRENCY=USD&METHOD=IMG' height="1" width="20">
+<!-- end CJ Conversion Tracking Code -->
+
+
+<!-- Pricegrabber -->
+<img src="//www.pricegrabber.com/conversion.php?retid=22721@&STYLES4">
+<!-- end Pricegrabber -->
+
+<!-- Shareasale Conversion Tracking Code -->
+<img src="//shareasale.com/sale.cfm?amount=@&TOT &tracking=@&OHNO &transtype=sale&merchantID=30666" width="1" height="1">
+<!-- end Shareasale Conversion Tracking Code -->
+
+<!-- Google Code for PURCHASE Conversion Page -->
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1066800001;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "FFFFFF";
+if ('@&TOT ') {
+	var google_conversion_value = '@&TOT ';
+}
+var google_conversion_label = "PURCHASE";
+//-->
+</script>
+<script language="JavaScript"
+	src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<img height=1 width=1 border=0 src="//www.googleadservices.com/pagead/conversion/1066800001/?value=@&TOT &label=PURCHASE&script=0">
+</noscript>
+<!-- end Google Code for PURCHASE Conversion Page -->
+
+<!-- Shopzilla tracking -->
+<script language="javascript">
+<!--
+	/* Performance Tracking Data */
+	var mid            = '235770';
+	var cust_type      = '';
+	var order_value    = '@&TOT ';
+	var order_id       = '@&OHNO ';
+	var units_ordered  = '@&QTY ';
+//-->
+</script>
+<script language="javascript" src="//www.shopzilla.com/css/roi_tracker.js"></script>
+<!-- end Shopzilla tracking -->
+
+
+<!-- NexTag tracking -->
+<script type="text/javascript">
+<!--
+/* NexTag ROI Optimizer Data */
+var id = '4802221';
+var rev = '@&TOT ';
+var order = '@&OHNO ';
+var cats = '@&PIPECATG';
+var prods = '@&PIPESTYL';
+var units = '@&PIPEQTY';
+//-->
+</script>
+<script type="text/javascript" src="//imgsrv.nextag.com/imagefiles/includes/roitrack.js"></script>
+<!-- end NexTag tracking -->
+<!-- BoldChat Conversion Tracking HTML v5.00 (Website=galls.com,ConversionCode=Galls Conversion Tracking) -->
+<script type="text/javascript">
+  var _bcvma = _bcvma || [];
+  _bcvma.push(["setAccountID", "537275693450078804"]);
+  _bcvma.push(["addConversion", {
+    ConversionAmount: '@&TOT ',
+    ConversionRef: "@&OHNO ",
+    ConversionInfo: "",
+    VisitName: "@&FNAM  @&LNAM ",
+    VisitPhone: "@&TEL ",
+    VisitEmail: "@&EMAL ",
+    VisitRef: "@&PUNO ",
+    VisitInfo: "",
+    CustomUrl: "",
+    WebsiteDefID: "532629387624954113",
+    ConversionCodeID: "1563537590316377814"
+  }]);
+  if(window.pageViewer && pageViewer.conversion) pageViewer.conversion(_bcct[_bcct.length-1]);
+  var bcLoad = function(){
+    if(window.bcLoaded) return; window.bcLoaded = true;
+    var vms = document.createElement("script"); vms.type = "text/javascript"; vms.async = true;
+    vms.src = ('https:'==document.location.protocol?'https://':'http://') + "vmss.boldchat.com/aid/537275693450078804/bc.vms4/vms.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vms, s);
+  };
+  if(window.pageViewer && pageViewer.load) pageViewer.load();
+  else if(window.addEventListener) window.addEventListener('load', bcLoad, false);
+  else window.attachEvent('onload', bcLoad);
+</script>
+<noscript>
+<a href="//www.boldchat.com" title="Live Chat Software" target="_blank"><img alt="Live Chat Software" src="https://vms.boldchat.com/aid/537275693450078804/bc.vci?ccid=1563537590316377814&amp;wdid=532629387624954113&amp;ca=&amp;cr=&amp;ci=&amp;vr=&amp;vn=&amp;vi=&amp;ve=&amp;vp=&amp;iq=&amp;curl=" border="0" width="1" height="1" /></a>
+</noscript>
+<!-- /BoldChat Conversion Tracking HTML v5.00 -->
+
+
+<!-- Google Code for Order Confirmation Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066800001;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "_Wv_CJ_t-QEQgafY_AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1066800001/?label=_Wv_CJ_t-QEQgafY_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- end Google Code Remarketing List -->
+
+<!-- Shopping.com -->
+<script type="text/javascript">
+var _roi = _roi || [];
+_roi.push(['_setMerchantId','503229']); //required
+_roi.push(['_setOrderId','@&OHNO ']); //unique customer order ID
+_roi.push(['_setOrderAmount','@&SUBT ']); //order total without tax and shipping
+_roi.push(['_setOrderNotes','']); //notes on order, up to 50 characters
+
+<!--End:OpenNetElixir-->
+
+<!--Seg:shoppingLine-->
+_roi.push(['_addItem',
+'@&SKU ', //Merchant sku
+'@&DESC ', //Product name
+'@&WTNO ', //Category id
+'@&CATG ', //Category name
+'@&PRIC ', //Unit price
+'@&QTY ', //Item quantity
+]);
+<!--End:shoppingLine-->
+
+<!--Seg:closeShopping-->
+_roi.push(['_trackTrans']);
+</script>
+<script type="text/javascript" src="//stat.dealtime.com/ROI/ROI2.js"></script>
+<!-- end Shopping.com -->
+<script type='text/javascript'>
+<!--End:closeShopping-->
+
+
+<!--Seg:GoogleRemarket-->
+</script>
+<!-- Google Code for Shopping Cart Abandoned Customers Remarketing List -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066800001;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "b9O8CM_n-QEQgafY_AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1066800001/?label=b9O8CM_n-QEQgafY_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- end Google Code Remarketing List -->
+<script type='text/javascript'>
+<!--End:GoogleRemarket-->
+
+<!--Seg:GoogleRemarket1-->
+</script>
+
+<!-- Google Code for Checkout Funnel Abandoned Customers Remarketing List -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066800001;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "0q_7CMfo-QEQgafY_AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;"> <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1066800001/?label=0q_7CMfo-QEQgafY_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- end Google Code Remarketing List -->
+<script type='text/javascript'>
+<!--End:GoogleRemarket1-->
+
+
+<!--Seg:SLICartTrackOpen-->
+<script type="text/javascript">
+var sliSparkJsHost = (("https:" == document.location.protocol) ? "https://"� : "http://"�);
+document.write(unescape("%3Cscript src='" + sliSparkJsHost + "b.sli-spark.com/sli-spark.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script language="javascript" type="text/javascript">
+var spark= new SliSpark("1999", "1");
+spark.setPageType("checkout-confirmation");
+spark.addTransaction("@&OHNO ","@&PUNO ","@&TOT ","@&FRT ","@&TAX ");
+<!--End:SLICartTrackOpen-->
+
+<!--Seg:SLIItemTrack-->
+spark.addItem("@&SKU ","@&QTY ","@&COST ");
+<!--End:SLIItemTrack-->
+
+<!--Seg:SLICartTrackClose-->
+spark.writeTrackCode();
+spark.writeTransactionCode();
+</script>
+<!--End:SLICartTrackClose-->
+
+<!--Seg:openYAMIGO-->
+<!--yourAmigo JS tracking-->
+<script type="text/javascript">
+var _yaq = _yaq || [];
+_yaq.push(["setVar",
+            "tid","@&OHNO ",
+            "dv","@&TOTL ",
+            "ccy","USD",
+            "ctype","BUY"]);
+<!--End:openYAMIGO-->
+
+<!--Seg:closeYAMIGO-->
+_yaq.push(["setVar","cust","37758269"]);
+_yaq.push(["convert"]);
+(function(){
+var _ya = document.createElement("script"); _ya.type="text/javascript";
+_ya.async = true;
+_ya.src = ("https:" == document.location.protocol ?
+              "https://support" : "http://trace") +
+              ".youramigo.com/37758269/tracev2.js";
+var _yas = document.getElementsByTagName("script")[0];
+_yas.parentNode.insertBefore(_ya, _yas);
+}());
+</script>
+<!--yourAmigo JS tracking-->
+<!--End:closeYAMIGO-->
+
+<!--Seg:BingConf-->
+<!-- BingAds Conversion Tracking -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4017988"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+<script>
+window.uetq = window.uetq || [];
+window.uetq.push({ 'gv': @&TOT  }); // Pass the computed goal value
+</script>
+<!-- end BingAds Conversion Tracking -->
+<!--End:BingConf-->

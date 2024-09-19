@@ -1,0 +1,914 @@
+
+/* For Deal Destination and Top 300 styles static page */
+#category--label--for--mobile {
+	display: none;
+}
+#brand--label--for--mobile {
+	display: none;
+}
+/* End */
+
+
+/* ---FOR SLIDER IMAGE--- */
+/* Super Small: iPhone 5, Galaxy S5) */
+@media screen and (max-width: 374px) {
+	
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: -25px;
+		margin-left: -45px;
+		margin-bottom: -15px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: 0px;
+		margin-bottom: -10px;
+	}
+
+	/* To make it consistent with existing code */
+	.hero--image--container {
+		padding-top: 40px;
+	}
+
+
+	/* For Deal Destination and Top 300 styles static page */
+	.div--top--300--filter {
+		width: 265px;
+	}	
+	#category--label--for--mobile {
+		display: block;
+	}
+	#brand--label--for--mobile {
+		display: block;
+	}
+	#category--label--desktop {
+		display: none;
+	}
+	#brand--label--desktop {
+		display: none;
+	}
+
+	.div--dd--filter {
+		width: 280px;
+		background-image: none;
+	}
+	/* END */
+
+}
+
+/* iPhoneX, 6,7,8, Pixel 2, Pixel 2 XL */
+@media (min-width: 375px) and (max-width: 499px) {
+
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: -25px;
+		margin-left: -45px;
+		margin-bottom: -15px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: 0px;
+		margin-bottom: -10px;
+	}
+
+	/* To make it consistent with existing code */
+	.hero--image--container {
+		padding-top: 40px;
+	}
+
+
+	/* For Deal Destination and Top 300 styles static page*/
+	.div--dd--filter {
+		width: 315px;
+		background-image: none;
+	}
+	.div--top--300--filter {
+		width: 340px;
+	}
+
+
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 500px) and (max-width: 575.98px) {
+	
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: -20px;
+		margin-left: -45px;
+		margin-bottom: -10px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -30px;
+		margin-bottom: -10px;
+	}
+
+	/* To make it consistent with existing code */
+	.hero--image--container {
+		padding-top: 40px;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: -20px;
+		margin-left: -45px;
+		margin-bottom: -15px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -30px;
+		margin-bottom: -10px;
+	}
+
+	/* To make it consistent with existing code */
+	.hero--image--container {
+		padding-top: 40px;
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: -20px;
+		margin-left: -45px;
+		margin-bottom: 5px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -35px;
+		margin-bottom: -10px;
+	}
+
+	/* To make it consistent with existing code */
+	.hero--image--container {
+		padding-top: 40px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+	
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: 20px;
+		margin-left: -45px;
+		margin-bottom: 25px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -38px;
+		margin-bottom: 35px;
+	}
+
+	/* For Navigation - Dropdown Animation*/
+	.sub-nav.active {height: 410px;}
+	.mini-hero {height: 90px;}
+
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) and (max-width: 1999.98px) {
+
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: 20px;
+		margin-left: -45px;
+		margin-bottom: 20px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -45px;
+		margin-bottom: 35px;
+	}
+
+	/* For Navigation - Dropdown Animation*/
+	.sub-nav.active {height: 450px;}
+	.mini-hero {height: 105px;}
+
+}
+
+/* Extra large devices (large desktops, 2000px and up) */
+@media (min-width: 2000px) {
+	
+	/* Slider Image - Category Pages*/
+	.image--slider--row--category {
+		margin-top: 20px;
+		margin-left: -45px;
+		margin-bottom: 25px;
+	}
+
+	/* Slider Image - Brand Pages*/
+	.image--slider--row {
+		margin-top: -10px;
+		margin-left: -45px;
+		margin-bottom: 35px;
+	}
+
+	/* For Navigation - Dropdown Animation*/
+	.sub-nav.active {height: 530px;}
+	.mini-hero {height: 140px;}
+	
+}
+
+
+/* FOR VIP TOOLTIP */
+#my--vip {
+	margin-left: 0px;
+}
+.samtooltip {
+	/* display: inline; */
+	position: relative;
+	z-index: 999;
+}
+/* Hide Tooltip Content */
+.samtooltip-content {
+	position: absolute;
+	z-index: 9999;
+	width: 515px;
+	left: -50px;
+	top: 10px;
+	/* margin: 0 0 20px -180px; */
+	/* bottom: 100%; */
+	text-align: left;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+/* Show Tooltip Content */
+.samtooltip:hover .samtooltip-content {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+	transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+}
+.samtooltip-text {
+	/* font-size: 0.68em; */
+	line-height: 1.35;
+	display: block;
+	margin-top: 8px;
+	background-color: #FFF;
+	color: #000;
+	font-weight: normal;
+	text-transform: none;
+	border-radius: 2px;
+}
+
+.samtooltip-showbox .samtooltip-text {
+	padding: 5px;
+}
+.samtooltip-text a {
+	font-weight: bold;
+}
+.samtooltip-a:hover {
+	text-decoration: underline;
+	color: #007ac2;
+}
+/* END FOR VIP */
+
+
+/* FOR AGENCY*/
+/* Hide Tooltip Content */
+.agencytooltip-content {
+	position: absolute;
+	width: 370px;
+	/* left: -338px; */
+	left: -368px;
+	top: 18px;
+	/* margin: 0 0 20px -180px; */
+	/* bottom: 100%; */
+	text-align: left;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+	font-family:'Rajdhani',Helvetica,sans-serif;
+}
+.agencytooltip:hover .agencytooltip-content {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+	transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+}
+.agencytooltip-text-agency {
+	/* font-size: 0.68em; */
+	line-height: 1.35;
+	display: block;
+	margin-top: 8px;
+	background-color: #FFF;
+	color: #000;
+	font-weight: normal;
+	text-transform: none;
+	border-radius: 2px;
+}
+.agencytooltip-showbox .agencytooltip-text-agency {
+	padding: 5px;
+}
+.agencytooltip-showbox .agencytooltip-text-agency a {
+	color: #007ac2;
+	font-weight: bold;
+	padding-right: 0;
+	line-height: 1.35;
+	font-size: 15px;
+}
+.agencytooltip-showbox .agencytooltip-text-agency a:hover {
+	text-decoration: underline;
+}
+/* END FOR AGENCY*/
+
+
+
+
+
+/* FOR BRAND PAGE - HERO IMAGE*/
+.my--brand--page {
+	padding: 20px 0 20px 0;
+}
+
+
+/* BROSSAM - H1 Over Image */
+.h1--overimage {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    font-size: 65px;
+    letter-spacing: -5px;
+    font-weight:620;
+    color: #ffffff;
+}
+/* END - H1 Over Image */
+
+
+/* FOR NAVIGATION */
+.sub-nav {
+    background-color: #EBEBEB;
+    box-sizing: border-box;
+    left: auto; 
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: auto; 
+	z-index: 1000;
+	margin-left: -10px;
+	
+}
+.sub--nav--title {
+	font-weight: bold;
+	color: #007ac2;
+}
+.sub-nav-category {
+	padding-left: 30px; 
+	padding-right: 30px;
+}
+.main-nav {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+/* For customized Deals*/
+.sub-nav.activeDeals {
+	height: 260px; 
+}
+
+
+/* MOBILE Cleanup */
+@media (max-width: 800px) {
+	/* For Profession Pages */
+	.professions_container {
+		margin-left: -10px;
+	}
+	.professions_container p {
+		text-align: justify;
+		font-size: 18px;
+	}
+	.professions_container h1 {
+		font-size: 28px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	.professions_container h2 {
+		font-size: 22px;
+	}
+	.professions_container h3 {
+		font-size: 20px;
+	}
+	.professions_container .brand__grid--below {
+		background-color: #fff;
+		margin-left: -10px;
+		margin-right: -20px;
+	}
+	.professions_container .brand__body {
+		background-color: transparent;
+	}
+	/* END Profession Pages */
+
+	/* For deal destination page */
+	.my--h1--responsive {
+		font-size: 28px;
+	}
+	.my--h2--responsive {
+		font-size: 26px;
+	}
+	.my--h3--responsive {
+		font-size: 24px;
+	}
+	/* END deal destination page */
+
+}
+@media (max-width: 500px) {
+	/* For Profession Pages */
+	.professions_container {
+		margin-left: -10px;
+	}
+	.professions_container p {
+		text-align: justify;
+		font-size: 14px;
+	}
+	.professions_container h1 {
+		font-size: 24px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	.professions_container h2 {
+		font-size: 22px;
+	}
+	.professions_container h3 {
+		font-size: 20px;
+	}
+	.professions_container .brand__grid--below {
+		background-color: #fff;
+		margin-left: -15px;
+		margin-right: -25px;
+	}
+	.professions_container .brand__body {
+		background-color: transparent;
+	}
+	/* END Profession Pages */
+
+	/* For deal destination page */
+	.my--h1--responsive {
+		font-size: 24px;
+	}
+	.my--h2--responsive {
+		font-size: 22px;
+	}
+	.my--h3--responsive {
+		font-size: 20px;
+	}
+	/* END deal destination Pages */
+	
+	/* Additional Changes */
+	/* .mobile-filter {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	#product-gridp {
+		padding-left: 5px;
+		padding-right: 5px;
+	} */
+	.searchpromo1 {
+		padding-left: 10px;
+	}
+	.searchpromo1 h2 {
+		font-size: 22px;
+	}
+	.searchpromo1 h3 {
+		font-size: 20px;
+	}
+	.searchpromo1 h4 {
+		font-size: 20px;
+	}
+}
+
+
+
+/* Holster Page - Search Button */
+.my--btnsearch {
+	display: inline-block;
+	font-size: 14px; 
+	line-height: 0; 
+	width: 100%; 
+	height: 28px;
+	color: #fff;
+	background-color: #2e6da4;
+	margin-bottom: 0;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	white-space: nowrap;
+}
+.my--holster--filter {
+	font-family: "Rajdhani",Helvetica,sans-serif;
+}
+.my--holster--label {
+	display: inline-block;
+	max-width: 100%;
+	font-weight: bold;
+	cursor: pointer;
+	margin-right: 1em !important;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+}
+.sam--dropbox {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	color: #000;
+}
+.sam--dropbox option {
+	color: #000;
+}
+/* For Holster Configurator */
+#holster--configurator {
+	margin-left: -10px; 
+	font-family:'Rajdhani'; 
+	font-weight: 600; 
+}
+
+/* For Help Center Page*/
+.background_one {
+	position: absolute;
+	left:0;
+	width: 100%;
+    background: url(https://www.galls.com/photos/gar/help-center/background/bg_first.jpg);
+    background-attachment: fixed;
+	height: 57vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: -40px;
+    overflow: hidden;
+    color: #ffffff;
+	text-align: center;
+	z-index: -3;
+}
+.background_two {
+	position: absolute;
+	left:0;
+	height: 520px;
+	width: 100%;
+    background: url(https://www.galls.com/photos/gar/help-center/background/hc_background2.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #ffffff;
+	text-align: center;
+	z-index: -2;
+}
+.background_three {
+	position: absolute;
+	left:0;
+	height: 520px;
+	width: 100%;
+    background: url(https://www.galls.com/photos/gar/help-center/background/hc_background3.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #ffffff;
+	text-align: center;
+	z-index: -1;
+}
+.myiconbox:hover .sam--box {
+    box-shadow: 5px 10px 30px 20px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.myiconbox a:hover {
+    color: #007ac2;
+}
+.sam--boxes .sam--box {
+    /* padding: 40px 30px; */
+    position: relative;
+    overflow: hidden;
+    background: #ebebeb;
+	box-shadow: 5px 10px 30px 0 rgba(68, 88, 144, 0.2);
+	padding: 15px;
+	border-radius: 0px 40px;
+	border-left: 15px solid #0086d4;
+}
+.sam--boxes .sam--box h6 {
+	margin-top: -8px;
+}
+.sam--boxes .sam--box--big {
+    /* padding: 40px 30px; */
+    position: relative;
+    overflow: hidden;
+    background: #ebebeb;
+    box-shadow: 5px 10px 30px 0 rgba(68, 88, 144, 0.2);
+	padding: 15px;
+	border-radius: 0px 40px;
+	border-left: 15px solid #0086d4;
+}
+.sam--boxes .description {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.sam--section--one {
+    animation: samFadeInTransition ease-in-out 1s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+@keyframes samFadeInTransition { 
+	0% { 
+		margin-top: calc(53vh - 340px);
+		opacity: 0; 
+	} 
+	100% { 
+		margin-top: calc(57vh - 420px);
+		opacity: 1; 
+	 } 
+} 
+.hc--profession {
+	overflow: hidden;
+	cursor: default;
+}
+.hc--profession img {
+	display: block;
+	position: relative;
+	-webkit-transition: all .4s linear;
+	transition: all .4s linear;
+}
+.hc--profession:hover img {
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.hc--profession--title {
+	position: absolute;
+	bottom: -9px;
+	width: 100%;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+.hc--profession--title h3 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 1.5rem;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+}
+.hc--profession .hc--profession--animation {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-transition: all .4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.hc--profession:hover .hc--profession--animation {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.hc--profession .hc--profession--link {
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: transparent;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	padding: 5px 10px;
+}
+.hc--profession:hover .hc--profession--link {
+	margin-top: 35px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-webkit-transition-delay: .2s;
+	transition-delay: .2s;
+}
+.hc--profession:hover .hc--profession--title {
+
+	bottom: -10px;
+	padding-left: 0px;
+	padding-right: 0px;
+    
+}
+.hc--profession--p {
+	background-color: #000000a9;
+	margin: 5px 5px 10px 0;
+	color: #ffffff;
+	padding: 5px;
+	text-align: justify;
+	padding-bottom: 0px;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.background_one {
+        background-attachment: scroll;
+        margin-top: -130px;
+	}
+	.background_two {
+        background-attachment: scroll;
+        margin-top: -20px;
+	}
+	.background_three {
+        background-attachment: scroll;
+        margin-top: 0px;
+	}
+	@keyframes samFadeInTransition { 
+		0% { 
+			margin-top: 60px;
+			opacity: 0; 
+		} 
+		100% { 
+			margin-top: 0px;
+			opacity: 1; 
+		 } 
+	} 
+	.sam--section--two {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	.sam--section--three {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	@keyframes samFadeInTransition2 {  
+		100% { 
+			margin-top: 80px;
+		 } 
+	}
+	.hc--profession {
+		margin-top: 10px;
+	} 
+	.hc--h3 {
+		font-size: 22px;
+		margin-top: 8px;
+	}
+	.sam--boxes .sam--box {
+		border-radius: 0px 30px;
+	}
+	.sam--boxes .sam--box--big {
+		border-radius: 0px 30px;
+	}
+}
+
+@media (min-width: 412px) and (max-width: 768px) {
+    .background_one {
+        background-attachment: scroll;
+        margin-top: -10px;
+	}
+	.background_two {
+        background-attachment: scroll;
+        margin-top: -20px;
+	}
+	.background_three {
+        background-attachment: scroll;
+        margin-top: -20px;
+	}
+	@keyframes samFadeInTransition { 
+		0% { 
+			margin-top: 60px;
+			opacity: 0; 
+		} 
+		100% { 
+			margin-top: 0px;
+			opacity: 1; 
+		 } 
+	}
+	.sam--section--two {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	.sam--section--three {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	@keyframes samFadeInTransition2 {  
+		100% { 
+			margin-top: -10px;
+		 } 
+	} 
+	.hc--profession {
+		margin-top: 10px;
+	} 
+	.hc--h3 {
+		margin-top: 0px;
+	}
+	.sam--boxes .sam--box {
+		border-radius: 0px 20px;
+	}
+	.sam--boxes .sam--box--big {
+		border-radius: 0px 20px;
+	}
+	.sam--boxes iframe {
+		height: 820px;
+	}
+}
+
+@media (max-width: 411px) {
+    .background_one {
+        background-attachment: scroll;
+        margin-top: -10px;
+	}
+	.background_two {
+        background-attachment: scroll;
+        margin-top: -20px;
+	}
+	.background_three {
+        background-attachment: scroll;
+        margin-top: -20px;
+	}
+	@keyframes samFadeInTransition { 
+		0% { 
+			margin-top: 60px;
+			opacity: 0; 
+		} 
+		100% { 
+			margin-top: 0px;
+			opacity: 1; 
+		 } 
+	}
+	.sam--section--two {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	.sam--section--three {
+		animation: samFadeInTransition2 ease-in-out 1s;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards; 
+	}
+	@keyframes samFadeInTransition2 {  
+		100% { 
+			margin-top: -10px;
+		 } 
+	} 
+	.hc--profession {
+		margin-top: 10px;
+	} 
+	.hc--h3 {
+		font-size: 22px;
+		margin-top: 0px;
+	}
+	.sam--boxes .sam--box {
+		border-radius: 0px 20px;
+	}
+	.sam--boxes .sam--box--big {
+		border-radius: 0px 20px;
+	}
+	.sam--boxes iframe {
+		height: 820px;
+	}
+
+	/* Added in Wufoo2.css
+	@media (max-width: 411px) {
+		form li.leftThird, form li.middleThird {
+			width: 100% !important;
+		}
+		form li.middleThird { 
+			margin-left: -2px !important;
+		}
+		form li.rightThird {
+			width: 98% !important;
+			float: left;
+		}
+	} */
+}
+/* END - For Help Center Page*/
+

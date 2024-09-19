@@ -1,0 +1,275 @@
+
+.topWorkwearImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.topWorkwearImage a {
+    color: black;
+}
+
+main.contact-us {
+    margin: 0;
+}
+
+.container {
+    /* width: 100%; */
+}
+
+.ProdAssort {
+    width: 95%;
+    margin: auto;
+}
+
+.SectionLast {
+    width: 95%;
+    margin: auto;
+}
+
+.SectionLast h2 {
+    margin-bottom: 5px;
+}
+
+.SectionLast p {
+    font-size: 16px !important;
+    margin-bottom: 15px;
+}
+
+.topWorkwearImage .topimgText h2 {
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.topWorkwearImage .topimgText {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.rizeenPopularCatTitle {
+    margin: 30px 0 20px 0;
+}
+
+.jumpSection {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.jumpSection ul {
+    list-style: none;
+}
+
+.jumpSection ul a {
+    font-size: 18px;
+}
+
+.SectionjumpSec {
+    background-color: #f2f2f2;
+}
+
+.SecBgimgNslide {
+    padding: 25px 0;
+}
+
+.SecBgimgNslide > div {
+    width: 92.5%;
+    margin: auto;
+}
+
+.SectionConstruct {
+    padding: 50px 0 25px 0;
+}
+
+.SectionCommercial {
+    padding: 25px 0 50px 0;
+}
+
+.SectionHomeServ {
+    background-color: #FAFAFA;
+}
+
+.SecBgimgNslide .bgimg {
+    height: 295px;
+    margin: 10px 0;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.SecBgimgNslide .bgimg h2 {
+    position: absolute;
+    bottom: 20px;
+}
+
+.SecBgimgNslide .bgimg p {
+    font-size: 16px !important;
+}
+
+.carouselsBtm {
+    padding: 25px 0;
+}
+
+.SeccarouselsBtm .wrapper {
+    width: 97%;
+    margin: auto;
+}
+
+.SeccarouselsBtm h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.bgcolorf2 {
+    background-color: #f2f2f2;
+}
+
+.SectionPeerPerspect {
+    width: 93% !important;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #007ac3;
+}
+
+.SectionPeerPerspect .card {
+    border: 0;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+.SectionPeerPerspect .card-content {
+    text-align: center;
+    color: white;
+}
+
+
+.SectionPeerPerspect .slick-prev:before, .SectionPeerPerspect .slick-next:before {
+    color: white;
+}
+
+.SectionConstruct .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.SectionHomeServ .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.SectionCommercial .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.wrapper{
+  width:100%;
+  text-align:center;
+}
+.carousel{
+  width:90%;
+  margin:0px auto;
+}
+.slick-slide{
+  margin:10px 20px;
+}
+.slick-slide img{
+    width: 100%;
+    margin: auto;
+    max-height: 200px;
+    max-width: 150px;
+}
+.slick-prev, .slick-next{
+  border-radius: 15px;
+  border-color: transparent;
+}
+.slick-prev:before, .slick-next:before {
+    font: 30px 'FontAwesome';
+    color: black;
+}
+.slick-prev:before {
+    content: '\f053';
+}
+.slick-next:before {
+    content: '\f054';
+}
+.card{
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 15px #ccc;
+  padding: 10px;
+  background-color: white;
+}
+.card-title {
+    color: black;
+    font-size: 16px;
+}
+.card-body{
+  width: 100%;
+  vertical-align: top;
+}
+.card-content{
+  text-align: left;
+  padding-top: 10px;
+  color: #333;
+}
+.card-text{
+  font-size: 14px;
+  font-weight: 300;
+}
+.card-content div.flex-grid {
+    margin: 5px 0 10px 0;
+}
+.card-content a.flex-grid {
+    margin: 15px 0 0 0;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .jumpSection {
+    width: 60%;
+  }
+  .slick-slide {
+    margin: 10px 10px;
+  }
+  .SecBgimgNslide > div {
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+    .SecBgimgNslide .bgimg h2 {
+        position: static;
+        padding-top: 10px;
+    }
+    .SecBgimgNslide .bgimg {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  .jumpSection {
+    width: 90%;
+  }
+    .topWorkwearImage img {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .jumpSection .col-xs-4 {
+        width: 100%;
+    }
+    .jumpSection li {
+        text-align: center;
+    }
+    .SectionPeerPerspect .slick-prev:before {
+        margin-right: -20px;
+    }
+    .SectionPeerPerspect .slick-next:before {
+        margin-left: -20px;
+    }
+}

@@ -1,0 +1,224 @@
+<!--Seg:Open-->
+<style>
+  .custom_table_header {
+    background-color: #03538C;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: none;
+    text-align:center;
+  }
+
+    @media screen and (max-width: 767px){
+    .table-responsive {
+      border: none;
+    }
+  }
+
+  @media only screen and (max-width: 620px){
+    #no-more-tables table, 
+    #no-more-tables thead, 
+    #no-more-tables tbody, 
+    #no-more-tables th, 
+    #no-more-tables td, 
+    #no-more-tables tr { 
+      display: block; 
+    }
+    #no-more-tables thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    }
+    #no-more-tables tr { border: 1px solid #ccc; }
+    
+    #no-more-tables td { 
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+      white-space: normal;
+      text-align:left;
+    }
+
+    #no-more-tables td:before { 
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      text-align:left;
+      font-weight: bold;
+    }
+    #no-more-tables td:before { content: attr(data-title); }
+    .trNoRecs {
+      border: none !important;
+    }
+    .tdNoRecs {
+      padding: 8px !important;
+      text-align: center !important;
+      border: none !important;
+    }
+    .orderLM {
+      padding:30px 0px;
+    }
+    .orderLM__wrapper {
+      padding: 20px 5px;
+    }
+  }
+
+  #nextPrevBtn .f-submit {
+    -webkit-appearance: button;
+    border-radius: 0;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<form name="f" method="POST" action="@&PGM ">
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIACNO" value="@&SIACNO ">
+  <input type="hidden" name="SIVIEW" value="@&SIVIEW ">
+  <input type="hidden" name="SIFROD" value="@&SIFROD ">
+  <input type="hidden" name="SITOOD" value="@&SITOOD ">
+
+  <main class="account">
+  
+      <div class="container">
+  <div class="account__header">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="account__headline">Welcome @&FNAM &nbsp;@&LNAM !</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <p class="account__description">@&FNAM , from this page you can review order status and history and make updates to your account. All fields are required below even if you choose to keep your current password, current email, or current user name.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="account__body">
+      
+      <div class="row row-eq-height row-v-center account__body--tabs">
+          <div class="col-xs-12 col-md-10">
+            <ul class="list-tabs">
+              <li><a href="/CGBCMRSL"><span class="hidden-xs-sm">Your </span>Shopping Lists</a></li>
+              <li class="active"><a href="/order-status">Order History<span class="hidden-xs-sm"></span></a></li>
+              <li><a href="/CGBCACC"><span class="hidden-xs-sm">Your </span>Profile</a></li>
+			  <li @&HIDEFR ><a href="/CGBCLMFR">Fittings Request</a></li>
+            </ul>
+          </div>
+        </div>
+<!--End:Open-->
+
+<!--Seg:openTable-->
+        <div class="row">
+          <div class="col-md-6 col-sm-12" >
+            <div class="form-group" style="padding:10px;">
+              <label for="Customer PO">Customer PO #</label><input type="text" name="SICPON" value="@&SICPON " id="SICPON" maxlength="25" class="form__input full no-outline">
+            </div>
+            <div class="form-group" style="padding:10px;">
+              <label for="Within">Within</label>&nbsp;&nbsp;<span>@&SIWTN </span>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12" style="padding:10px;">
+            <div class="form-group" style="">
+              <label for="From Date">From Date</label><input type="date" name="SITODT" value="@&SITODT " id="SITODT" maxlenth="10" class="form__input full no-outline" placeholder="YYYY/MM/DD" onfocus="clearDateDrop();">
+              <label for="To Date" style="padding-top:10px;">To Date</label><input type="date" name="SIFRDT" value="@&SIFRDT " id="SIFRDT" maxlength="10" class="form__input full no-outline" placeholder="YYYY/MM/DD" onfocus="clearDateDrop();">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group col-sm-12 col-md-4 col-md-offset-4" style="text-align:center;">
+              <button class="btn btn--orange btn_submit btn-block" onclick="submit_form('f','GO')">Search</button>
+            </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="table-responsive">
+              <section id="no-more-tables">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="custom_table_header">Order #</th>
+                      <th class="custom_table_header">Cust PO #</th>
+                      <th class="custom_table_header">Order Date</th>
+                      <th class="custom_table_header">Status</th>
+                      <th class="custom_table_header">View Order</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+<!--End:openTable-->
+
+<!--Seg:tableRow-->
+                    <tr>
+                      <td nowrap align="center" data-title="Order #" style="color:#386b9d;"><strong>@&OHNO </strong></td>
+                      <td nowrap align="center" data-title="Cust PO #" style="color:#386b9d;"><strong>@&CPON </strong></td>
+                      <td nowrap align="center" data-title="Order Date" style="color:#386b9d;"><strong>@&DATE </strong></td>
+                      <td nowrap align="center" data-title="Status" style="color:#386b9d;"><strong>@&STAT </strong></td>
+                      <td nowrap align="center" data-title="View Order" style="color:#386b9d;"><strong>@&VIEW </strong></td>                  
+                    </tr>
+<!--End:tableRow-->
+
+<!--Seg:norecs-->
+                    <tr class="trNoRecs">
+                      <td class="tdNoRecs" colspan="5" align="center" style="color:#386b9d"><strong>No Orders Found</strong></td>
+                    </tr>
+<!--End:norecs-->
+
+<!--Seg:closeTable-->                
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div nowrap ><p id="nextPrevBtn">@&PREV &nbsp;&nbsp;&nbsp; @&NEXT </p></div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!--End:closeTable-->
+
+<!--Seg:closePage-->
+  <input type="hidden" name="SIDATET" value="@&SIDATET ">
+  <input type="hidden" name="SIDATEB" value="@&SIDATEB ">
+  <input type="hidden" name="SIOHNOT" value="@&SIOHNOT ">
+  <input type="hidden" name="SIOHNOB" value="@&SIOHNOB ">
+  <input type="hidden" name="SIPAGE" value="@&SIPAGE ">
+
+ <!-- @&SQL -->
+</form>
+
+<script>
+  function clearDateDrop(){
+    document.querySelector('select[name="SIWTN"]').value = "";
+  }
+</script>
+<!--End:closePage-->

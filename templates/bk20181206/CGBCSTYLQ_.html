@@ -1,0 +1,200 @@
+<!--Seg:Main-->
+<script type="text/javascript">
+UnbxdAnalyticsConf = window.UnbxdAnalyticsConf || {};
+UnbxdAnalyticsConf['pid'] = "@&SISTYL "; //uniqueId being passed to UNBXD
+</script>
+<main class="product">
+<form id="QuickViewForm">
+<input type="hidden" id="SIAJAXACTN" name="SIAJAXACTN" value="">
+<input type="hidden" id="SIAJAXMODE" name="SIAJAXMODE" value="">
+<input type="hidden" value="@&SISTYL " name="SISTYL" id="style">
+<input type="hidden" value="@&SICMPLT " name="SICMPLT" id="SICMPLT">
+<input type="hidden" name="SIEDP" value="@&SIEDP " id="SIEDP">
+
+<div class="row">
+            <div class="col-md-6 hidden-xs hidden-sm">
+            <div class="product__gallery hidden-xs hidden-sm">
+             <div class="product__thumbnails @&DSPTH ">
+              
+              <a href="javascript:void(0)" class="product__thumbnails--arrow prev btn-block text-center" id="product__thumbnails--prev"><svg class="icon caret--black-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#caret--black-up"></use></svg></a>
+              <div class="product__thumbnails--scroll" id="product__thumbnails--scroll">
+                  <div  id="hiddenOverflow">
+                    @&ALTIMG  <!--GalleryImages-->
+                  </div>
+              </div>
+              <a href="javascript:void(0)" class="product__thumbnails--arrow next" id="product__thumbnails--next"><svg class="icon caret--black-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#caret--black-down"></use></svg></a>
+            </div>
+            <div class="product__gallery--image @&DSPNG ">
+              <img src="@&HOST @&PATH @&ZIMG " class="product__gallery--active" id="product__gallery--active" alt="@&FALT ">
+            </div>
+              <!--<img class="img-responsive" src="@&HOST @&PATH @&FIMG " alt="@&H1SC "> -->
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="product__title">
+                <h6>@&BRND </h6>
+                <h3>@&H1SC </h3>
+                <div class="product__title--item hidden-xs">
+                  <ul class="list-separator">
+                    <li>Item# <span id="sku">@&STYL </span></li>
+                    <li><span id="mfgn">@&MFGN </span></li>
+                  </ul>
+                </div>
+              </div>
+              <h4 class="product__price discounted" id="priceMsg">@&PRIC </h4>
+              <ul class="product__links list-inline">
+               <li class="product__links--rating">
+                   @&RATING <a href="@&HOST /@&HREF ">Reviews</a>
+                </li>
+                <li>
+                  <a href="@&HOST /@&HREF ">Questions &amp; Answers</a>
+                </li>
+              </ul>
+              <div class="product__mobile-image visible-xs visible-sm">
+                <img src="@&HOST @&PATH @&ZIMG " alt="@&H1SC " class="img-responsive">
+              </div>
+              <div style="width:100%;">@&RSTR </div>
+              <div class="product__options  @&DSPOPTN ">
+                <div class="row row-eq-height row-v-center product__options--row">
+                  <div class="col-sm-4">
+                    <label class="mr-1 form__label">Qty</label>@&SIQTY </div>
+                  <div class="col-sm-8 @&DSPLC ">
+                    <label class="form__checkbox">
+                      @&SICLER <span class="fake-checkbox"></span>
+                      Show only markdown color/sizes
+                    </label>
+                  </div>
+                </div>
+                <div style="width:100%;float:left;margin:-10px 0 10px 0;">@&CLRC </div>
+                <input type="hidden" name="SIOPV1P" id="SIOPV1P" value="@&SIOPV1 ">
+                <input type="hidden" name="SIOPV2P" id="SIOPV2P" value="@&SIOPV2 ">
+                <input type="hidden" name="SIOPV3P" id="SIOPV3P" value="@&SIOPV3 ">
+                <!--OPV1/Color Section-->            
+            <div class="product__options--row @&DSPOPV1 ">
+              <div class="product__options--row-label">
+                <label class="form__label mr-1" id="origDesc1">@&OPD1 </label>
+                <label class="form__label black product__options--selected" id="product__options--color-selected">@&OPD1S </label>  
+              </div>
+              <ul class="product__options--list product__options--@&TYPE1  choices" data-text="product__options--color-selected" id="opv1UL">
+                @&BOXOPV1 <!--OPV1-->
+                <input type="hidden" name="SIOPV1" id="SIOPV1" class="styleOption" requ="@&REQ1 " mesg="@&OPD1 " value="@&SIOPV1 ">
+              </ul>
+            </div>
+<!--Opv2 Section-->             
+            <div class="product__options--row @&DSPOPV2 ">
+              <div class="product__options--row-label">
+                <label class="mr-1 form__label" id="origDesc2">@&OPD2 </label>
+                <label class="mr-1 form__label black" id="product__options--size">@&OPD2S </label>
+              </div>
+              <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size" id="opv2UL">
+                @&BOXOPV2 <!--OPV2-->
+                <input type="hidden" name="SIOPV2" id="SIOPV2" class="styleOption" requ="@&REQ2 " mesg="@&OPD2 " value="@&SIOPV2 ">
+              </ul>
+            </div>
+<!--Opv3 Section-->             
+            <div class="product__options--row @&DSPOPV3 ">
+              <div class="product__options--row-label">
+                <label class="mr-1 form__label" id="origDesc3">@&OPD3 </label>
+                <label class="mr-1 form__label black" id="product__options--size2">@&OPD3S </label>
+              </div>         
+              <h6 style="color:#007ac2" class="@&DSPHM " id="prehemmedMesg">Pre-hemmed Sizes<h6>              
+              <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size2" id="opv3UL">
+                @&BOXOPV3 <!--OPV3-->
+                <input type="hidden" name="SIOPV3" id="SIOPV3" class="styleOption" requ="@&REQ3 " mesg="@&OPD3 " value="@&SIOPV3 ">
+              </ul>
+              
+              <label for="SIHEMD"><h6 style="color:#007ac2" class="@&DSPHM ">Custom hemming&nbsp;&nbsp;   
+              <label class="form__checkbox" style="margin-bottom:-3px;" for="SIHEMD">                                    
+                  <input type="checkbox" name="SIHEMD" ID="SIHEMD" @&HEMD  value="Y" onchange="toggleHemming()">
+                  <span class="fake-checkbox"></span>                   
+                <small class="form__label" style=""><b>Please allow 3-4 days for hemming</b></small></label></h6></label>  
+              <ul class="product__options--list product__options--boxes product__options--size choices @&DSPHML " data-text="product__options--size2" id="opv3ULH">
+                @&OPV3HEM <!--HEMMING-->
+              </ul> 
+              <div id="hemmingMesg">@&HEMMSG </div>                                      
+            </div> 
+                <div class="product__options--row">
+                <span class="product__stock-warning" id="stockMsg">@&STKMSG </span>
+                <div class="product__options--ctas">
+                <!-- <div class="product__optionsctas hidden-xs-sm"> -->
+                  <a href="javascript:void(0)" onclick="addToCartQV()" class="btn btn_lg btn--orange" unbxdattr="AddToCart" unbxdparam_sku="@&SISTYL ">Add To Cart</a>
+                  <a href="javascript:void(0)" onclick="addToList('I','','@&SISTYL ');void(0)" class="btn btn_lg btn--white">Add To List</a>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </form>
+       </main>
+
+<style>
+  body.modal-open {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  body.platform-ios.modal-open {
+    position: fixed;
+  }
+</style>
+
+<script>
+  var scrollTopPosition = 0;
+  var lastKnownScrollTopPosition = 0;
+
+  $(document).ready(function(){
+    if( navigator.userAgent.match(/iPhone|iPad|iPod/i) ) {
+      $('body').addClass('platform-ios');
+      $(window).scroll(function () {
+        scrollTopPosition = $(document).scrollTop();
+      });
+      $('.modal').on('show.bs.modal', function () {
+        $('body').css('top', (scrollTopPosition * -1));
+        lastKnownScrollTopPosition = scrollTopPosition;
+      });
+      $('.modal').on('hidden.bs.modal', function () {
+        $('body').scrollTop(lastKnownScrollTopPosition);
+
+      });
+    }
+  });
+
+  function overflowIsHidden(node) {
+    var style = getComputedStyle(node);
+    return style.overflow === 'hidden' || style.overflowX === 'hidden' || style.overflowY === 'hidden';
+  }
+
+  function findNearestScrollableParent(firstNode) {
+    var node = firstNode;
+    var scrollable = null;
+    while(!scrollable && node) {
+      if (node.scrollWidth > node.clientWidth || node.scrollHeight > node.clientHeight) {
+        if (!overflowIsHidden(node)) {
+          scrollable = node;
+        }
+      }
+      node = node.parentNode;
+    }
+    return scrollable;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('touchmove', function(event) {
+      var owner = findNearestScrollableParent(event.target);
+      if (!owner || owner === document.documentElement || owner === document.body) {
+        event.preventDefault();
+      }
+    });
+  }, false);
+
+  // ['resize', 'orientationchange', 'scroll'].forEach(function(event) {
+  //   window.addEventListener(event, function() {
+  //     window.scrollTo(0, 0);
+  //   });
+  // });
+
+
+</script>
+
+
+<!--End:Main--> 

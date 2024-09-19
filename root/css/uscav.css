@@ -1,0 +1,264 @@
+.uscav ul {
+margin: 0px !important;
+padding: 0px !important;
+list-style-type: disc;
+list-style-position: outside;
+list-style-image: none;
+}
+.category_title,.category_title h2 {
+	color: #f99d2a;
+	text-transform: uppercase;
+	text-align: center;
+		font-family: 'Rajdhani', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+}
+.uscav_benefits {background-color: #ebebeb;padding: 15px 15px;margin-bottom:20px;}
+.uscav_benefits ul li {
+	display: inline-block;
+	width: 100%;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 600;
+	margin-bottom: 4px;
+	font-size: 15px;
+}
+.uscav_benefits .material-icons {
+	vertical-align: bottom;
+	margin-right: 3px;
+}
+.uscav {margin-top: 0px;font-size: 0;}
+#promo_banner {display: none !important;}
+.uscav_banner {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#303821+0,3d3e40+100 */
+background: #303821; /* Old browsers */
+background: -moz-linear-gradient(left, #303821 0%, #3d3e40 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #303821 0%,#3d3e40 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #303821 0%,#3d3e40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303821', endColorstr='#3d3e40',GradientType=1 ); /* IE6-9 */
+color: #fff;
+font-family: 'Rajdhani', sans-serif;
+font-size: 15px;
+font-weight: 600;
+height: 45px;
+text-align: center;
+padding: 13px 0px 0px 0px;
+}
+.uscav_banner_left {
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+margin-left: 20px;
+}
+.uscav_banner_right {
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+margin-right: 20px;
+font-size: 15px;
+}
+.uscav_banner_left {float: left;}
+.uscav_banner_right {float: right;}
+.uscav_banner img {
+	display: inline-block;
+	height: 20px;
+	vertical-align: top;
+}
+
+.uscav_small1 {
+width: 48%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-right: 2%;
+margin-bottom: 2%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_large1 {
+width: 100%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-bottom: 4%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_small2 {
+width: 48%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-left: 2%;
+margin-bottom: 2%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_smallm2 {margin-left:2%;margin-right:0%;margin-bottom: 4%;}
+.uscav_smallm1 {margin-left:0%;margin-right:2%;margin-bottom: 4%;}
+.uscav_large2 {
+width: 100%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-bottom: 4%;
+box-sizing: border-box;
+font-size: 0;
+}
+
+.uscav_large1 img, .uscav_small1 img,.uscav_large2 img, .uscav_small2 img,.uscav_brands ul li img, .uscav_topsellers ul li img {
+max-width: 100% !important;
+height: auto;
+display: block;
+margin: 0 auto;
+vertical-align: top;
+box-sizing: border-box;
+}
+.uscav_topsellers ul li {
+width: 25%;
+display: inline-block;
+text-align: center;
+margin-bottom: 20px;
+}
+.uscav_topsellers a {
+color: #2028ac;
+font-size: 13px;
+}
+.uscav_topsellers a:hover {
+color: #c90000;
+font-size: 13px;
+text-decoration: underline;
+}
+.uscav_brands ul li {
+width: 50%;
+display: inline-block;
+vertical-align: top;
+text-align: center;
+margin-bottom: 20px;
+}
+.uscav_title {
+font-family: 'Rajdhani', sans-serif;
+font-size: 32px;
+font-weight: 600;
+border-bottom: 1px solid #ddd;
+display: block;
+}
+.show_tiny {display: inline-block;}
+.hidden_tiny {display: none;}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+.uscav_banner{
+height:54px;
+font-size: 18px;
+}
+.uscav_benefits ul li {
+	width: 50%;
+}
+.uscav_banner img {
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+}
+.show_tiny {display: none;}
+.hidden_tiny {display: inline-block;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.category_title,.category_title h2 {
+	color: #f99d2a;
+	text-transform: uppercase;
+	text-align: center;
+		font-family: 'Rajdhani', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+}
+.uscav_brands ul li {
+width: 25%;
+
+}
+.uscav_banner{
+
+font-size: 22px;
+}
+.uscav_benefits ul li {
+	width: 50%;
+}
+.uscav_banner img {
+	display: inline-block;
+	height: 30px;
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.uscav_benefits ul li {
+	display: inline-block;
+	width: 33%;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 600;
+	margin-bottom: 4px;
+	font-size: 15px;
+}
+.uscav_brands ul li {
+width: 16.6%;
+}
+.uscav_benefits {background-color: #ebebeb;padding: 15px 40px;margin-bottom:20px;}
+}
+.uscav_small1 {
+width: 24%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-left: 2%;
+margin-bottom: 2%;
+margin-right: 0%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_large1 {
+width: 48%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-bottom: 2%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_small2 {
+width: 24%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-right: 2%;
+margin-left: 0%;
+margin-bottom: 2%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_large2 {
+width: 48%;
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin-bottom: 2%;
+box-sizing: border-box;
+font-size: 0;
+}
+.uscav_banner_right {
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+margin-right: 20px;
+font-size: 30px;
+}
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* Extra Extra large devices (1400px and up) */
+@media (min-width: 1400px) {
+
+
+}
+}

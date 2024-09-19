@@ -1,0 +1,308 @@
+<!--Seg:Open-->
+<script type="text/javascript">
+ function onfoc(){document.f.SIBZIP.hasFocus=true;}
+ function onfoc1(){document.f.SIBZIP.hasFocus=false;}
+ function geoFmt(city,sta,cnty,geo,zip){
+
+  if(document.f.SIBZIP.hasFocus )
+    {
+     document.f.SIBCTY.value=city;
+     document.f.SIBSTA.value=sta;
+     document.f.SIBZIP.value=zip;
+     document.f.SIBCNTY.value=cnty;
+     }
+      else
+    {
+     document.f.SISCTY.value=city;
+     document.f.SISSTA.value=sta;
+     document.f.SISZIP.value=zip;
+     document.f.SISCNTY.value=cnty;
+     }
+}
+</script>
+
+<style>
+.billship_custom {
+  color: black;
+}
+.new-acct {
+  padding: 30px 0;
+}
+.new-acct .container {
+  background-color: #fff;
+}
+.fldError {
+  color: red;float:left;
+}
+
+
+#message {
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#message p {
+  padding: 0px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2714";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #a94442;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\2716";
+}
+            
+
+
+
+
+</style>
+
+<form name="f" method="POST" action="@&PGM " novalidate>
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="@&SIRFNO ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIANON" value="@&SIANON ">
+  <input type="hidden" name="SICONF" value="@&SICONF ">
+  <input type="hidden" name="DSPLGIN" value="@&DSPLGIN ">
+  <input type="hidden" name="SIINTS" id="SIINTS" value="@&SIINTS ">
+
+  <main class="new-acct">
+    <div class="container">
+      <div class="wrapper">
+<!--End:Open-->
+
+<!--Seg:Main1-->
+        <div class="row-eq-height">
+          <div class="col-xs-12" style="text-align:center;">
+            <h3>Create New Account</h3>
+            <p class="new-acct__subtitle">Please select a User Name and Password. The user name and password must be unique. We suggest using your e-mail address as a user name.</p>
+          </div>
+        </div>
+        <br>
+        <div class="row row-eq-height">
+          <div class="col-md-6 left">            
+            <div class="form-group">
+              <label for="SIUSER">User Name*</label><input type="text" id="SIUSER" name="SIUSER" value="@&SIUSER " class="form__input full no-outline" required maxlength="50">
+            </div>
+			<div class="form-group" >
+              <label for="SIFSNM">First Name*</label><input type="text" name="SIFSNM" id="SIFSNM" value="@&SIFSNM " class="form__input full no-outline" required>
+            </div>
+            <p id="passerrorsp" style="display:none;">Correct the following items to continue:</p>
+            <ul id="passerrorsu" style="display:none;">
+              <li id="errorinval" style="display:none;"><u>Please enter a valid password.</u></li>
+              <li id="errormatch" style="display:none;"><u>The passwords you entered do not match.</u></li>
+            </ul> 
+            <div class="form-group">
+              <label for="SIPSWD">Password*</label><input type="password" id="SIPSWD" name="SIPSWD" value="@&SIPSWD " class="form__input full no-outline" required minlength="8" maxlength="50" onkeypress="handleEnterEventPassB(this, event, 'SAVE')" onkeyup="validPass('')" onblur="checkValidPass('N')">
+              <span class="fldError" id="invalpass" style="width:100%; font-weight:bold; color: red; display:none;"><small>Please enter a valid password</small></span>
+            </div>
+            <div class="form-group">
+              <label for="SIPSWDC">Confirm Password*</label><input type="password" id="SIPSWDC" name="SIPSWDC" value="@&SIPSWDC " class="form__input full no-outline" required minlength="8" maxlength="50" onkeypress="handleEnterEventPassB(this, event, 'SAVE')" onkeyup="validPass('')">
+            </div>
+
+            <div class="form-group">
+              <div id="message">
+                <h5 style="margin-bottom:5px">Password rules:</h5>
+                <p id="haslow" class="invalid" >A <b>lowercase</b> letter</p>
+                <p id="hascap" class="invalid" >A <b>capital (uppercase)</b> letter</p>
+                <p id="hasnum"class="invalid" >A <b>number</b></p>
+                <p id="hasspcl"class="invalid" >A <b>special character</b></p>
+                <p id="haschr8" class="invalid" >Minimum <b>8 characters</b></p>
+                <p id="matchp" class="invalid" ><b>Confirm</b> password</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 right">
+            <div class="form-group">
+              <label for="SIEMAL">Email Address*</label><input type="email" id="SIEMAL" value="@&SIEMAL " name="SIEMAL" class="form__input full no-outline" required>
+            </div>
+			<div class="form-group">
+              <label for="SILSNM">Last Name*</label><input type="text" name="SILSNM" id="SILSNM" value="@&SILSNM " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="SIPTNO">Profession*</label>&nbsp;&nbsp;<div>@&PTNO &nbsp;
+              <div class="col-xs-12">
+              <label for="radioIndiv" style="margin:15px 5px;" class="form__radio">
+                    <input type="radio" name="SITYPE" value="I" id="radioIndiv" onClick="checkType();" @&CHEK2 >
+                    <span class="fake-radio"></span>Individual
+              </label>
+              <label for="agency" style="margin:15px 5px;" class="form__radio">
+                    <input type="radio" name="SITYPE" value="A" id="agency" onClick="checkType()" @&CHEK1 >
+                    <span class="fake-radio"></span>Agency
+              </label>
+              </div>
+              </div>
+            </div>
+    
+			<div class="form-group">
+				<label class="form__checkbox">@&SISIGNUP <span class="fake-checkbox"></span>
+					<b>Sign me up to receive exclusive offers, promotions, and updates!</b> 
+				</label>                  
+            </div>
+			
+            <div id="hideShowAgency" style="display:@&DISP ">
+              <div class="form-group">
+                <label for="SIANAME">Agency Name*</label><input type="text" name="SIANAME" id="SIANAME" value="@&SIANAME " class="form__input full no-outline" maxlength="20">
+              </div>
+              <div class="form-group">
+                <label for="SIACCT">Account Number*</label><input type="text" name="SIACCT" id="SIACCT" value="@&SIACCT " class="form__input full no-outline" data-parsley-maxlength="20">
+              </div>
+              <div class="form-group">
+                <label for="SIPYOP">Allow Payment Option*</label>&nbsp;&nbsp;<div>@&PYOP &nbsp;</div>
+              </div>
+            </div>
+			
+			<div id="hideShowMilitary" style="display:@&DISPM ">
+              <div class="form-group">
+                <label for="SIBRSV">Branch of Service</label>&nbsp;&nbsp;<div>@&BRSV &nbsp;</div>
+              </div>
+              <div class="form-group">
+                <label for="SIRANK">Rank</label>&nbsp;&nbsp;<div>@&RANK &nbsp;</div>
+              </div>
+              <div class="form-group">
+                 <label for="SIENDT">Date of Entry</label><input type="date" name="SIENDT" value="@&SIENDT " id="SIENDT" maxlenth="10" class="form__input full no-outline" placeholder="YYYY/MM/DD">
+              </div>
+			</div>
+			
+          </div>
+        </div>
+        <hr>
+<!--End:Main1-->
+
+<!--Seg:Main2-->
+        <div class="row row-eq-height">
+          <div class="col-sm-12 col-md-4 col-md-offset-4" style="margin-bottom:20px;">
+            <a value="@&BTNNAME " class="btn btn_md btn-block btn--blue" href="javascript:void(0)" onclick="resetPasswordB()">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+function checkType(){
+  var agency = document.getElementById("agency");
+  var hideShow = document.getElementById("hideShowAgency");
+  if (agency.checked){
+    hideShow.style.display="block";
+  } else {
+    hideShow.style.display="none";
+  }
+}
+
+function checkMilitary(){
+  var indiv = document.getElementById("radioIndiv");
+  var ptno = document.getElementById("SIPTNO");
+  var hideShow = document.getElementById("hideShowMilitary");
+  if (indiv.checked @&CHEKPTNO ){
+    hideShow.style.display="block";
+  } else {
+    hideShow.style.display="none";
+  }
+}
+
+function copyAddress(){
+  document.f.SISFNM.value= document.f.SIFSNM.value;
+  document.f.SISLNM.value= document.f.SILSNM.value;
+  document.f.SISAD1.value= document.f.SIBAD1.value;
+  document.f.SISAD2.value= document.f.SIBAD2.value;
+  document.f.SISCTY.value= document.f.SIBCTY.value;
+  document.f.SISSTA.value= document.f.SIBSTA.value;
+  document.f.SISZIP.value= document.f.SIBZIP.value;
+  document.f.SISCNTY.value=document.f.SIBCNTY.value;
+  document.f.SISPTYP.value=document.f.SIBPTYP.value;
+  //document.f.SICCOD1.value=document.f.SIHCOD1.value;
+  //document.f.SICCOD2.value=document.f.SIHCOD2.value;
+  if (document.f.SIINTS.value=='Y') {
+	document.f.SISCTR.value=document.f.SIBCTR.value;
+  }
+  if (document.f.SIINTS.value=='Y' && document.f.SIBCTR.value!='US') {
+	document.f.SICTEL.value=document.f.SIHTEL.value;
+  }else{
+    document.f.SICCOD1.value=document.f.SIHCOD1.value;
+    document.f.SICCOD2.value=document.f.SIHCOD2.value;
+  }
+}
+
+(function runOnce(){
+  checkType();
+})();
+
+
+function resetPasswordB(){
+      var match = "";
+      validPass(match);
+      var check = validPass(match);
+      
+      if (check=='Y'){
+        submit_form('f','SAVE')
+      }else if (check=='I'){
+        document.getElementById("passerrorsp").style.display= '';
+        document.getElementById("passerrorsu").style.display= '';
+        document.getElementById("errorinval").style.display= '';
+        document.getElementById("errormatch").style.display= 'none';
+      }else if (check=='M'){
+        document.getElementById("passerrorsp").style.display= '';
+        document.getElementById("passerrorsu").style.display= '';
+        document.getElementById("errorinval").style.display= 'none';
+        document.getElementById("errormatch").style.display= '';
+      }else if (check=='B'){
+        document.getElementById("passerrorsp").style.display= '';
+        document.getElementById("passerrorsu").style.display= '';
+        document.getElementById("errorinval").style.display= '';
+        document.getElementById("errormatch").style.display= '';
+      }
+    }
+    
+    function handleEnterEventPassB(inField, e) {
+        var charCode;
+        if(e && e.which){
+            charCode = e.which;
+        }else if(window.event){
+            e = window.event;
+            charCode = e.keyCode;
+        }
+    
+        if(charCode == 13) {
+          resetPasswordB()
+        }
+    }
+
+
+</script>
+<!--End:Main2-->
+
+<!--Seg:country-->
+				<div class="form-group">
+					<label for="">*Country</label>&nbsp;&nbsp;<div>@&CTRY &nbsp;</div>
+				</div>
+           
+<!--End:country-->
+
+<!--Seg:Close-->
+</form>
+<!--End:Close-->
+
+
+ 

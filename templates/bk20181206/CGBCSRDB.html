@@ -1,0 +1,391 @@
+<!--Seg:Open-->
+<form name="f" method="POST" action="@&PGM ">
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SISTYL" value="@&SISTYL ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SICHNO" id="SICHNO" value="@&SICHNO ">
+
+  <main class="account">
+    <div class="container">
+<!--End:Open-->
+
+<!--Seg:Main-->    
+      <div class="account__header">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="account__headline">Welcome @&FNAM &nbsp;@&LNAM !</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <p class="account__description">@&FNAM , from this page you can review order status and history and make updates to your account. All fields are required below even if you choose to keep your current password, current email, or current user name.</p>
+          </div>
+        </div>
+      </div>
+      <div class="account__body">
+        <div class="row account__body--tabs">
+          <div class="col-xs-12">
+            <ul class="list-tabs">
+              <li><a href="CGBCMRSL"><span class="hidden-xs-sm">Your </span>Shopping Lists</a></li>
+              <li class="active"><a href="account.html"><span class="hidden-xs-sm">Your </span>Profile</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountProfession" aria-expanded="false" aria-controls="accountProfession" data-visibility="#mobileProfessionValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Profession</h4>
+              <p class="account__row--subtitle">Select your profession for your account</p>
+              <p class="account__value--mobile" id="mobileProfessionValue">&nbsp;&nbsp;@&PROF </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountProfession" aria-expanded="false" aria-controls="accountProfession" data-visibility="#desktopProfessionValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopProfessionValue">@&PROF </p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountProfession">
+            <div class="col-md-6 account__row--body">
+              <form action="javascript:void(0)" id="accountProfessionForm" data-parsley-validate="">
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">
+                    Choose your new profession<br>
+                    &nbsp;&nbsp; @&PTNO &nbsp;
+                  </label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" onclick="submit_form('f','SAVEPR')">save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountPassword" aria-expanded="false" aria-controls="accountPassword" data-visibility="#mobilePasswordValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">change password</h4>
+              <p class="account__row--subtitle">Choose a unique password to protect your account</p>
+              <p class="account__value--mobile" id="mobilePasswordValue">*******</p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountPassword" aria-expanded="false" aria-controls="accountPassword" data-visibility="#desktopPasswordValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopPasswordValue">*******</p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountPassword">
+            <div class="col-xs-12 col-md-5 account__row--body">
+              
+                <div class="form-group">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Passwords must be at least 6 characters.</label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current password <input class="form__input full no-outline" type="password" name="SIPSWD" value="" required="" id="SIPSWD"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new password <input class="form__input full no-outline" type="password" name="SIPSWDB" value="" required="" id="SIPSWDB"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Retype your new password <input class="form__input full no-outline" type="password" name="SIPSWDC" value="" required="" data-parsley-equalto="#new-password" data-parsley-error-message="Passwords do not match" id="SIPSWDC"></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" onclick="validatePassword();">save</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountEmailAddress" aria-expanded="false" aria-controls="accountEmailAddress" data-visibility="#mobileEmailAddressValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Email address</h4>
+              <p class="account__row--subtitle">Add or remove email addresses on your account</p>
+              <p class="account__value--mobile" id="mobileEmailAddressValue">@&SIEMAL </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountEmailAddress" aria-expanded="false" aria-controls="accountEmailAddress" data-visibility="#desktopEmailAddressValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopEmailAddressValue">@&SIEMAL </p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountEmailAddress">
+            <div class="col-md-6 account__row--body">
+              
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current email <input class="form__input full no-outline" type="email" name="SIEMAL" value="@&SIEMAL " required="" id="SIEMAL"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new email <input class="form__input full no-outline form-control" type="email" name="SIEMALB" required="" id="SIEMALB"></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" onclick="validateEmail()">save</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountUsername" aria-expanded="false" aria-controls="accountUsername" data-visibility="#mobileUsernameValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Username</h4>
+              <p class="account__row--subtitle">Create a unique username to protect your account</p>
+              <p class="account__value--mobile" id="mobileUsernameValue">@&SIUSERA </p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountUsername" aria-expanded="false" aria-controls="accountUsername" data-visibility="#desktopUsernameValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopUsernameValue">@&SIUSERA </p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountUsername">
+            <div class="col-md-6 account__row--body">
+              
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current username <input class="form__input full no-outline" type="text" name="SIUSERA" value="@&SIUSERA " required="" id="SIUSERA"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new username <input class="form__input full no-outline" type="text" name="SIUSERB" value="" required="" id="SIUSERB"></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue" onclick="validateUser()">save</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountShippingInformation" aria-expanded="false" aria-controls="accountShippingInformation" data-visibility="#mobileShippingInformationValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Shipping Information</h4>
+              <p class="account__row--subtitle">Choose a unique password to protect your account</p>
+              <p class="account__value--mobile" id="mobileShippingInformationValue">985 Rose Avenue, Oakland CA 94611</p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountShippingInformation" aria-expanded="false" aria-controls="accountShippingInformation" data-visibility="#desktopShippingInformationValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopShippingInformationValue">985 Rose Avenue, Oakland CA 94611</p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountShippingInformation">
+            <div class="col-md-6 account__row--body">
+              
+                <div class="row form-group">
+                  <div class="col-xs-10"><label class="form__label form__label--sans mw-100 fw-l dark-gray">First Name*<input class="form__input full no-outline" type="text" name="name-first" required=""></label></div>
+                  <div class="col-xs-2 col-md-2"><label class="form__label form__label--sans mw-100 fw-l dark-gray">MI<input class="form__input full no-outline" type="text" name="name-mi"></label></div>
+                  <div class="col-md-5"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Last Name*<input class="form__input full no-outline" type="text" name="name-last" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Business Name (for companies, agencies ro depts.)<input class="form__input full no-outline" type="text" name="business-name"></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Street Address*<input class="form__input full no-outline" type="text" name="street" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="address"></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Zip Code*<input class="form__input full no-outline" type="text" name="zip" required=""></label></div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">save</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountBillingInformation" aria-expanded="false" aria-controls="accountBillingInformation" data-visibility="#mobileBillingInformationValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">Billing Information</h4>
+              <p class="account__row--subtitle">Add or remove credit cards on your account</p>
+              <p class="account__value--mobile" id="mobileBillingInformationValue">VISA 08/06/20 -****-3456</p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountBillingInformation" aria-expanded="false" aria-controls="accountBillingInformation" data-visibility="#desktopBillingInformationValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopBillingInformationValue">VISA 08/06/20 -****-3456</p>
+            </div>
+          </div>
+          <div class="row collapse account__collapse" id="accountBillingInformation">
+            <div class="col-md-6 account__row--body">
+              
+                <div class="row form-group">
+                  <div class="col-xs-10"><label class="form__label form__label--sans mw-100 fw-l dark-gray">First Name*<input class="form__input full no-outline" type="text" name="name-first" required=""></label></div>
+                  <div class="col-xs-2 col-md-2"><label class="form__label form__label--sans mw-100 fw-l dark-gray">MI<input class="form__input full no-outline" type="text" name="name-mi"></label></div>
+                  <div class="col-md-5"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Last Name*<input class="form__input full no-outline" type="text" name="name-last" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Business Name (for companies, agencies ro depts.)<input class="form__input full no-outline" type="text" name="business-name"></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Street Address*<input class="form__input full no-outline" type="text" name="street" required=""></label></div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-7"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Address (Apt #, Suite #, Bldg., Floor)<input class="form__input full no-outline" type="text" name="address"></label></div>
+                  <div class="col-md-4 col-md-offset-1"><label class="form__label form__label--sans mw-100 fw-l dark-gray">Zip Code*<input class="form__input full no-outline" type="text" name="zip" required=""></label></div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">save</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row account__row">
+          <div class="row account__row--header">
+            <div class="col-xs-12 col-md-9 account__row--left">
+              <a class="account__mobile--toggle collapsed visible-xs-sm" role="button" data-toggle="collapse" href="#accountPhoneNumber" aria-expanded="false" aria-controls="accountPhoneNumber" data-visibility="#mobilePhoneNumberValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <h4 class="account__row--title">PHone Number</h4>
+              <p class="account__row--subtitle">Add a phone number in case you have trouble signing in</p>
+              <p class="account__value--mobile" id="mobilePhoneNumberValue">415-370-5456 - Mobile</p>
+            </div>
+            <div class="col-md-3 account__row--right hidden-xs-sm">
+              <a class="account__change--link collapsed" role="button" data-toggle="collapse" href="#accountPhoneNumber" aria-expanded="false" aria-controls="accountPhoneNumber" data-visibility="#desktopPhoneNumberValue">
+                <span class="collapsed">Change</span>
+                <span class="expanded">Close</span>
+              </a>
+              <p class="account__value--desktop" id="desktopPhoneNumberValue">415-370-5456 - Mobile</p>
+            </div>
+          </div>
+        </div>
+          <div class="row collapse account__collapse" id="accountPhoneNumber">
+            <div class="col-md-6 account__row--body">
+              
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your current phone number <input class="form__input full no-outline" type="tel" name="current-phone-number" value="" required="" data-parsley-type="number"></label>
+                </div>
+                <div class="form-group mxw-50">
+                  <label class="form__label form__label--sans mw-100 fw-l dark-gray">Type your new phone number <input class="form__input full no-outline" type="tel" name="new-phone-number" value="" required="" data-parsley-type="number"></label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn_md btn--blue">save</button>
+                </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+  function validatePassword(){
+    var currpass = document.getElementById("SIPSWD").value;
+    var newpass = document.getElementById("SIPSWDB").value;
+    var confpass = document.getElementById("SIPSWDC").value;
+    if (currpass === "" || newpass === "" || confpass ===""){
+      return;
+    } else {
+      submit_form('f','SAVEP');
+    }
+  }
+
+  function validateEmail(){
+    var curremal = document.getElementById("SIEMAL").value;
+    var newemal = document.getElementById("SIEMALB").value;
+    if (curremal === "" || newemal === ""){
+      return;
+    } else {
+      submit_form('f','SAVEE');
+    }
+  }
+
+  function validateUser(){
+    var currName = document.getElementById("SIUSERA").value;
+    var newName = document.getElementById("SIUSERB").value;
+    if (currName === "" || newName === ""){
+      return;
+    } else {
+      submit_form('f','SAVEU');
+    }
+  }
+</script>  
+<!--End:Main-->
+
+<!--Seg:Address-->
+<!--End:Address-->
+
+<!--Seg:Address2-->
+<!--End:Address2-->
+
+<!--Seg:Addrow-->
+<!--End:Addrow-->
+
+<!--Seg:Addrow2-->
+<!--End:Addrow2-->
+
+<!--Seg:noAddress-->
+<!--End:noAddress-->
+
+<!--Seg:Phone-->
+<!--End:Phone-->
+
+<!--Seg:Phonerow-->
+<!--End:Phonerow-->
+
+<!--Seg:noPhone-->
+<!--End:noPhone-->
+
+<!--Seg:Close-->
+</form>
+<!--End:Close-->
+
+<!--Seg:yourAmigo-->
+<!--yourAmigo JS --> 
+<script type="text/javascript">
+var _yaq = _yaq || [];
+_yaq.push(["setvar",
+            "tid","@&PUNO ",
+            "pid","",
+            "ctype","REG"]);
+            
+_yaq.push(["setVar","cust","37758269"]);
+_yaq.push(["convert"]);
+(function(){
+var _ya = document.createElement("script"); _ya.type="text/javascript";
+_ya.async = true;
+_ya.src = ("https:" == document.location.protocol ?
+              "https://support" : "http://trace") +
+              ".youramigo.com/37758269/tracev2.js";
+var _yas = document.getElementsByTagName("script")[0];
+_yas.parentNode.insertBefore(_ya, _yas);
+}());
+</script>
+<!--End:yourAmigo-->  

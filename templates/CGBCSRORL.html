@@ -1,0 +1,232 @@
+<!--Seg:Open-->
+<style>
+  .label__wrapper {
+    background-color: #fff;
+    color: #464646;
+    padding: 40px 15px;
+  }
+  .label__form {
+    padding: 30px;
+  }
+  main.label__form label {
+    color: black;
+    font-weight: normal;
+  }
+  main.label__form .heading {
+    color: black;
+    text-align: center;
+  }
+
+</style>
+<script type="text/javascript">
+
+ function geoFmt(city,sta,cnty,geo,zip){
+    document.f.SICITY.value = city;
+    document.f.SISTA.value  = sta;
+    document.f.SIZIP.value  = zip;
+    document.f.SIGEO.value  = geo;
+    //document.f.SICNTY.value  = cnty;
+	document.f.SICTID.value  = 'US';
+}
+
+function addr(index){
+$('#SIADR1').val($('#SIADR1H'+index).val());
+$('#SIADR2').val($('#SIADR2H'+index).val());
+$('#SIADR3').val($('#SIADR3H'+index).val());
+$('#SICITY').val($('#SICITYH'+index).val());
+$('#SIZIP').val($('#SIZIPH'+index).val());
+$('#SISTA').val($('#SISTAH'+index).val());
+}
+
+</script>
+
+<form name="f" method="POST" action="@&PGM " novalidate>
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIVIEW" value="@&SIVIEW ">
+  <input type="hidden" name="SIOHNO" value="@&SIOHNO ">
+  <input type="hidden" name="SIPUNO" value="@&SIPUNO ">
+  <input type="hidden" name="SIWSRC" value="@&SIWSRC ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIREC" value="@&SIREC ">
+  
+  <main class="label__form" style="padding:0;">
+    <div class="container">
+      <div class="label__wrapper">
+<!--End:Open-->
+
+<!--Seg:Address-->
+        <div class="row">
+          <div class="col-xs-12">
+            <span>@&MSG </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group heading">
+              <h4>Create an Online @&CARR  Return Label</h4>
+              <p>On this page you can create a @&CARR  label for returning products. Please complete the information below.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="SIFNAM">First Name*</label>
+              <input type="TEXT" class="form__input full no-outline" id="SIFNAM" name="SIFNAM" value="@&SIFNAM " maxlength="30" required>
+            </div>
+            <div class="form-group">
+              <label for="SILNAM">Last Name*</label>
+              <input type="text" class="form__input full no-outline" id="SILNAM" name="SILNAM" value="@&SILNAM " maxlength="30" required>
+            </div>
+            <div class="form-group">
+              <label for="SICNAM">Company Name</label>
+              <input type="text" class="form__input full no-outline" id="SICNAM" name="SICNAM" value="@&SICNAM " maxlength="30">
+            </div>
+            <div class="form-group">
+              <label for="SIHCOD1">Phone Number*</label><br>
+              <span style="font-weight:bold">(</span>
+              <input type="tel" class="form__input no-outline" id="SIHCOD1" size="3" name="SIHCOD1" value="@&SIHCOD1 " placeholder="xxx" maxlength="3" required>
+              <span style="font-weight:bold">)</span>
+              <input type="tel" class="form__input no-outline" id="SIHCOD2" size="8" name="SIHCOD2" value="@&SIHCOD2 " placeholder="xxx-xxxx" maxlength="8" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="SIADR1">Street*</label>
+              <input type="text" class="form__input full no-outline" id="SIADR1" name="SIADR1" value="@&SIADR1 " maxlength="60" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form__input full no-outline" id="SIADR2" name="SIADR2" value="@&SIADR2 " maxlength="60">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form__input full no-outline" id="SIADR3" name="SIADR3" value="@&SIADR3 " maxlength="60">
+            </div>
+            <div class="form-group">
+              <label for="SIZIP">Zip/Postal Code*</label>
+              <input type="text" class="form__input full no-outline" id="SIZIP" name="SIZIP" value="@&SIZIP " maxlength="10" required>
+              <input type="hidden" id="SIGEO" name="SIGEO" value="@&SIGEO ">
+            </div>
+            <div class="form-group">
+              <label for="SICITY">City*</label>
+              <input type="text" class="form__input full no-outline" id="SICITY" name="SICITY" value="@&SICITY " maxlength="25" required>
+            </div>
+            <div class="form-group">
+              <label for="SISTA" style="min-width:65px;">State*</label>&nbsp;&nbsp;<span>@&SISTA </span>
+            </div>
+            <div class="form-group">
+              <label for="SICTID" style="min-width:65px;">Country*</label>&nbsp;&nbsp;<span>@&SICTID </span>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding-top:20px;">
+          <hr style="width:90%;">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="SIRMA">RMA Number*</label>&nbsp;<a class="tipClass" style="float:none" title="RMA Number is your order number" href="javascript:void(0);" data-toggle="tooltip"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a>
+              <input type="text" class="form__input full no-outline" id="SIRMA" name="SIRMA" value="@&SIRMA " maxlength="15" required>
+            </div>
+            <div class="form-group">
+              <label for="SIBX#">Box Number*</label>&nbsp;<a class="tipClass" style="float:none" title="Each box returned requires a separate @&CARR  label, please indicate a box number above" href="javascript:void(0);" data-toggle="tooltip"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a>
+              <input type="text" class="form__input full no-outline" id="SIBX#" name="SIBX#" value="@&SIBX# " maxlength="9" required>
+            </div>
+            <div class="form-group">
+              <label for="SICTSZ">Box Size*</label>&nbsp;<a class="tipClass" style="float:none" title='Small(15" L x 9" W x 6" H up to 5 lbs.) Medium(21" L x 15" W x 8" H up to 10 lbs.) Large(25" L x 19" W x 16" H up to 20 lbs.)' href="javascript:void(0);" data-toggle="tooltip"><img border="0" src="/images/Help1.png" style="border:none;display:inline;" ></a>
+              &nbsp;&nbsp;<span>@&SICTSZ </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>A deduction from your return credits or refund amount will be made in an amount equal to our standard return shipping rate which is $10. If your return credit/refund is in an amount less than the applicable shipping cost, your original pay method will be charged the difference. Each box will incur the charge or deduction specified above.<br /><strong>Before printing @&CARR  labels, we suggest changing your page orientation to Landscape</strong>.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" style="text-align:center;">
+            <div class="form-group">
+              <a href="javascript:void(0)" onclick="submit_form('f','SUBMIT');" class="btn btn_xs btn--orange">Submit</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <span>@&SUGGL </span>
+          <span>@&SUGG </span>
+        </div>
+<!--End:Address-->
+
+<!--Seg:closePage-->
+      </div>
+    </div>
+  </main>
+</form>
+
+<script>
+  function validateLabelForm(){
+    var testForm = document.getElementById('mainForm');
+    if (testForm.checkValidity() === false){
+      return false;
+    } else {
+      submit_form('f','SUBMIT');
+    }
+  }
+</script>
+
+
+
+<script>
+  (function(funcName, baseObj) {
+    funcName = funcName || "docReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
+
+    function ready() {
+      if (!readyFired) {
+        readyFired = true;
+        for (var i = 0; i < readyList.length; i++) {
+          readyList[i].fn.call(window, readyList[i].ctx);
+        }
+        readyList = [];
+      }
+    }
+
+    function readyStateChange() {
+      if ( document.readyState === "complete" ) {
+        ready();
+      }
+    }
+
+    baseObj[funcName] = function(callback, context) {
+      if (typeof callback !== "function") {
+        throw new TypeError("callback for docReady(fn) must be a function");
+      }
+      if (readyFired) {
+        setTimeout(function() {callback(context);}, 1);
+        return;
+      } else {
+        readyList.push({fn: callback, ctx: context});
+      }
+      if (document.readyState === "complete") {
+        setTimeout(ready, 1);
+      } else if (!readyEventHandlersInstalled) {
+        if (document.addEventListener) {
+          document.addEventListener("DOMContentLoaded", ready, false);
+          window.addEventListener("load", ready, false);
+        } else {
+          document.attachEvent("onreadystatechange", readyStateChange);
+          window.attachEvent("onload", ready);
+        }
+        readyEventHandlersInstalled = true;
+      }
+    }
+  })("docReady", window);
+
+  docReady(function() {
+    $('[rel="tooltip"]').on('click', function () {
+      $(this).tooltip('hide')
+    })
+  });
+
+
+</script>
+<!--End:closePage--> 

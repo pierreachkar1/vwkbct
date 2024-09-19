@@ -1,0 +1,244 @@
+<!--Seg:Open-->    
+<script type="text/javascript">
+UnbxdAnalyticsConf = window.UnbxdAnalyticsConf || {};
+UnbxdAnalyticsConf['pid'] = "@&SISTYL "; //uniqueId being passed to UNBXD
+</script>
+<form name="f" id="styleForm" method="POST" action="@&PGM ">
+<main class="product">   
+  <input type="hidden" id="SIACTN" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIWTNO" id="SIWTNO" value="@&SIWTNO ">
+  <input type="hidden" id="style" name="SISTYL" value="@&SISTYL ">    
+  <input type="hidden" name="SICDNO"  id="SICDNO"  value="@&SICDNO ">
+  <input type="hidden" name="SISORE"  id="SISORE"  value="@&SISORE ">
+  <input type="hidden" name="SIINFO"  id="SIINFO"  value="@&SIINFO ">
+  <input type="hidden" id="imageList" name="imageList" value="">
+  <input type="hidden" id="thumbnailList" name="thumbnailList" value="">
+  <input type="hidden" id="imageListI" name="imageListI" value="">
+  <input type="hidden" id="thumbnailListI" name="thumbnailListI" value="">
+  <input type="hidden" id="noImageFound" name="noImageFound" value="">
+  <input type="hidden" id="drpActn"  value="">
+  <input type="hidden" name="SISRCHG" value="@&SISRCH " id="SISRCH">
+  <input type="hidden" name="SIAREDP" id="SIAREDP" value="">
+  <input type="hidden" name="SIARNAME" id="SIARNAME" value="">
+  <input type="hidden" name="SIAJAXMODE" id="SIAJAXMODE" value=""> 
+
+<!--End:Open-->
+
+
+<!--Seg:StyleMain-->
+<input type="hidden" name="SIEDP" value="@&SIEDP " id="SIEDP">
+<div class="container hidden-xs hidden-sm">
+      <div class="row">
+        <div class="col-sm-12">
+          <ol class="breadcrumb product__breadcrumb">
+            @&BRDCR <!--BreadCrumb-->
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="container product__header">
+      <div class="row">
+        <div class="col-md-6 left hidden-xs hidden-sm">
+          <div class="product__gallery hidden-xs hidden-sm">
+            <div class="product__thumbnails @&DSPTH ">
+              
+              <a href="javascript:void(0)" class="product__thumbnails--arrow prev btn-block text-center" id="product__thumbnails--prev"><svg class="icon caret--black-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-up"></use></svg></a>
+              <div class="product__thumbnails--scroll" id="product__thumbnails--scroll">
+                  <div  id="hiddenOverflow">
+                    @&ALTIMG  <!--GalleryImages-->
+                  </div>
+              </div>
+              <a href="javascript:void(0)" class="product__thumbnails--arrow next" id="product__thumbnails--next"><svg class="icon caret--black-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-down"></use></svg></a>
+            </div>
+            <div class="product__gallery--image @&DSPNG ">
+              <a href="javascript:void(0)" class="product__gallery--zoom" data-zoom="product__gallery--active" data-zoom-title="">
+                <svg class="icon zoom">
+                  <use xlink:href="images/sprite.svg#zoom"></use>
+                </svg>
+              </a>
+              <img src="@&DOMN @&PATH @&ZIMG " class="product__gallery--active" id="product__gallery--active" alt="@&ZALT ">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 right">
+          <div class="product__title">
+            <h6>@&BRND </h6>
+            <h3>@&H1SC </h3>
+            <div class="product__title--item">
+              Item# <span id="sku">@&STYL </span>&nbsp;<span id="mfgn">@&MFGN </span><!--Manuf.-->
+            </div>
+          </div>
+          <h4 class="product__price discounted" id="priceMsg" >@&PRIC </h4>
+          <span class="TurnToReviewsTeaser"></span>
+          <span class="TurnToItemTeaser"></span>
+  
+          <div class="product__mobile-slider visible-xs visible-sm" id="product__mobile-slider">
+            @&ALTIMGM  <!--GalleryImages-->
+          </div>
+          <div style="width:100%;float:left;">@&RSTR </div>
+          <div class="product__options @&DSPOPTN ">
+            <div class="row row-eq- row-v -center product__options--row">
+              <div class="col-md-3">
+                @&SIQTY <!--Qty DropDown-->
+              </div>
+
+          </div>
+        
+            @&COMPNT <!--Components-->         
+        
+           <div class="pull-left mw-100">
+                <span class="product__stock-warning" id="stockMsg">@&STKMSG </span>
+           </div>
+          <div class="product__options--row pull-left">
+                <div class="product__options--ctas hidden-xs-sm">
+                  <a href="javascript:void(0)" onclick="addToCartKit()" class="btn btn_lg btn--orange" unbxdattr="AddToCart" unbxdparam_sku="@&SISTYL ">Add To Cart</a>
+                  <a href="javascript:void(0)" onclick="addToList('I','','@&SISTYL ')" class="btn btn_lg btn--white">Add To List</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--SizeChartModal-->
+    <div class="modal size-chart" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="sizeChartModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="sizeChartModalLabel">Size Chart</h4>
+        </div>
+        <div class="modal-body">@&SIZEC </div>
+      </div>
+    </div>
+  </div> 
+  <input type="hidden" name="SIEDP" id="SIEDP" value="@&SIEDP ">
+   
+<!--End:StyleMain-->    
+    
+<!--Seg:longDescription-->
+    <div class="container">
+      <div class="product__details">
+        <div class="row">
+          <div class="col-md-8 product__details--left">
+            <h6 class="hidden-sm hidden-xs">Product Details</h6>
+            <a class="mobile_collapse--toggle collapsed visible-sm visible-xs" role="button" data-toggle="collapse" href="#productDetails" aria-expanded="false" aria-controls="productDetails"><h6>Details</h6></a>
+            <div class="mobile_collapse" id="productDetails">
+              <h3>@&H1SC </h3>
+              <p>@&INFO </p>
+            </div>  
+            <div class="product__specs">
+              <h6 class="hidden-sm hidden-xs">Product Specs</h6>
+              <a class="mobile_collapse--toggle collapsed visible-sm visible-xs" role="button" data-toggle="collapse" href="#productSpecs" aria-expanded="false" aria-controls="productSpecs"><h6>Specs</h6></a>
+              <div class="mobile_collapse" id="productSpecs">
+                <div class="row">                  
+                    @&BULT <!--Bullets-->                         
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Recommendations-->
+          <div class="col-md-4 product__details--right">
+            <h6 class="ta-c">Customers Also Purchased</h6>
+            <div class="product__also-purchased" data-ltk-merchandiseblock="4d834b52-95fd-4e7c-8add-a76bc6a9b87c">
+                  <script type="text/html">
+                      <div class="product__also-purchased--item">
+                      <a href="@Recommendation.LinkUrl"><img class="also-purchased__thumbnail" src="@(Recommendation.ImageUrl)" /></a>
+                        <div class="also-purchased__details">
+                          <span class="also-purchased__brand">@Recommendation.Brand</span>
+                          <a href="@Recommendation.LinkUrl"><span class="also-purchased__name">@Recommendation.Title</span></a>
+                        </div>
+                          <span class="also-purchased__price">$@Recommendation.Price</span>
+                      </div>
+                  </script>
+            </div>
+          </div>
+          <script type="text/javascript">
+            (function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+            else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+            if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+                /********** Begin Custom Code **********/
+                _ltk.Recommender.AddField("Brand");
+                _ltk.Recommender.AddField("Price");
+                _ltk.Recommender.AddField("StarRating");
+                _ltk.Recommender.AddField("RatingCount");
+                _ltk.Recommender.Render();
+                /********** End Custom Code **********/
+            });
+          </script>
+          <script type="text/javascript">
+            var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            (function (d, s, id, tid, vid) {
+                var js, ljs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+                js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+                ljs.parentNode.insertBefore(js, ljs);
+            })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+          </script>
+          <script type="text/javascript">
+            var imageRoot ="//www.galls.com/";
+          </script>
+          <!--Recommendations End-->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="product__customers">
+        <div id="TurnToChatterContent"></div>
+      </div>
+    </div>
+    <div class="product__qa">
+      <div class="container">
+        <h3><a name="qa_widget">Questions &amp; Answers</a></h2>
+        <div id="TurnToContent"></div>
+        <h3><a name="reviews_widget">Product Reviews</a></h2>
+        <div id="TurnToReviewsContent"></div>
+    </div>
+   </div>   
+<!--End:longDescription-->   
+
+<!--Seg:Close--> 
+<div class="product__mobile-cta">
+    <a href="javascript:void(0)" onclick="addToCartKit()" class="btn btn--orange" unbxdattr="AddToCart" unbxdparam_sku="@&STYL ">Add To Cart</a>
+    <a href="javascript:void(0)" onclick="addToList('I','','@&STYL ')" class="btn btn_lg btn--white">Add To List</a>
+  </div>
+  <input type="hidden" id="turntoKey" name="turntoKey" value="@&SITEKEY ">
+  <script type="text/javascript" src="/js/galls/stylepage.js"></script>
+  <script type="text/javascript" src="//static.www.turnto.com/traServer4_3/trajs/@&SITEKEY /tra.js"></script> 
+  <script type="text/javascript" src="//static.www.turnto.com/sitedata/@&SITEKEY /v4_3/@&STYL /d/itemjs"></script> 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538fa77131c2df3d" async="async"></script> 
+    <div class="modal zoom" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="zoomModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+          <img src="" class="img-zoom img-responsive" id="zoomImage">
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  </main>  
+</form>
+<!--End:Close-->
+
+<!--Seg:openComp-->
+  <div class="product__options--row">
+    <div class="product__options--row-label">
+<!--End:openComp-->
+
+<!--Seg:closeComp-->
+    </div>
+  </div>
+<!--End:closeComp--> 

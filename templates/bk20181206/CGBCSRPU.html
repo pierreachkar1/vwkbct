@@ -1,0 +1,237 @@
+<!--Seg:Open-->
+<script type="text/javascript">
+ function onfoc(){document.f.SIBZIP.hasFocus=true;}
+ function onfoc1(){document.f.SIBZIP.hasFocus=false;}
+ function geoFmt(city,sta,cnty,geo,zip){
+
+  if(document.f.SIBZIP.hasFocus )
+    {
+     document.f.SIBCTY.value=city;
+     document.f.SIBSTA.value=sta;
+     document.f.SIBZIP.value=zip;
+     document.f.SIBCNTY.value=cnty;
+     }
+      else
+    {
+     document.f.SISCTY.value=city;
+     document.f.SISSTA.value=sta;
+     document.f.SISZIP.value=zip;
+     document.f.SISCNTY.value=cnty;
+     }
+}
+</script>
+
+<style>
+.billship_custom {
+  color: black;
+}
+.new-acct {
+  padding: 30px 0;
+}
+.new-acct .container {
+  background-color: #fff;
+}
+.fldError {
+  color: red;float:left;
+}
+</style>
+
+<form name="f" method="POST" action="@&PGM " novalidate>
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="@&SIRFNO ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIANON" value="@&SIANON ">
+  <input type="hidden" name="SICONF" value="@&SICONF ">
+  <input type="hidden" name="DSPLGIN" value="@&DSPLGIN ">
+
+  <main class="new-acct">
+    <div class="container">
+      <div class="wrapper">
+<!--End:Open-->
+
+<!--Seg:Main1-->
+        <div class="row-eq-height">
+          <div class="col-xs-12" style="text-align:center;">
+            <h3>Create New Account</h3>
+            <p class="new-acct__subtitle">Please select a User Name and Password. The user name and password must be unique. We suggest using your e-mail address as a user name.</p>
+          </div>
+        </div>
+        <br>
+        <div class="row row-eq-height">
+          <div class="col-md-6 left">            
+            <div class="form-group">
+              <label for="username">User Name*</label><input type="text" id="SIUSER" name="SIUSER" value="@&SIUSER " class="form__input full no-outline" required maxlength="50">
+            </div>
+            <div class="form-group">
+              <label for="password">Password*</label><input type="password" id="SIPSWD" name="SIPSWD" value="@&SIPSWD " class="form__input full no-outline" required minlength="7" maxlength="12">
+            </div>
+            <div class="form-group">
+              <label for="password">Confirm Password*</label><input type="password" id="SIPSWDC" name="SIPSWDC" value="@&SIPSWDC " class="form__input full no-outline" required minlength="7" maxlength="12">
+            </div>
+          </div>
+          <div class="col-md-6 right">
+            <div class="form-group">
+              <label for="email">Email Address*</label><input type="email" id="SIEMAL" value="@&SIEMAL " name="SIEMAL" class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="profession">Profession*</label>&nbsp;&nbsp;<div>@&PTNO &nbsp;
+              <div class="col-xs-12">
+              <label for="radioIndiv" style="margin:15px 5px;" class="form__radio">
+                    <input type="radio" name="SITYPE" value="I" id="radioIndiv" onClick="checkType();" @&CHEK2 >
+                    <span class="fake-radio"></span>Individual
+              </label>
+              <label for="agency" style="margin:15px 5px;" class="form__radio">
+                    <input type="radio" name="SITYPE" value="A" id="agency" onClick="checkType()" @&CHEK1 >
+                    <span class="fake-radio"></span>Agency
+              </label>
+              </div>
+              </div>
+            </div>
+    
+            <div id="hideShowAgency" style="display:@&DISP ">
+              <div class="form-group">
+                <label for="agency">Agency Name*</label><input type="text" name="SIANAME" id="SIANAME" value="@&SIANAME " class="form__input full no-outline" maxlength="20">
+              </div>
+              <div class="form-group">
+                <label for="account#">Account Number*</label><input type="text" name="SIACCT" id="SIACCT" value="@&SIACCT " class="form__input full no-outline" data-parsley-maxlength="20">
+              </div>
+              <div class="form-group">
+                <label for="paymentopt">Allow Payment Option*</label>&nbsp;&nbsp;<div>@&PYOP &nbsp;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+<!--End:Main1-->
+
+<!--Seg:Main2-->
+        <div class="row row-eq-height">
+          <div class="col-md-6 left">
+            <h4 class="billship_custom">Billing Info</h4>
+            <div class="form-group" style="height:27px;">&nbsp;</div>
+            <div class="form-group" >
+              <label for="firstname">First Name*</label><input type="text" name="SIFSNM" id="SIFSNM" value="@&SIFSNM " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name*</label><input type="text" name="SILSNM" id="SILSNM" value="@&SILSNM " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="address1">Address Line 1*</label><input type="text" name="SIBAD1" id="SIBAD1" value="@&SIBAD1 " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="address2">Address Line 2</label><input type="text" name="SIBAD2" id="SIBAD2" value="@&SIBAD2 " class="form__input full no-outline">
+            </div>
+            <div class="form-group">
+              <label for="zipcode">Zip Code*</label><input type="text" name="SIBZIP" id="SIBZIP" value="@&SIBZIP " class="form__input full no-outline" onfocus="onfoc();" required>
+            </div>
+            <div class="form-group">
+              <label for="city">City/APO/FPO*</label><input type="text" name="SIBCTY" id="SIBCTY" value="@&SIBCTY " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="state">State*</label>&nbsp;&nbsp;<div>@&BSTA &nbsp;</div>
+            </div>
+            <div class="form-group">
+              <label for="county">County</label><input type="text" name="SIBCNTY" id="SIBCNTY" value="@&SIBCNTY " class="form__input full no-outline">
+            </div>
+            <div class="form-group">
+              <label for="phonetype">Phone Type*</label>&nbsp;&nbsp;<div>@&SIBPTYP &nbsp;</div>
+            </div>
+            <div class="form-group">
+              <label for="phonenumber">Phone Number*</label><br>
+              <span style="font-weight:bold">(</span>
+              <input type="text" name="SIHCOD1" id="SIHCOD1" value="@&SIHCOD1 " class="form__input no-outline" style="width:20%;" maxlength="3" required placeholder="xxx">
+              <span style="font-weight:bold">)</span>
+              &nbsp;<input type="text" name="SIHCOD2" id="SIHCOD2" value="@&SIHCOD2 " class="form__input no-outline" style="width:72%;" maxlength="8" required placeholder="xxx-xxxx">
+            </div>
+          </div>
+          <div class="col-md-6 right">
+            <h4 class="billship_custom">Shipping Info</h4>
+            <div class="form-group">
+              
+              <label class="form__checkbox" for="shiptosame">
+                <input type="checkbox" name="shiptosame" id="shiptosame" onclick="copyAddress();">
+                <span class="fake-checkbox"></span>
+                Same as billing</label>
+            </div>
+            <div class="form-group" >
+              <label for="Sfirstname">First Name*</label><input type="text" name="SISFNM" id="SISFNM" value="@&SISFNM " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="Slastname">Last Name*</label><input type="text" name="SISLNM" id="SISLNM" value="@&SISLNM " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="Saddress1">Address Line 1*</label><input type="text" name="SISAD1" id="SISAD1" value="@&SISAD1 " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="Saddress2">Address Line 2</label><input type="text" name="SISAD2" id="SISAD2" value="@&SISAD2 " class="form__input full no-outline">
+            </div>
+            <div class="form-group">
+              <label for="Szipcode">Zip Code*</label><input type="text" name="SISZIP" id="SISZIP" value="@&SISZIP " class="form__input full no-outline" onfocus="onfoc1();" required>
+            </div>
+            <div class="form-group">
+              <label for="Scity">City/APO/FPO*</label><input type="text" name="SISCTY" id="SISCTY" value="@&SISCTY " class="form__input full no-outline" required>
+            </div>
+            <div class="form-group">
+              <label for="Sstate">State*</label>&nbsp;&nbsp;<div>@&SSTA &nbsp;</div>
+            </div>
+            <div class="form-group">
+              <label for="Scounty">County</label><input type="text" name="SISCNTY" id="SISCNTY" value="@&SISCNTY " class="form__input full no-outline">
+            </div>
+            <div class="form-group">
+              <label for="Sphonetype">Phone Type*</label>&nbsp;&nbsp;<div>@&SISPTYP &nbsp;</div>
+            </div>
+            <div class="form-group">
+              <label for="Sphonenumber">Phone Number*</label><br>
+              <span style="font-weight:bold">(</span>
+              <input type="text" name="SICCOD1" id="SICCOD1" value="@&SICCOD1 " class="form__input no-outline" style="width:20%;" maxlength="3" required placeholder="xxx">
+              <span style="font-weight:bold">)</span>
+              &nbsp;<input type="text" name="SICCOD2" id="SICCOD2" value="@&SICCOD2 " class="form__input no-outline" style="width:72%;" maxlength="8" required placeholder="xxx-xxxx">
+            </div>
+          </div>
+        </div>
+        <div class="row row-eq-height">
+          <div class="col-sm-12 col-md-4 col-md-offset-4" style="margin-bottom:20px;">
+            <a value="@&BTNNAME " class="btn btn_md btn-block btn--blue" href="javascript:void(0)" onclick="submit_form('f','SAVE');">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+function checkType(){
+  var agency = document.getElementById("agency");
+  var hideShow = document.getElementById("hideShowAgency");
+  if (agency.checked){
+    hideShow.style.display="block";
+  } else {
+    hideShow.style.display="none";
+  }
+}
+
+function copyAddress(){
+  document.f.SISFNM.value= document.f.SIFSNM.value;
+  document.f.SISLNM.value= document.f.SILSNM.value;
+  document.f.SISAD1.value= document.f.SIBAD1.value;
+  document.f.SISAD2.value= document.f.SIBAD2.value;
+  document.f.SISCTY.value= document.f.SIBCTY.value;
+  document.f.SISSTA.value= document.f.SIBSTA.value;
+  document.f.SISZIP.value= document.f.SIBZIP.value;
+  document.f.SISCNTY.value=document.f.SIBCNTY.value;
+  document.f.SISPTYP.value=document.f.SIBPTYP.value;
+  document.f.SICCOD1.value=document.f.SIHCOD1.value;
+  document.f.SICCOD2.value=document.f.SIHCOD2.value;
+}
+
+(function runOnce(){
+  checkType();
+})();
+</script>
+<!--End:Main2-->
+
+<!--Seg:Close-->
+</form>
+<!--End:Close-->
+
+
+ 

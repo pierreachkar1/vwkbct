@@ -1,0 +1,158 @@
+
+
+.rizeen-bravery-updates .topHeadingSec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rizeen-bravery-updates .topHeadingSec span.h2 {
+  margin: 0;
+}
+
+.rizeen-bravery-updates .topHeadingSec button {
+    padding: 10px 30px 12px 30px;
+    font-weight: bold;
+    transition: all 1s;
+    background-color: #bd0202;
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.rizeen-bravery-updates .topHeadingSec button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+
+
+
+.rizeen-bravery-updates .img-wish {
+  text-align: center !important;
+}
+.rizeen-bravery-updates .top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rizeen-bravery-updates .top-header a {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 1s;
+  background-color: #bd0202;
+  color: #ffd700;
+  text-decoration: none;
+}
+.rizeen-bravery-updates .top-header a:hover {
+  background-color: #000;
+  color: #fff;
+}
+.rizeen-bravery-updates .img-wish img {
+  display: inline;
+  width: 50%;
+  margin: 5px;
+  aspect-ratio: 1;
+} 
+.rizeen-bravery-updates .slick-next:before, .rizeen-bravery-updates .slick-prev:before {
+  font-size: 24px !important;
+  color: #000 !important;
+  z-index: 1000;
+}
+
+.rizeen-bravery-updates h5.text-dark {
+  color: black;
+}
+.rizeen-bravery-updates .slide-content {
+  position: relative;  
+  padding: 0;
+  width: 90%;
+  margin: auto;
+}
+
+.slide-content .carousel-control {
+  background-image: none;
+  width: auto;
+  color: black;
+  opacity: 1;
+}
+
+.hp--carousel--middle {
+  display: none;
+}
+
+.slide-content a.left.carousel-control {
+  left: -20px;
+}
+
+.slide-content a.right.carousel-control {
+  right: -20px;
+}
+
+.rizeen-bravery-updates .details {
+  background-color: #c42033;
+  color: white;
+  border: solid 2px #c42033;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+.rizeen-bravery-updates .details:hover {
+  background-color: white;
+  color: #c42033;
+}
+.rizeen-bravery-updates .toggle_details p.dnone,
+.rizeen-bravery-updates .toggle_details div.slide-content {
+    display: none;
+}
+.rizeen-bravery-updates button span:first-child {
+  display: none;
+}
+.rizeen-bravery-updates .data-open span:last-child {
+  display: none;
+}
+.rizeen-bravery-updates .data-open span:first-child {
+  display: block;
+}
+.rizeen-bravery-updates iframe,
+.rizeen-bravery-updates img {
+  border: 0;
+  width: 95%;
+  aspect-ratio: 16 / 9;
+}
+.rizeen-bravery-updates hr {
+  border-top: 1px solid #757575;
+}
+.rizeen-bravery-updates .data-open {
+  background-color: black !important;
+  border-color: black !important;
+  color: white !important;
+}
+.rizeen-bravery-updates div.top-header.mystic-head {
+  left: 0px;
+  width: 100%;
+  z-index: 10000;
+  background-color: white;
+  border-bottom: 1px solid rgb(117, 117, 117);
+  padding: 10px 30px;
+}
+@media only screen and (max-width: 768px) {
+  .rizeen-bravery-updates iframe,
+  .rizeen-bravery-updates img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .rizeen-bravery-updates .top-header {
+    flex-direction: column;
+  }
+  .rizeen-bravery-updates .top-header a {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+  .rizeen-bravery-updates .img-wish img {
+    width: 100%;
+  }   
+}

@@ -1,0 +1,48 @@
+/* Rizeen Existing CSS */
+li.priv {margin-left: 5%;}
+.rizeenPrivacy .alphaOrdlist .numOrdlist ol li.no-list-style:before {
+    content: '';
+}
+.rizeenPrivacy .alphaOrdlist .numOrdlist ol li.no-list-style {
+    margin-left: -20px;
+}
+.rizeenPrivacy .alphaOrdlist .numOrdlist ol li:before {
+    content: "("counter(list) ") ";
+    counter-increment: list;
+}
+.rizeenPrivacy table {
+    width: 100%;
+}
+.rizeenPrivacy table th, .rizeenPrivacy table td {
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #ebebeb;
+    width: 33.33%;
+}
+.rizeenPrivacy .alphaOrdlist ol {
+    counter-reset: list;
+}
+.rizeenPrivacy .alphaOrdlist ol li {
+    list-style: none;
+    position: relative;
+}
+.rizeenPrivacy .alphaOrdlist ol li:before {
+    counter-increment: list;
+    content: "("counter(list, lower-alpha) ") ";
+    position: absolute;
+    left: -1.4em;
+    font-weight: 700;
+}
+.sam-static.flex-row #sam-static-right {
+	padding-right: 0;
+}
+
+/* Fix Cut Off Screen on Static Pages */
+.sam-static.flex-row #sam-static-right {
+	width: 100%;
+}
+.sam-static.flex-row #sam-static-right .rizeenPrivacy {
+	margin: 0 !important;
+	padding-left: 10px;
+}

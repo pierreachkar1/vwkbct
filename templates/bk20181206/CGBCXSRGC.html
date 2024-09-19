@@ -1,0 +1,75 @@
+<!--Seg:openPage-->
+
+<!--End:openPage-->
+
+<!--Seg:Body-->
+<div class="container-fluid">
+
+  <input type="hidden" id="SIERR" name="SIERR" value="@&ERR ">
+  <div class="row"> 
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="SIRCFN">Recipient's First Name*</label>
+        <input type="text" class="form__input full no-outline" name="SIRCFN" id="SIRCFN" value="@&SIRCFN " maxlength="60" required>
+      </div>      
+      <div class="form-group">
+        <label for="SIRCLN">Recipient's Last Name*</label>
+        <input type="text" class="form__input full no-outline" name="SIRCLN" id="SIRCLN" value="@&SIRCLN " maxlength="60" required>
+      </div>
+      <div class="form-group">
+        <label for="SIRCEM">Recipient's Email*</label>
+        <input type="email" class="form__input full no-outline" name="SIRCEM" id="SIRCEM" value="@&SIRCEM " maxlength="60" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="SIFRNM">From*</label>
+        <input type="text" class="form__input full no-outline" name="SIFRNM" id="SIFRNM" value="@&SIFRNM " maxlength="60" required>
+      </div>
+      <div class="form-group">
+        <label for="SIPMSG">Personal Message</label>
+        <textarea name="SIPMSG" id="SIPMSG" style="width:100%" rows="3" maxlength="250" onkeyup="countChar()">@&SIPMSG </textarea>
+        <span id="areaCount">250</span>
+        <script> function countChar(){var left = 250- $('#SIPMSG').val().length;$('#areaCount').html(left);}</script>
+      </div>
+      <div class="form-group">
+        <label for="SIFRNM">Delivery Method*</label>
+        <span>@&DLMT </span>
+      </div>
+      <div class="form-group" id="deliveryDate" style="@&DSPDT ">
+        <label for="SIDLDT">Delivery Date*</label>&nbsp;&nbsp;
+        <input type="date" name="SIDLDT" id="SIDLDT" value="@&SIDLDT " maxlength="10" placeholder="YYYY/MM/DD">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <p>NOTE: To ensure delivery of gift certificate emails from us to your inbox (not bulk, spam or junk folders) please be sure to add 
+        donotreply@galls.com to your address book or approved senders list.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" style="text-align:center;">
+      <button type="submit" class="btn btn_md btn--orange" onclick="addGiftCard();">ADD TO CART</button>
+    </div>
+  </div>
+              
+</div>
+<!-- <script>
+  function validateGCform(e){
+    var testForm = document.getElementById('giftCardForm');
+    if (testForm.checkValidity()===false){
+      return false;
+    } else {
+      e.preventDefault();
+      addGiftCard();
+      return false;
+    }
+  }
+  // function stopSubmit(e){
+  //   e.preventDefault();
+  //   return false;
+  // }
+
+</script> -->
+<!--End:Body--> 

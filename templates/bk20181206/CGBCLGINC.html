@@ -1,0 +1,224 @@
+<!--Seg:openPage-->
+<form name="f" method="POST" action="@&PGM ">
+  <input type="hidden" name="SIACTN" value="LOGIN" id="SIACTNLGIN">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIVIEW" value="@&SIVIEW ">
+  <input type="hidden" name="SIEMAL" id="SIEMAL" value="">
+  <input type="hidden" name="SIUSERP" id="SIUSERP" value="">
+  <main class="sign-in">
+    <div class="container">
+<!--End:openPage-->
+
+<!--Seg:defaultView-->
+      <div class="sign-in__wrapper">
+        <div class="row row-eq-height">
+          <div class="col-md-6 left">
+
+
+            <h3 class="sign-in__title">New Customers</h3>
+            <p class="sign-in__subtitle hidden-xs-sm">Welcome! We're happy to have you join the Galls family. Enter your email address below and we will send you along. You will have the option to create an account when completing your order.</p>
+              <div class="form-group"><label for="email">Email Address</label><input type="email" name="SIEMAL1" value="@&SIEMAL1 " class="form__input full no-outline" id="SIEMAL1"></div>
+              <div class="form-submit">
+                <a class="btn btn_xs btn--orange btn_submit hidden-xs-sm" href="javascript:void(0)" onclick="submitGuest();">Continue As Guest</a>
+                <a class="btn btn_sm btn_block btn--orange btn_submit visible-xs-sm" href="javascript:void(0)" onclick="submitGuest();">Continue As Guest</a>
+                <p class="guest_message visible-xs-sm">You can optionally create an account later.</p>
+              </div>
+              
+          </div>
+          <div class="col-md-6 right">
+            <h3 class="sign-in__title">Sign In</h3>
+            <p class="sign-in__subtitle">If you have an account with us please enter your user name and password below and we'll log you in!</p>
+            <form action="javascript:void(0)" data-parsley-validate="">
+              <div class="form-group"><label for="username">User Name*</label><input type="text" name="SIUSER" value="@&SIUSER " class="form__input full no-outline" required="required" id="SIUSER" onkeypress="EnterActn('LOGIN',event)" ></div>
+              <div class="form-group"><label for="password">Password*</label><input type="password" name="SIPSWD"  value="@&SIPSWD " class="form__input full no-outline" required="required" id="SIPSWD" onkeypress="EnterActn('LOGIN',event)" ></div>
+              <div class="form-group"><a href="#" data-toggle="modal" data-target="#forgotpass">Forgot your password ?</a></div>
+              <div class="form-group"><a href="#" data-toggle="modal" data-target="#forgotuser">Forgot your username ?</a></div>              
+              <div class="form-submit">
+                <a class="btn btn_xs btn--orange btn_submit hidden-xs-sm" href="javascript:void(0)" onclick="submit_form('f','LOGIN')">Sign In</a>
+                <a class="btn btn_sm btn_block btn--orange btn_submit visible-xs-sm" href="javascript:void(0)" onclick="submit_form('f','LOGIN')">Sign In</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!--End:defaultView-->
+
+<!--Seg:closePage-->
+
+<!--Password Modal-->
+  <div class="modal about" id="forgotpass" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Request Password</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Submit the user name associated with your account and we'll send your password</p>
+              <form action="javascript:void(0)" data-parsley-validate="">
+                <div class="form_group"><label for="username">User Name</label>
+                  <input type="text" size="30" maxlength="50" name="SIUSERPx" id="SIUSERPx" class="form__input full no-outline" required="required" >
+                </div><br>
+                <a class="btn btn_sm btn--orange" href="javascript:void(0)" onclick="submitPass()">Send password</a>&nbsp;&nbsp;<a href="#" class="btn btn_sm btn--orange" data-dismiss="modal" href="javascript:void(0)" onclick="clearFields('SIUSERPx')">Cancel</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<!--Username Modal-->
+  <div class="modal about" id="forgotuser" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Request Username</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Submit the email address associated with your account and we'll send your Username</p>
+              <form action="javascript:void(0)" data-parsley-validate="" id="passForm">
+                <div class="form_group"><label for="username">Email Address</label>
+                  <input type="email" size="30" maxlength="50" name="SIEMALx" id="SIEMALx" class="form__input full no-outline" required="required">
+                </div><br>
+                <a class="btn btn_sm btn--orange" href="javascript:void(0)" onclick="submitUser()">Send username</a>&nbsp;&nbsp;<a class="btn btn_sm btn--orange" data-dismiss="modal" href="javascript:void(0)" onclick="clearFields('SIEMALx')">Cancel</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</form>
+<script>
+  function submitPass(){
+    var user = document.getElementById('SIUSERPx').value;
+    if (user === ""){return};
+    document.getElementById('SIUSERP').value = user;
+    submit_form('f','SENDPSWD');
+  }
+  function submitUser(){
+    var email = document.getElementById('SIEMALx').value;
+    if (email === ""){return};
+    var pswForm = document.getElementById("passForm");
+    if (pswForm.checkValidity() === false){
+      return false;
+    } else {
+      document.getElementById('SIEMAL').value = email;
+      submit_form('f','SENDUSER');
+    }
+  }
+  function clearFields(field){
+    document.getElementById(field).value = "";
+  }
+  function validate(){
+    var usr = document.getElementById('SIUSER').value;
+    var psw = document.getElementById('SIPSWD').value;
+    if (usr !=="" && psw !==""){
+      submit_form('f','LOGIN');
+    } else {
+      return;
+    }
+  }
+  function submitGuest() {
+    var usr = document.getElementById('SIUSER');
+    var psw = document.getElementById('SIPSWD');
+    usr.removeAttribute('required');
+    psw.removeAttribute('required');
+    submit_form('f','GUEST');
+  }
+</script>
+<!--End:closePage-->
+<!--Seg:Multiple-->
+ <div class="row">
+  <div class="col-xs-12">
+    <div class="table-responsive" style="margin:auto;">
+      <input type="hidden" name="SIPSWD" value="@&SIPSWD ">
+      <input type="hidden" name="SIUSER" value="@&SIUSER ">
+      <table class="table">
+          <thead>
+            <tr>
+              <th class="custom_table_header">Select</th>
+              <th class="custom_table_header">Agency#</th>
+              <th class="custom_table_header">Agency</th>
+            </tr>
+          </thead>
+          <tbody>        
+<!--End:Multiple-->
+
+<!--Seg:Agencyrow-->
+            <tr>
+              <td nowrap align="left"><strong>@&SLCT </strong></td>
+              <td nowrap align="left"><strong>@&ACNO </strong></td>
+              <td nowrap align="left"><strong>@&NAME </strong></td>
+            </tr>
+<!--End:Agencyrow-->
+
+<!--Seg:closeTable-->
+				  </tbody>
+        </table>
+			</div>
+		</div>
+  </div>
+</form>
+<!--End:closeTable-->
+
+<!--Seg:CartTracking-->
+
+<!-- Listrak Analytics Submit Tracking Click -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+    _ltk.Click.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+
+<!-- Listrak Shopping Cart Abandonment -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+		_ltk.SCA.Stage = 2;
+		@&STYLES2 var u = window.location.href.replace(/http[s]?\:\/\/[a-zA-Z0-9\.\:]+\//,'');
+	    u = (u.indexOf('/')<0)?'':'/'+u.substring(0,u.indexOf('/'));
+	    _ltk.SCA.Source = u;
+	    _ltk.SCA.CaptureEmail('SIEMAL');
+	    _ltk.SCA.SetCustomer('@&EMAL ', '@&FNAM ', '@&LNAM ');
+	    _ltk.SCA.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+<!-- end Listrak Shopping Cart Abandonment -->
+<!-- Listrak Analytics Script Source-->
+<script type="text/javascript">
+        var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+        (function (d, s, id, tid, vid) {
+            var js, ljs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+            js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+            ljs.parentNode.insertBefore(js, ljs);
+        })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+</script>
+
+
+<!--End:CartTracking-->    

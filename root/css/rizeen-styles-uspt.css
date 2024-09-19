@@ -1,0 +1,724 @@
+
+main.product .product__gallery--active {
+    height: 360px;
+    object-fit: contain;
+}
+
+span.rizi_pdp_h4, span.rizi_pdp_h6 {
+    display: block;    
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --samHeaderSearchLRPadding: 30px;
+    --samBtnRedTheme: #c42033;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.5px !important;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: 36px !important;
+}
+
+span.rizi_pdp_h6 {
+    cursor: pointer;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+span.spanCateH2, span.spanCateH3, span.spanCateH4 {
+    display: block;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --samHeaderSearchLRPadding: 30px;
+    --samBtnRedTheme: #c42033;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+span.spanCateH2 {
+    font-size: 34px !important;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+span.spanCateH3 {
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: inline;
+    font-weight: 800;
+    font-size: 22px !important;
+    letter-spacing: 1px;
+}
+
+span.spanCateH4 {
+    font-size: 20px !important;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 25px;
+    padding: 0;
+}
+
+span.spanCateH5 {
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+}
+
+span.spanCateH6 {
+    font-weight: 600;
+    border-bottom: 1px solid #dcdcdc;
+    color: #000;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+    padding: 0 0 5px;
+}
+
+span.h2, span.h3, span.h4, span.h5, span.h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+}
+
+.h2 {
+    font-size: 40px;
+}
+
+.h3 {
+    font-size: 28px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+.h6 {
+    font-size: 16px;
+}
+
+.hpUniformBuilderContainer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hpUniformBuilderContainer span.myUnibuildStrip {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.hpUniformBuilderContainer span.myUnibuildStrip a {
+    color: white;
+}
+
+.hp--comp2 .hp--brand--banner--div .hp--sideimg {
+    transition: all 0.3s ease;
+}
+
+.hp--component1-n-2 .hero-desc {
+    top: unset;
+    left: unset;
+    transform: unset;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    text-shadow: unset;
+}
+
+.hp--component1-n-2 .hero-desc span.h2 {
+    padding: 20px !important;
+    font-size: 40px !important;
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+
+.hp--carousel-controllers--wrapper ol li {
+    display: none !important;
+}
+
+#homePageCarousel .carousel-control {
+    display: none !important;
+}
+
+span.rizeenPopularCatTitle, span.rizeenPopularPagesTitle {
+    font-size: 36px;
+}
+
+ .rizeenPopularCat>div img {
+    width: 100%;
+}
+
+ .rizeenPopularCat>div {
+    padding: 0;
+    margin: 10px;
+    width: calc(16.66% - 20px);
+    transition: all .3s ease;
+}
+
+ .rizeenPopularCat>div .bg-overlay {
+    color: #fff;
+    position: absolute!important;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+/*    background: linear-gradient(180deg,rgba(0,0,0,0),black);*/
+    word-wrap: break-word;
+    padding-bottom: 10px;
+}
+
+ .rizeenPopularCat>div .bg-overlay .m-0 {
+    margin-top: 45px!important;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 28px
+}
+
+ .rizeenPopularCat>div .bg-overlay span.h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+ .rizeenPopularCat>div .bg-overlay span.h6 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    display: block;
+}
+
+ .rizeenPopularCat>div .bg-overlay span.h6 span {
+    font-size: 12px;
+}
+
+.rizeenHPimgGrid .flex-row, .rizeenHPimgGrid .flex-col {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hp--component1-n-2 .topCarouselGrid {
+    margin: auto;
+    padding: 20px 0 0 0;
+}
+
+.rizeenHPimgGrid {
+    display: flex;
+    margin: auto;
+}
+
+.rizeenHPimgGrid .flex-col {
+    flex-direction: column;
+}
+
+.rizeenHPimgGrid .rcol {
+    justify-content: space-between;
+}
+
+.rizeenHPimgGrid .w33 {
+    width: 33.33%;
+    margin: 0 10px 0 0;
+}
+
+.rizeenHPimgGrid .w66 {
+    width: 66.66%;
+    margin: 0 0 0 10px;
+}
+
+#rizeenGrid2USP {
+    margin: auto;
+    padding: 0;
+}
+
+.rizeenHPimgGrid a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.rizeenHPimgGrid .im1 img {
+    height: 580px;
+}
+
+.rizeenHPimgGrid .im3 {
+    margin-right: 10px;
+    width: 50%;
+}
+
+.rizeenHPimgGrid .im4 {
+    margin-left: 10px;
+    width: 50%;
+}
+
+.rizeenHPimgGrid .im2 img,
+.rizeenHPimgGrid .im3 img,
+.rizeenHPimgGrid .im4 img  {
+    height: 280px;
+}
+
+.rizeenHPimgGrid .im5,
+.rizeenHPimgGrid .im6  {
+    width: 50%;
+}
+
+.rizeenHPimgGrid .im5 a  {
+    width: 100%;
+}
+
+.rizeenHPimgGrid .im5 img,
+.rizeenHPimgGrid .im6 img,
+.rizeenHPimgGrid .im7 img,
+.rizeenHPimgGrid .im8 img  {
+    height: 200px;
+}
+
+.rizeenHPimgGrid .im5,
+.rizeenHPimgGrid .im6,
+.rizeenHPimgGrid .im7,
+.rizeenHPimgGrid .im8  {
+    margin: 10px;
+}
+
+.rizeenHPimgGrid .im1 img,
+.rizeenHPimgGrid .im2 img,
+.rizeenHPimgGrid .im3 img,
+.rizeenHPimgGrid .im4 img,
+.rizeenHPimgGrid .im5 img,
+.rizeenHPimgGrid .im6 img,
+.rizeenHPimgGrid .im7 img,
+.rizeenHPimgGrid .im8 img  {
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+}
+
+.rizeenHPimgGrid.block2rows {
+    display: none;
+}    
+
+#homePageCarousel .hero-banner {
+    background-image: none;
+	padding:0;
+	height: auto;
+}
+
+.rizeen-accordion .panel-heading {
+    padding: 0 0;
+}
+
+.rizeen-accordion .panel-default >.panel-heading a:after {
+    position: relative;
+    top: 4px;
+    font-size: 14px;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    float: right;
+    transition: transform .25s linear;
+}
+
+.rizeen-accordion .panel a[data-toggle="collapse"] {
+	display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.rizeen-accordion .panel-default >.panel-heading a[aria-expanded="false"]:after {
+    content: "\002b";
+    transform: rotate(90deg);
+}
+
+.rizeen-accordion .panel-default >.panel-heading a[aria-expanded="true"]:after {
+    content: "\2212";
+    transform: rotate(180deg);
+    color: #007ac2;
+}
+
+.hp--component1-n-2 .bg-overlay {
+    color: white;
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+/*    background: linear-gradient(180deg, rgba(0,0,0,0), black);*/
+    padding-bottom: 20px;
+}
+
+.hp--component1-n-2 .bg-overlay span.h2 {
+    margin-top: 2em !important;
+    
+}
+
+.hp--component1-n-2 .top-right-hero-img span.h4 {
+    padding-bottom: 10px;
+}
+
+.hp--component1-n-2 .top-right-hero-img .div1 {
+    margin-bottom: 10px;
+}
+
+.hp--component1-n-2 .top-right-hero-img .div2 {
+    margin-top: 10px;
+}
+
+.hp--component1-n-2 .top-right-hero-img div, 
+.hp--component1-n-2 #homePageCarousel .hero-banner {
+    position:relative;
+    display:inline-block;
+    width: 100%;
+}
+
+.hp--component1-n-2 .nopadding {
+    padding: 0;
+}
+
+.hp--quicklinks--title {
+    text-align: center;
+    color: #c42033;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hp--comp1--carousel.hp--hero--carousel--div.nopadding {
+    padding-right: 20px;
+}
+
+.hp--component1-n-2 .topCarouselGrid .hp--hero--carousel--img {
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.hp--quicklinks--content {
+    padding: 2rem;
+}
+
+.hp--quicklinks--popular .hp--quicklinks--content::after,
+.hp--quicklinks--popular .hp--quicklinks--content::before {
+    content: '';
+    height: 50%;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: 32%;
+    background-color: grey;
+  }
+
+.hp--component1-n-2 .how-it-works .enter-now {
+    padding-top: 20px;
+}
+
+.hp--component1-n-2 .how-it-works .enter-now a {
+    padding: 10px 30px 12px 30px;
+    font-weight: bold;
+    transition: all 1s;
+    background-color: #bd0202;
+    color: #ffd700;
+    border: 2px solid #bd0202;
+}
+
+.hp--component1-n-2 .how-it-works .enter-now a:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.hp--component1-n-2 .top-right-hero-img img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.hp--component1-n-2 .hero-carousel img {
+    width: 100%;
+    aspect-ratio: 3/1;
+}
+
+.hp--component1-n-2 .how-it-works img {
+    width: 100%;
+    aspect-ratio: 2/1;
+}
+
+.hp--component1-n-2 .how-it-works {
+    display: flex;
+    align-items: center;
+}
+
+.hp--component1-n-2 .how-it-works .right-col span.h2 {
+    margin-top: 0;
+}
+
+.hp--component1-n-2 .how-it-works .left-col img {
+    margin-top: 20px;
+}
+
+.hp--component1-n-2 .hp--carousel-controllers--wrapper .hp-carousel-indicators li {
+    width: 10px;
+    height: 10px;
+}
+.hp--component1-n-2 .hp--carousel-controllers--wrapper .hp-carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+}
+
+.rizeenHPimgGrid .bg-overlay .m-0 {
+    margin-top: 45px !important;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 28px !important;
+}
+
+.hp--component1-n-2 .topCarouselGrid .bg-overlay span.h2.m-0 {
+    padding: 20px !important;
+    font-size: 28px !important;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+
+.hp--component1-n-2.visible-exs {
+    display: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .rizeenPopularCat>div:hover {
+        transform: scale(1.1);
+        transition: all .3s ease;
+    }
+
+     span.h3.rizeenPopularCatTitle {
+        padding-top:1em
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .product__mobile-slider .slick-slide {
+        height: 360px;
+        object-fit: contain;
+    }
+
+
+     .rizeenPopularCat>div {
+        width:calc(50% - 20px)
+    }
+    .hp--component1-n-2 .how-it-works .right-col {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .hp--comp1--carousel.hp--hero--carousel--div.nopadding {
+        padding-right: 0;
+    }
+    
+    .hp--component1-n-2 .topCarouselGrid {
+        width: 90%;
+    }
+    .hp--component1-n-2 .bg-overlay {
+        width: 100% !important;
+    }
+    .hp--component1-n-2 .topCarouselGrid .hp--hero--carousel--img {
+        padding-right: 0;
+        aspect-ratio: 1/1;
+    }    
+    #homePageCarousel a.carousel-control {
+        display: none;
+    }    
+    .hp--component1-n-2 .top-right-hero-img div:after {
+        width: 80%;
+        left: 50%;
+        bottom: 20px;
+        transform: translate(-50%, 0%);    
+    }    
+    .hp--component1-n-2 .top-right-hero-img img {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;    
+    }    
+    .hp--component1-n-2 .how-it-works {
+        flex-direction: column;
+    }    
+    .hp--component1-n-2 .how-it-works .left-col img {
+		aspect-ratio: 2/1;
+		width: calc(100% - 20px);
+		margin: auto;
+		display: flex;
+	}    
+	.hp--component1-n-2 .how-it-works .right-col {
+		text-align: center;
+    }    
+    .hp--component1-n-2 .top-hero-section .hero-carousel img {
+        width: 100%;
+        aspect-ratio: 2/1;
+    }    
+    .hp--component1-n-2 .top-hero-section .top-right-hero-img img, 
+    .hp--component1-n-2 .how-it-works img {
+        aspect-ratio: 3/1;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    .rizeenHPimgGrid.block2rows {
+        display: block;
+        width: 95%;
+        margin: auto;
+    }  
+    .rizeenHPimgGrid.flex-row {
+        display: none;
+    }  
+    .rizeenHPimgGrid .im5,
+    .rizeenHPimgGrid .im7 {
+        margin: 10px 10px 10px 0;
+    }
+    .rizeenHPimgGrid .im6,
+    .rizeenHPimgGrid .im8  {
+        margin: 10px 0 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 767px) {
+    .hp--component1-n-2 .topCarouselGrid, #rizeenGrid2USP {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+    .hp--component1-n-2 .topCarouselGrid {
+        width: 89%;
+    }
+    #rizeenGrid2USP {
+        width: 94%;
+    }
+    .hp--component1-n-2 .top-right-hero-img {
+        display: flex;
+    }  
+    .hp--component1-n-2 .top-right-hero-img .div1,
+    .hp--component1-n-2 .top-right-hero-img .div2
+    {
+        margin: 10px 10px;
+    }
+    .hp--component1-n-2 .top-right-hero-img .div1 {
+        margin-left: 0;
+    }
+    .hp--component1-n-2 .top-right-hero-img .div2 {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .hp--component1-n-2.visible-xs-sm {
+        display: none;
+    }
+
+    .hp--component1-n-2.visible-exs {
+        display: block;
+    }
+
+    .rizeenHPimgGrid.block2rows {
+        display: block;
+    }
+    .rizeenHPimgGrid.block2rows .im5, 
+    .rizeenHPimgGrid.block2rows .im6, 
+    .rizeenHPimgGrid.block2rows .im7, 
+    .rizeenHPimgGrid.block2rows .im8 {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .hp--component1-n-2 .bg-overlay,
+    .rizeenHPimgGrid .bg-overlay .m-0,
+    .hp--component1-n-2 .topCarouselGrid .bg-overlay span.h2.m-0 {
+        text-align: center;
+    }
+    .hp--component1-n-2 .top-right-hero-img .div1 {
+        margin-bottom: 0;
+    }
+    .hp--component1-n-2 .top-right-hero-img .div2 {
+        margin-bottom: -7px;
+        margin-top: 7px;
+    }
+
+    .hp--component1-n-2 .top-right-hero-img img {
+        height: 150px;
+    }
+    .hp--component1-n-2 .topCarouselGrid {
+        width: 94%;
+    }
+
+    .rizeenHPimgGrid, .rizeenHPimgGrid .flex-row, .rizeenHPimgGrid .flex-col {
+      display: block;
+      width: 100%;
+    }
+    .rizeenHPimgGrid a {
+        width: 100%;
+    }  
+    .rizeenHPimgGrid .im3 {
+        margin-right: 0;
+    }  
+    .rizeenHPimgGrid .im4 {
+        margin-left: 0;
+    }
+    .rizeenHPimgGrid .im1, .rizeenHPimgGrid .im2, .rizeenHPimgGrid .im3, .rizeenHPimgGrid .im4  {
+        margin: 10px auto;
+        width: 100%;
+    }
+    .rizeenHPimgGrid .w66, .rizeenHPimgGrid .w33 {
+        margin: 10px auto;
+    }
+    .rizeenHPimgGrid .w33 {
+        width: 100%;
+    }
+    .rizeenHPimgGrid {
+        width: 94%;
+    }
+    .rizeenHPimgGrid .w66 {
+        width: 100%;
+    }
+    .rizeenHPimgGrid .im1 img, .rizeenHPimgGrid .im2 img, .rizeenHPimgGrid .im3 img, .rizeenHPimgGrid .im4 img  {
+        height: 150px;
+    }   
+    .flex-row.rizeenHPimgGrid {
+        display: none;
+    }
+
+  }
+

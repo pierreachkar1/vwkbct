@@ -1,0 +1,304 @@
+
+/* Fix Fullwidth Issue */
+.riziWorkWear .samWorkwear_FullWidth {
+	width: 102vw;
+	position: relative;
+	margin-left: -51vw;
+	left: 50%;
+	padding: 0;
+}
+/* END */
+
+
+.riziWorkWear .topWorkwearImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.riziWorkWear.topWorkwearImage a {
+    color: black;
+}
+
+.riziWorkWear main.contact-us {
+    margin: 0;
+}
+
+.riziWorkWear .ProdAssort {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.riziWorkWear .SectionLast {
+    width: 95%;
+    margin: auto;
+}
+
+.riziWorkWear .SectionLast h2 {
+    margin-bottom: 5px;
+}
+
+.riziWorkWear .SectionLast p {
+    font-size: 16px !important;
+    margin-bottom: 15px;
+}
+
+.riziWorkWear .topWorkwearImage .topimgText h2 {
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.riziWorkWear .topWorkwearImage .topimgText {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.riziWorkWear .rizeenPopularCatTitle {
+    margin: 30px 0 20px 0;
+}
+
+.riziWorkWear .jumpSection {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.riziWorkWear .jumpSection ul {
+    list-style: none;
+}
+
+.riziWorkWear .jumpSection ul a {
+    font-size: 18px;
+}
+
+.riziWorkWear .SectionjumpSec {
+    background-color: #f2f2f2;
+}
+
+.riziWorkWear .SecBgimgNslide {
+    padding: 25px 0;
+}
+
+.riziWorkWear .SecBgimgNslide > div {
+    width: 92.5%;
+    margin: auto;
+}
+
+.riziWorkWear .SectionConstruct {
+    padding: 50px 0 25px 0;
+}
+
+.riziWorkWear .SectionCommercial {
+    padding: 25px 0 50px 0;
+}
+
+.riziWorkWear .SectionHomeServ {
+    background-color: #FAFAFA;
+}
+
+.riziWorkWear .SecBgimgNslide .bgimg {
+    height: 290px;
+    margin: 10px 0;
+    color: white;
+    padding: 20px;
+}
+
+.riziWorkWear .SecBgimgNslide .bgimg h2 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 26px !important;
+}
+
+.riziWorkWear .SecBgimgNslide .bgimg p {
+    font-size: 16px !important;
+}
+
+.riziWorkWear .carouselsBtm {
+    padding: 25px 0;
+}
+
+.riziWorkWear .SeccarouselsBtm {
+    margin: auto;
+}
+
+.riziWorkWear .SeccarouselsBtm .wrapper {
+    width: 97%;
+    margin: auto;
+}
+
+.riziWorkWear .SeccarouselsBtm h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.riziWorkWear .bgcolorf2 {
+    background-color: #f2f2f2;
+}
+
+.riziWorkWear .SectionPeerPerspect {
+    width: 93% !important;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background-color: #007ac3;
+}
+
+.riziWorkWear .SectionPeerPerspect .card {
+    border: 0;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+.riziWorkWear .SectionPeerPerspect .card-content {
+    text-align: center;
+    color: white;
+}
+
+
+.riziWorkWear .SectionPeerPerspect .slick-prev:before,
+.riziWorkWear .SectionPeerPerspect .slick-next:before {
+    color: white;
+}
+
+.riziWorkWear .SectionConstruct .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.riziWorkWear .SectionHomeServ .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.riziWorkWear .SectionCommercial .bgimg {
+    background-image: url(https://www.w3schools.com/howto/photographer.jpg);
+}
+
+.riziWorkWear .wrapper{
+  width:100%;
+  text-align:center;
+}
+.riziWorkWear .carousel{
+  width:90%;
+  margin:0px auto;
+}
+.riziWorkWear .slick-slide{
+  margin:10px 5px;
+}
+.riziWorkWear .slick-slide img{
+    width: 100%;
+    margin: auto;
+    max-height: 200px;
+    max-width: 150px;
+}
+.riziWorkWear .slick-prev, .riziWorkWear .slick-next{
+  border-radius: 15px;
+  border-color: transparent;
+}
+.riziWorkWear .slick-prev:before, .riziWorkWear .slick-next:before {
+    font: 30px 'FontAwesome';
+    color: black;
+}
+.riziWorkWear .slick-prev:before {
+    content: '\f053';
+}
+.riziWorkWear .slick-next:before {
+    content: '\f054';
+}
+.riziWorkWear .card{
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px #00000020;
+  padding: 10px;
+  background-color: white;
+  width: 200px;
+  margin: auto;
+}
+.riziWorkWear .card-title {
+    color: black;
+    font-size: 16px;
+}
+.riziWorkWear .card-body{
+  width: 100%;
+  vertical-align: top;
+}
+.riziWorkWear .card-content{
+  text-align: left;
+  padding-top: 10px;
+  color: #333;
+}
+.riziWorkWear .card-text{
+  font-size: 14px;
+  font-weight: 300;
+}
+.riziWorkWear .card-content div.flex-grid {
+    margin: 5px 0 10px 0;
+}
+.riziWorkWear .card-content a.flex-grid {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .riziWorkWear .jumpSection {
+    width: 60%;
+  }
+  .riziWorkWear .slick-slide {
+    margin: 10px 10px;
+  }
+  .riziWorkWear .SecBgimgNslide > div {
+    width: 97%;
+  }
+    .riziWorkWear .SecBgimgNslide .bgimg {
+        padding: 15px 15px 10px 15px;
+    }
+    .riziWorkWear .SecBgimgNslide .bgimg h2 {
+        margin-bottom: -10px !important;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .riziWorkWear .SecBgimgNslide .bgimg h2 {
+        position: static;
+        padding-top: 10px;
+    }
+    .riziWorkWear .SecBgimgNslide .bgimg {
+        height: auto;
+        width: 95%;
+        margin: 10px auto 20px auto;
+        padding: 20px;
+    }
+    .riziWorkWear .SecBgimgNslide .bgimg h2 {
+        margin-bottom: 0 !important;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .riziWorkWear .jumpSection {
+        width: 90%;
+    }
+    .riziWorkWear .topWorkwearImage img {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .riziWorkWear .jumpSection .col-xs-4 {
+        width: 100%;
+    }
+    .riziWorkWear .jumpSection li {
+        text-align: center;
+    }
+    .riziWorkWear .SectionPeerPerspect .riziWorkWear .slick-prev:before {
+        margin-right: -20px;
+    }
+    .riziWorkWear .SectionPeerPerspect .riziWorkWear .slick-next:before {
+        margin-left: -20px;
+    }
+}

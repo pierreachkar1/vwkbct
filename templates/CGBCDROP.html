@@ -1,0 +1,22 @@
+Note that this template is used in CGINDROP, CGOEDROP, and OEGETQTY
+
+<!--Seg:openSel-->
+<select name="@&SINAME " id="@&SINAME " size="1" @&JS >@&EXTRAS <!-- -->
+<!--End:openSel-->
+
+<!--Seg:SelOption-->
+<option value="@&VALUE " @&SELECT >@&DESC </option>
+<!--End:SelOption-->
+
+<!--Seg:SelOptionTitle-->
+<option value="@&VALUE " @&SELECT  title="@&TITLE ">@&DESC </option>
+<!--End:SelOptionTitle-->
+
+<!--Seg:closeSel-->
+</select>
+<!--End:closeSel-->
+
+<!--Seg:SelOptionAjax-->
+new Option("@&DESC ","@&VALUE ",false,@&SELECT );
+<!--End:SelOptionAjax-->
+

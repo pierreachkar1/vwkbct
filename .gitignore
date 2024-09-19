@@ -1,0 +1,18 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# ignore dynamic files (used for caching)
+.DS_Store
+._.DS_Store
+templates/Brands/
+templates/Categories/
+templates/HomePages/
+templates/Keywords/
+templates/StaticPages/
+root/*
+# But not these files...
+!root/css/
+!root/js/

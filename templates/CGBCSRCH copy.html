@@ -1,0 +1,505 @@
+<!--Seg:Open-->  
+<style>
+  .swatch {
+	border: 1px solid #9d9d9d;
+	height: 14px;
+	width: 16px;
+	margin: 0 2px;
+	vertical-align: middle;
+	display: inline-block;
+  }
+</style>
+ <!--Compare Modal -->
+  <div class="modal compare" id="compareModal" tabindex="-1" role="dialog" aria-labelledby="compareModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+            <!--AJAX Loaded -->
+      </div>
+    </div>
+  </div>  
+    <!--TemplatesSource:WCBN=@&SIWCBN ||WCTN=@&SIWCTN ||WCBN1=@&SIWCBN1 ||WCTN1=@&SIWCTN1 ||WCBN2=@&SIWCBN2 ||WCTN2=@&SIWCTN2 -->
+    <input type="hidden" name="SISRCH" id="SISRCH" value="@&SISRCH ">
+    <input type="hidden" name="SISORT" id="SISORT" value="@&SISORT ">
+    <input type="hidden" name="SIWTNO" id="SIWTNO" value="@&SIWTNO ">
+    <input type="hidden" name="SIATID" id="SIATID" value="@&SIATID ">
+    <input type="hidden" name="SIAVNO" id="SIAVNO" value="@&SIAVNO ">
+    <input type="hidden" name="SICLER" id="SICLER" value="@&SICLER ">
+    <input type="hidden" name="SINLPR" id="SINLPR" value="@&SINLPR ">
+    <input type="hidden" name="SIAVDS" id="SIAVDS" value="@&SIAVDS ">
+    <input type="hidden" name="SINWIT" id="SINWIT" value="@&SINWIT ">
+    <input type="hidden" name="notUnbxd" id="notUnbxd" value="Y">
+    <input type="hidden" name="SICURR" id="SICURR" value="">
+    <input type="hidden" name="SICURRM" id="SICURRM" value="">
+    <input type="hidden" name="morecateg" id="morecateg" value="N">
+    <input type="hidden" name="morebrand" id="morebrand" value="N">
+    <input type="hidden" name="morecolor" id="morecolor" value="N">
+    <input type="hidden" name="moresize" id="moresize" value="N">
+    <input type="text" id="firstClick" value="Y" style="display:none">   
+    <input type="hidden" id="filters" value="Y">  
+    <input type="hidden" id="openFilter" value="">    
+    <input type="hidden" id="onUnload" value="">       
+    <input type="hidden" name="SIIPPG" id="SIIPPG" value="24" />
+    <input type="text" id="topPosition" value="" style="display:none">  
+    <!--Compare ToolTip-->
+    <div class="compare-tooltip">
+        <h6>Selected Items</h6>
+        <ul class="compare-tooltip__list" id="compareBody" >
+        </ul>
+        <div class="compare-tooltip__ctas">
+            <a href="javascript:void(0)" onclick="resetCompare()" class="btn btn_xs btn--light-gray compare-item__reset">Reset</a>
+            <button type="button" id="compareBtn" class="btn btn_xs btn--blue disabled" onclick="comparestyles()" >Compare</button>
+        </div>
+    </div>
+    <main class="category">
+            <div class="container">
+<!--End:Open--> 
+
+<!--Seg:OpenContainer-->
+        <div class="row" id="scrollIndicator">
+          <div class="col-sm-12">
+            <!--Brossam - Breadcrumb-->
+            <ol class="breadcrumb" id="samBreadcrumbol"><li><a href="/">Home</a></li>@&CRUMB </ol>
+          </div>
+        </div>	
+        
+        
+
+
+<!--End:OpenContainer-->
+
+<!--Seg:controlsT-->
+    <style>
+    footer{position:relative;z-index:1000;}
+    </style>
+    <div class="row hidden-xs hidden-sm" id="scrollIndicatorf">
+      <div class="col-md-12 catgory-logos center">
+          @&LOGO 
+      </div>
+    </div>
+     <div class="row filter flex-row sam-flex-row">
+
+        <!--Brossam - Refine Results-->
+        <div class="col-md-3 hidden-xs hidden-sm refine-results-col"> 
+          <h2>// Refine Results</h2>
+        </div>
+
+        <!--Brossam - Pagination - Sorted By - Item Per Page - List Style (TOP ROW)-->
+        <div class="col-md-12 sam-product-list-top-row">
+
+          <div class="sam-pltr-left">
+            <div class="sam-filter-title"> 
+              <span class="filter__results">
+              @&TTLR  Results
+              </span> 
+            </div>
+            
+            <!-- <div class="sam-filter-content @&DSPB"> -->
+            <div class="sam-filter-content">
+              <div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+                <ul class="pagination" style="margin-top:0px" id="pagination__list">
+                  <li class="paginate_button previous disabled" id="pagination__link--prev"><a href="javascript:void(0)">Previous</a></li>
+                  <li class="paginate_button innerpagination active"><a href="javascript:setpage(1)">1</a></li>
+                  @&PAGES <!--Pages-->
+                  <li class="paginate_button next" id="pagination__link--next"><a href="javascript:void(0)">Next</a></li>
+                </ul>
+              </div> 
+            </div>
+          </div>        
+          
+
+          <div class="sam-pltr-right">
+
+            <!--Brossam - Sorted By-->
+            <div class="desktop-filter__dropdown" id="product-grid__filter--dropdown">
+              <div class="sam-filter-title">Sorted by:</div>
+              <div class="sam-filter-content">
+                  <select name="filter-sort sam-srch-sorted-by" id="product-grid__filter--sortf">
+                      <option value="MOSTPPLR" @&SELC0 >Most Popular</option>
+                      <option value="BESTSELL" @&SELC1 >Best Selling</option>
+                      <option value="BRANDDW"  @&SELC2 >Brand Ascending</option>
+                      <option value="BRANDUP"  @&SELC3 >Brand Descending</option>
+                      <option value="NEWEST"   @&SELC4 >Newest</option>
+                      <option value="PRICEDW"  @&SELC5 >Price Low to High</option>
+                      <option value="PRICEUP"  @&SELC6 >Price High to Low</option>
+                      <option value="DESCDW"   @&SELC7 >Description A-Z</option>
+                      <option value="DESCUP"   @&SELC8 >Description Z-A</option>
+                      <option value="RATEDW"   @&SELC9 >Highest Rated</option>
+                 </select>
+              </div>              
+            </div>
+
+            <div class="sam-item-per-page">
+              <div class="sam-filter-title">Items Per Page:</div>
+              <div class="sam-filter-content">
+                  <select name="sam-srch-item-per-page" onchange="samProductPerPage(value,'sam-srch-item-per-page-bottom')">
+                      <option class="active @&DSP24 " value="24">24</option>
+                      <option class="@&DSP48 " value="48">48</option>
+                      <option class="@&DSP96 " value="96">96</option>
+                      <option class="@&DSPAL " value="AL">View All</option>
+                 </select>
+              </div>   
+            </div>
+
+            <!--ViewGrid on Mobile Only-->
+          <div class="sam-view-grid-option visible-sm visible-xs">
+            <div class="mobile-filter__view">
+              <a href="javascript:void(0)" id="viewList"><span class="icon view-list"></span></a>
+              <a href="javascript:void(0)" id="viewGrid"><span class="icon view-grid selected"></span></a>
+            </div>  
+          </div>
+
+            <!-- <ul class="list-inline filter__links">
+              <li><a href="javascript:void(0)" class="active @&DSP24 " id="perpage24">24</a></li>
+              <li><a href="javascript:void(0)" class="@&DSP48 " id="perpage48">48</a></li>
+              <li><a href="javascript:void(0)" class="@&DSP96 " id="perpage96">96</a></li>
+              <li><a href="javascript:void(0)" class="@&DSPAL " id="perpageAll">View All</a></li>
+            </ul> -->
+
+
+          </div>
+        </div>
+        <!--END-->
+
+       
+      </div>
+
+
+      <!--Brossam - Toggle Filter for Mobile-->
+      <div class="row visible-xs visible-sm sam-filter-div-mobile-toggle">
+        <div class="col-12">
+          <h3>//REFINE RESULTS</h3>
+          <img src="images/mobile-filter-toggle.svg" alt="Mobile Filter" onclick="samToggleCategoryMobileFilter()">
+        </div>
+      </div>
+
+
+      <!--Brossam - Need to leave it because of codes related in main.js-->
+      <div class="row mobile-filter visible-xs visible-sm">
+        <!--Mobile Affixed Filter-->
+        <div id="mobileFilterAffix" class="col-xs-12 hidden hidden-xs hidden-sm">
+          <div class="mobile-filter__dropdown">&nbsp;</div>
+        </div>   
+      </div>
+
+
+<!--End:controlsT-->
+
+<!--Seg:controlsB-->
+
+<!--Brossam - Pagination - Sorted By - Item Per Page - List Style (BOTTOM ROW)-->
+<div class="col-xs-12 product-grid__pagination @&DSPB " id="product-grid__pagination">
+  <div class="">
+    <a href="javascript:void(0)" class="pagination__link pagination__link--prev hidden" id="pagination__link--prev">
+      <span class="icon triangle blue left"></span> Previous
+    </a>
+      <input  type="hidden" name="page" value="1" id="pagination__dropdown">    
+  </div>
+</div> 
+
+<div class="col-md-12 sam-product-list-top-row sam-pltr-bottom">
+
+  <div class="sam-pltr-left">
+    <div class="sam-filter-title"> 
+      <span class="filter__results">
+      @&TTLR  Results
+      </span> 
+    </div>
+    
+    <!-- <div class="sam-filter-content @&DSPB"> -->
+    <div class="sam-filter-content">
+      <!--Bottom Pagination (with _bottom ID)-->
+      <div class="dataTables_paginate paging_simple_numbers" id="example_paginate_bottom">
+        <ul class="pagination" style="margin-top:0px" id="pagination__list_bottom">
+          <li class="paginate_button paginate_button_bottom  previous disabled" id="pagination__link--prev_bottom"><a href="javascript:void(0)">Previous</a></li>
+          <li class="paginate_button paginate_button_bottom innerpagination active"><a href="javascript:setpage(1)">1</a></li>
+          @&PAGES <!--Pages-->
+          <li class="paginate_button paginate_button_bottom next" id="pagination__link--next_bottom"><a href="javascript:void(0)">Next</a></li>
+        </ul>
+      </div>  
+
+    </div>
+  </div>        
+  
+
+  <div class="sam-pltr-right">
+
+    <!--Brossam - Sorted By-->
+    <div class="desktop-filter__dropdown" id="product-grid__filter--dropdown">
+      <div class="sam-filter-title">Sorted by:</div>
+      <div class="sam-filter-content">
+          <select name="filter-sort sam-srch-sorted-by" id="product-grid__filter--sortf_bottom">
+              <option value="MOSTPPLR" @&SELC0 >Most Popular</option>
+              <option value="BESTSELL" @&SELC1 >Best Selling</option>
+              <option value="BRANDDW"  @&SELC2 >Brand Ascending</option>
+              <option value="BRANDUP"  @&SELC3 >Brand Descending</option>
+              <option value="NEWEST"   @&SELC4 >Newest</option>
+              <option value="PRICEDW"  @&SELC5 >Price Low to High</option>
+              <option value="PRICEUP"  @&SELC6 >Price High to Low</option>
+              <option value="DESCDW"   @&SELC7 >Description A-Z</option>
+              <option value="DESCUP"   @&SELC8 >Description Z-A</option>
+              <option value="RATEDW"   @&SELC9 >Highest Rated</option>
+         </select>
+      </div>              
+    </div>
+
+    <div class="sam-item-per-page">
+      <div class="sam-filter-title">Items Per Page:</div>
+      <div class="sam-filter-content">
+          <select name="sam-srch-item-per-page-bottom" onchange="samProductPerPage(value,'sam-srch-item-per-page')">
+              <option class="active @&DSP24 " value="24">24</option>
+              <option class="@&DSP48 " value="48">48</option>
+              <option class="@&DSP96 " value="96">96</option>
+              <option class="@&DSPAL " value="AL">View All</option>
+         </select>
+      </div> 
+    </div>
+
+    <!--ViewGrid on Mobile Only (BOTTOM)-->
+    <div class="sam-view-grid-option sam-view-grid-option-bottom visible-sm visible-xs">
+      <div class="mobile-filter__view">
+        <a href="javascript:void(0)" id="viewList-bottom"><span class="icon view-list"></span></a>
+        <a href="javascript:void(0)" id="viewGrid-bottom"><span class="icon view-grid selected"></span></a>
+      </div>  
+    </div>
+
+  </div>
+</div>
+  
+<!--End:controlsB-->
+ 
+
+
+
+<!--Seg:closeMain--> 
+  </main>
+</div>
+<!--End:closeMain--> 
+
+<!--Seg:ListDflts--> 
+ <!-- <div class="col-md-12 product-grid product-grid__gallery col-sm-12" id="product-gridp">  -->
+ <div class="col-md-12 product-grid product-grid__gallery col-sm-12" id="product-gridp">
+ <div id="product-grid" style="width:100%"> 
+  <input type="hidden" id="current_page" value="@&CRPG " />
+  <input type="hidden" id="total_pages" value="@&TTPG " />
+  <input type="hidden" id="total_results" value="@&TTLR " />
+  <input type="hidden" id="maxviewall" value="@&MXVA " />
+  <input type="hidden" id="keywords" value="" />
+  <input type="hidden" id="cid" value="32" />
+  <input type="hidden" id="brand" value="" />
+<!--End:ListDflts-->
+
+<!--Seg:SingleResult-->
+          <!-- <div class="col-xs-6 col-sm-6 col-md-4 col-lg-@&SIZE  product-grid__col "> -->
+          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3  product-grid__col ">
+          <script type="application/ld+json">
+            {
+              "@context" : "http://schema.org",
+              "@type" : "Product",
+              "name" : "@&DESC ",
+              "sku" : "@&STYL ",
+              "url" : "@&HREF2 ",
+              "description" : "@&INFO ",
+              "mpn" : "@&MFGN ",
+              "image" : "@&HOST /@&IMG ",
+              "brand" : {
+                "@type": "Brand",
+                "name": "@&BRND2 "
+              },
+          "offers": {
+                "@type": "AggregateOffer",
+                "highPrice": "@&TOPR ",
+                "lowPrice": "@&FRPR ",
+                "priceCurrency":"USD"
+            }@&RATJSON }
+            </script>
+              <div class="product-item product-item-cta product-grid__item">
+              <a class="product-item-link" href="@&HREF "></a>
+              <label class="compare hidden-xs" data-compare onclick="checkCompare($(this));ga('send', 'event', 'category', 'click', 'compare-feature');">
+                  <input id="COMPC@&STYL " type="checkbox" stylname="@&STYL " styldesc="@&DESC " stylhref="@&HREF " stylimg="@&HOST /@&IMG " imghost="@&HOST "  class="compCheck">
+                  <span class="fake-checkbox"></span>
+                  Compare
+                </label>           
+              <div class="product-item__sale @&CLRC ">SALE</div>
+              <div class="parentbox">
+                <div class="childbox"> 
+                  <a href="@&HREF " >
+                  <img src="/css/ajax-loader.gif" data-original="@&HOST /@&IMG " class="lazy product-item__thumbnail img-responsive" alt="@&ALT " >
+                  </a>
+                </div>
+              </div> 
+                <div class="product-item__details">
+                  <div class="details-title">
+                   @&COLR <!--Available Colors-->
+                    <span class="product-brand">@&BRND </span><span class="product-style">#@&STYL </span>
+                    <a href="@&HREF " ><h5 class="product-name line-clamp line-clamp-2">@&DESC </h5></a>
+                  </div>
+                  <div class="details-info">
+                    <div class="product-item__rating">@&RATING </div>
+                  </div>
+                </div>
+                <div class="product-item__cta">
+                    <div class="product-item__price">
+                        <span class="product-price fl-l">@&PRIC </span>
+                    </div>
+                    <a href="@&QUICK " onclick="@&ACTN " class="btn btn_xs btn--orange @&HIDEADD " >Add to Cart</a>
+                  </div>
+              </div>      
+            </div> 
+            <div class="clearfix row hidden hidden-md hidden-lg clearfix1"></div>
+<!--End:SingleResult-->
+
+
+<!--Seg:CloseResults-->
+        </div>
+      </div>      
+      <input type="hidden" name="SIINDXT" id="SIINDXT" value="@&SIINDXT ">
+      <input type="hidden" name="SIINDXB" id="SIINDXB" value="@&SIINDXB ">
+<!--End:CloseResults-->
+
+<!--Seg:OpenFilter-->  
+  <div class="row flex-row"  >
+        <div class="col-md-3 product-grid__filter hidden-xs hidden-sm hiddenf"  id="leftFilter">
+          <div class="product-grid__filter--inner">
+
+            <div class="row">	
+              <div class="col-md-12 product-grid__filter-options">
+               <a href="javascript:void(0)" id="clearAllFilters" style="display:none">Clear All</a>
+<!--End:OpenFilter--> 
+
+<!--Seg:OpenFilterM-->  
+  <div class="mobile-category-filter__overlay"></div>
+    <div class="mobile-category-filter" id="mobile-category-filter">
+  	 <div class="filter__header">
+  		  Filters
+  		  <div class="filter__header--info">
+  			 <span class="filter__counter" id="countMobileFilter"></span>
+  			 <a href="#" class="filter__clear" id="clearMobileFilter">Clear All</a>
+  		  </div>
+  		  <svg class="icon close--black filter__close" id="closeMobileFilter"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+  	 </div>
+     <ul class="subnav">
+<!--End:OpenFilterM--> 
+
+<!--Seg:FilterGroup-->
+                <div class="panel">
+                  <div class="panel-heading" role="tab" id="heading@&TITLESEON ">
+                    <h4 class="panel-title">
+                      <a class="panel-link collapsed" role="button"  href="javascript:void(0)"  expand="collapse@&TITLESEON " id="full@&TITLESEON " targetid="@&TITLESEON " >
+                        @&TITLE </a>
+                    </h4>
+                  </div>
+                <div id="collapse@&TITLESEON " class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading@&TITLESEON ">
+                    <div class="panel-body">
+                      <ul class="list-unstyled list-filters">@&FILTER </ul>
+					  <div class="text-right resetdiv" style="visibility:hidden"><a href="javascript:void(0)" class="resetfilters"><b>CLEAR ALL</b></a></div>
+                    </div>
+                  </div>
+                 </div>	
+<!--End:FilterGroup-->
+
+<!--Seg:FilterGroupM-->
+            <li class="mobileGroup" id="M@&TITLESEON L2">
+                <a href="javascript:void(0)" expand="@&TITLESEON L2" class="subnav__l1 collapsed" id="mobil@&TITLESEON " targetid="@&TITLESEON " >@&TITLE </a>
+                <ul class="collapse subnav__l2" id="@&TITLESEON L2">@&FILTERM </ul>
+            </li>
+<!--End:FilterGroupM-->
+ 
+<!--Seg:CloseFilter-->
+              </div>
+            </div>
+          </div>
+        </div>           
+<!--End:CloseFilter-->
+
+<!--Seg:CloseFilterM-->
+      </ul>
+        <div class="filter__footer">
+      	 <a href="#" class="btn btn_block btn--blue" id="applyMobileFilter">Apply</a>
+        </div>
+    </div>
+<!--End:CloseFilterM--> 
+
+
+<!--Seg:TopCLER-->
+  <div class="row" >
+    <div class="col-sm-12">
+      <h2 style="margin-top: 15px;" id="scrollIndicator">Clearance</h2>
+
+
+      <p class="hidden-xs-sm" style="font-size: 16px;margin-bottom: 30px">Galls understands the constraints that modern-day law enforcement faces with budget cuts, including limited funding for academies, training and professional development. With this in mind, Galls provides a broad array of essential public-safety products at clearance prices. Purchase quality yet economical uniform apparel, duty boots, gloves, outerwear, concealed carry gear, body armor and tactical equipment from Galls, LawPro, 5.11, Danner, Safariland and more.</p>
+    
+    </div>
+  </div>   
+<!--End:TopCLER-->
+
+<!--Seg:TopC--> 
+  <!--Brossam - Hero and Copy Component -->
+  <div class="row flex-row sam-category-top-row">
+    <div class="col-md-3" id="sam-shop-category-div">
+      &nbsp;
+    </div>
+    <div class="col-md-12">
+      <div class="searchhero" style="display: @&DC1 "><div class="col-sm-12">@&C1 </div></div>
+      <div id="sam-srch-breadcrumb"></div>
+      <div class="searchcopy" style="display: @&DC2 "><div class="col-sm-12">@&C2 </div></div>
+    </div>
+  </div>
+<!--End:TopC-->
+
+<!--Seg:BottomC-->
+  <div class="row searchpromo1" style="display: @&DC3 ;width:100%;overflow:hidden;"><div class="col-sm-12">@&C3 </div></div>
+  <div class="row searchpromo2" style="display: @&DC4 ;width:100%;overflow:hidden;"><div class="col-sm-12">@&C4 </div></div>
+
+  <!--BROSSAM - Sam Script for SRCH-->
+  GTSAMJSSRCH
+  <!--BROSSAM - END-->
+  
+<!--End:BottomC-->
+
+<!--Seg:TopB-->
+  <div class="row searchhero" style="display: @&DB1 ;overflow:hidden;"><div class="col-sm-12">@&B1 </div></div>
+  <div class="row searchcopy" style="display: @&DB2 ;overflow:hidden;"><div class="col-sm-12">@&B2 </div></div>
+<!--End:TopB-->
+
+<!--Seg:BottomB-->  
+  <div class="row searchpromo1" style="display: @&DB3 ;width:100%;overflow:hidden;"><div class="col-sm-12">@&B3 </div></div>
+  <div class="row searchpromo2" style="display: @&DB4 ;width:100%;overflow:hidden;"><div class="col-sm-12">@&B4 </div></div>
+<!--End:BottomB-->
+
+<!--Seg:OpenCatgPage--> 
+<div class="container brand__body">
+<div class="row brand__body--header">
+        <div class="col-xs-12 ta-c">
+          <h2 class="brand__title">Categories</h2>
+        </div>
+      </div>
+  <div class="row">
+	  <div class="brand__grid--left" >     
+<!--End:OpenCatgPage-->           
+
+<!--Seg:CatgResult-->
+            <div class="brand__grid--cell">
+              <a href="@&HREF " class="brand__grid--box" style="background-image: url('@&IMAG ')"><h3>@&DESC </h3></a>
+            </div>
+<!--End:CatgResult-->      
+
+<!--Seg:CloseCatgPage-->
+      </div>
+    </div>
+	</div>
+<!--End:CloseCatgPage-->
+
+<!--Seg:NoResults-->
+  <div class="container noresults">		
+				<H4>We're sorry! We couldn't find results for "@&SRCH ".</H4>		
+		<h3>Search Hints:</h3>
+		<ul>
+			<li>Please double check your spelling.</li>
+			<li>Use more generic search terms (e.g. gear uniform, fire). </li>
+			<li>Your product search may have been discontinued, removed, or is not yet on our site.</li>
+			<li>Navigate to a product category using the site navigation above.</li>
+		</ul>
+
+		<p><b>Need additional help? Call us at (866) 673-7643.</b></p>
+</div>
+<!--End:NoResults-->   

@@ -1,0 +1,577 @@
+<!--Seg:Main1-->
+          <div class="row">
+            <div class="col-xs-12">
+              <h6 class="product__title--brand">@&BRND </h6>
+            </div>
+          </div>
+          <div class="row customize__header">
+            <div class="col-sm-9">
+              <h3 class="product__title--name">@&DESC </h3>
+              <div class="product__title--item" style="border:0">
+                <ul class="list-separator">
+                  <li>Item# @&SKU </li>
+                  <li>Mfg# @&MFG </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <h4 class="product__title--price">@&PRIC </h4>
+            </div>
+          </div>
+          <div class="row customize__body">
+            <div class="col-md-6">
+              <img class="img-responsive" src="@&PATH @&IMG " alt="">
+            </div>
+            <div class="col-md-6 customize__step-1">
+              <div class="customize__row">
+                <div class="customize__row--label">
+                  <label class="form__label mr-1"><b>Customization<span style="color:red">*</span></b></label>
+                </div>
+                @&V1NO <!-- -->
+              </div>
+              @&VASLINES <!-- -->
+            </div>
+          </div>
+ 
+                <input type="hidden" name="SISKU" value="@&SISKU ">
+
+<!--End:Main1-->
+
+<!--Seg:Main2-->
+
+           
+          <div class="row customize__footer">
+            <div class="col-xs-12">
+              <h4 class="customize__footer--subtotal">SubTotal: @&PRIC </h4>
+              <a href="javascript:void(0)" onclick="addToCart()" class="btn btn_lg btn--orange">Add to cart</a>
+            </div>
+          </div>
+          <style>
+  body.modal-open {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  body.platform-ios.modal-open {
+    position: fixed;
+  }
+</style>
+
+<script>
+  var scrollTopPosition = 0;
+  var lastKnownScrollTopPosition = 0;
+
+  $(document).ready(function(){
+    if( navigator.userAgent.match(/iPhone|iPad|iPod/i) ) {
+      $('body').addClass('platform-ios');
+      $(window).scroll(function () {
+        scrollTopPosition = $(document).scrollTop();
+      });
+      $('.modal').on('show.bs.modal', function () {
+        $('body').css('top', (scrollTopPosition * -1));
+        lastKnownScrollTopPosition = scrollTopPosition;
+      });
+      $('.modal').on('hidden.bs.modal', function () {
+        $('body').scrollTop(lastKnownScrollTopPosition);
+      });
+    }
+  });
+
+  function overflowIsHidden(node) {
+    var style = getComputedStyle(node);
+    return style.overflow === 'hidden' || style.overflowX === 'hidden' || style.overflowY === 'hidden';
+  }
+
+  function findNearestScrollableParent(firstNode) {
+    var node = firstNode;
+    var scrollable = null;
+    while(!scrollable && node) {
+      if (node.scrollWidth > node.clientWidth || node.scrollHeight > node.clientHeight) {
+        if (!overflowIsHidden(node)) {
+          scrollable = node;
+        }
+      }
+      node = node.parentNode;
+    }
+    return scrollable;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('touchmove', function(event) {
+      var owner = findNearestScrollableParent(event.target);
+      if (!owner || owner === document.documentElement || owner === document.body) {
+        event.preventDefault();
+      }
+    });
+  }, false);
+
+  // ['resize', 'orientationchange', 'scroll'].forEach(function(event) {
+  //   window.(event, function() {
+  //     window.scrollTo(0, 0);
+  //   });
+  // });
+</script>
+
+<!--End:Main2-->
+
+
+<!--Seg:VasLine-->
+              <div class="customize__row @&CLASS ">
+                <div class="customize__row--label">
+                  <label class="form__label mr-1">@&DESC @&REQ </label>
+                  <label class="form__label mr-1 black" id="customize__2--selected"></label>
+                </div>
+                @&HTML <!-- -->
+                @&XTR1 <!-- -->
+              </div>
+<!--End:VasLine-->
+
+<!--Seg:Main1New-->
+<style>
+  .vasAppList {
+    list-style: none;
+    display: block;
+    padding: 5px 5px 8px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .vasAppList a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .vasAppList li {
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    margin-right: 8px;
+    height: 75px;
+    width: 75px;
+    font-size: 12px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    padding: 4px;
+  }
+  .vasAppList a.selected li {
+    outline: medium solid #ff6006;
+  }
+  .vasAppList a.completed, .vasAppList a.completed2 {
+    /* pointer-events: none; */
+    position: relative;
+  }
+  .vasAppList a.completed li, .vasAppList a.completed2 li {
+    outline: medium solid #4CBB17;
+  }
+  .vasAppList a.completed li:after {
+    content: '\2713';
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    transform: translate(-99%, 0%);
+    -moz-transform: translate(-99%, -100%);
+    color: #4CBB17;
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 0.8)
+  }
+  .vasAppList a.completed2 li:after {
+    content: '\2713';
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -200%);
+    color: #4CBB17;
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 0.8)
+  }
+
+  .vasItemList {
+    list-style: none;
+    display: block;
+    padding: 5px 5px 8px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .vasItemList a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .vasItemList li {
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    margin-right: 8px;
+    height: 90px;
+    width: 75px;
+    font-size: 12px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    padding: 4px;
+  }
+  .vasItemList a.selected li {
+    outline: medium solid #ff6006;
+  }
+  .vasItemList img {
+    width: 100%;
+    max-height: 55px;
+  }
+  .vasItemList p {
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  .rearView__label {
+    font-size: 12px;
+    line-height: 1;
+    margin: 0;
+  }
+  .rearView__detail {
+    color: #939393;
+    font-size: 14px;
+  }
+  #SII1NO option:disabled {
+    color: #4CBB17;
+  }
+  .iv2s:disabled {
+    background-color: #808080;
+  }
+  .customize__row.disabled {
+    display: none;
+  }
+</style>
+<div class="row">
+  <div class="col-xs-12">
+    <h6 class="product__title--brand">@&BRND </h6>
+  </div>
+</div>
+<div class="row customize__header">
+  <div class="col-sm-9">
+    <h3 class="product__title--name">@&DESC </h3>
+    <div class="product__title--item" style="border:0">
+      <ul class="list-separator">
+        <li>Item# @&SKU </li>
+        <li>Mfg# @&MFG </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <h4 class="product__title--price">@&PRIC </h4>
+  </div>
+</div>
+<div class="row customize__body">
+  <div class="col-md-4">
+    <img class="img-responsive" src="@&PATH @&IMG " alt="">
+  </div>
+  <div class="col-md-5 customize__step-1" style="border-right:1px solid #dcdcdc;">
+    <div class="customize__row">
+      <div class="customize__row--label">
+        <label class="form__label mr-1"><b>Customization<span style="color:red">*</span></b></label>
+
+      </div>
+      @&V1NO <!-- -->
+    </div>
+    @&VASITEM <!-- -->
+    @&VASLINES <!-- -->
+    <div class="customize__footer">@&ADDVASBTN </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row" style="border-bottom: 1px solid #dcdcdc; padding-bottom: 5px; margin-bottom: 5px;">
+      <div class="col-xs-7 rearView__label"><b>Customized<br>Products</b></div>
+      <div class="col-xs-2 rearView__label text-center"><b>Delete</b></div>
+      <div class="col-xs-1 rearView__label text-center"><b>Edit</b></div>
+      <div class="col-xs-2 rearView__label text-center"><b>&nbsp;</b></div>
+    </div>
+    @&CART <!-- -->
+  </div>
+</div>
+<input type="hidden" name="SISKU" value="@&SISKU ">
+
+
+<script>
+  function selectVasApp(i1no) {
+    showWait();
+    var edp = $("#SIEDP").val();
+		var qty = $("#SIQTY").val();
+    if(!i1no) {
+      i1no = $("#SII1NO").val();
+    } else {
+      i1noP =  $("#SII1NO").val();
+      if (i1no == i1noP) i1no = '';
+    }
+    var vedp = "";
+    var cdno = $("#SICDNO").val();
+    $("#SIE1NOE").val('');
+    $.ajax({
+      url: '/CGBCXSTYL?SIACTN=LOADALL&SIEDP='+edp+'&SIQTY='+qty+'&SII1NO='+i1no+'&SIVEDP='+vedp+'&SICDNO='+cdno,
+      type: "get",
+      dataType: 'html',
+      success: function(html) { 
+        $('#customBody').html(html);
+        hideWait();
+      }
+    });
+  }
+
+  function selectVasItem(vedp) {
+    showWait();
+    var edp = $("#SIEDP").val();
+		var qty = $("#SIQTY").val();
+    var i1no = $("#SII1NO").val();
+    if(!vedp) {
+      vedp = $("#SIVEDP").val();
+    }  
+    var cdno = $("#SICDNO").val();
+    $.ajax({
+      url: '/CGBCXSTYL?SIACTN=LOADALL&SIEDP='+edp+'&SIQTY='+qty+'&SII1NO='+i1no+'&SIVEDP='+vedp+'&SICDNO='+cdno,
+      type: "get",
+      dataType: 'html',
+      success: function(html) {
+        $('#customBody').html(html);
+        removeLetterSizeInput();
+        hideWait();
+      }
+    });
+  }
+
+  
+function deleteEV1Cart(cdno, e1no) {
+    jsDeleteMsg = 'Do you want to remove this customization from this item?';
+    if(!confirm(jsDeleteMsg)) {
+        submitted = false;
+        return;
+    }
+    showWait();
+    $.ajax({
+        url: '/CGBCXSTYL?SIACTN=DLTVASCART'+'&SICDNO='+cdno+'&SIE1NO='+e1no,
+        type: "get",
+        dataType: 'html',
+        success: function(html) {
+            location.reload();
+        }
+    });
+}
+
+  function addItemVas() {
+    var errors = "N";
+    $(".iv2s").each(function() {
+      if($(this).attr("valrequired") == 'true_') {
+        if($.trim($(this).val()) == "") {
+          alert($(this).attr("prompt")+' is required!');
+          errors = "Y";
+          return false;
+        }
+      }
+    });
+    if(errors == "Y") return false;
+    showWait();
+    $("#SIACTN").val("ADDTOCARTVAS");
+    $.ajax({
+      url: '/CGBCSTYL',
+	    type: "post",
+      dataType: 'html',
+      data: $("#styleForm").serialize(),
+      success: function(html) {
+        if(html.charAt(0) == "S") {
+          $('#SICDNO').val(html.substring(1));
+          hideWait();
+          selectVasApp(' ');
+        }
+        else {
+          hideWait();
+          alert("Error happened...please add to cart again!");               
+        }
+      }
+    });
+  }
+
+  function addVasApp() {
+    var errors = "N";
+    $(".iv2s").each(function() {
+      if($(this).attr("valrequired") == 'true_') {
+        if($.trim($(this).val()) == "") {
+          alert($(this).attr("prompt")+' is required!');
+          errors = "Y";
+          return false;
+        }
+      }
+    });
+    if(errors == "Y") return false;
+    showWait();
+    $("#SIACTN").val("ADDVASAPP");
+    $.ajax({
+      url: '/CGBCXSTYL',
+      type: "post",
+      dataType: 'html',
+      data: $("#styleForm").serialize(),
+      success: function(html) {
+        hideWait();
+        selectVasApp(' ');
+      }
+    });
+  }
+
+  function editVasApp(e1no) {
+    showWait();
+    var cdno = $("#SICDNO").val();
+    $("#SIE1NOE").val(e1no);
+    $.ajax({
+      url: '/CGBCXSTYL?SIACTN=LOADALL'+'&SICDNO='+cdno+'&SIE1NO='+e1no,
+      type: "get",
+      dataType: 'html',
+      success: function(html) { 
+        $('#customBody').html(html);
+        hideWait();
+      }
+    });
+  }
+
+  function deleteVasApp(e1no) {
+    jsDeleteMsg = 'Do you want to remove this customization from this item?';
+    if(!confirm(jsDeleteMsg)) {
+      submitted = false;
+      return;
+    }
+    showWait();
+    var cdno = $("#SICDNO").val();
+    $.ajax({
+      url: '/CGBCXSTYL?SIACTN=DLTVASAPP'+'&SICDNO='+cdno+'&SIE1NO='+e1no,
+      type: "get",
+      dataType: 'html',
+      success: function(html) {
+        $("#SIE1NOE").val('');
+        if(html == "CART") {
+          if($("#fromCart").val() == "Y") {
+            location.href = '/cart';
+          } else {
+            $("#SICDNO").val('');
+            hideWait();
+            selectVasApp(' ');
+          }
+        } else {
+          hideWait();
+          selectVasApp(' ');
+        }
+      }
+    });
+  }
+
+  function deleteAllVas(cdno) {
+    jsDeleteMsg = 'Do you want to clear all customization from this item?';
+    if(!confirm(jsDeleteMsg)) {
+      submitted = false;
+      return;
+    }
+    showWait();
+    $.ajax({
+      url: '/CGBCXSTYL?SIACTN=DLTALLVAS'+'&SICDNO='+cdno,
+      type: "get",
+      dataType: 'html',
+      success: function(html) {
+        $("#SICDNO").val('');
+        $("#SIE1NOE").val('');
+        $("#customizeModal").modal("hide");
+        hideWait();
+        if(html == "CART") {
+          if($("#fromCart").val() == "Y") {
+            location.href = '/cart';
+          }
+        }
+      }
+    });
+  }
+
+  function finishCustom() {
+    $("#SICDNO").val('');
+    $("#SIE1NOE").val('');
+    location.href = '/cart';
+  }
+</script>
+
+<style>
+  body.modal-open {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  body.platform-ios.modal-open {
+    position: fixed;
+  }
+</style>
+<script>
+  var scrollTopPosition = 0;
+  var lastKnownScrollTopPosition = 0;
+
+  $(document).ready(function () {
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      $('body').addClass('platform-ios');
+      $(window).scroll(function () {
+        scrollTopPosition = $(document).scrollTop();
+      });
+      $('.modal').on('show.bs.modal', function () {
+        $('body').css('top', (scrollTopPosition * -1));
+        lastKnownScrollTopPosition = scrollTopPosition;
+      });
+      $('.modal').on('hidden.bs.modal', function () {
+        $('body').scrollTop(lastKnownScrollTopPosition);
+      });
+    }
+  });
+
+  function overflowIsHidden(node) {
+    var style = getComputedStyle(node);
+    return style.overflow === 'hidden' || style.overflowX === 'hidden' || style.overflowY === 'hidden';
+  }
+
+  function findNearestScrollableParent(firstNode) {
+    var node = firstNode;
+    var scrollable = null;
+    while (!scrollable && node) {
+      if (node.scrollWidth > node.clientWidth || node.scrollHeight > node.clientHeight) {
+        if (!overflowIsHidden(node)) {
+          scrollable = node;
+        }
+      }
+      node = node.parentNode;
+    }
+    return scrollable;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.addEventListener('touchmove', function (event) {
+      var owner = findNearestScrollableParent(event.target);
+      if (!owner || owner === document.documentElement || owner === document.body) {
+        event.preventDefault();
+      }
+    });
+  }, false);
+</script>
+<!--End:Main1New-->
+
+<!--Seg:cartItem-->
+<div class="row rearView__detail">
+  <div class="col-xs-7">@&ITEM </div>
+  <div class="col-xs-2">&nbsp;</div>
+  <div class="col-xs-3 text-right">@&PRIC </div>
+</div>
+<!--End:cartItem-->
+
+<!--Seg:cartVAS-->
+<div class="row rearView__detail">
+  <div class="col-xs-7">@&DESC </div>
+  <div class="col-xs-2 text-center"><a href="javascript:void(0)" onclick="deleteVasApp('@&E1NO ')"><img src="/images/icon-delete.png" alt="Delete" title="Delete"></a></div>
+  <div class="col-xs-1 text-center"><a href="javascript:void(0)" onclick="editVasApp('@&E1NO ')"><img src="/images/icon-edit.png" alt="Edit" title="Edit"></a></div>
+  <div class="col-xs-2">&nbsp;</div>
+</div>
+<!--End:cartVAS-->
+
+<!--Seg:cartFooter-->
+<div class="row" style="padding-top: 10px;">
+  <div class="col-xs-7 rearView__label"><b>Subtotal</b></div>
+  <div class="col-xs-5 rearView__label text-right"><b>@&SUBT </b></div>
+</div>
+<div class="row" style="padding-top: 10px;">
+  <div class="col-xs-6 text-left"><a href="javascript:void(0)" onclick="deleteAllVas('@&CDNO ')" class="btn btn_xs btn--orange">Clear All</a></div>
+  <div class="col-xs-6 text-right"><a href="javascript:void(0)" onclick="finishCustom()" class="btn btn_xs btn--orange">Finished<br>Customization</a></div>
+</div>
+<!--End:cartFooter-->

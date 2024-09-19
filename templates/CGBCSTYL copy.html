@@ -1,0 +1,428 @@
+<!--Seg:Open-->
+<script language="JavaScript">
+$( document ).ready(function() {
+$("img.lazy").lazyload({ threshold : 3400 });
+});
+</script>
+
+<form name="f" id="styleForm" method="POST" action="@&PGM ">
+<main class="product sam-pdp-main">
+  <input type="hidden" id="SIACTN" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIWTNO" id="SIWTNO" value="@&SIWTNO ">
+  <input type="hidden" id="style" name="SISTYL" value="@&SISTYL ">
+  <input type="hidden" id="turntoKey" name="turntoKey" value="@&SITEKEY ">
+  <input type="hidden" name="SICDNO"  id="SICDNO"  value="@&SICDNO ">
+  <input type="hidden" name="SISORE"  id="SISORE"  value="@&SISORE ">
+  <input type="hidden" name="SIINFO"  id="SIINFO"  value="@&SIINFO ">
+  <input type="hidden" id="imageList" name="imageList" value="">
+  <input type="hidden" id="thumbnailList" name="thumbnailList" value="">
+  <input type="hidden" id="imageListI" name="imageListI" value="">
+  <input type="hidden" id="thumbnailListI" name="thumbnailListI" value="">
+  <input type="hidden" id="noImageFound" name="noImageFound" value="">
+  <input type="hidden" id="drpActn"  value="">
+  <input type="hidden" name="SIVAS" value="@&SIVAS " id="SIVAS">
+  <input type="hidden" name="vasable" value="@&VASABLE " id="vasable">
+  <input type="hidden" name="requiredvas" value="@&REQUIREDVAS " id="requiredvas">
+  <input type="hidden" name="SISRCHG" value="@&SISRCH " id="SISRCH">
+  <input type="hidden" value="@&OPVARR " id="optnarray">
+
+
+    <div class="container">
+<!--End:Open-->
+
+
+<!--Seg:StyleMain-->
+      <div class="row">
+        <div class="col-sm-12">
+          <ol class="breadcrumb product__breadcrumb hidden-xs hidden-sm">
+            @&BRDCR <!--BreadCrumb-->
+          </ol>
+          <div class="product__title--item visible-xs visible-sm">
+              <span class="product__brand">@&BRND </span><span class="sku">Item# <span>@&STYL </span> </span><span id="mfgn">@&MFGN </span><!--Manuf.-->
+          </div>
+          <!-- <div class="product__title">
+            <h1>@&H1SC </h1>
+          </div> -->
+          <span class="TurnToReviewsTeaser"></span>
+          <span class="TurnToItemTeaser"></span>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" name="SIEDP" value="@&SIEDP " id="SIEDP">
+    <div class="container product__header">
+      <div class="row">
+        <div class="col-md-6 left hidden-xs hidden-sm">
+          <div class="product__gallery hidden-xs hidden-sm">
+            <div class="product__thumbnails @&DSPTH ">
+
+              <a href="javascript:void(0)" class="product__thumbnails--arrow prev btn-block text-center" id="product__thumbnails--prev"><svg class="icon caret--black-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-up"></use></svg></a>
+              <div class="product__thumbnails--scroll" id="product__thumbnails--scroll">
+                  <div  id="hiddenOverflow">
+                    @&ALTIMG  <!--GalleryImages-->
+                  </div>
+              </div>
+              <a href="javascript:void(0)" class="product__thumbnails--arrow next" id="product__thumbnails--next"><svg class="icon caret--black-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-down"></use></svg></a>
+            </div>
+            <div class="product__gallery--image @&DSPNG " id="galleryMain">
+              <a href="javascript:void(0)" class="product__gallery--zoom" data-zoom="product__gallery--active" data-zoom-title="">
+                <svg class="icon zoom">
+                  <use xlink:href="images/sprite.svg#zoom"></use>
+                </svg>
+              </a>
+              <img src="@&DOMN @&PATH @&ZIMG " class="product__gallery--active" id="product__gallery--active" alt="@&FALT " data-zoom="product__gallery--active">
+              <div id="videoDiv" class="hidden"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 right">
+        <div class="product__info">
+
+          <!--Brossam: Note-->
+          GTGIFTS
+          
+
+          <!--1. Brossam Image Zoom on Mobile Click-->
+          <span id="samPDPImageZoom"></span>
+          <!--1. END Brossam Image Zoom on Mobile Click-->
+
+
+
+          <!--Product Title, Brand, Price-->
+          <div class="product__box__upper">
+            <div class="product__title--item">
+              <span class="product__brand">@&BRND </span>
+            </div>
+            <div class="product__title">
+              <h1>@&H1SC </h1>
+            </div>
+            <div class="product__title--item">
+              <span class="sku">Item# @&STYL </span><span id="mfgn">@&MFGN </span><!--Manuf.-->
+            </div>
+            <h4 class="product__price discounted" id="priceMsg">@&PRIC </h4>
+            <!--BROSSAM - 1. Sezzle Price Widget Container-->
+            <div id="sam--sezzle--wrapper">
+              <div id="sam--sezzle--price"></div>
+            </div>
+            <!--BROSSAM - END Sezzle Price Widget Container-->
+          </div>
+          <!--END Product Title, Brand, Price-->
+
+
+          
+          <div class="product__mobile-slider visible-xs visible-sm" id="product__mobile-slider">
+            @&ALTIMGM  <!--GalleryImages-->
+          </div>
+
+          <!--2. Brossam Image Zoom on Mobile Click-->
+          <div id="samPDPZoomIconDiv"></div>
+          <!--2. END Brossam Image Zoom on Mobile Click-->
+
+
+          <div class="product__options @&DSPOPTN ">
+            <div class="markdown-box @&DSPLC ">
+                <label class="form__checkbox">
+                     @&SICLER <span class="fake-checkbox"></span>
+                      Show only markdown color/sizes
+                </label>
+            </div>
+         
+          <input type="hidden" name="SIOPV1P" id="SIOPV1P" value="@&SIOPV1 ">
+          <input type="hidden" name="SIOPV2P" id="SIOPV2P" value="@&SIOPV2 ">
+          <input type="hidden" name="SIOPV3P" id="SIOPV3P" value="@&SIOPV3 ">
+
+
+
+<!--OPV1/Color Section-->
+            <div class="product__options--row @&DSPOPV1 ">
+              <div class="product__options--row-label">
+                <label class="form__label mr-1" id="origDesc1" >@&OPD1 </label>
+                <label class="form__label black product__options--selected" id="product__options--color-selected">@&OPD1S </label>
+                &nbsp;&nbsp;&nbsp;@&SIZE1 &nbsp;&nbsp;&nbsp;@&COPY1 <!-- -->
+              </div>
+              <ul class="product__options--list product__options--@&TYPE1  choices" data-text="product__options--color-selected" id="opv1UL">
+                @&BOXOPV1 <!--OPV1-->
+                <input type="hidden" name="SIOPV1" id="SIOPV1" class="styleOption" requ="@&REQ1 " mesg="@&OPD1 " value="@&SIOPV1 ">
+              </ul>
+            </div>
+<!--Opv2 Section-->
+            <div class="product__options--row @&DSPOPV2 ">
+              <div class="product__options--row-label">
+                <label class="mr-1 form__label" id="origDesc2">@&OPD2 </label>
+                <label class="mr-1 form__label black" id="product__options--size">@&OPD2S </label>
+                &nbsp;&nbsp;&nbsp;@&SIZE2 &nbsp;&nbsp;&nbsp;@&COPY2 <!-- -->
+              </div>
+              <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size" id="opv2UL">
+                @&BOXOPV2 <!--OPV2-->
+                <input type="hidden" name="SIOPV2" id="SIOPV2" class="styleOption" requ="@&REQ2 " mesg="@&OPD2 " value="@&SIOPV2 ">
+              </ul>
+            </div>
+<!--Opv3 Section-->
+            <div class="product__options--row @&DSPOPV3 ">
+              <div class="product__options--row-label">
+                <label class="mr-1 form__label" id="origDesc3">@&OPD3 </label>
+                <label class="mr-1 form__label black" id="product__options--size2">@&OPD3S </label>
+              </div>
+              <h6 style="color:#007ac2" class="@&DSPHM " id="prehemmedMesg">Pre-hemmed Sizes<h6>
+              <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size2" id="opv3UL">
+                @&BOXOPV3 <!--OPV3-->
+                <input type="hidden" name="SIOPV3" id="SIOPV3" class="styleOption" requ="@&REQ3 " mesg="@&OPD3 " value="@&SIOPV3 ">
+              </ul>
+
+              <label for="SIHEMD" id="samHemmingLabel"><h6 class="hemming-title @&DSPHM ">Custom hemming
+              <label class="form__checkbox" style="margin-bottom:-3px;" for="SIHEMD">
+                  <input type="checkbox" name="SIHEMD" ID="SIHEMD" @&HEMD  value="Y" onchange="toggleHemming()">
+                  <span class="fake-checkbox"></span>
+                  <!--BROSSAM-->
+                  <small class="form__label hemming-label"><s>&#36;6.99</s> Now &#36;3.99. <span style="color: #E50000">Please allow @&LDTM  days for hemming</span></small></label></h6></label>
+                <!-- <small class="form__label hemming-label" style="">Please allow @&LDTM  day(s) for hemming</small></label></h6></label> -->
+              <ul class="product__options--list product__options--boxes product__options--size choices @&DSPHML " data-text="product__options--size2" id="opv3ULH">
+                @&OPV3HEM <!--HEMMING-->
+              </ul>
+              <div id="hemmingMesg">@&HEMMSG </div>
+            </div>
+
+<!--VAS -->
+            <div class="product__options--row @&DSPVAS " id="vasbutton" >
+              <a href="javascript:void(0)"  class="btn btn_sm btn--white btn_outline-blue customize-button">Customize</a>
+            </div>
+
+                <span class="product__stock-warning" id="stockMsg">@&STKMSG </span>  
+                <span style="width:100%;float:left;" id="SIRIMSG">@&RIDMSG </span>
+                <span class="clearMsg" id="clearMsg">@&CLRMSG </span>
+
+
+            <div class="row">
+                <div class="col-md-3 col-sm-12 product__qty @&DSPOPTN ">
+                @&SIQTY <!--Qty DropDown--> <span style="display: inline-block;font-size: 18px;margin-left:10px;" class="qtyPrice hidden-lg hidden-md"></span>
+              </div>
+                <div class="col-md-9 col-sm-12" id="samPDPAddToCartDiv">
+                  <a href="javascript:void(0)" onclick="addToCartItem()" id="samPDPAddToCartBtn" class="btn btn_lg btn-block btn--orange btn--black vwo-addtocart @&DSPLADD " >Add To Cart</a>
+                  <a href="javascript:void(0)" onclick="submit_form('f','ADDTO');" class="btn btn_lg btn--blue @&DSPLADDU ">@&ADDTOLBL </a>
+                  <a href="/CGBCSHPFL?PMKEY=RESET" class="btn btn_lg btn--white @&DSPLADDU ">@&SHNOLBL </a> 
+                </div>
+            </div> 
+      
+      </div>
+        </div><!-- Product Info end -->
+          <div class="social-box clearfix">
+ 
+            <div class="wishlist-box"><a href="javascript:void(0)" onclick="addToList('I','','@&SISTYL ');" class="@&DSPLADD ">Add To Wishlist</a>
+            
+         </div>
+        </div><!-- Product Column End -->
+          </span>
+          
+        </div>
+      </div>
+
+
+
+<!--SizeChartModal-->
+    <div class="modal size-chart" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="sizeChartModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="sizeChartModalLabel">Size Chart</h4>
+        </div>
+        <div class="modal-body">@&SIZEC </div>
+      </div>
+    </div>
+  </div>
+<!--copyModal-->
+    <div class="modal size-chart" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="copyModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="copyModalLabel">Helpful info</h4>
+        </div>
+        <div class="modal-body">@&OPCP </div>
+      </div>
+    </div>
+  </div>
+<!--End:StyleMain-->
+
+<!--Seg:longDescription-->
+  
+
+
+    <div class="container">
+      <div class="product__details">
+        <div class="row">
+          <div class="col-md-12 product__details--left">
+            <h6 class="hidden-sm hidden-xs">Product Details</h6>
+            <a class="mobile_collapse--toggle collapsed visible-sm visible-xs" role="button" data-toggle="collapse" href="#productDetails" aria-expanded="false" aria-controls="productDetails"><h6>Details</h6></a>
+            <div class="mobile_collapse" id="productDetails">
+              <h2>@&H1SC </h2>
+              <p itemprop="description">@&INFO </p>
+            </div>
+            <div class="product__specs">
+              <h6 class="hidden-sm hidden-xs">Product Specs</h6>
+              <a class="mobile_collapse--toggle visible-sm visible-xs" role="button" data-toggle="collapse" href="#productSpecs" aria-expanded="false" aria-controls="productSpecs"><h6>Specs</h6></a>
+              <div class="mobile_collapse collapse in" id="productSpecs">
+                <div class="row">
+                    @&BULT <!--Bullets-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="product__customers">
+        <div id="TurnToChatterContent"></div>
+      </div>
+    </div>
+    <div class="product__qa">
+      <div class="container">
+        <h3><a id="qa_widget">Questions &amp; Answers</a></h2>
+        <div id="TurnToContent"></div>
+        <h3><a id="reviews_widget">Product Reviews</a></h2>
+        <div id="TurnToReviewsContent"></div>
+    </div>
+   </div>
+<!--End:longDescription-->
+
+<!--Seg:Video-->
+     <img src="http://img.youtube.com/vi/@&VID /default.jpg" zoomV="@&VID " />
+<!--End:Video-->
+
+<!--Seg:Close-->
+
+<div class="product__mobile-cta" style="display: none;">
+    <a href="javascript:void(0)" onclick="addToCartItem()" class="btn btn--orange @&DSPLADD " >Add To Cart</a>
+    <a href="javascript:void(0)" onclick="addToList('I','','@&STYL ')" class="btn btn_lg btn--white @&DSPLADD ">Add To List</a>
+    <a href="javascript:void(0)" onclick="submit_form('f','ADDTO');" class="btn btn_lg btn--blue @&DSPLADDU ">Add to My Site</a>
+                  <a href="/CGBCSHPFL?PMKEY=RESET" class="btn btn_lg btn--white @&DSPLADDU ">Return to Self Serve</a> 
+  </div>
+  <script type="text/javascript" src="/js/galls/stylepage.js"></script>
+  <script type="text/javascript" src="//static.www.turnto.com/traServer4_3/trajs/@&SITEKEY /tra.js"></script>
+  <script type="text/javascript" src="//static.www.turnto.com/sitedata/@&SITEKEY /v4_3/@&STYL /d/itemjs"></script>
+
+
+
+  <!--Brossam -->
+  GTSAMJSPDP
+
+
+    <!--BROSSAM - 2. Sezzle Price Widget Configuration-->
+    <script type="text/javascript">
+      if(document.getElementsByClassName('qtyPrice').length > 0) {
+        //Hide when "See price in cart" (Length will be 0)
+        if(document.getElementsByClassName('mapmesg').length > 0) {
+          //Show different text
+          document.sezzleConfig =
+          {
+            targetXPath: '.qtyPrice',
+            renderToPath: '#sam--sezzle--price',
+            altVersionTemplate: "4 interest-free payments with %%logo%% %%info%%",
+            theme: 'light',
+            alignment: 'auto',
+            fontFamily: 'Rajdhani, Helvetica Neue, sans-serif',
+            color: 'inherit',
+            fontSize: 14,
+            logoSize: 1.00,
+            maxWidth: 400,
+            marginTop: 0,
+            marginLeft: 0,
+            marginRight: 0
+          }
+          
+        } else {
+          document.sezzleConfig =
+          {
+            targetXPath: '.qtyPrice',
+            renderToPath: '#sam--sezzle--price',
+            theme: 'light',
+            alignment: 'auto',
+            fontFamily: 'Rajdhani, Helvetica Neue, sans-serif',
+            color: 'inherit',
+            fontSize: 14,
+            logoSize: 1.00,
+            maxWidth: 400,
+            marginTop: 0,
+            marginLeft: 0,
+            marginRight: 0
+          }
+        }
+      }
+
+    </script>
+    <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=0debddd3-6cda-46bb-893e-59072ee2a6aa"></script>
+    <!--BROSSAM - END 2. Sezzle Price Widget Configuration-->
+    
+
+    <div class="modal zoom" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="zoomModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+          <img src="" class="img-zoom img-responsive" id="zoomImage">
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--Customization Modal-->
+    <div class="modal customize" id="customizeModal" tabindex="-1" role="dialog" aria-labelledby="customizeModalLabel" style="padding-right: 17px;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="customizeModalLabel">Customize Your Item</h4>
+        </div>
+        <div class="modal-body" id="customBody">
+              <!--Ajax-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+</form>
+
+      <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Product",
+          "name" : "@&H1SC ",
+          "sku" : "@&STYL ",
+          "mpn" : "@&MFGN ",
+          "url" : "@&HREF2 ",           
+          "description" : "@&INFO ",
+          "image" : "@&HOST /@&IMG ",
+          "brand" : {
+            "@type": "Brand",
+            "name": "@&BRND "
+          },
+          "offers": {
+                "@type": "AggregateOffer",
+                "highPrice": "@&TOPR ",
+                "lowPrice": "@&FRPR ",
+                "priceCurrency":"USD"
+            }@&RATJSON }
+      </script>
+
+<!--End:Close-->      

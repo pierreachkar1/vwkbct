@@ -1,0 +1,143 @@
+<!--Seg:Open-->
+<main class="account">
+  <div class="container">
+    <div class="account__header">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="account__headline">Welcome!</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-7">
+          <p class="account__description">From this page you can review order status and history and make updates to your account. All fields are required below even if you choose to keep your current password, current email, or current user name.</p>
+        </div>
+      </div>
+    </div>
+    <div class="account__body">
+      <div class="row row-eq-height row-v-center account__body--tabs">
+        <div class="col-xs-12 col-md-10">
+          <ul class="list-tabs">
+            <li class="active"><a href="/CGBCMRSL"><span class="hidden-xs-sm">Your </span>Shopping Lists</a></li>
+            <li><a href="/order-status">Order History<span class="hidden-xs-sm"></span></a></li>
+            <li><a href="/CGBCACC"><span class="hidden-xs-sm">Your </span>Profile</a></li>
+      <li @&HIDEFR ><a href="/CGBCLMFR">Fittings Request</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 account__new-list">
+          <a href="#newListModal" data-toggle="modal" data-target="#newListModal" class="btn btn_xs btn--blue btn_new-list">New List</a>
+        </div>
+      </div>
+<!--End:Open-->
+
+<!--Seg:SlOpen-->
+      <div class="row account__row">
+        <div class="account__row--header">
+          <a role="button" data-toggle="collapse" href="#list-@&CTR " aria-expanded="true" aria-controls="list-@&CTR " class="">
+            <h4 class="account__row--title">@&NAMEH </h4>
+          </a>
+          <span class="account__row--items" >(<span id="countRows@&CTR ">@&QTY </span> )</span>
+          <a href="javascript:void(0)" onclick="EditList('@&SLNO ','I','@&NAME ');void(0);" class="account__row--edit" ><span class="icon edit"></span></a>
+          <a class="account__row--toggle collapsed" role="button" data-toggle="collapse" href="#list-@&CTR " aria-expanded="false" aria-controls="list-@&CTR "></a>
+        </div>
+        <div class="collapse" id="list-@&CTR " aria-expanded="false">
+          <div class="shopping-list">
+<!--End:SlOpen-->
+
+<!--Seg:SdRow-->
+       <div class="row shopping-list__item">
+              <div class="col-sm-10">
+                <div class="shopping-list__item--inner">
+                  <div class="shopping-list__item--thumbnail">
+                    <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC "  onerror="this.onerror=null;this.src='/images/mia.gif'" style="max-width:100px;">
+                  </div>
+                  <div class="shopping-list__item--details">
+                    <h6 class="shopping-list__item--name"><a href="@&HREF ">@&DESC </a></h6>
+                    <ul class="shopping-list__item--info list-separator"><li>Item# @&STYL </li><li>Mfg# @&MFGN </li></ul>
+                    <div class="shopping-list__item--cta">
+                      <a href="@&HREF " class="btn btn_xs btn--light-gray">View Item</a>
+                      <a href="javascript:void(0)" onclick="removeSdno('@&SDNO ','@&CTR ')" id="sdno@&SDNO " class="btn btn_xs btn--link--no-outline">Remove</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 hidden-xs-sm">
+                <a href="@&HREF " class="btn btn_xs btn--orange shopping-list__item--add">Add to cart</a>
+              </div>
+            </div> 
+<!--End:SdRow-->
+
+<!--Seg:SlClose-->
+      </div>
+    </div>
+  </div>
+<!--End:SlClose-->
+
+<!--Seg:Close-->
+      <div class="row account__row visible-xs-sm">
+        <a href="#newListModal" data-toggle="modal" data-target="#newListModal" class="btn btn_xs btn--orange btn_new-list">New List</a>
+      </div>
+    </div>
+  </div>
+</main>
+<!--Add New List Modal-->
+<div class="modal new-list" id="newListModal" tabindex="-1" role="dialog" aria-labelledby="newListModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title">New List</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        <div class="alert alert-success" id="successMsg" style="display:none">
+            
+          </div>
+          <div class="col-xs-12">
+            <div action="" class="new-list__form">
+              <input type="text" class="form__input no-outline" name="list-name" id="list-name-new" placeholder="List Name Here">
+              <a href="javascript:void(0)" onclick="newShopList()" class="btn btn_outline-thin btn--gray">Create New List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Edit List Modal-->
+<div class="modal edit-list in" id="editListModal" tabindex="-1" role="dialog" aria-labelledby="editListModalLabel" style="display: none; padding-right: 17px;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title">Edit List</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="alert alert-success" id="successMsg" style="display:none">
+            
+          </div>
+          <div class="col-xs-12">
+            <div action="" class="edit-list__form">
+              <input type="hidden" id="slnoEdit" value="">
+              <input type="text" class="form__input no-outline" name="list-name" id="list-name" placeholder="List Name Here" value="">
+              <div class="btn-toolbar">
+                <a href="javascript:void(0)" onclick="EditList('','E','')" class="btn btn_outline-thin btn--gray">Save</a>
+                <a href="javascript:void(0)" onclick="EditList('','D','')"  class="btn btn_outline-thin btn--orange">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End:Close-->
+

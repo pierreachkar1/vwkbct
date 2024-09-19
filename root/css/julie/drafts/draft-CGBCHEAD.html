@@ -1,0 +1,1494 @@
+<!--Seg:OpenHeader-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="@&DOMN1 /images/favicon.ico">
+
+  <!--Brossam-->
+  <!-- begin Convert Experiences code-->
+  <!-- <script type="text/javascript" src="//cdn-4.convertexperiments.com/js/10045687-10045570.js"></script> -->
+  <!-- end Convert Experiences code -->
+
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Rajdhani:500,600,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link type="text/css" rel="stylesheet" href="/css/vendor.css?v=6 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/main.css?v=6 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN1 /css/galls/main.css?v=6 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN2 /css/galls/custom.css?v=6 " />   
+
+  <!--BROSSAM-->
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/sam-styles-uspt.css?v=93" />
+
+  <script src="@&DOMN3 /js/jquery-3.6.3.min.js@&TS " type="text/javascript"></script> 
+  <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+  
+  <link rel="preload" href="/js/owl.carousel.min.js" as="script" />
+  <link rel="preload" href="/js/main.js@&TS " as="script" />
+
+  <!--Optimove Web SDK - IN STAGE ONLY-->
+  <script async src="https://sdk.optimove.net/websdk/?tenant_id=1202&tenant_token=a60c029453e84b70802935f9cf1d7d2d"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJL4252');</script>
+  <!-- End Google Tag Manager -->
+
+  <!--OPTIMOVE - IN STAGE ONLY-->
+  <script>
+    dataLayer.push({
+      'sam_user_email': '@&EMAL ',
+      'sam_user_fname': '@&FNAM ',
+      'sam_user_lname': '@&LNAM ',
+      'sam_cart_items': '@&CARTITEMS '
+    });
+  </script>
+  
+<!-- Google GA4 -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=@&GA4ID "></script>
+<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '@&GA4ID ' @&PUINFO );
+        </script>
+<!-- End Google GA4 --> 
+
+
+ 
+  @&GOOGLEJS 
+  @&TITLE <!-- -->
+  @&METADESC <!-- -->
+  @&METAKEYW <!-- -->
+  @&CANON <!-- -->
+  @&JSCRIPT <!-- End Page Specific Header Tags -->
+  
+
+
+<script>
+function getMenu(thno){
+     if ($('#div'+thno).html()== '' )
+     {
+        $('#div'+thno).html("Loading...");    
+     $.ajax({
+                 url: '/cgi/CGBCXMENU',
+		type: 'get',
+            dataType: 'html',
+                data: {SITHNO : thno },
+             success: function (html) {$("#div"+thno).html(html);}
+           })         
+    }
+}   
+
+
+
+</script>
+
+GTSAMHEADER
+
+
+</head>
+<body>     
+
+
+  <!-- Brossam - Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJL4252"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  
+  <span id="mobileHeader"><span class="fl-r">@&SRCE </span></span>
+  <div id="samTopInfoBarDiv">@&SRCE </div>
+  <header class="header desktop-header" id="samNewHeader">
+
+    <!--Top Navigation-->
+    <nav class="samTopNavBar">
+      <div class="container">
+
+        <!--LEFT-->
+        <div id="samNavBarLeft">
+          <span style="display: none;" id="samSRCEMSG">@&SRCEMSG </span>  
+          
+          <div class="image--slider--row" id="samNavBarSlider">
+            <div class="container">
+              <div class="row text-center image--slider--row">
+                <section id="samNavBarSection"></section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--RIGHT-->
+        <div id="samNavBarRight">
+          <!-- <a href="/pages/help-center">Help Center</a> -->
+          <a href="@&HOST /pages/stores">Find a Store</a>
+          <a href="tel:@&GBLPH1 "><img src="/images/icons/feathericons_white/phone.svg" id="samSVGImgPhone"></a>
+        </div>
+
+      </div>
+    </nav>  
+   
+    <!--Header Top-->
+    <div class="header-top" id="samNewHeader_HeaderTopDiv">
+      <div class="container">
+        <div class="row" id="samHeaderTop">
+
+          <!--Flex Grid col-xs-12 -->
+          <div class="col-xs-12">
+
+            <!--Mobile Menu-->
+            <div class="samHeaderTop_MobileMenu">
+              <span class="icon menu" id="mobile-menu"></span>
+            </div>
+
+            <!--Logo-->
+            <div class="samHeaderTop_Logo">
+              <a href="@&HOST /" class="header-logo" title="">
+                <img src="@&DOMN2 /images/Logo-USP-White.png" alt="USPT" id="samUSPHeaderLogo">
+              </a>
+            </div>
+
+            <!--Search-->
+            <div class="search__autofill search__autofill--desktop samHeaderTop_Search" id="headerSearchAutofill">
+              <form action="." onsubmit="getLookAheadL('F');return false;" style="display:@&DSPDN "> 
+                <a href="javascript:void(0)" onclick="getLookAheadL('F')" class="SearchLink"></a>
+                <input type="text" class="autofill__input autofill__input--desktop" id="header-search@&DSPDN " name="header-search" placeholder="I'm looking for..." autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'F');" />
+                <div class="autofill__popup suggestDropDownF" style="display:none">
+                  <div class="autofill__header">
+                    Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                  </div>
+                  <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                  <!--Suggestions(Full) Ajax Populated-->
+                  </div>                
+                </div>
+              
+                <div class="search__autofill--mask"></div>
+              </form>
+            </div>  
+
+
+            <!--SignIn Status Div-->
+            <div class="samHeaderTop_Status">
+
+              <!--SignIn Dropdown-->
+              <div id="samHeaderTop_SignInDD" style="display: none;">
+                <a href="#signInModal" data-toggle="modal" data-target="#signInModal" id="samHeaderTop_SignInLink" class="btn btn_xs btn--orange btn_submit">
+                  Sign In
+                </a>
+                <div id="samHeaderTop_CADiv">
+                  New Customer? 
+                  <a href="/CGBCSRPU?PMTYPE=I">Create Your Account</a>
+                </div>
+              </div>
+
+              <!--Account Details Dropwdown-->
+              <div id="samHeaderTop_AccountDiv" style="display: none;">
+                <div class="samHeaderTop_YourAccount">Your Account</div>
+                <a href="@&HOST /CGBCACC" id="samHeaderTop_ViewAccount">
+                  View Account
+                </a>
+                <a href="@&HOST /order-status" id="samHeaderTop_OS">
+                  Order Status
+                </a>
+                <a href="@&HOST /CGBCSIGNOF" id="utility-bar__sign-out">
+                  Sign Out
+                </a>
+              </div>
+
+            </div>
+
+            
+            <!--SignIn Icon Div-->
+            <div id="samHeaderTop_SignInIcon" class="b5-active">
+
+              <span class="@&DSPLI " id="loggedIn"></span>  <!--IMPORTANT TO CHECK LOGIN STATUS-->
+
+              <div class="d-flex text-nowrap text-light gap-6in">
+                <img src="/images/icons/feathericons_white/user.svg" class="profile-icon">
+                <span class="signin-text text-nowrap">Sign In</span>
+              </div>
+            
+            </div>
+
+            <script>
+              changeSigninText();
+            </script>
+
+
+            <!--Search Icon PDP Only-->
+            <div class="samHeaderTop_SearchIconPDP" style="display: none;">
+              <a href="#" id="mobileSearchIcon"><span class="icon search"></span></a>
+            </div>
+              
+            
+
+            <!--Cart Div-->
+            <div class="samHeaderTop_Cart">
+              <a id="samHeaderCartTotal">
+                <img src="/images/icons/feathericons_white/shopping-cart.svg" id="samSVGImgCart">
+                <span class="cart--total">@&QTY </span>
+              </a>
+            </div>
+              
+              
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+    <!--Header Text for Mobile Only-->
+    <div class="header-text" id="samNewHeader_HeaderTextDiv">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            &nbsp;
+            <!-- <a href="">LEFT-SIDE MESSAGE</a> -->
+          </div>
+          <div class="col-xs-6 samHeaderText_Right">
+            &nbsp;
+            <!-- <a href="">RIGHT-SIDE MESSAGE</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Searchbox for Mobile Only-->
+    <div class="search__preview" id="mobilesearchDiv" >
+      <a href="#" id="mobileSearchButton" class="search__preview--link" ></a>
+      <form id="" name="" method="get" action="" >                
+        <input type="text" class="search__preview--input" placeholder="I'm looking for..." autocomplete="off" id="header-search-mobile" />
+        <a href="#"  class="search__preview--icon">GO</a>
+      </form>
+    </div>
+    
+    @&MENUF <!--Full Menu-->
+  
+  </header>  
+  
+
+
+  <!--Mobile Search Popup-->
+  <div class="search__autofill search__autofill--mobile" id="mobileSearchAutofill">
+    <form id="mobilesearch@&DSPMN " name="mobilesearch" method="get" action="/CGBCMENU" onsubmit="getLookAheadL('M');return false;" style="display:@&DSPMN ">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search@&DSPMN " name="header-search" placeholder="Search..." autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'M');"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="getLookAheadL('M')" class="SearchLinkM2" >GO</a>
+      </div>
+    </form>
+    
+    <div class="autofill__popup suggestDropDownM" style="display:none" >
+        <div class="autofill__header">
+          Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+        </div>
+        <div class="autofill__body" id="suggestDropDownM">
+        <!--Mobile Suggestion Ajax-->
+        </div>
+    </div>
+  </div>
+
+
+  <!--Mobile Navigation-->
+  <div class="mobile-nav sidebar" id="mobile-sidebar">
+    <div class="inner">
+      <div class="header">
+        <ul class="micon-nav">
+          <!-- <li><a href="/pages/EMAIL_SIGNUPM"><div class="micon micons-Mail"></div><br>Newsletter</a></li> -->
+          <li><a href="tel:@&GBLPH1 "><div class="micon micons-Phonelink-Ring-Filled"></div><br>Call Us</a></li>
+          <!-- <li><a href="javascript:popupPatronChat()"><div class="micon micons-Chat-Filled"></div><br>Live Chat</a></li> -->
+          <li>
+            <a class="@&DSPLO " href="#signInModal" data-toggle="modal" data-target="#signInModal" title="Sign In" id="mobileSignIn"><div class="micon micons-Contacts"></div><br>Sign In</a>        
+          <!--<a class="waitlink mobile-nav__sign-in @&DSPLO " href="javascript:void(0)" href1="/sign-in" title="Sign In" id="mobileSignIn"><div><span class="icon profile-pic"></span></div><div>Sign In</div></a>-->    
+          <a class="@&DSPLI  " href="javascript:void(0)" data-toggle="dropdown" title="My Account">
+            <div class="micon micons-Contacts"></div><br>Account
+          </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/CGBCACC">My Account</a>
+              <a class="dropdown-item" href="/CGBCSIGNOF">Sign Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="subnav">
+        @&MENUM <!--Menu Mobile-->
+      </ul>
+      <div class="subnav-popular">
+        <span class="h5"><img class="micon micons-Double-Down" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNmYWxzZSIgPjxnIGlkPSJzdXJmYWNlMSI+PHBhdGggc3R5bGU9IiAiIGQ9Ik0gNC44MTI1IDQgTCAzIDYuNjg3NSBMIDEyIDEyLjkwNjI1IEwgMjEgNi42ODc1IEwgMTkuMTg3NSA0IEwgMTIgOC45MDYyNSBaIE0gNC44MTI1IDExLjA5Mzc1IEwgMyAxMy44MTI1IEwgMTIgMjAgTCAyMSAxMy44MTI1IEwgMTkuMTg3NSAxMS4wOTM3NSBMIDEyIDE2IFogIj48L3BhdGg+PC9nPjwvc3ZnPg=='/>Popular Categories</span>
+      <ul>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/tactical-pants">Tactical Pants</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/duty-boots">Duty Boots</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/holsters">Holsters</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/duty-gear">Duty Gear</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/flashlights">Flashlights</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/bags-organizers">Bags &amp; Organizers</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/shirts">Shirts</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/belts">Belts</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/body-armor">Body Armor</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/outerwear">Outerwear</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/restraints">Handcuffs/Restraints</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/knives-tools">Knives/Tools</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/badges-insignia-customization">Badges</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/gloves">Gloves</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+
+  <div class="main__wrapper">
+<!--End:OpenHeader-->
+
+
+<!--Seg:OpenHeaderS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="@&DOMN2 /images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/vendor.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN1 /css/main.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN2 /css/galls/main.css@&TS " />
+  <!-- <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/galls/custom.css@&TS " />  -->
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/galls/custom.css?v=12 " />
+
+
+    <!--BROSSAM B2B - Image Slider-->
+    <link rel="stylesheet" type="text/css" href="@&DOMN3 /css/assets/slick.css" />
+    <link rel="stylesheet" type="text/css" href="@&DOMN3 /css/assets/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="@&DOMN3 /css/assets/slider-styles.css" />
+  
+    <!--BROSSAM-->
+    <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/sam-styles-uspt.css?v=93" />
+
+
+
+  <script src="@&DOMN3 /js/jqueryv3.2.1.js@&TS " type="text/javascript"></script> 
+  <script>
+  function getMenu(thno){
+     if ($('#div'+thno).html()== '' )
+     {
+        $('#div'+thno).html("Loading...");    
+     $.ajax({
+                 url: '/cgi/CGBCXMENU',
+		type: 'get',
+            dataType: 'html',
+                data: {SITHNO : thno },
+             success: function (html) {$("#div"+thno).html(html);}
+           })         
+    }
+  } 
+</script>
+
+<!-- Google GA4 -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=@&GA4ID "></script>
+<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '@&GA4ID ' @&PUINFO );
+        </script>
+<!-- End Google GA4 -->
+
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani:600,700" rel="stylesheet">
+  @&GOOGLEJS 
+  @&TITLE <!-- -->
+  @&METADESC <!-- -->
+  @&METAKEYW <!-- -->
+  @&CANON <!-- -->
+  @&JSCRIPT <!-- End Page Specific Header Tags -->
+</head>
+<body>
+  @&LTRKIMG <!-- begin HEADER -->
+  <header class="header desktop-header hidden-xs hidden-sm">
+    <nav class="navbar navbar-static-top utility-bar">
+      <div class="container">
+        <div class="navbar-left">
+           @&SRCEMSG <span>@&SRCE </span>
+        </div>
+        <div class="navbar-right utility-bar__logged-out">
+ 
+          <ul class="nav navbar-nav navbar-right navbar-account @&DSPLUP  " id="loggedIn">
+            <li>@&HEADLINKS </li>
+            <li><a href="@&HOST /Cart">
+              <svg class="icon cart--white">
+                <use xlink:href="@&HOST /images/sprite.svg#cart--white"></use>
+              </svg>
+              <span class="cart--total">(@&QTY )</span>
+            </a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-links">
+            <li class="visible-lg hidden-md"><a href="@&HOST /pages/stores">Find a Store</a></li>
+            <li><a href="tel:@&GBLPH1 ">@&GBLPH1 </a></li>
+          </uL>
+        </div>
+      </div>
+    </nav>  <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <a href="@&HOST /CGBCSHPFL?PMKEY=RESET&PMROUTE=H" class="header-logo logolink" title="">
+            </a>
+            <!-- <span class="h5 header-text">Proud to serve america&rsquo;s public safety professionals</span> -->
+          </div>
+          <div class="col-md-4">
+            <div class="search__autofill search__autofill--desktop" id="headerSearchAutofill">
+            <form action="." onsubmit="getLookAheadL('F');return false;" style="display:@&DSPDN "> 
+              <a href="javascript:void(0)" onclick="getLookAheadL('F')" class="SearchLink"></a>
+              <input type="text" class="autofill__input autofill__input--desktop" id="header-search" name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'F');" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              
+              <form action="/usearch" style="display:@&DSPDY " name="FORMD"> 
+              <a href="javascript:void(0)" onclick="document.forms['FORMD'].submit(); return false;" class="SearchLink"></a>
+              <input type="text" class="autofill__input autofill__input--desktop" id="header-search" name="header-search" placeholder="Search" autocomplete="off" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              
+            </div>        </div>
+        </div>
+      </div>
+    </div>
+    @&MENUF <!--Full Menu-->
+  </header>  <header class="header mobile-header visible-xs visible-sm">
+    <div class="header-banner">
+      <!-- Proud to serve america&rsquo;s public safety professionals -->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3 ta-l">
+          <span class="icon menu" id="mobile-menu"></span>
+        </div>
+        <div class="col-xs-6 ta-c flx-jc">
+          <a href="/" class="header-logo logolink">
+          </a>
+        </div>
+        <div class="col-xs-3 ta-r flx-jr">
+          <a href="#" id="mobileSearchIcon"><span class="icon search"></span></a>
+          <a href="/Cart"><span class="icon cart"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-text">
+        @&SRCEMSG <span class="fl-r">use code: @&SRCE </span>
+    </div>
+    </header>
+    <div class="search__autofill search__autofill--mobile" id="mobileSearchAutofill">
+    <form id="mobilesearch" name="mobilesearch" method="get" action="/CGBCMENU" onsubmit="getLookAheadL('M');return false;" style="display:@&DSPMN ">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search" name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'M');"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="getLookAheadL('M')" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+      <form id="mobilesearch" name="mobilesearch" method="get" action="/usearch" style="display:@&DSPMY " name="FORMM">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search" name="header-search" placeholder="Search" autocomplete="off"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="document.forms['FORMM'].submit(); return false;" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+	  <div class="autofill__popup suggestDropDownM" style="display:none" >
+      <div class="autofill__header">
+        Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+      </div>
+      <div class="autofill__body" id="suggestDropDownM">
+     <!--Mobile Suggestion Ajax-->
+		</div>
+      </div>
+	 </div>
+   <!--Mobile Navigation-->
+     <div class="mobile-nav sidebar" id="mobile-sidebar">
+    <div class="inner">
+      <div class="header">
+      <img class="pull-left" src="@&DOMN3 /images/Logo-White@2x.png" alt="US Patriot Tactical" height="35">
+        @&HEADLINKSM <!--Shop B2B-->
+        <a class="mobile-nav__sign-in @&DSPLO " href="#signInModal" data-toggle="modal" data-target="#signInModal" title="Sign In" id="mobileSignIn"><div><span class="icon profile-pic"></span></div><div>Sign In</div></a>        
+        <a class="mobile-nav-top top-right @&DSPLI  " href="javascript:void(0)" data-toggle="dropdown" title="My Account"><div><span class="icon profile-pic"></span></div><div</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/CGBCACC">My Account</a>
+              <a class="dropdown-item" href="/CGBCSIGNOF">Sign Out</a>
+            </div>              
+      </div>
+      <ul class="subnav">
+        @&MENUM <!--Menu Mobile-->
+      </ul>
+      <div class="footer">
+        <div class="footer__buttons">
+          <a href="tel:@&GBLPH1 " class="btn btn_outline-thin">
+            <svg class="icon call">
+              <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#call"></use>
+            </svg>
+            Call
+          </a>
+          <!--<a href="javascript:void(0)" onclick="$('.bcText a div a').trigger('click')" class="btn btn_outline-thin boldChat">
+            <svg class="icon chat">
+              <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#chat"></use>
+            </svg>
+            Chat
+          </a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>.logolink{@&PRLOGO ;background-repeat: no-repeat;width:150px;height:47px;}ul#css3menu .clearanceLink{@&DSPCL }  .addToList,#atstbx{@&DSPLB } </style>
+  <div class="main__wrapper">
+<!--End:OpenHeaderS-->
+
+<!--Seg:footer--> 
+  </div>
+  <footer class="footer">
+
+    <!--Footer - First Row-->
+    <div class="email-signup container-fluid">
+      <!--Desktop First Row-->
+      <div class="container">
+        <div class="row sam--footer--first">
+          <div class="col-12 sam--foooter--wrapper">
+            <div class="sfw--col1">
+              <span class="span_h4 sam_ab_version_1" id="samH4FooterABTest">SIGN-UP FOR OUR NEWSLETTER</span>
+            </div>
+            <div class="sfw--col2">
+              <div class="input email-signup__input samFooterEmailSignup" id="mc_embed_signup">
+
+                <!-- Begin Mailchimp Signup Form -->
+                <form id="mc-embedded-subscribe-form">
+                  
+                  <div class="samFooterEmailDiv">
+                    <div id="mc_embed_signup_scroll">
+                      <input placeholder="Email Address*" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                    </div>
+                  </div>
+
+                  <div class="samFooterProfessionDiv">
+                    <select name="samFooterProfession" id="samFooterProfession">
+                      <option value="" disabled="" selected="">Profession*</option>
+                      <option value="Active Duty">Active Duty</option>
+                      <option value="Civilian">Civilian</option>
+                      <option value="Emergency Services">Emergency Services</option>
+                      <option value="Government">Government</option>
+                      <option value="Law Enforcement">Law Enforcement</option>
+                      <option value="Military Dependent">Military Dependent</option>
+                      <option value="National Guard">National Guard</option>
+                      <option value="Reservist">Reservist</option>
+                      <option value="Retired">Retired</option>
+                      <option value="Security">Security</option>
+                      <option value="Veteran">Veteran</option>
+                    </select>
+                  </div>
+                  <div class="samFooterSignUpButtonDiv">
+                    <input value="Subscribe" name="subscribe" class="button" onclick="samEmailSignup()">
+                  </div>
+
+                </form>
+                <!--End mc_embed_signup-->
+
+              </div>
+            </div>
+            <div class="sfw--col3">
+              <a href="/"><img src="@&HOST /photos/uspt/homepage/USPatriotLogo-BlackText.png" alt="US Patriot Tactical" id="USPTLogo_Bottom_Desktop"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Desktop Second Row-->
+      <div class="container">
+        <div class="row hidden-xs hidden-sm sam--footer--second">
+          <div class="col-12 sam--foooter--wrapper">
+            <div class="sfw--col1">
+              <div>
+                <span class="span_h5">Company</span>
+                <ul class="list-unstyled">
+                  <li><a href="@&HOST /pages/about">About Us</a></li>
+                  <li><a href="@&HOST /pages/stores">Locations</a></li>
+                  <li><a href="@&HOST /pages/careers">Careers</a></li>
+                  <li><a href="https://blog.uspatriottactical.com/">Our Blog</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sfw--col2">
+              <div>
+                <span class="span_h5">Your Account</span>
+                <ul class="list-unstyled">
+                  <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Your Online Account</a></li>
+                  <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Wish List</a></li>
+                  <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Log In/Sign Up</a></li>
+                  <li><a href="@&HOST /pages/quote-request">Request A Quote</a></li>
+                </ul>
+              </div>
+              <div>
+                <span class="span_h5">Order & Returns</span>
+                <ul class="list-unstyled">
+                  <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Order Status</a></li>
+                  <li><a href="@&HOST /pages/returns">Returns</a></li>
+                  <li><a href="@&HOST /pages/deals-discounts">Deals & Discounts</a></li>
+                  <li><a href="@&HOST /pages/shipping">Shipping & Delivery</a></li>
+                </ul>
+              </div>
+              <div>
+                <span class="span_h5">Customer Service</span>
+                <ul class="list-unstyled">
+                  <li><a href="@&HOST /pages/contactus">Contact Us</a></li>
+                  <li><a href="@&HOST /pages/FAQ">FAQs</a></li>
+                  <li><a href="@&HOST /pages/gsa-contract-info">GSA Contract Info</a></li>
+                  <li><a href="@&HOST /pages/resources">Resources</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sfw--col3">
+              <div>
+                <b>COMPANY:</b> The largest supplier of military boots, uniforms, and related high-performance gear for professionals with 100+ stores worldwide.<br>
+                <b>PEOPLE:</b> Founded + led by veterans.<br>
+                <b>MISSION:</b> To equip + support those who serve.
+              </div>
+              <div>
+                <br>Some exclusions and limitations apply. <a href="/pages/offer-details" style="color: red">LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Desktop Third Row-->
+      <div class="container">
+        <div class="row hidden-xs hidden-sm sam--footer--third">
+          <div class="col-12 sam--foooter--wrapper">
+            <div class="sfw--col1-n-2">
+              <div>
+                <span><a href="@&HOST /pages/terms">Terms of Use</a></span>
+                <span><a href="@&HOST /pages/privacy-policy">Privacy Policy</a></span>
+                <span><a href="@&HOST /pages/ca-transparency">CA Transparency Act</a></span>
+                <span><a href="@&HOST /pages/promotions">Payment, Pricing & Promotions</a></span>
+                <span><a href="@&HOST /sitemap">Sitemap</a></span>
+              </div>
+            </div>
+            <div class="sfw--col3">
+              <div id="dynamic-date">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Mobile-->
+      <div class="row footer__mobile visible-xs visible-sm">
+        <ul class="footer__mobile-nav">
+          <li>
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseCustomerService" aria-expanded="false" aria-controls="collapseCustomerService">
+              <span class="span_h4">Company</span>
+            </a>
+            <div class="footer__mobile-collapse collapse" id="collapseCustomerService">
+              <ul class="list-unstyled">
+                <li><a href="@&HOST /pages/about">About Us</a></li>
+                <li><a href="@&HOST /pages/stores">Locations</a></li>
+                <li><a href="@&HOST /pages/careers">Careers</a></li>
+                <li><a href="https://blog.uspatriottactical.com/">Our Blog</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseOnlineResources" aria-expanded="false" aria-controls="collapseOnlineResources">
+              <span class="span_h4">Your Account</span>
+            </a>
+            <div class="footer__mobile-collapse collapse" id="collapseOnlineResources">
+              <ul class="list-unstyled">
+                <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Your Online Account</a></li>
+                <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Wish List</a></li>
+                <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Log In/Sign Up</a></li>
+                <li><a href="@&HOST /pages/quote-request">Request A Quote</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseCompanyInformation" aria-expanded="false" aria-controls="collapseCompanyInformation">
+              <span class="span_h4">Order & Returns</span>
+            </a>
+            <div class="footer__mobile-collapse collapse" id="collapseCompanyInformation">
+              <ul class="list-unstyled">
+                <li><a href="@&HOST /cgi/sign-in?PARTPG=CGBCLMOH">Order Status</a></li>
+                <li><a href="@&HOST /pages/returns">Returns</a></li>
+                <li><a href="@&HOST /pages/deals-discounts">Deals & Discounts</a></li>
+                <li><a href="@&HOST /pages/shipping">Shipping & Delivery</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseStayConnected" aria-expanded="false" aria-controls="collapseStayConnected">
+              <span class="span_h4">Customer Service</span>
+            </a>
+            <div class="footer__mobile-collapse collapse" id="collapseStayConnected">
+              <ul class="list-unstyled">
+                <li><a href="@&HOST /pages/contactus">Contact Us</a></li>
+                <li><a href="@&HOST /pages/FAQ">FAQs</a></li>
+                <li><a href="@&HOST /pages/gsa-contract-info">GSA Contract Info</a></li>
+                <li><a href="@&HOST /pages/resources">Resources</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row footer__mobile visible-xs visible-sm">
+        <div class="footer__mobile_logo">
+          <a href="/"><img src="@&HOST /photos/uspt/homepage/USPatriotLogo-BlackText.png" alt="US Patriot Tactical" id="USPTLogo_Bottom_Mobile"></a>
+                <b>COMPANY:</b> The largest supplier of military boots, uniforms, and related high-performance gear for professionals with 100+ stores worldwide.<br>
+                <b>PEOPLE:</b> Founded + led by veterans.<br>
+                <b>MISSION:</b> To equip + support those who serve.
+          
+          <br><br>Some exclusions and limitations apply. <a href="/pages/offer-details" style="color: red">LEARN MORE</a>
+          
+          <!--IN STAGE ONLY-->
+          <div class="footer__bototm_link">
+            <a href="@&HOST /pages/terms" class="span_h4">Terms of Use</a>
+            <a href="@&HOST /pages/privacy-policy" class="span_h4">Privacy Policy</a>
+            <a href="@&HOST /pages/ca-transparency" class="span_h4">CA Transparency Act</a>
+            <a href="@&HOST /pages/promotions" class="span_h4">Payment, Pricing & Promotions</a>
+            <a href="@&HOST /sitemap" class="span_h4">Sitemap</a>
+          </div>
+          
+
+        </div>
+        <div class="footer__mobile_copyright">
+          <div id="dynamic-date-mobile">
+          </div> 
+        </div>
+      </div>
+    </div>
+    
+
+    
+  </footer>
+  
+  
+  
+  
+  
+  
+  
+  <!--Sign In  Modal-->
+<div class="modal sign-in" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header visible-xs-sm">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Log In</h4>
+        </div>
+        <div class="modal-body">
+          <div class="hidden-xs-sm">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg class="icon close--black"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+            </button>
+            <h3 class="modal-title">Sign In</h3>
+          </div>
+          <div class="alert alert-success" id="successMsg" style="display:none">
+            <strong>Success!</strong> You have successfully logged in.
+          </div>
+          <div class="alert alert-danger" id="errorMsg"  style="display:none">
+            <strong>Error!</strong> Invalid login credentials.
+          </div>
+          <div class="alert alert-warning" id="multMsg"  style="display:none">
+            <strong>Alert!</strong> User with multiple login redirecting.
+          </div>
+		  <div class="alert alert-danger" id="passwordMsg"  style="display:none">
+            We have upgraded our site and you will be required to reset your password for security purposes. 
+			Click <a href="javascript:void(0)" onclick="resetPasswordModal();">HERE</a> to receive an email with password reset instructions.
+          </div>
+		  <div class="alert alert-success" id="emailMsg"  style="display:none">
+            <strong>Success!</strong> Email has been sent.
+          </div>
+		  <div class="alert alert-warning" id="noEmailMsg"  style="display:none">
+            <strong>Alert!</strong> User does not have an email.
+          </div>
+		  <div class="alert alert-warning" id="hasPassMsg"  style="display:none">
+            <strong>Alert!</strong> User has a new password.
+          </div>
+          <p>If you have an account with us please enter your user name and password below and we'll log you in!</p>
+          <form action="javascript:void(0)" id="signInModalForm" data-parsley-validate="" onsubmit="return false">
+            <div class="form-group">
+              <label for="username">User Name*</label>
+              <input type="text" name="usernameHead" id="usernameHead"  class="form__input full no-outline" required="required">
+            </div>
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <input type="password" name="passwordHead" id="passwordHead" class="form__input full no-outline" required="required">
+            </div>
+            <div class="form-group"><a href="/sign-in?PMFORG=P">Forgot your password ?</a></div>
+            <div class="form-group"><a href="/sign-in?PMFORG=U">Forgot your user name ?</a></div>
+            <div class="form-submit">
+              <div class="create-account hidden-xs-sm">New to U.S. Patriot? <a href="/CGBCSRPU?PMTYPE=I">Create Your Account</a></div>
+              <button class="btn btn_xs btn--orange btn_submit" onclick="headerLogin()">Sign In</button>
+            </div>
+            <div class="create-account visible-xs-sm">
+              <p>New to U.S Patriot? Start here by creating an account</p>
+              <a href="/CGBCSRPU?PMTYPE=I" class="btn btn_sm btn--gray">Create Account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <!--Add To List Modal-->
+  <div class="modal add-to-list" id="addToListModal" tabindex="-1" role="dialog" aria-labelledby="addToListModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Add to List</h4>
+        </div>
+        <div class="modal-body">     
+          <div class="row">
+          <input type="hidden" id="styleList" value="">    
+            <div class="alert alert-success" id="successAddToList" style="display:none">
+              <strong>Success!</strong> You have successfully logged in.
+            </div>
+            <div class="col-xs-12">
+              <div action="" class="add-to-list__form">
+                <input type="text" class="form__input no-outline" name="list-name" id="list-name" placeholder="List Name Here">
+                <a href="javascript:void(0)" onclick="addToList('A','')" class="btn btn_outline-thin btn--gray">Create New List</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12" id="listBody">
+              <!--Ajax Loaded-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Quick View Modal-->
+  <div class="modal quick-view in" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalLabel" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Quick View</h4>
+        </div>
+        <div class="modal-body" style="padding-top:0">
+          <div class="row" id="QuickViewBody">
+                <!--Ajax Driven-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Gift Card-->
+<div class="modal" id="gcInfo" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Gift Card Details</h4>
+        </div>
+        <div class="modal-body" id="gcInfoBody"></div>
+      </div>
+    </div>
+  </div>
+ <!--Mini Cart-->
+<div class="modal" id="miniCart" tabindex="-1" role="dialog">         
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title"><img width="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMsSURBVGhD7ZrNThNRGIabmLhQVIxYtuy4FPcq0aQJKxMjcBcV5C6Mwfi70hsQXSACAZe6YqUQYyK4p/X5Om+b0PbMnM6cOeNinuTLdM55v59XBmba2qipqYlHp9NpdrvdBY6rxFviI+d7ik2t2d5doqm0/wMGnGaoFWKX6HDuhWlhm1jhdFrl4mPNiXUG+WuDFYEap8QqL+Maouki8SsZIxzUPCZaalMeNLlCPFff0lCPKbUNC8Vnif2kVRT2rKfah4GCN4nvahAN62m9NUYxKGSX01fVjg69dzkUv8wo9CIpWR3MsKFx8kGBRdWqHGbJ99eM3OskB/8TmxdmOeYw+X2GpPVehYgw7HvipU5HYG9N4/lBjj12FL5jT4KZ4HCRuJBi5oTw/6lQyJ5/otE3ofb2D+k0w/qSZNkg/qK80hk20Yf1h4niPKx/liQdhE3C+ym2CLRxmXjgmoHlMw4zkrpBtNDLKJk8JvqwfUdyN4jWpC8NeuQ2YSB5rBQ36N4k8nIoasJA9kppbhB9kt4JmkPip069IaewCbGpVDfUO5B4LOwfcpjjOE94m0EbyoTV2le6GxNJPwJ7PROSmtbLDJpgJgxSvIw4Ly32bkk2gLVUM+wFNSGyLy1Ezl92G5iYl3SArdmeZANYe8chtAmr6/XLbp9mOGHfywyvSzFhkN5WOTfoMm+IFEo1Q5RmwqCE1w3R3p9nNkMy1gxbc0SZJs6IGyqbDsJt5aWC7gcxYmYYNEFMGJTZUtlsEC8rLxO0qWbYC2bCoNQjlc4Gvb2xOk1Ss0E71gxroU384TDZ212SniTpfqA/Z4bXQU0YlMt+WByGPPup2Bt+b9D3zBBlmDgirmq8ySCxpTrekPObCGrCoOQ9jZUPCmyoVmUwwzONkx/qTFFoJykZH3rbreCSxikGxar6EPub9dYYYaDgLLXtu8Ao0G8nuIk+1LfLLMYXPU+Jy2pbHjRpEUfqGwxq2vPbfbWJA33tPmNfNXs/AaRwQp02x2sqHx+am6FlYouwD8+8MK1yljitzsA4GGiGwW4TbeI18YG13n8YsNdasz3T+D2K19TUBKDR+AdbNFyhOnZjIAAAAABJRU5ErkJggg=="> Item Added to Cart!</h4>
+        </div>
+        <div class="modal-body" id="miniCartBody"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+  
+  
+  
+  <div class="mobile-nav overlay" id="mobile-overlay"></div> 
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script src="@&DOMN3 /js/main.js@&TS " type="text/javascript"></script>
+<!-- <script src="@&DOMN3 /js/main.js?v=3 " type="text/javascript"></script> -->
+
+
+
+
+
+
+<!--BROSSAM - Sam Script-->
+GTSAMFOOTER
+
+<!--Popup Subscriber Form-->
+<div id="samPopupSubscriberForm" style="display: none;">
+  <div class="samClosePopupSubscriberDiv" onclick="samClosePopupSubscriber()"></div>
+  <img src="/css/ajax-loader.gif">
+  <h2></h2>
+  <button onclick="samClosePopupSubscriber()"></button>
+</div> 
+
+
+
+<!--New Popup Subscriber (NPS)-->
+<div id="samNPS_Wrapper" style="display: none;">
+  <!--Overlay-->
+  <div id="samNPS_Overlay" style="display: none;">&nbsp;</div>
+  
+  <!--Content-->
+  <div id="samNPS_Content" style="display: none;">    
+    <!--Close Button-->
+    <div id="samNPS_CloseDiv">
+      <img onclick="samCloseNPS()" src="/css/ajax-loader2.jpg">
+    </div>
+
+    <!--Text Area-->
+    <div class="col-md-6 samNPS_Content_Left">
+      <h3>UNLOCK UP TO <span style="color:#005eac">15% OFF</span> YOUR NEXT ORDER!</h3>
+      <form>
+        <label>Unlock 10% Off</label>
+        <input type="text" id="samNPSEmail" placeholder="ENTER YOUR EMAIL*" onfocusout="samNPSValidateInfo()">
+        <select id="samNPSProfession" onchange="samNPSValidateInfo()">
+            <option value="" disabled="" selected="">SELECT YOUR BRANCH/PROFESSION*</option>
+            <option value="Active Duty">Active Duty</option>
+            <option value="Civilian">Civilian</option>
+            <option value="Emergency Services">Emergency Services</option>
+            <option value="Government">Government</option>
+            <option value="Law Enforcement">Law Enforcement</option>
+            <option value="Military Dependent">Military Dependent</option>
+            <option value="National Guard">National Guard</option>
+            <option value="Reservist">Reservist</option>
+            <option value="Retired">Retired</option>
+            <option value="Security">Security</option>
+            <option value="Veteran">Veteran</option>
+        </select>
+
+        
+  
+        <label>Unlock 15% Off</label>
+        <input type="text" id="samNPSPhone" placeholder="ADD YOUR PHONE NUMBER" onfocusout="samNPSValidateInfo()">
+
+        <div id="samNPSOutput" style="display: none;">&nbsp;</div>
+  
+        <input type="button" onclick="samNPSClaimCode()" id="samNPSSubmit" value="CLAIM MY CODE" class="disabled">
+        <p>By submitting this form, you agree to receive recurring automated promotional and personalized marketing text messages (e.g. cart reminders) from US Patriot Tactical at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP for help and STOP to cancel. Msg frequency varies. Msg and data rates may apply. View <a href="/pages/terms">Terms</a> & <a href="/pages/privacy-policy">Privacy Policy</a>.</p>
+      </form>
+    </div>
+
+    <!--Image-->
+    <div class="col-md-6 samNPS_Content_Right">&nbsp;</div>
+
+  </div>
+
+  <!--Claim Code Div-->
+  <div id="samNPS_ClaimCode" style="display: none;">
+    <!--Close Button-->
+    <div id="samNPS_ClaimCode_CloseDiv">
+      <img onclick="samCloseNPS_ClaimCode()" src="/css/ajax-loader2.jpg">
+    </div>
+    <div>
+      <h2 id="samNPS_ClaimCode_H2">SUCCESS!</h2>
+      <label>YOUR CODE IS</label>
+      <div id="samNPS_ClaimCode_Value">&nbsp;</div>
+      <input type="button" id="samNPS_ClaimCode_ApplyBtn" onclick="samNPSApplynShop()" value="APPLY & SHOP NOW" class="disabled">
+    </div>
+  </div>
+
+</div>
+<!--Reopen Popup Div-->
+<div id="samNPS_ReopenDiv" style="display: none;">
+  <span onclick="samShowNPS_FromReopen()">GET 15% OFF!</span>
+  <img onclick="samCloseNPS_ReopenDiv()" src="/css/ajax-loader2.jpg">
+</div>
+<!--END New Popup Subscriber (NPS)-->
+
+
+
+
+<!--Exit Intent Form-->
+<div id="samExitIntentForm" style="display: none;"></div>
+
+<!--Floating Add To Cart PDP-->
+<div id="SamFloatingAddToCart" style="display: none;"></div> 
+
+<!--Floating Checkout Button Cart Page-->
+<div id="SamFloatingCheckOut" style="display: none;"></div> 
+
+<!--BROSSAM - Return To Top-->
+<div id="SamReturnToTop" style="display: none;"><span onclick="window.scroll({top: 0})">Return To Top</span></div> 
+
+<!--Cart Drawer (IN STAGE ONLY)-->
+<div id="samCartDrawer" style="width: 0; opacity: 0; display: none;">
+  <!--Overlay-->
+  <div id="samCartDrawer_Overlay">&nbsp;</div>
+  <!--You Might Like-->
+  <div id="samCartDrawer_YouMightLike"></div>
+  <!--Cart Drawer: Right-->
+  <div id="samCartDrawer_Right">
+    <!--Title: Your Cart-->
+    <div class="samCD_Title" id="samCD_Title">&nbsp;</div>  
+    <!--Cart Content-->
+    <div class="samCD_Content" id="samCD_Content">
+      <!--Cart Items-->
+      <div class="samCDIS_row_flex_wrapper" id="samCDIS_row_flex_wrapper">&nbsp;</div>  
+    </div>
+    <!--Sub Total-->
+    <div class="samCD_BottomSection" id="samCD_BottomSection_SubTotal">   
+      <div class="samCD_SubTotal">&nbsp;</div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+<!--Brossam - Added Organization Schema-->
+<script type="application/ld+json">
+{ "@context" : "https://schema.org",
+  "@type" : "Organization",
+  "name" : "U.S Patriot",
+  "url" : "https://www.uspatriottactical.com",
+  "logo": "https://www.uspatriottactical.com/images/logos/Logo-Tran.png",
+  "description": "US Patriot Tactical is the nation's largest off-post tactical and military retailer. With over 70 locations worldwide and lightning-fast international shipping, we've made it our mission to serve those who serve us.",
+  "sameAs" : [ "https://www.facebook.com/USPatriotTactical",
+    "https://www.twitter.com/USPatriotTac",
+    "https://www.instagram.com/uspatriottactical",
+    "https://www.youtube.com/channel/UCP3oXRverUHYlI4jeaIojUg"]
+}
+</script>
+
+
+<script>   
+function emailSignup(emarsys){
+	//Disabled
+}
+function handleEnterEvent(e, emarsys) {
+   //Disabled
+}
+</script>  
+
+<!--End:Google Knowledge Graph-->
+
+<script type="text/javascript">
+function init() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+@&ONLOAD //
+};
+
+function cleanup() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+};
+
+userDFMT="*USA    ";userNFMT=".       ";//
+//window.onload   = init;
+//window.onunload = cleanup;
+</script>
+
+
+@&RMRKT <!-- Google Remarketing 12/20/13 -->
+
+
+
+<script type="text/javascript">
+
+//variables for all pages
+
+@&EMAIL @&JSCRIPT </script>
+
+</html>
+<!--End:footer-->
+
+<!--Seg:GoogleJS-->
+<!-- Google Website Optimizer Tracking Script -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '@&GAID ', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview'@&PGVW );
+
+</script>
+<!-- End includes for tracking scripts -->
+
+<!--End:GoogleJS-->
+
+
+
+<!--Seg:BetaGoogleJS-->
+
+<!--End:BetaGoogleJS-->
+
+
+
+
+
+<!--Seg:GOOGLEREMRKT-->
+
+<!--End:GOOGLEREMRKT-->
+
+<!--Seg:bloomreach-->
+<!--End:bloomreach--> 
+
+<!--Seg:usersnap-->
+  
+<!--End:usersnap-->
+
+
+
+<!--NEW CHECKOUT SEGMENTS-->
+
+<!--Seg:OpenHeaderC-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="@&DOMN1 /images/favicon.ico">
+
+  <!--Brossam-->
+  <!-- begin Convert Experiences code-->
+  <script type="text/javascript" src="//cdn-4.convertexperiments.com/js/10045687-10045570.js"></script>
+  <!-- end Convert Experiences code -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Rajdhani:500,600,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link type="text/css" rel="stylesheet" href="/css/vendor.css?v=5 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/main.css?v=5 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN1 /css/galls/main.css?v=5 " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN2 /css/galls/custom.css?v=5 " />   
+
+  <!--BROSSAM-->
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/sam-styles-uspt.css?v=93" />
+
+  <script src="@&DOMN3 /js/jquery-3.6.3.min.js@&TS " type="text/javascript"></script> 
+  <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+  
+  <link rel="preload" href="/js/owl.carousel.min.js" as="script" />
+  <link rel="preload" href="/js/main.js@&TS " as="script" />
+
+  <!--Optimove Web SDK - IN STAGE ONLY-->
+  <script async src="https://sdk.optimove.net/websdk/?tenant_id=1202&tenant_token=a60c029453e84b70802935f9cf1d7d2d"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJL4252');</script>
+  <!-- End Google Tag Manager -->
+
+  <!--OPTIMOVE - IN STAGE ONLY-->
+  <script>
+    dataLayer.push({
+      'sam_user_email': '@&EMAL ',
+      'sam_user_fname': '@&FNAM ',
+      'sam_user_lname': '@&LNAM ',
+      'sam_cart_items': '@&CARTITEMS '
+    });
+  </script>
+  
+<!-- Google GA4 -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=@&GA4ID "></script>
+<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '@&GA4ID ' @&PUINFO );
+        </script>
+<!-- End Google GA4 --> 
+ 
+  @&GOOGLEJS 
+  @&TITLE <!-- -->
+  @&METADESC <!-- -->
+  @&METAKEYW <!-- -->
+  @&CANON <!-- -->
+  @&JSCRIPT <!-- End Page Specific Header Tags -->
+  
+
+
+<script>
+function getMenu(thno){
+     if ($('#div'+thno).html()== '' )
+     {
+        $('#div'+thno).html("Loading...");    
+     $.ajax({
+                 url: '/cgi/CGBCXMENU',
+		type: 'get',
+            dataType: 'html',
+                data: {SITHNO : thno },
+             success: function (html) {$("#div"+thno).html(html);}
+           })         
+    }
+}   
+
+
+
+</script>
+
+GTSAMHEADER
+
+GTSAMCHKOUTHEADER
+
+</head>
+<body>     
+
+
+  <!-- Brossam - Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJL4252"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<!--End:OpenHeaderC-->
+
+<!--Seg:footerC--> 
+<!--Sign In  Modal-->
+<div class="modal sign-in" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header visible-xs-sm">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title" id="brandAboutModalLabel">Log In</h4>
+      </div>
+      <div class="modal-body">
+        <div class="hidden-xs-sm">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--black"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+          </button>
+          <h3 class="modal-title">Sign In</h3>
+        </div>
+        <div class="alert alert-success" id="successMsg" style="display:none">
+          <strong>Success!</strong> You have successfully logged in.
+        </div>
+        <div class="alert alert-danger" id="errorMsg"  style="display:none">
+          <strong>Error!</strong> Invalid login credentials.
+        </div>
+        <div class="alert alert-warning" id="multMsg"  style="display:none">
+          <strong>Alert!</strong> User with multiple login redirecting.
+        </div>
+    <div class="alert alert-danger" id="passwordMsg"  style="display:none">
+          We have upgraded our site and you will be required to reset your password for security purposes. 
+    Click <a href="javascript:void(0)" onclick="resetPasswordModal();">HERE</a> to receive an email with password reset instructions.
+        </div>
+    <div class="alert alert-success" id="emailMsg"  style="display:none">
+          <strong>Success!</strong> Email has been sent.
+        </div>
+    <div class="alert alert-warning" id="noEmailMsg"  style="display:none">
+          <strong>Alert!</strong> User does not have an email.
+        </div>
+    <div class="alert alert-warning" id="hasPassMsg"  style="display:none">
+          <strong>Alert!</strong> User has a new password.
+        </div>
+        <p>If you have an account with us please enter your user name and password below and we'll log you in!</p>
+        <form action="javascript:void(0)" id="signInModalForm" data-parsley-validate="" onsubmit="return false">
+          <div class="form-group">
+            <label for="username">User Name*</label>
+            <input type="text" name="usernameHead" id="usernameHead"  class="form__input full no-outline" required="required">
+          </div>
+          <div class="form-group">
+            <label for="password">Password*</label>
+            <input type="password" name="passwordHead" id="passwordHead" class="form__input full no-outline" required="required">
+          </div>
+          <div class="form-group"><a href="/sign-in?PMFORG=P">Forgot your password ?</a></div>
+          <div class="form-group"><a href="/sign-in?PMFORG=U">Forgot your user name ?</a></div>
+          <div class="form-submit">
+            <div class="create-account hidden-xs-sm">New to U.S. Patriot? <a href="/CGBCSRPU?PMTYPE=I">Create Your Account</a></div>
+            <button class="btn btn_xs btn--orange btn_submit" onclick="headerLogin()">Sign In</button>
+          </div>
+          <div class="create-account visible-xs-sm">
+            <p>New to U.S Patriot? Start here by creating an account</p>
+            <a href="/CGBCSRPU?PMTYPE=I" class="btn btn_sm btn--gray">Create Account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+<div class="mobile-nav overlay" id="mobile-overlay"></div> 
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script src="@&DOMN3 /js/main.js@&TS " type="text/javascript"></script>
+<!-- <script src="@&DOMN3 /js/main.js?v=3 " type="text/javascript"></script> -->
+
+
+
+
+
+
+<!--BROSSAM - Sam Script-->
+GTSAMFOOTER
+
+GTSAMCHKOUTFOOTER
+
+<!--Popup Subscriber Form-->
+<div id="samPopupSubscriberForm" style="display: none;">
+<div class="samClosePopupSubscriberDiv" onclick="samClosePopupSubscriber()"></div>
+<img src="/css/ajax-loader.gif">
+<h2></h2>
+<button onclick="samClosePopupSubscriber()"></button>
+</div> 
+
+<!--Exit Intent Form-->
+<div id="samExitIntentForm" style="display: none;"></div>
+
+<!--Floating Add To Cart PDP-->
+<div id="SamFloatingAddToCart" style="display: none;"></div> 
+
+<!--Floating Checkout Button Cart Page-->
+<div id="SamFloatingCheckOut" style="display: none;"></div> 
+
+<!--BROSSAM - Return To Top-->
+<div id="SamReturnToTop" style="display: none;"><span onclick="window.scroll({top: 0})">Return To Top</span></div> 
+
+
+</body>
+
+
+<!--Brossam - Added Organization Schema-->
+<script type="application/ld+json">
+{ "@context" : "https://schema.org",
+"@type" : "Organization",
+"name" : "U.S Patriot",
+"url" : "https://www.uspatriottactical.com",
+"logo": "https://www.uspatriottactical.com/images/logos/Logo-Tran.png",
+"description": "US Patriot Tactical is the nation's largest off-post tactical and military retailer. With over 70 locations worldwide and lightning-fast international shipping, we've made it our mission to serve those who serve us.",
+"sameAs" : [ "https://www.facebook.com/USPatriotTactical",
+  "https://www.twitter.com/USPatriotTac",
+  "https://www.instagram.com/uspatriottactical",
+  "https://www.youtube.com/channel/UCP3oXRverUHYlI4jeaIojUg"]
+}
+</script>
+
+
+<script>   
+function emailSignup(emarsys){
+//Disabled
+}
+function handleEnterEvent(e, emarsys) {
+ //Disabled
+}
+</script>  
+
+<!--End:Google Knowledge Graph-->
+
+<script type="text/javascript">
+function init() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+@&ONLOAD //
+};
+
+function cleanup() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+};
+
+userDFMT="*USA    ";userNFMT=".       ";//
+//window.onload   = init;
+//window.onunload = cleanup;
+</script>
+
+
+@&RMRKT <!-- Google Remarketing 12/20/13 -->
+
+
+
+<script type="text/javascript">
+
+//variables for all pages
+
+@&EMAIL @&JSCRIPT </script>
+
+</html>
+<!--End:footerC-->

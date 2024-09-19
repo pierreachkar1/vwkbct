@@ -1,0 +1,82 @@
+/*================== README ================== Updated 6/17/2024
+Galls styles - Overrides to base.css
+================== END README ==================
+*/
+
+/* Global Styles ------------------------------------------------------------------------------- */
+:root {
+	--base_fontFamily: 'Rajdhani', 'Helvetica', 'sans-serif';
+
+  /* Galls */
+	--base_galls_blue: #005dac;
+	--base_galls_red: #b82025;
+	--base_galls_navy: #103a60;
+	--base_galls_limeGreen: #b9c73c;
+	--base_galls_odGreen: #747a33;
+	--base_galls_green: #0b6d38;
+	--base_galls_burntOrange: #b56e2c;
+	--base_galls_orange: #dd5a26;
+
+
+	--base_fontSize: 16px;
+	--base_lineHeight: 1.25;
+}
+
+/* Global Components ------------------------------------------------------------------------------- */
+
+/*====== BUTTONS ======*/
+.b5-active .btn {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: var(--base_lineHeight);
+	padding: 9px 18px;
+	border-radius: 6px;
+}
+
+/*====== PRIMARY BUTTONS ======*/
+.b5-active .btn-primary:hover {
+	background-color: var(--base_galls_blue);
+	border: 1px solid var(--base_galls_blue);
+}
+
+.b5-active .btn-primary:focus {
+  outline: none;
+  border: none;
+}
+
+/*====== CARD ======*/
+.b5-active .card {
+  font-size: var(--base_fontSize);
+	display: flex;
+  flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	color: #000000;
+	border: 1px solid #e3e3e3;
+	box-shadow: 0px 20px 20px -8px #00000033;
+	padding: 40px;
+	background-color: #ffffff;
+	background-clip: border-box;
+  line-height: var(--base_lineHeight);
+  border-radius: 12px;
+}
+.b5-active .card-title {
+	font-weight: 700;
+	padding: 8px 16px;
+	border-radius: 12px 12px 0 0;
+	margin: -16px -16px 16px -16px;
+}
+
+/*====== NOTIFICATIONS / ALERTS ======*/
+.b5-active .alert {
+  display: inline-flex;
+	width: fit-content;
+  padding: 12px;
+  align-items: center;
+  align-content: flex-start;
+  gap: 10px;
+  border: 0.657px solid;
+  line-height: var(--base_lineHeight);
+  border-radius: 12px;
+	flex-grow: 0;
+}

@@ -1,0 +1,131 @@
+html {
+	overflow: hidden;
+}
+body.widget .promotion {
+    box-shadow: 2px 2px 8px #000;
+    border-radius: 0;
+}
+.form {
+    margin-top: -50px !important;
+}
+
+
+/* Logo */
+.logo>img {
+    display: none;
+}
+
+/* Section */
+form .email.form_item_wrapper>span,
+form .name.form_item_wrapper>span,
+form .birthday.form_item_wrapper>span,
+form .checkbox {
+    display: block;
+    margin: 0 0 0px;
+}
+
+/* Title */
+.title p {
+  	font-weight: bold;
+    color: #000000;
+}
+/* Radio Section */
+form .checkbox>span,
+form .radio>div>span,
+form .multi_check>div>span,
+.actions .question_radio {
+    display: inline-block;
+    width: 30%;
+}
+
+/* Section Title */
+form label,.form label,.actions div label {
+    color: #000000;
+    font-weight: bold;
+}
+form .form_item_wrapper {
+    padding-bottom: 15px;
+}
+.submit.enter_sweeps {
+    margin-top: 50px;
+}
+.logo {
+    display: none;
+}
+.title {
+    padding: 30px 0;
+    margin: 0;
+    background: #bd0202;
+    /* border-radius: 8px 8px 0 0; */
+    /* border-bottom: 3px solid #818181; */
+}
+.title p {
+    padding: 0;
+    margin: 0 !important;
+    background: #bd0202;
+    color: #FFEB3B !important;
+    text-shadow: 2px 2px #000000;
+    display: inline;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 4px 120px 8px 120px;
+    /* background-image: linear-gradient(to right, #000 0%, #bd0202 30%, #bd0202 70%, #000 100%); */
+}
+
+form .first_name_label,
+form .form_label_text {
+    line-height: 50px;
+    font-size: 18px;
+}
+form input[type],
+form div.form-item.icon select {
+    font-size: 14px;
+    border: 1px solid #9E9E9E;
+}
+form .email.form_item_wrapper>span input, 
+form .name.form_item_wrapper>span input, 
+form .birthday.form_item_wrapper>span select,
+form div.form-item:not(.icon) input[type],
+div.form-item:not(.icon) select {
+    border: 1px solid #9E9E9E;
+}
+form div.form-item.icon input[type],
+form div.form-item.icon input[type=number],
+form div.form-item.icon input[type=password],
+form div.form-item.icon input[type=tel],
+form div.form-item.icon select,
+form div.form-item.icon textarea {
+    padding: 5px 0 5px 30px;
+}
+form div.form-item.icon>i {
+    padding-top: 5px;
+}
+form div.form-item.icon>i.fa-map {
+    left: 5px;
+}
+
+
+@media (min-width: 991px) {
+    .form {
+        padding: 20px;
+        margin: 0;
+    }
+    /* .title {
+        background-image: none;
+        padding: 0;
+        background: #ffffff !important;
+        color: #000 !important;
+    } */
+    body.widget .promotion {
+        box-shadow: 0px 0px 0px #000;
+        padding-top: 100px;
+    }
+    body.widget .container {
+        top: 0px;
+        left: -50px;
+        width: calc(100% + 200px);
+    }
+}
+
+

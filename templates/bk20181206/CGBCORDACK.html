@@ -1,0 +1,710 @@
+<!--Seg:TOP-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+			[style*="Open Sans"] { font-family: 'Open Sans', Arial, sans-serif !important; }
+			[style*="Open Sans Condensed"] { font-family: 'Open Sans Condensed', Arial, sans-serif !important; }
+			/* Reset Styles */
+			#outlook a {padding:0;}
+			body {width: 100% !important;-webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+			margin: 0;padding: 0;}
+			.ReadMsgBody {width: 100%;}
+			.ExternalClass {width: 100%;}
+			.backgroundTable {margin: 0 auto;padding: 0;width: 100% !important;}
+			table td {border-collapse: collapse;}
+			.ExternalClass * {line-height: 115%;}
+			/* Mobile Styles */
+			@media only screen and (max-width : 480px) {
+			/********** CUSTOM STYLES ***********/
+			.mobileStack th { width:100% !important; display:block !important; }
+			.mobileLogo { width:200px !important; height:auto !important; }
+			.padding5 { padding:5px !important; }
+			/* Footer Nav */
+			.footer-nav a {
+			display: block !important;
+			width: 100%;
+			padding: 15px 0 !important;
+			border-top: 1px solid #CCCCCC !important;
+			border-right: 0 !important;
+			border-left: 0 !important;
+			}
+			.footer-nav, .footer-nav tbody, .footer-nav tr, .footer-nav td {width: 100% !important;max-height: inherit !important;
+			overflow: visible !important;display: block !important;float: none !important;}
+			.footer-nav table {display: table !important;width:100% !important;}
+			.footer-nav tbody {display: table !important;}
+			.footer-nav tr {display: table-row !important;}
+			.footer-nav td {display: table-cell !important;}
+			/****** Add Custom Styles Here ******/
+			/* General Styles */
+			.container {width: 100% !important;overflow: hidden;}
+			.mobileHide {display: none !important;}
+			.displayInlineBlock {display: inline-block;}
+			.fullWidth {width: 100% !important;height: auto;}
+			.halfWidth {width: 50% !important;height: auto;}
+			.floatLeft {float: left;}
+			.floatRight {float: right;}
+			.heightAuto {height: auto;}
+			/* Images */
+			.fullWidthImg img {width: 100% !important;height: auto;}
+			.fullImg {width: 100% !important;}
+			/* Buttons */
+			.fullWidthBtn {width: 100% !important;height: auto;border-left: 0 none !important;
+			border-right: 0 none !important;padding-left: 0 !important;padding-right: 0 !important;}
+			/* Text */
+			.mobileAlignCenter {text-align: center !important;margin: auto;float: none;}
+			.mobileAlignLeft {text-align: left !important;}
+			.copy13 {font-size: 13px !important;line-height: 1.5 !important;}
+			.copy14 {font-size: 14px !important;line-height: 1.5 !important;}
+			.copy16 {font-size: 16px !important;line-height: 1.5 !important;}
+			.copy18 {font-size: 18px !important;line-height: 1.5 !important;}
+			.copy21 {font-size: 21px !important;line-height: 1.5 !important;}
+			.copy24 {font-size: 24px !important;line-height: 1.5 !important;}
+			.copy30 {font-size: 30px !important;line-height: 1.5 !important;}
+			/* Borders */
+			.borderTop {border-top: 1px solid #cccccc;}
+			.borderTopBold {border-top: 2px solid #559EBF;}
+			.borderBottom {border-bottom: 1px solid #cccccc;}
+			.borderBottomBold {border-bottom: 2px solid #559EBF;}
+			.borderNone {border: 0 none !important;}
+			.borderTopNone {border-top: 0 none !important;}
+			.borderRightNone {border-right: 0 none !important;}
+			.borderBottomNone {border-bottom: 0 none !important;}
+			.borderLeftNone {border-left: 0 none !important;}
+			/* Padding */
+			.contentPadding {padding-left: 10px !important;padding-right: 10px !important;}
+			.contentPadding20 {padding-left: 20px !important;padding-right: 20px !important;}
+			.paddingNone {padding: 0 !important;}
+			.paddingLeft0 {padding-left: 0 !important;}
+			.paddingRight0 {padding-right: 0 !important;}
+			.paddingTop0 {padding-top: 0 !important;}
+			.paddingTop2 {padding-top: 2px !important;}
+			.paddingTop5 {padding-top: 5px !important;}
+			.paddingTop10 {padding-top: 10px !important;}
+			.paddingTop15 {padding-top: 15px !important;}
+			.paddingTop20 {padding-top: 20px !important;}
+			.paddingTop25 {padding-top: 25px !important;}
+			.paddingTop30 {padding-top: 30px !important;}
+			.paddingBottom0 {padding-bottom: 0 !important;}
+			.paddingBottom2 {padding-bottom: 2px !important;}
+			.paddingBottom5 {padding-bottom: 5px !important;}
+			.paddingBottom10 {padding-bottom: 10px !important;}
+			.paddingBottom15 {padding-bottom: 15px !important;}
+			.paddingBottom20 {padding-bottom: 20px !important;}
+			.paddingBottom25 {padding-bottom: 25px !important;}
+			.paddingBottom30 {padding-bottom: 30px !important;}
+			/* Mobile Show */
+			.mobileShow, .mobileShow tbody, .mobileShow tr, .mobileShow td {width: 100% !important;
+			max-height: inherit !important;overflow: visible !important;display: block !important;
+			float: none !important;}
+			.mobileShow table {display: table !important;width:100% !important;}
+			.mobileShow tbody {display: table !important;}
+			.mobileShow tr {display: table-row !important;}
+			.mobileShow td {display: table-cell !important;}
+			/* Reset Styles */
+			body {margin:0 !important;}
+			div[style*="margin: 16px 0"] {margin:0 !important;}
+			}
+		</style>
+	</head>
+	<body style="">
+		<table bgcolor="#ebebeb" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+					<td class="paddingLeft0 paddingRight0" style="padding:0 10px;" align="center">
+					<table class="container" align="center" border="0" cellpadding="0" cellspacing="0" width="640">
+						<tbody>
+							<tr>
+								<td align="center">
+								<!-- Preheader -->
+								<table class="mobileHide" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#666666; padding:10px 0;" align="center">
+                                            </td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- Preheader END -->
+								<!-- Containing Table (white background) -->
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<td class="" style="background-color:#ffffff;" align="center">
+											<!-- Logo -->
+											<table width="100%" cellspacing="0" cellpadding="0" border="0">
+												<tbody>
+													<tr>
+														<td style="padding:15px 0;" align="center">
+														<a href="http://enews.email-galls.com/q/GwcHY3bua5d5NNZvXO6xVrcQF0C0uR-SHLjk0XtPtSlSn6RQG2RNuXrbpuqUHVyY2hhc2UgRGF0YVxCdXllcl9TZWdtZW50c8OJPDxQdXJjaGFzZSBEYXRhXEJ1eWVyX1NlZ21lbnRzPj7DiGXDiWtlbGx5LWRhbm55QEdhbGxzLmNvbcOI?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Galls" target="_blank">
+														<img class="mobileLogo" src="http://media.email-galls.com/5167/Shared/responsive_template/logo.png" alt="Galls" style="font-family: Arial,Helvetica,sans-serif; font-size: 30px; display: block;" width="181" height="55" border="0"></a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Logo END -->
+                                            
+											<!-- Navigation -->
+											<table class="mobileHide" border="0" cellpadding="0" cellspacing="0" width="100%">
+												<tbody>
+													<tr>
+														<td style="background-color:#3d3e3f;" align="center">
+														<table border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td style="font-family:Arial, Helvetica, sans-serif, 'Open Sans'; font-size:0px;" align="center">
+																	<a href="http://www.galls.com/pages/categories?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Categories" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CATEGORIES</strong></a>
+																	<a href="http://www.galls.com/allbrands?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Brands" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">BRANDS</strong></a>
+																	<a href="http://www.galls.com/clothing?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Clothing" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CLOTHING</strong></a>
+																	<a href="http://www.galls.com/footwear?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Footwear" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">FOOTWEAR</strong></a>
+																	<a href="http://www.galls.com/equipment?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Equipment" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">EQUIPMENT</strong></a>
+																	<a href="http://www.galls.com/clearance?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Clearance" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CLEARANCE</strong></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Navigation END -->
+                                            
+									
+                     
+                    <!-- Begin GQ generated content --> 
+                    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;">
+					<tr>
+						<td style="padding-bottom:0px;">
+							<table border="0">
+								<tr><td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; text-align:left; float:left;">
+								Hi <span style="text-transform:uppercase;">@&SNAM </span>,</td><td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; text-align:right; float:right;">ORDER INFORMATION</td></tr>
+
+								<tr><td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; line-height: 18px; text-align:left; width: 600px;">
+								<p>Thank you for shopping at Galls. This is a summary of your order.</p>
+
+								<p>Order Number: <span style="font-weight: normal;">@&OHNO </span><br>
+
+								Order Date: <span style="font-weight: normal;">@&SSED </span><br>
+
+								Payments: <span style="font-weight: normal;">@&PYMTS </span></p>
+
+								<p>Ship To:</p>
+								</td></tr>
+
+								<tr>
+									<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left; width: 600px;">
+									<span style="text-transform:uppercase; display: block;">@&SNAM @&SAD1 @&SAD2 @&SAD3 @&SCTY ,&nbsp; @&SSTA &nbsp; @&SZIP </span></td>
+								</tr>
+								<br>
+								<tr>
+									<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; line-height: 18px; text-align:left; width: 600px;">
+									<p>Customer PO#: <span style="font-weight: normal;">@&REF </span></p></td>
+								</tr>
+								<tr>
+									<td><span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:22px; text-align:left;">Order Status</span><br>
+									<span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left; width:600px;">You can check your order status anytime by signing in to your Galls account or by clicking <a href="@&HTTP /CGBCSROHE?PAMODE=*DISP&PMOHNO=@&OHNO &PMHASH=@&HASH &utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf">here</a>. If you have any questions or concerns, <a href="mailto:help-desk@galls.com">email us</a> or call us toll-free at 866.673.7643.</span></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="padding-bottom:10px;">
+							<table border="0" cellpadding="1" cellspacing="0">
+								<tr>
+									<td colspan="5" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px; text-align:left;">Order Summary</td>
+								</tr>
+								<tr>
+									<th style="color:#FFF; background-color:#1679BF; text-align:left; width:100px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Item No.</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:left; width:260px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Description</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:center; width:60px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Ordered</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:center; width:90px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Item Price</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:center; width:90px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Total Price</th>
+								</tr>
+								<!--End:TOP-->
+
+<!--Seg:TOPsupp-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Galls Order Confirmation</title>
+</head>
+
+<body>
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse; ">
+	<tbody>
+		<tr>
+			<td>
+				<table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+					<tr>
+						<td><a href="http://@&URL ?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" style="text-decoration: none;" title="Galls"><img border="0" src="@&HTTP /images/2013-09-13-WELCOME_logo.jpg"></a>
+						</td>
+					</tr>
+				</table>
+
+				<table>
+					<tr>
+						<td style="padding-bottom:0px;">
+							<table border="0">
+								<tr><td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; text-align:left; float:left;">
+								Hi <span style="text-transform:uppercase;">@&SNAM </span>,</td><td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; text-align:right; float:right;">ORDER INFORMATION</td></tr>
+
+								<tr><td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; line-height: 18px; text-align:left; width: 600px;">
+								<p>Thank you for shopping at Galls. This is a summary of your order.</p>
+
+								<p>Order Number: <span style="font-weight: normal;">@&OHNO </span><br>
+
+								Order Date: <span style="font-weight: normal;">@&OHNO </span><br>
+
+								Payments: <span style="font-weight: normal;">@&PYMTS </span></p>
+
+								<p>Ship To:</p>
+								</td></tr>
+								<tr>
+									<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left; width: 600px;">
+									<span style="text-transform:uppercase; display: block;">@&SNAM @&SAD1 @&SAD2 @&SAD3 @&SCTY ,&nbsp; @&SSTA &nbsp; @&SZIP </span></td>
+								</tr>
+								<br>
+								<tr>
+									<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:11px; line-height: 18px; text-align:left; width: 600px;">
+									<p>Customer PO#: <span style="font-weight: normal;">@&REF </span></p></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="padding-bottom:10px;">
+							<table border="0" cellpadding="1" cellspacing="0">
+								<tr>
+									<td colspan="5" style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px; text-align:left;">Order Summary</td>
+								</tr>
+								<tr>
+									<th style="color:#FFF; background-color:#1679BF; text-align:left; width:100px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Item No.</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:left; width:300px; font-family:Arial, Helvetica, sans-serif; font-size:11px;padding:4px;">Description</th>
+									<th style="color:#FFF; font-weight: bold; background-color:#1679BF; text-align:center; width:80px; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding:4px;">Ordered</th>
+								</tr>
+<!--End:TOPsupp-->
+
+<!--Seg:LINE-->
+   <tr>
+   	  <td style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;">@&SKU </td>
+      <td style="font-size:11px; font-family:Arial, Helvetica, sans-serif;">@&DESC <br>@&STOCK @&WHNO </td>
+      <td nowrap style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&QTY </td>
+      <td nowrap align="right" style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&NETP </td>
+      <td nowrap align="right" style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&EXTP </td>
+   </tr>
+   <span style="font-size:11px; font-family:Arial, Helvetica, sans-serif;">@&VAS </span>
+   <tr>
+      <td colspan="5" style="border-bottom:1px solid #ddd;">&nbsp;</td>
+   </tr>
+<!--End:LINE-->
+
+<!--Seg:LINEsupp-->
+   <tr>
+   	  <td style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;">@&SKU </td>
+      <td style="font-size:11px; font-family:Arial, Helvetica, sans-serif;">@&DESC <br>@&STOCK @&WHNO </td>
+      <td nowrap style="font-size:11px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&QTY </td>
+   </tr>
+   <span style="font-size:11px; font-family:Arial, Helvetica, sans-serif;">@&VAS </span>
+   <tr>
+      <td colspan="3" style="border-bottom:1px solid #ddd;">&nbsp;</td>
+   </tr>
+<!--End:LINEsupp-->
+
+<!--Seg:openvas-->
+
+	<tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+      <td style="font-size: 10px; font-style: italic; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;">Customizations Added</td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+      <td align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+      <td align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+    </tr>
+<!--End:openvas-->   
+
+<!--Seg:openvasSupp-->
+
+	<tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+      <td style="font-size: 10px; font-style: italic; text-decoration: underline; font-family:Arial, Helvetica, sans-serif;">Customizations Added</td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666"> </td>
+    </tr>
+<!--End:openvasSupp--> 
+
+<!--Seg:vasapp-->
+    <tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;"> </td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif;">@&APPLICATION </td>
+      <td nowrap style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&VASQTY </td>
+      <td nowrap align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&VASPRC </td>
+      <td nowrap align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&TOTL </td>
+    </tr>
+<!--End:vasapp-->
+
+<!--Seg:vasappSupp-->
+    <tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;"> </td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif;">@&APPLICATION </td>
+      <td nowrap style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&VASQTY </td>
+    </tr>
+<!--End:vasappSupp-->
+
+<!--Seg:bv2Row-->
+    <tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;"> </td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-left: 10px;">@&BV2 </td>
+      <td nowrap style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&BV2QTY </td>
+      <td nowrap align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&BV2PRC </td>
+      <td nowrap align="right" style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;" >@&BV2TOTL </td>
+    </tr>
+<!--End:bv2Row-->
+
+<!--Seg:bv2RowSupp-->
+    <tr>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top;"> </td>
+      <td style="font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-left: 10px;">@&BV2 </td>
+      <td nowrap style="font-size:10px; font-family:Arial, Helvetica, sans-serif; vertical-align:text-top; text-align:center;">@&BV2QTY </td>
+    </tr>
+<!--End:bv2RowSupp-->
+
+<!--Seg:closevas-->
+<!--End:closevas-->
+
+<!--Seg:BOTTOM-->
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="padding-bottom:10px;">
+							<table border="0">
+								<tr>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:12px; text-align:right; width:564px;">Merchandise Total:</td>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; width:76px; text-align:right;">@&SUBT </td>
+								</tr>
+								<tr>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:12px; text-align:right; width:564px;">Shipping &amp; Handling:</td>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; width:76px; text-align:right;">@&FAMT </td>
+								</tr>
+								<tr>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:12px; text-align:right; width:564px;">Sales Tax:</td>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; width:76px; text-align:right;">@&TAXT </td>
+								</tr>
+								<tr>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:12px; text-align:right; width:564px;">Order Total:</td>
+									<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; width:76px; text-align:right;">@&TOTT </td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color:#1679BF; height:3px;"></td>
+					</tr>
+					<tr>
+						<td><p style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left;">
+						Your order may ship in various intervals. If an item is on backorder or ships directly from our suppliers your credit card is not charged until the item ships. Your credit card statement will show this purchase from GALLS. If items have shipped from our suppliers, we may not be able to process cancelation requests.</p></td>
+					</tr>
+					<br>
+					<tr>
+						<td><span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:22px; text-align:left;">Order Status</span><br>
+						<span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left; width:600px;">You can check your order status anytime by signing in to your Galls account or by clicking <a href="@&HTTP /CGBCSROHE?PAMODE=*DISP&PMOHNO=@&OHNO &PMHASH=@&HASH &utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf">here</a>. If you have any questions or concerns, <a href="mailto:help-desk@galls.com">email us</a> or call us toll-free at 866.673.7643.</span></td>
+					</tr>
+				</table>
+				<br>
+				<table cellspacing="0" border="0" cellpadding="0" width="600">
+					<tbody>
+						<tr>
+							<td colspan="4"><span style="font-size: 22px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Recommendations Just for You</span><br>
+							<span style="font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Below are some popular products for you based on your past selections. If you need help completing another purchase, let us know. Call, <a href="http://@&URL /allproducts?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf">click</a> or <a href="http://@&URL /pages/stores?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf">visit us</a>.</span></td>
+						</tr>
+
+<tr>
+<td>
+<!--/*SC*/ START Listrak Recommender /*EC*/-->
+<table class="fullWidth" width="600" cellpadding="0" cellspacing="0" border="0" style="padding-top:20px;">
+				  <tr>
+                    <td class="" align="center" style="">
+
+                      <!-- Containing Table -->
+                      <table class="fullWidth" width="300" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td class="contentPadding" align="center" style="background-color:;">
+
+                            <table class="mobileStack fullWidth" align="center" width="300" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <th class="fullWidth" width="150" align="center" valign="top" style="padding-bottom:20px;">
+
+                                  <!-- Product #1 -->
+                                  <table class="fullWidth" align="center" width="150" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td class="fullWidthImg" align="center">
+                                     
+                                     <a href="http://recs.listrakbi.com/link/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/12/0/140/240/email/#Listrak\Email#?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" title="Product">
+										<img src="http://recs.listrakbi.com/image/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/12/0/140/240/email/#Listrak\Email#" width="140" height="240" border="0" alt="Product" style="display:block;max-width:150px; max-height:300px; width:auto;height:auto;" />
+									</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!-- Product #1 END-->
+
+                                </th>
+                                <th class="fullWidth" width="150" align="center" valign="top" style="padding-bottom:20px;">
+
+                                  <!-- Product #2 -->
+                                  <table class="fullWidth" align="center" width="150" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td class="fullWidthImg" align="center">
+                                     	<a href="http://recs.listrakbi.com/link/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/156/0/140/240/email/#Listrak\Email#?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" title="Product">
+										<img src="http://recs.listrakbi.com/image/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/156/0/140/240/email/#Listrak\Email#" width="140" height="240" border="0" alt="Product" style="display:block;max-width:150px; max-height:300px; width:auto;height:auto;" />
+									</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!-- Product #2 END-->
+
+                                </th>
+                              </tr>
+                              
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- Containing Table END-->
+
+                    </td>
+                          <td class="contentPadding" align="center" style="background-color:#;">
+
+                            <table class="mobileStack fullWidth" align="center" width="300" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <th class="fullWidth" width="150" align="center" valign="top" style="padding-bottom:20px;">
+
+                                  <!-- Product #3 -->
+                                  <table class="fullWidth" align="center" width="150" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td class="fullWidthImg" align="center">
+                                      <a href="http://recs.listrakbi.com/link/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/300/0/140/240/email/#Listrak\Email#?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" title="Product">
+										<img src="http://recs.listrakbi.com/image/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/300/0/140/240/email/#Listrak\Email#" width="140" height="240" border="0" alt="Product" style="display:block;max-width:150px; max-height:300px; width:auto;height:auto;" />
+									</a>
+                                      </td>
+                                    </tr>
+
+                                  </table>
+                                  <!-- Product #3 END-->
+
+                                </th>
+                                <th class="fullWidth" width="150" align="center" valign="top" style="padding-bottom:20px;">
+
+                                  <!-- Product #4 -->
+                                  <table class="fullWidth" align="center" width="150" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td class="fullWidthImg" align="center">
+                                       <a href="http://recs.listrakbi.com/link/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/444/0/140/240/email/#Listrak\Email#?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" title="Product">
+										<img src="http://recs.listrakbi.com/image/788bd0e1-73dd-448c-9646-9def57d1346c/73146ca9-c89f-4dcc-a0fb-9ca04e7125aa/d4c4ef86-ebcd-4918-9b5d-d37431ba1d4b/444/0/140/240/email/#Listrak\Email#" width="140" height="240" border="0" alt="Product" style="display:block;max-width:150px; max-height:300px; width:auto;height:auto;" />
+									</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!-- Product #4 END-->
+
+                                </th>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+	
+	        </table>                
+	            <!-- End Listrak recommender responsive -->
+
+
+
+
+<!--/*SC*/ END Listrak Recommender /*EC*/-->
+</td>
+</tr>
+
+
+					</tbody>
+				</table>
+
+				
+</body>
+</html>
+
+<!--End:BOTTOM-->
+
+<!--Seg:BOTTOMsupp-->
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="background-color:#1679BF; height:3px;"></td>
+					</tr>
+					<tr>
+						<td>
+						<p style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left;">
+						</p>
+						</td>
+					</tr>
+					<br>
+					<tr>
+						<td style="padding-bottom: 20px;">
+						<span style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:22px; text-align:left;">Order Status</span><br>
+						<span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; text-align:left; width:600px;">You can check your order status anytime by signing in to your Galls account or by clicking <a href="@&HTTP /CGBCSROHE?PAMODE=*DISP&PMOHNO=@&OHNO &PMHASH=@&HASH &utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf">here</a>. If you have any questions or concerns, <a href="mailto:help-desk@galls.com">email us</a> or call us toll-free at 866.673.7643.</span></td>
+					</tr>
+				</table>
+                      <!-- End GQ generated content -->
+                                                            
+                                            <!-- Navigation -->
+											<table class="footer-nav" border="0" cellpadding="0" cellspacing="0" width="100%">
+												<tbody>
+													<tr>
+														<td style="background-color:#3d3e3f;" align="center">
+														<table border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td class="paddingNone fullWidthImg" style="font-family:Arial, Helvetica, sans-serif, 'Open Sans'; font-size:0px;" align="center">
+																	<a href="http://www.galls.com/pages/categories?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Categories" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CATEGORIES</strong></a>
+																	<a href="http://www.galls.com/allbrands?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Brands" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">BRANDS</strong></a>
+																	<a href="http://www.galls.com/clothing?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Clothing" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CLOTHING</strong></a>
+																	<a href="http://www.galls.com/footwear?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Footwear" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">FOOTWEAR</strong></a>
+																	<a href="http://www.galls.com/equipment?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Equipment" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">EQUIPMENT</strong></a>
+																	<a href="http://www.galls.com/clearance?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Clearance" target="_blank" style="font-size:14px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #3d3e3f; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;"><strong style="font-weight:normal;">CLEARANCE</strong></a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Navigation END -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- Containing Table END-->
+								
+								<!-- Footer -->
+								<table class="mobileStack" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<th class="paddingTop10" style="padding-top:20px;" align="center" valign="top" width="40%">
+											<!-- Social Box -->
+											<table class="fullWidth" border="0" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td class="borderNone paddingNone" style="border:1px solid #010101; padding:20px" align="center">
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td class="mobileAlignCenter" style="font-family: Arial, Helvetica, sans-serif, 'Open Sans Condensed'; font-size:18px; color:#010101; padding-bottom:10px" align="left">
+																	CONNECT WITH US
+																	</td>
+																</tr>
+																<tr>
+																	<td class="" style="padding-bottom:10px;">
+																	<table align="center" border="0" cellpadding="0" cellspacing="0">
+																		<tbody>
+																			<tr>
+																				<td style="padding:0 10px;" align="center"><a href="https://www.facebook.com/gallsconnect?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Facebook" target="_blank"><img src="http://media.email-galls.com/5167/Shared/responsive_template/facebook.gif" alt="Facebook" style="display: block;" height="25" border="0" width="16"></a></td>
+																				<td style="padding:0 10px;" align="center"><a href="https://twitter.com/gallsconnect?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Twitter" target="_blank"><img src="http://media.email-galls.com/5167/Shared/responsive_template/twitter.gif" alt="Twitter" style="display: block;" height="25" border="0" width="28"></a></td>
+																				<td style="padding:0 10px;" align="center"><a href="https://plus.google.com/113303718069663307736/posts?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Google+" target="_blank"><img src="http://media.email-galls.com/5167/Shared/responsive_template/google.gif" alt="Google Plus" style="display: block;" height="25" border="0" width="38"></a></td>
+																				<td style="padding:0 10px;" align="center"><a href="https://www.youtube.com/user/GallsPublicSafety?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="YouTube" target="_blank"><img src="http://media.email-galls.com/5167/Shared/responsive_template/youtube.gif" alt="YouTube" style="display: block;" height="25" border="0" width="25"></a></td>
+																				<td style="padding:0 10px;" align="center"><a href="http://gallsblog.com/?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Blog" target="_blank"><img src="http://media.email-galls.com/5167/Shared/responsive_template/blog.gif" alt="Blog" style="display: block;" height="25" border="0" width="28"></a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="borderNone" style="border-top:1px solid #010101;" align="center">
+																	<!-- Containing Table -->
+																	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																		<tbody>
+																			<tr>
+																				<td class="mobileAlignCenter" style="padding-top:10px; font-family: Arial, Helvetica, sans-serif, 'Open Sans Condensed'; font-size:14px;" align="left">
+																				<a href="http://www.galls.com/pages/privacy?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Privacy Policy" target="_blank" style="color:#010101; text-decoration:none;"><strong>PRIVACY POLICY &raquo;</strong></a><br>
+																				<a href="http://www.galls.com/Pages/EMAIL_SIGNUP?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Email Preference Center" target="_blank" style="color:#010101; text-decoration:none;"><strong>EMAIL PREFERENCE CENTER &raquo;</strong></a><br>
+																				<a href="[[UnsubscribeLink]]" title="Unsubscribe" target="_blank" style="color:#010101; text-decoration:none"><strong>UNSUBSCRIBE &raquo;</strong></a>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<!-- Containing Table END-->
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Social Box END-->
+											</th>
+											<th class="" style="padding-top:20px;" align="center" valign="top" width="60%">
+											<table class="fullWidth" align="center" border="0" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td class="copy13 contentPadding" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; color:#666666; padding-left:20px; font-weight:normal;" align="left">&copy; #Listrak\Datestamp Format=yyyy# Galls, LLC.<br>
+                                                          <a href="http://www.galls.com/?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Galls" target="_blank" style="color:#666666; text-decoration:none;"><strong style="font-weight:normal;">1340 Russell Cave Road, Lexington, KY 40505</strong></a><br>
+                                                          <br>
+                                                          Your order may ship in various intervals. If an item is on backorder or ships directly from our suppliers your credit card is not charged until the item ships. Your credit card statement will show this purchase from Galls. If items have shipped from our suppliers, we may not be able to process cancelation requests.<br><br>
+															Galls respects your privacy, please review our <a href="http://@&URL /pages/privacy?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" target="_blank" style="color:#666666; text-decoration:none;">Privacy Policy</a>.<br>
+<br>
+Customer service is available <a href="http://www.galls.com/?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="Galls" target="_blank" style="color:#666666; text-decoration:none;"><strong style="font-weight:normal;">M-F 8AM-9PM ET</strong></a> at <a href="tel:+18666737643?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="1-866-73-7643" target="_blank" style="color:#666666; text-decoration:none;"><strong style="font-weight:normal;">1-866-673-7643</strong></a> <br>
+<br>
+<!-- MOBILE Browser Link -->
+														<table class="mobileShow" border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+																	<td style="padding-top:20px;" align="center"><a href="[[BrowserLink]]?utm_source=gqordconf&utm_medium=email&utm_campaign=gqordconf" title="View in browser" target="_blank" style="color:#666666;"><strong style="font-weight:normal;">View in Browser</strong></a></td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- MOBILE Browser Link  END-->
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Social Icons END-->
+											</th>
+										</tr>
+									</tbody>
+								</table>
+								<!-- Footer END -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Gmail Fix-->
+					<table class="mobileHide" style="display:none; width:650px; min-width:650px; max-width:650px;" align="center" border="0" cellpadding="0" cellspacing="0" width="650">
+						<tbody>
+							<tr>
+								<td><img src="http://media.listrak.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" style="display: block; min-width: 650px; max-width: 650px;" height="20" border="0" width="650"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+					<!-- Gmail Fix END -->
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+<!--End:BOTTOMsupp--> 

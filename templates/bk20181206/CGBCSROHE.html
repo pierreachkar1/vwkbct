@@ -1,0 +1,343 @@
+<!--Seg:Open-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">      
+  <link type="text/css" rel="stylesheet" href="@&HOST /css/vendor.css?ts=000000050520529">
+  <link type="text/css" rel="stylesheet" href="@&HOST /css/main.css?ts=000000050520529">
+  <link type="text/css" rel="stylesheet" href="@&HOST /css/galls/main.css?ts=000000050520529">
+  <link type="text/css" rel="stylesheet" href="@&HOST /css/galls/custom.css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '@&ACNO ', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview','/email-order-status');
+  </script>
+  <script>
+  function init(){}
+  </script>
+</head>
+
+<body>
+
+<style>
+  .labelOH {
+    font-weight: bold;
+  }
+  .inputOH {
+    font-weight: normal;
+  }
+  .orderEmailDetail {
+    padding: 25px 0px;
+  }
+  .orderEmailDetail__wrapper {
+    background-color: #fff;
+    padding: 15px;
+  }
+  .custom_table_header {
+    background-color: #03538C;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: none;
+    text-align:center;
+  }
+
+  @media screen and (max-width: 767px){
+    .table-responsive {
+      border: none;
+    }
+  }
+
+  @media only screen and (max-width: 750px){
+    #no-more-tables table, 
+    #no-more-tables thead, 
+    #no-more-tables tbody, 
+    #no-more-tables th, 
+    #no-more-tables td, 
+    #no-more-tables tr { 
+      display: block; 
+    }
+    #no-more-tables thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    }
+    #no-more-tables tr { border: 1px solid #ccc; }
+    
+    #no-more-tables td { 
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+      white-space: normal;
+      text-align:left;
+    }
+
+    #no-more-tables td:before { 
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      text-align:left;
+      font-weight: bold;
+    }
+    #no-more-tables td:before { content: attr(data-title); }
+  }
+  main.orderEmailDetail h4 {
+    font-size: 19px;
+  }    
+</style>
+
+<form name="f" method="POST" action="CGBCSROHE">
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIOHNO" value="@&SIOHNO ">
+  <input type="hidden" name="SIHASH" value="@&SIHASH ">
+  <input type="hidden" name="SICNCL" value="@&SICNCL ">
+  
+  <main class="orderEmailDetail">
+    <div class="container">
+      <div class="orderEmailDetail__wrapper">
+        <div class="row">
+          <div class="col-xs-4">
+            <a href="@&HOST "><img src="/images/logo-black.png" alt="Galls" class="img-responsive" style="min-width:130px"></a>
+          </div>
+          <div class="col-xs-4 col-xs-offset-4">
+            <p>Customer Service<br><a href="tel:8666737643">866.673.7643</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p style="color:red;">@&MSG </p>
+          </div>
+        </div>
+<!--End:Open-->
+
+<!--Seg:opentable-->
+        <div class="row"> 
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="text-primary">Order Details</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Order Number:</span>&nbsp;<span>@&OHNO </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Placed On:</span>&nbsp;<span>@&DATE </span>
+              </div>
+            </div>
+          </div>
+<!--End:opentable-->
+
+<!--Seg:summary-->
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="text-primary">Order Summary</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Merchandise:</span>&nbsp;<span>@&SUB </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Shipping:</span>&nbsp;<span>@&FRHT </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Sales:</span>&nbsp;<span>@&TAX </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Order Total:</span>&nbsp;<span>@&TOTL </span>
+              </div>
+            </div>
+          </div>
+        </div> 
+<!--End:summary-->
+
+<!--Seg:billing-->
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="text-primary">Billing Information</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="inputOH">@&BILL </span>
+              </div>
+            </div>
+          </div>    
+<!--End:billing-->
+
+<!--Seg:shipping-->
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="text-primary">Shipping Information</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Order Status:</span>&nbsp;<span>@&OSTS </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Shipping Address:</span><br><span>@&SHIP </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">Shipping Method:</span>&nbsp;<span>@&CACD </span>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--End:shipping-->
+
+<!--Seg:payment-->
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="text-primary">Payment Information</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">@&CPOND </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="labelOH">@&CPON </span>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--End:payment-->
+
+<!--Seg:shippingHeader-->
+        <div class="row">
+          <div class="col-xs-12">
+            <span><strong>@&ERR </strong></span>
+          </div>
+        </div>
+        <div class="row" style="padding-top:30px;">
+          <div class="col-xs-12">
+            <div class="table-responsive">
+              <section id="no-more-tables">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="custom_table_header">Line #</th>
+                      <th class="custom_table_header">Item</th>
+                      <th class="custom_table_header">Description</th>
+                      <th class="custom_table_header" style="text-align:left;">Status</th>
+                      <th class="custom_table_header" style="display:@&DISPTH ">@&ACTN </th>
+                      <th class="custom_table_header">Ordered</th>
+                      <th class="custom_table_header">Shipped</th>
+                      <th class="custom_table_header">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+<!--End:shippingHeader-->
+
+<!--Seg:ODLine-->
+                    <tr>
+                      <td align="left" style="color:#386b9d" data-title="Line #"><strong>@&ODNO </strong></td>
+                      <td align="left" style="color:#386b9d" data-title="Item"><strong>@&SKU </strong></td>
+                      <td align="left" style="color:#386b9d" data-title="Description"><strong>@&DESC @&SHDT </strong></td>
+                      <td align="left" style="color:#386b9d" data-title="Status"><strong>@&TRCK @&STAT </strong></td>
+                      <td align="center" style="color:#386b9d;display:@&DISPTD " data-title="@&ACTNDT "><strong>@&ACTN </strong></td>
+                      <td align="center" style="color:#386b9d" data-title="Ordered"><strong>@&QTY </strong></td>
+                      <td align="center" style="color:#386b9d" data-title="Shipped"><strong>@&SHQT </strong></td>
+                      <td align="right" style="color:#386b9d" data-title="Total"><strong>@&EXNT </strong></td>
+                    </tr>
+<!--End:ODLine-->
+
+<!--Seg:shippingClose-->                    
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </div>
+        </div>
+<!--End:shippingClose-->  
+
+<!--Seg:closeTable-->        
+        <div class="row">
+          <div class="col-xs-12" style="text-align:center;">
+            <input type="button" class="btn btn-primary btn-group-lg" value="Print" onclick="window.print();">
+          </div>
+        </div>
+<!--End:closeTable-->
+
+<!--Seg:closeTableC-->
+        <div class="row">
+          <div class="col-sm-6" style="@&DSPLR ">
+            <div class="row" >
+              <input type="button" class="btn btn-primary btn-group-lg" value="Return item(s)" onclick="submit_form('f','RETLBL');">
+            </div>
+          </div>
+          <div class="col-sm-6" style="@&DSPLC ">
+            <div class="row" style="@&DSPLC ">
+              <input type="button" class="btn btn-primary btn-group-lg" value="Cancel selected item(s) on this order" onclick="canceLines();">
+            </div>
+            <div class="row" style="@&DSPLC ">
+              <p>*If items have shipped, we may not be able to process cancelation requests</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" style="text-align:right">
+            <input type="button" class="btn btn-primary btn-group-lg" value="Print" onclick="window.print();">
+          </div>
+        </div>
+<script>
+  function canceLines(){
+  if($('input.canclbox:checkbox:checked').length > 0)
+    { if(!confirm('Are you sure you want to cancel the selected lines?')){return;}
+      submit_form('f','CXLINES');
+     }
+   else
+    alert('No lines selected to be canceled!');
+  }
+</script>
+<!--End:closeTableC-->
+
+<!--Seg:Close-->        
+      </div> 
+    </div> 
+  </main>
+</form>
+  <script src="@&HOST /js/vendor.js?ts=000000050520529" type="text/javascript"></script>
+  <script src="@&HOST /js/main.js?ts=000000050520529" type="text/javascript"></script>
+  
+</body>
+</html>
+<!--End:Close-->
+                    

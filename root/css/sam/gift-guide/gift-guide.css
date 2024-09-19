@@ -1,0 +1,146 @@
+/* General */
+body {
+	background-color: #ffffff;
+	font-family:'Rajdhani',Helvetica,sans-serif;
+}
+p {
+	font-size: 16px;
+}
+@media (max-width: 992px) {
+    .samFullCarouselSection {
+		padding: 0px 0 0px 0 !important;
+	}
+}
+
+
+/* All Cards Styling */
+.gg_category_card .card .card-content {
+	box-shadow: 0 1px 8px #00000020;
+	border: 1px solid #ddd;
+	/* border-radius: 8px; */
+	transition: all 0.3s ease;
+}
+.gg_category_card .card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	/* border-radius: 6px 6px 0 0; */
+}
+@media (min-width: 992px) {
+	.gg_category_card .card .card-content:hover {
+		border: 1px solid #ccc;
+		box-shadow: 0 1px 8px #00000050;
+	}
+}
+.gg_category_card .card span {
+	display: block;
+	text-align: center;
+	background-color: #f2f2f2;
+	padding: 20px 0;
+	color: #000;
+	font-weight: 700;
+	font-size: 18px;
+	/* border-radius: 0 0 8px 8px; */
+	text-transform: uppercase;
+}
+.samFullCarouselSection .gg_category_card {
+	margin: 25px -8px 25px -12px !important;
+}
+@media (max-width: 992px) {
+    .gg_category_card .card {
+		margin-bottom: 22px;
+	}
+}
+
+
+/* All Sections Except FullWidth Carousel */
+/* #gg_top_desc_section .row,
+#gg_bottom_desc_section .row {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+#gg_categories_section .row,
+#gg_under_50_section .row,
+#gg_gear_galore_section .row,
+#gg_safety_swag_section .row {
+	margin-left: -5px !important;
+	margin-right: -5px !important;
+}
+.samFullCarouselSection .carousel {
+	margin-left: -10px !important;
+	margin-right: -10px !important;
+} */
+
+
+/* Full Width Hero Section */
+#gg_fw_hero_section {
+    padding: 0;
+    margin-top: -40px;
+}
+@media (max-width: 992px) {
+    #gg_fw_hero_section {
+        margin-top: 0px;
+    }
+}
+#gg_fw_hero_section .container {
+    width: 100%;
+	padding: 0;
+}
+#gg_fw_hero_section img {
+    width: 100%;
+	height: 400px;
+    object-fit: cover;
+}
+
+
+/* Top Desc Section */
+#gg_top_desc_section .row {
+	background-color: #f2f2f2;
+	margin: 30px 0;
+	text-align: center;
+}
+#gg_top_desc_section p {
+	margin: 10px 0 30px 0;
+}
+#gg_top_desc_section .repeating-linear-gradient {
+	background: repeating-linear-gradient(
+		135deg,
+		#f2f2f2,
+		#f2f2f2 10px,
+		#ffffff 10px,
+		#ffffff 20px
+	);
+	padding: 5px 0;
+}
+
+/* Gift Categories Section */
+#gg_categories_section {
+	margin-bottom: 30px;	
+}
+
+
+/* Gear Galore Section */
+@media (max-width: 600px) {
+	#gg_gear_galore_section .samH2 {
+		margin-top: 20px;
+	}
+}
+
+
+/* Safety Swag Section */
+@media (max-width: 600px) {
+	#gg_safety_swag_section .samH2 {
+		margin-top: 35px;
+	}
+}
+
+
+/* Bottom Desc Section */
+#gg_bottom_desc_section {
+	padding-bottom: 50px;
+	margin-top: -30px;
+}
+#gg_bottom_desc_section .samH2 {
+	text-align: left;
+	padding-bottom: 20px;
+}

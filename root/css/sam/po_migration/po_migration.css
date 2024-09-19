@@ -1,0 +1,214 @@
+
+/* Modified from Homepage (Rizeen) */
+.hp--comp1--fw {
+	margin-top: -40px;
+}
+@media (max-width: 992px) {
+	.hp--comp1--fw {
+		margin-top: -10px !important;
+	}
+}
+@media (max-width: 500px) {
+	.hp--comp1--fw {
+		margin-top: -15px !important;
+	}
+}
+
+
+/* Main Hero */
+.samMainHeroSection .container .row {
+	width: calc(100% + 48px);
+	margin-left: -20px;
+}
+.samMainHeroSection img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+    .samMainHeroSection img {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+}
+
+.samMainHeroSection .samMHS_logo .col-xs-12 {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+@media (min-width: 992px) {
+	.samMainHeroSection .samMHS_logo a {
+		transition: all .3s ease;
+	}
+	.samMainHeroSection .samMHS_logo a:hover {
+		transform: scale(1.1);
+	}
+}
+/* END */
+
+
+
+
+/* Copied and Modified From PO for QuickLinks */
+.samQuickLinks .container .row {
+	padding:15px 0 0 0;
+	background-color: #ebebeb; 
+	margin-top: 0px; 
+	margin-bottom: 30px;
+	width: calc(100% + 28px);
+}
+.bs--component4--ul li {
+	padding: 4px 0;
+}
+.bs--component4--ul a {
+	font-size: 20px;
+	color: #000000;
+}
+.bs--component4--ul a:hover {
+	text-decoration: underline;
+	
+}
+.bs--component4--diagonal {
+	background-color: #ffffff;
+	margin-top: -16px;
+	clip-path: polygon(90% 0, 100% 0, 10% 100%, 0% 100%);
+}
+.samQuickLinks .col-xs-1 {
+	min-height: 260px;
+}
+@media screen and (max-width: 374px) {
+	.bs--component4--diagonal {display: none;}
+	.bs--component4 {padding-left: 20px; width: 100%;}
+	.bs--component4 h4{font-size: 20px; padding-left: 10px}
+	.bs--component4--middle {padding-left: 20px;  width: 100%;}
+	.bs--component4--middle h4{font-size: 20px; padding-left: 10px}
+	.bs--component4--ul {padding-left: 35px; padding-bottom: 15px; font-size: 15px; list-style-type: square; }
+}
+
+/* iPhoneX, 6,7,8, Pixel 2, Pixel 2 XL */
+@media (min-width: 375px) and (max-width: 499px) {
+	.bs--component4--diagonal {display: none;}
+	.bs--component4 {padding-left: 20px; width: 100%;}
+	.bs--component4 h4{font-size: 18px; padding-left: 10px}
+	.bs--component4--middle {padding-left: 20px;  width: 100%;}
+	.bs--component4--middle h4{font-size: 18px; padding-left: 10px}
+	.bs--component4--ul {padding-left: 35px; padding-bottom: 15px; font-size: 15px; list-style-type: square; }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 500px) and (max-width: 575.98px) {
+	.bs--component4--diagonal {display: none;}
+	.bs--component4 {padding-left: 20px; width: 100%;}
+	.bs--component4 h4{font-size: 22px; padding-left: 20px}
+	.bs--component4--middle {padding-left: 20px;  width: 100%;}
+	.bs--component4--middle h4{font-size: 22px; padding-left: 20px}
+	.bs--component4--ul {padding-left: 45px; padding-bottom: 15px; font-size: 16px; list-style-type: square; }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.bs--component4--diagonal ul{height: 180px;} /* only for this dimension */
+	.bs--component4 {padding-left: 10px;}
+	.bs--component4 h4 {font-size: 14px;}
+	.bs--component4--middle {padding-left: 20px}
+	.bs--component4--middle h4 {font-size: 14px;}
+	.bs--component4--ul {padding-left: 20px; padding-bottom: 15px; list-style-type: square}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.bs--component4 {padding-left: 10px;}
+	.bs--component4 h4 {font-size: 16px;}
+	.bs--component4--middle {padding-left: 30px}
+	.bs--component4--middle h4 {font-size: 16px;}
+	.bs--component4--ul {padding-left: 20px; padding-bottom: 15px; list-style-type: square}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+	.bs--component4 {padding-left: 20px}
+	.bs--component4 h4 {font-size: 18px;}
+	.bs--component4--middle {padding-left: 55px}
+	.bs--component4--ul {font-size: 14px; padding-left: 20px; padding-bottom: 10px; list-style-type: square}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) and (max-width: 1999.98px) {
+	.bs--component4 {padding-left: 30px}
+	.bs--component4--middle {padding-left: 85px}
+	.bs--component4--ul {font-size: 18px; padding-left: 25px; padding-bottom: 10px; list-style-type: square}
+}
+
+/* Extra large devices (large desktops, 2000px and up) */
+@media (min-width: 2000px) {
+	.bs--component4 {padding-left: 30px}
+	.bs--component4--middle {padding-left: 115px}
+	.bs--component4--ul {font-size: 18px; padding-left: 25px; list-style-type: square}
+}
+/* END */
+
+
+
+
+/* Copy Section */
+.samCopyTop {
+	background-color: #f2f2f2; 
+	padding: 5px 20px 20px 20px;
+	margin: 20px 0 20px 0;
+}
+.samCopyTop h2,
+.samCopyBottom h2 {
+	text-align: left !important;;
+}
+
+.samCopyBottom .row {
+	background-color: #f2f2f2; 
+	padding: 5px 20px 20px 20px;
+	margin: 10px 0 50px 0;
+}
+@media (max-width: 992px) {
+	.samCopyTop {
+		margin: 10px 0 20px 0;
+	}
+}
+@media (max-width: 600px) {
+	.samCopyTop {
+		margin: 10px 0 0px 0;
+	}
+}
+@media (max-width: 500px) {
+	.samCopyTop {
+		margin: 15px 0 5px 0;
+	}
+}
+
+
+/* For New Changes*/
+#newCarouselPO {
+	margin-top: -20px;
+}
+@media (max-width: 600px) {
+	#newCarouselPO {
+		margin-top: -5px;
+		margin-bottom: -20px;
+	}
+}
+
+#newShopPopularPO {
+	margin-top: -30px;
+	margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+	#newShopPopularPO {
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 600px) {
+	#newShopPopularPO {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}

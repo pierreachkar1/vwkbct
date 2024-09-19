@@ -1,0 +1,75 @@
+.wufoo {
+	font-family: "PT Sans", Arial, serif;
+}
+#container {
+	background: #f2f2f2 !important;
+}
+input.medium, select.medium {
+	width: 100%;
+	height: auto !important;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: #555555 !important;
+	padding: 13px 20px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	background: none;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.wufoo input.btTxt {
+	text-transform: uppercase;
+	font-size: 18px;
+	width: 100%;
+	padding: 13px 20px;
+	border-radius: 6px;
+	letter-spacing: 2px;
+	border: 0px;
+	transition: all ease-in-out 0.5 !important;
+	background-color: #c0c0c0;
+	color: #7f7f7f;
+}
+.wufoo input.btTxt:hover {
+	background-color: #393e46;
+	color: #fff;
+}
+.wufoo .info h2 {
+	color: #333;
+	text-transform: uppercase;
+	font-size: 35px;
+	letter-spacing: 2px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase !important;
+	font-family: "Rajdhani", Helvetica, sans-serif !important;
+}
+.wufoo .info {
+	text-align: center;
+	font-size: 16px;
+}
+.wufoo .info, .wufoo .paging-context {
+	border-bottom: 0px;
+}
+
+
+input.text, input.search, textarea.textarea, #Field5 {
+	width: 100%;
+	border: 1px solid #ccc !important;
+	border-radius: 4px;
+	color: #555555;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	background: #fff none !important;
+	box-sizing: border-box;
+	padding: 13px 20px;
+}
+
+.wufoo li.focused {
+	background-color: #f2f2f2;
+}
+
+.wufoo label.desc, .wufoo legend.desc {
+	color: #555;
+	font-size: 15px;
+	font-weight: normal;
+}

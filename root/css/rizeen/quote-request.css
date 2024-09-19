@@ -1,0 +1,56 @@
+
+
+form#mktoForm_1082 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+}
+
+form#mktoForm_1082 .mktoFieldDescriptor.mktoFormCol {
+    width: 100% !important;
+}
+
+form#mktoForm_1082 .mktoOffset {
+    display: none;
+}
+
+form#mktoForm_1082 .mktoFieldWrap {
+    width: 100% !important;
+}
+
+form#mktoForm_1082 .mktoFieldWrap.mktoRequiredField {
+    width: 100% !important;
+}
+
+form#mktoForm_1082 input, form#mktoForm_1082 textarea {
+    width: inherit !important;
+    border-radius: 0;
+}
+
+form#mktoForm_1082 label {
+    width: auto !important;
+}
+
+form#mktoForm_1082 span.mktoButtonWrap.mktoRound {
+    margin-left: 0 !important;
+}
+
+form#mktoForm_1082 .mktoForm .mktoFormRow {
+    padding: 5px;
+}
+
+form#mktoForm_1082 input:focus,
+form#mktoForm_1082 textarea:focus {
+    background: #FFF7C0; 
+}
+
+form#mktoForm_1082 span button.mktoButton {
+    border-radius: 0;
+}
+
+
+@media only screen and (max-width: 424px) {
+    form#mktoForm_1082 {
+        width: 350px !important;
+    }
+}

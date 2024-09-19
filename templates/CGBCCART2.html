@@ -1,0 +1,1548 @@
+<!--Seg:openPage-->
+
+<!--found email address as guest checkout-->
+<div class="modal about in" id="fndEmail" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title" id="brandAboutModalLabel">Email registered to Account</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12 samOPC_FindEmailModal_Desc">
+            <p>This email address is associated with a registered account. Do you wish to sign in now so this purchase is available in order history? You'll also be able to quickly access saved billing and shipping address information</p>
+          </div>
+          <div class="col-xs-12 samOPC_FindEmailModal_Buttons">
+            <a href="javascript:void(0)" onclick="openSignInModal();" class="btn btn-primary btn-block btn_continue">Login</a>
+            <button type="button" data-dismiss="modal" class="btn btn-block btn--orange btn_continue">Continue as Guest</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Address Message-->
+<div class="modal about in" id="upsMessage" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title" id="brandAboutModalLabel">Shipping Addresses</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row" id="UPSMSG"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Free Item-->
+<div class="modal" id="freeItem" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title">Select your item</h4>
+      </div>
+      <div class="modal-body" id="freeItemBody"></div>
+    </div>
+  </div>
+</div>
+<!--postalCard-->
+<div class="modal" id="postalPopup" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title">Government Card Detected</h4>
+      </div>
+      <div class="modal-body" >
+        A Government Payment Card has been detected as being the payment method for this order.<br><br>
+        If you are a US Postal employee, you are not permitted to purchase from this website using your government card.<br><br>
+        To proceed with placing this order with current selected pay method, you must confirm you are NOT using a US Postal Government Card to pay for this order.<br><br>
+        <input type="checkbox" name="SIPCARDCHK" id="SIPCARDCHK" value="Y" onclick="togglePcardButton();">&nbsp;I confirm the Government Card used to purchase this order is NOT a US Postal Government Card.  By proceeding with this payment method, I acknowledge I am following the governing policies set forth by the United States Federal Government for the use of this Government Payment Card.
+        <div class="row">
+          <div class="col-md-6 text-center" style="padding-top:10px;">
+            <a href="javascript:void(0)" onclick="hidePostalPopup();" class="btn btn_sm btn--blue">Change Pay Method</a>
+          </div>
+          <div class="col-md-6 text-center" style="padding-top:10px;">
+            <a href="javascript:void(0)" onclick="setSIPCARDCHK();submit_form('f','CHECKOUTC');" class="btn btn_sm btn--blue disabled" id="pcardButton">Confirm and Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CCFraud-->
+<div class="modal" id="fraudInfo" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="icon close--modal">
+            <use xlink:href="images/sprite.svg#close--modal"></use>
+          </svg>
+        </button>
+        <h4 class="modal-title">We cannot process this order!</h4>
+      </div>
+      <div class="modal-body" >We apologize for the inconvenience. Please call our Customer Service Specialist to complete your order. 866-673-7643</div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid samOnePageCheckout" style="background-color: #ffffff;">
+  
+    <!--TOP NAVIGATION-->
+    <div class="row samOPC_TopNav_Row">
+
+        <!--LEFT-->
+        <div class="col-xs-6 col-md-7">
+            <div class="samOPC_Left">
+                <img src="/images/checkout_page/USP_Logo-Black.jpg" id="samOPC_GallsLogo">
+                <div id="samOPC_GallsLogoPopup" style="display: none;">
+                    <span>Are you sure you want to return to your cart?</span>
+                    <button type="button" id="samOPC_GallsLogoBtnWhite">Stay In Checkout</button>
+                    <a href="/Cart"><button type="button" id="samOPC_GallsLogoBtnBlue">Return To Cart</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!--MIDDLE-->
+        <div style="position: relative">
+            <div class="samOPC_CheckOut_Centered">
+                Checkout
+            </div> 
+        </div>
+
+        <!--RIGHT-->
+        <div class="col-xs-6 col-md-5">
+            <div class="samOPC_Right">
+                
+                <div class="samOPC_Right_Cart">
+                    <img src="/images/checkout_page/shopping-cart-black.svg" id="samOPC_CartIcon">
+                    <div id="samOPC_GallsCartIconPopup" style="display: none;">
+                        <span>Are you sure you want to return to your cart?</span>
+                        <button type="button" id="samOPC_CartIconBtnWhite">Stay In Checkout</button>
+                        <a href="/Cart"><button type="button" id="samOPC_CartIconBtnBlue">Return To Cart</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--CONTENT-->
+    <div class="row samOPC_Content">
+
+        <!--CONTENT LEFT-->
+        <div class="col-xs-12 col-md-7 samOPC_Full_LeftBG">
+            <div class="samOPC_Left">
+              <form name="f" method="POST" action="@&PGM " id="checkoutForm">
+                <input type="hidden" name="SIACTN" id="SIACTN" value="">
+                <input type="hidden" name="SIRFNO" value="">
+                <input type="hidden" name="SIMODE" value="@&SIMODE ">
+                <input type="hidden" name="SIMENU" value="@&SIMENU ">
+                <input type="hidden" id="freeitem" value="@&FREE " styleid="@&FSTYL " freeqty="@&FQTY ">
+                <input type="hidden" id="freeitems" value="@&STYLES " >
+                <input type="hidden" id="freeqtys" value="@&FREEQTY " >
+                <input type="hidden" id="freemrnos" value="@&FREEMRNOS " >
+                <input type="hidden" id="freemrno" value="@&FREEMRNO " >
+                <input type="hidden" id="freepath" value="@&PGM " >
+                <input type="hidden" id="message" value="@&MESSAGE " >
+                <input type="hidden" id="popGift" value="@&POPGIFT " >
+                <input type="hidden" name="SICHCC" id="SICHCC" value="@&SICHCC " >
+                <input type="hidden" name="SIRQPO" id="SIRQPO" value="@&SIRQPO " >
+                <input type="hidden" name="SIRQKF" id="SIRQKF" value="@&SIRQKF " >
+                <input type="hidden" name="SIRQPA" id="SIRQPA" value="@&SIRQPA " >
+                <input type="hidden" name="SIPOUPL" id="SIPOUPL" value="@&SIPOUPL " >
+                <input type="hidden" name="SIPCARDCHK" value="">
+<!--End:openPage-->
+
+<!--Seg:Contact-->
+                    <!-- **** CONTACT SECTION **** -->
+                    <section>   
+                        <label class="section_title left">Contact</label>
+                        <label class="right">@&LOGIN </label>
+                        <div>
+                          <input type="email" placeholder="Email" name="SIEMAL" value="@&SIEMAL " id="SIEMAL" onchange="saveCheckoutForm('CONTACT', this);">
+                        </div>
+
+                        <div style="display: flex; align-items: center;">
+                            <input type="checkbox" name="SIWEME" id="SIWEME" value="Y" @&SIWEME >
+                            <label for="SIWEME">Email me with news and offers</label> 
+                        </div>
+                        
+                    </section>
+<!--End:Contact-->
+
+<!--Seg:Shipping-->
+                    <!-- **** DELIVERY SECTION **** -->
+                    <section>   
+                        <label class="section_title">Delivery</label>
+
+                        <!--Saved Address-->
+                        <div id="PANS">@&PANS </div>
+
+                        <!--Country/Region-->
+                        <div>@&SCTR </div>
+
+                        <!--Name-->
+                        <div class="input-display-flex samOPC_FandLName">
+                            <!-- <span class="lblFname">First Name</span> -->
+                            <input type="text" placeholder="First Name" class="samOPC_FName samOPC_Test" name="SISFNM" id="SISFNM" value="@&SISFNM " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping given-name">
+                            <input type="text" placeholder="Last Name" class="samOPC_LName samOPC_Test" name="SISLNM" id="SISLNM" value="@&SISLNM " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping family-name">
+                        </div>
+                        
+                        <!--Company-->
+                        <!-- <input type="text" placeholder="Company (Optional)" name="SIBSNM" id="SIBSNM" value="@&SIBSNM " onchange="saveCheckoutForm('SHIPPING', this);"> -->
+
+                        <!--Address-->
+                        <div class="input-with-icon">
+                            <input type="text" placeholder="Address" name="SISAD1" value="@&SISAD1 " id="SISAD1" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping address-line1">
+                            <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/search.svg" class="address_search_icon"></a> -->
+                        </div>
+                        <div class="input-display-flex">
+                          <input type="text" placeholder="Apartment, suite, etc. (optional)" name="SISAD2" value="@&SISAD2 " id="SISAD2" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping address-line2">
+                        </div>
+
+                        <div class="input-display-flex">
+                            <!--City-->
+                            <input class="" type="text" placeholder="City" name="SISCTY" id="SISCTY" value="@&SISCTY " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping address-level2">
+                            <!--State-->
+                            <span id="SSTA">@&SSTA </span><!-- -->
+                            <!--Zip Code-->
+                            <input type="text" placeholder="Zip Code" name="SISZIP" value="@&SISZIP " id="SISZIP" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping postal-code">
+                        </div>
+                            
+                        <!--Phone-->
+                        <div class="input-with-icon">
+                            <input type="tel" placeholder="(000) 000-0000" name="SITELS" id="SITELS" value="@&SITELS " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="shipping home tel">
+                            <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/help-circle.svg" class="phone_info_icon"></a> -->
+                        </div>
+                       
+                        <!--Profession-->
+                        <div>@&PTNO </div>
+
+                        <div style="display: flex; align-items: center">
+                            <input type="checkbox" id="samOPC_ShippingAddressChk" name="SISAME" value="Y" onclick="clearBilling();" @&CHKD >
+                            <label for="samOPC_ShippingAddressChk">Use shipping address as billing address</label> 
+                        </div>
+                        
+
+
+                            <!-- **** BILLING SECTION **** -->
+                            <section id="samOPC_Shipping_Address_Hidden" style="padding: 30px 0 10px 0;@&DSPLS ">   
+                                <label class="section_title">Billing Address</label>
+
+                                <!--Country/Region-->
+                                <div>@&BCTR </div>
+
+                                <!--Name-->
+                                <div class="input-display-flex">
+                                    <input type="text" placeholder="First Name" class="samOPC_FName" name="SIFSNM" id="SIFSNM" value="@&SIFSNM " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing given-name">
+                                    <input type="text" placeholder="Last Name" class="samOPC_LName" name="SILSNM" id="SILSNM" value="@&SILSNM " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing family-name">
+                                </div>
+                                
+                                <!--Company-->
+                                <!-- <input type="text" placeholder="Company (Optional)" name="SIBBNM" id="SIBBNM" value="@&SIBBNM " onchange="saveCheckoutForm('SHIPPING', this);"> -->
+
+                                <!--Address-->
+                                <div class="input-with-icon">
+                                    <input type="text" placeholder="Address" name="SIBAD1" value="@&SIBAD1 " id="SIBAD1" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing address-line1">
+                                    <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/search.svg" class="address_search_icon"></a> -->
+                                </div>
+                                <div class="input-display-flex">
+                                  <input type="text" placeholder="Apartment, suite, etc. (optional)" name="SIBAD2" value="@&SIBAD2 " id="SIBAD2" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing address-line2">
+                                </div>
+
+                                <div class="input-display-flex">
+                                    <!--City-->
+                                    <input class="" type="text" placeholder="City" name="SIBCTY" id="SIBCTY" value="@&SIBCTY " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing address-level2">
+                                    <!--State-->
+                                    <span id="BSTA">@&BSTA </span><!-- -->
+                                    <!--Zip Code-->
+                                    <input type="text" placeholder="Zip Code" name="SIBZIP" value="@&SIBZIP " id="SIBZIP" onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing postal-code">
+                                </div>
+                                    
+                                <!--Phone-->
+                                <div class="input-with-icon">
+                                    <input type="tel" placeholder="Phone" name="SITELB" id="SITELB" value="@&SITELB " onchange="saveCheckoutForm('SHIPPING', this);" autocomplete="billing home tel">
+                                    <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/help-circle.svg" class="phone_info_icon"></a> -->
+                                </div>
+                        
+                            </section>
+                        
+
+                        <!--Text for News and Offers-->
+                        <div class="div-wrapper div-wrapper-higher" style="margin-bottom: 0;">
+                            <div class="div-wrapper-row div-wrapper-row-single">
+                                <input type="checkbox" name="SIWEMT" id="SIWEMT" value="Y" @&SIWEMT >
+                                <label for="SIWEMT">Text me with news and offers</label>    
+                            </div>
+
+                            <!--Mobile Info-->
+                            <div class="samOPC_TextMe_Details" style="@&DSPWEMT ">
+                                <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                                <div class="samOPC_TextMe_Details_Wrapper">
+                                    <input type="tel" placeholder="(000) 000-0000" name="SIWEMTN" id="SIWEMTN" value="@&SIWEMTN ">
+                                    <span>By submitting this form, you agree to receive recurring automated promotional and personalized marketing text messages (e.g. cart reminders) from US Patriot Tactical at the cell number used when signing up. Consent is not a condition of any purchase. Reply HELP for help and STOP to cancel. Msg frequency varies. Msg and data rates may apply. View <a onclick="samCK_Privacy_Clicked()">Privacy Policy & Mobile Terms and Conditions</a>.</span>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                    </section>
+<!--End:Shipping-->
+
+<!--Seg:OpenShipMethod-->
+                    <!-- **** SHIPPING METHOD SECTION **** -->
+                    <section id="samOPC_Shipping_Section">   
+                        <div style="margin-bottom: 10px;">
+                            <label class="section_title shippping_method_title">Shipping Method</label>
+                            <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/help-circle.svg" class="shipping_method_info_icon"></a> -->
+                        </div>
+                        
+
+                        <div class="div-wrapper" id="shipping_method_div">
+<!--End:OpenShipMethod-->  
+
+<!--Seg:ShipMethod-->
+                            <!--Standard-->
+                            <div class="div-wrapper-row @&ACTV1 " id="StandardCheckedDiv" style="@&DSPL1 ">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISHMT" value="@&CODE1 " id="StandardChecked" onclick="saveCheckoutForm('SHMT', this);" @&CKSM1 @&DSBL1 >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="StandardChecked">@&DESC1 </label>
+                                    <label for="StandardChecked" class="radio-label-desc"></label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                    <span class="radio-option-price">@&SMPC1 </span>
+                                </div>        
+                            </div>
+
+                            <!--2nd Day Air-->
+                            <div class="div-wrapper-row @&ACTV2 " id="2ndDayAirCheckedDiv" style="@&DSPL2 ">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISHMT" value="@&CODE2 " id="2ndDayAirChecked" onclick="saveCheckoutForm('SHMT', this);" @&CKSM2 @&DSBL2 >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="2ndDayAirChecked">@&DESC2 </label>
+                                    <label for="2ndDayAirChecked" class="radio-label-desc"></label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                    <span class="radio-option-price">@&SMPC2 </span>
+                                </div>        
+                            </div>
+
+
+                            <!--Next Day-->
+                            <div class="div-wrapper-row @&ACTV3 " id="NextDayCheckedDiv" style="@&DSPL3 ">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISHMT" value="@&CODE3 " id="NextDayChecked" onclick="saveCheckoutForm('SHMT', this);" @&CKSM3 @&DSBL3 >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="NextDayChecked">@&DESC3 </label>
+                                    <label for="NextDayChecked" class="radio-label-desc"></label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                    <span class="radio-option-price">@&SMPC3 </span>
+                                </div>        
+                            </div>
+
+                            <!--SHIP4-->
+                            <div class="div-wrapper-row @&ACTV4 " id="Ship4CheckedDiv" style="@&DSPL4 ">
+                              <div class="div-wrapper-row-left">
+                                  <input type="radio" name="SISHMT" value="@&CODE4 " id="Ship4Checked" onclick="saveCheckoutForm('SHMT', this);" @&CKSM4 @&DSBL4 >
+                              </div>
+                              <div class="div-wrapper-row-middle">
+                                  <label for="Ship4Checked">@&DESC4 </label>
+                                  <label for="Ship4Checked" class="radio-label-desc"></label>
+                              </div>
+                              <div class="div-wrapper-row-right">
+                                  <span class="radio-option-price">@&SMPC4 </span>
+                              </div>        
+                            </div>
+
+                            <!--SHIP5-->
+                            <div class="div-wrapper-row @&ACTV5 " id="Ship5CheckedDiv" style="@&DSPL5 ">
+                              <div class="div-wrapper-row-left">
+                                  <input type="radio" name="SISHMT" value="@&CODE5 " id="Ship5Checked" onclick="saveCheckoutForm('SHMT', this);" @&CKSM5 @&DSBL5 >
+                              </div>
+                              <div class="div-wrapper-row-middle">
+                                  <label for="Ship5Checked">@&DESC5 </label>
+                                  <label for="Ship5Checked" class="radio-label-desc"></label>
+                              </div>
+                              <div class="div-wrapper-row-right">
+                                  <span class="radio-option-price">@&SMPC5 </span>
+                              </div>        
+                          </div>
+<!--End:ShipMethod-->
+                            
+<!--Seg:CloseShipMethod-->
+                        </div>
+                    </section>
+<!--End:CloseShipMethod-->
+
+<!--Seg:Payment-->
+                    <!-- **** PAYMENT SECTION **** -->
+                    <section id="samOPC_Payment_Section">   
+                        <label class="section_title">
+                            Payment
+                            <span class="section_title_desc">All transactions are secure and encrypted</span>
+                        </label>
+                        
+                        <div class="div-wrapper">
+                            
+                            <!--1. Credit Card-->
+                            <div class="div-wrapper-row @&ACTVC " id="CreditCardCheckedDiv">
+                                <div class="div-wrapper-row-left">
+                                  <input type="radio" name="SISLPI" id="CreditCardChecked" value="C" @&PYMTCHKC >
+                                </div>
+                                <div class="div-wrapper-row-middle" style="width: 160px">
+                                  <label for="CreditCardChecked">Credit Card</label>
+                                </div>
+                                <div class="div-wrapper-row-right" style="width: 100%; text-align: right;">
+                                  <label for="CreditCardChecked">
+                                    <img src="https://www.galls.com/images/payment_options/visa.svg">
+                                    <img src="https://www.galls.com/images/payment_options/mc.svg">
+                                    <img src="https://www.galls.com/images/payment_options/amex.svg">
+                                    <img src="https://www.galls.com/images/payment_options/discover.svg">
+                                    <!-- <span class="and-more">and more...</span> -->
+                                  </label>
+                                </div>        
+                            </div>
+                            <!--Credit Card Details -->
+                            <div class="samOPC_CreditCard_Details">
+                                <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                                <div class="samOPC_CreditCard_Details_Wrapper">
+                                    <div class="input-display-flex" id="USECC">@&USECC </div>                                    
+                                    <!--Card Number-->
+                                    <!-- <input type="text" placeholder="Credit Number" id="samOPC_CreditCard_Number"> -->
+                                    <div>
+                                      <iframe id="tokenFrame" name="tokenFrame" src="https://@&TOKENURL /itoke/ajax-tokenizer.html?css=input%7B%0Aappearance%3A%20none%3B%0Abackground-image%3A%20url%28https%3A%2F%2Fistage.galls.com%2Fimages%2Fcheckout_page%2Flock.svg%29%3B%0Abackground-repeat%3A%20no-repeat%3B%0Abackground-position%3A%20right%208px%20center%3B%0Abackground-size%3A%2016px%3B%0Adisplay%3A%20block%3B%0Awidth%3A%2098%25%3B%0Aborder-radius%3A%205px%3B%0Aborder%3A%201px%20solid%20%23dadada%3B%0Aheight%3A%2050px%3B%0Apadding-left%3A%2010px%3B%0Afont-size%3A%2016px%3B%0A%7D%2Eerror%7Bborder%3A%20red%202px%20solid%3B%7D&invalidinputevent=true&tokenizewheninactive=true&inactivityto=2000&placeholder=Card%20Number" frameborder="0" scrolling="no" style="width:102%;height:65px;margin-left:-8px;margin-top:2px;margin-bottom:6px;"></iframe>
+                                      <input type="hidden" name="SICCNOT" id="SICCNOT">
+                                      <input type="hidden" name="SICCNO" id="SICCNO" value="@&SICCNO "> 
+                                    </div>
+
+                                    <div class="input-display-flex">
+                                        @&CCMO <!--Expiration Month-->
+                                        @&CCYR <!--Expiration Year-->
+                                        
+                                        <!--Security Code-->
+                                        <input type="tel" placeholder="Security Code" name="SICCV" id="SICCV" value="@&SICCV " maxlength="4"> 
+                                        <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/help-circle.svg" class="security_info_icon"></a> -->
+                                        
+                                    </div>
+
+                                    <!--Card Name-->
+                                    <div class="input-with-icon">
+                                        <input type="text" placeholder="Name On Card" name="SICCRF" id="SICCRF" value="@&SICCRF " maxlength="50">
+                                        <!-- <a onclick="$('#SICCRF').val('');"><img src="/images/checkout_page/x.svg" class="cardname_info_icon"></a> -->
+                                    </div>
+
+                                    <div class="input-display-flex">
+                                      @&SIDEBT <!-- -->
+                                      <label for="SIDEBT">Pre-Charge Card</label>
+                                    </div>
+                                    <div class="input-display-flex samOPC_PCC_Details" @&DEBTMSG >NOTE: Order contains items that are customized, shipped direct from our supplier or in stock shipping direct from our supplier. The order will be charged in full at the time the order is placed. Please note that customized product sales are final and can only be returned due to product defects.</div>
+
+                                    <div class="input-display-flex">
+                                      @&SAVECC <!-- -->
+                                    </div>
+                                    
+                                </div>
+                            </div>  
+
+                            <!--2. Agency Account-->
+                            <div class="div-wrapper-row @&ACTVO " id="AgencyAccountCheckedDiv" style="@&DSPOA ">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISLPI" id="AgencyAccountChecked" value="O" @&PYMTCHKO >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="AgencyAccountChecked">Use Your Account</label>
+                                </div>          
+                            </div>
+                            <!--Agency Account Details -->
+                            <div class="samOPC_AgencyAccount_Details" style="display: none;">
+                                <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                                <div class="samOPC_AgencyAccount_Details_Wrapper">
+                                    <!--PO Number-->
+                                    <div>
+                                    <input type="text" placeholder="PO Number *" name="SICCRF" id="SICCRFO" value="@&SICCRF " maxlength="30"> 
+                                    </div>
+                                    <span style="font-style: italic; display: block">Approved Corporate Customers may use a purchase order.</span>
+                                    <span>A copy of the Purchase Order is required to accompany any order $5,000 or greater.</span>
+                                </div>
+                            </div> 
+
+                            <!--3. Apple Pay-->
+                            <div class="div-wrapper-row @&ACTVA " id="ApplePayCheckedDiv" style="display:none">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISLPI" id="ApplePayChecked" value="A" @&PYMTCHKA >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="ApplePayChecked">Apple Pay</label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                    <img src="https://www.galls.com/images/apple_pay_new.jpg" id="samOPC_ApplePayIcon">
+                                </div>        
+                            </div>
+                            <!--Apple Pay Details -->
+                            <div class="samOPC_ApplePay_Details" style="display: none;">
+                              <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                              <div class="samOPC_ApplePay_Details_Wrapper">
+                                  <span>Your order will be pre-charged in full for a seamless purchasing experience.</span>
+                              </div>
+                            </div>
+                          
+                            <!--4. PayPal--> 
+                            <div class="div-wrapper-row @&ACTVP  @&CONDPP " id="PayPalCheckedDiv">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISLPI" id="PayPalChecked" value="P" @&PYMTCHKP >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="PayPalChecked">PayPal</label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                  <label for="PayPalChecked"><img src="/images/checkout_page/PayPal_Logo.png" id="samOPC_PayPalIcon"></label>
+                                </div>        
+                            </div>
+                            <!--PayPal Details -->
+                            <div class="samOPC_PayPal_Details" style="display: none;">
+                                <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                                <div class="samOPC_PayPal_Details_Wrapper">
+                                    <span>You will be redirected to PayPal and asked to log in.</span>
+                                </div>
+                            </div> 
+
+                            <!--5. Sezzle-->
+                            <div class="div-wrapper-row @&ACTVS  @&CONDSZ " id="SezzleCheckedDiv">
+                                <div class="div-wrapper-row-left">
+                                    <input type="radio" name="SISLPI" id="SezzleChecked" value="S" @&PYMTCHKS >
+                                </div>
+                                <div class="div-wrapper-row-middle">
+                                    <label for="SezzleChecked">Sezzle</label>
+                                    <label for="SezzleChecked" class="radio-label-desc">Buy Now, Pay Later</label>
+                                </div>
+                                <div class="div-wrapper-row-right">
+                                  <label for="SezzleChecked"><img src="/images/checkout_page/Sezzle_Logo.png" id="samOPC_SezzleIcon"></label>
+                                    
+                                </div>        
+                            </div>
+                            <!--Sezzle Details -->
+                            <div class="samOPC_Sezzle_Details" style="display: none;">
+                                <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                                <div class="samOPC_Sezzle_Details_Wrapper">
+                                    <span>You will be redirected to Sezzle and asked to log in.</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--E Gift Card-->
+                        <div class="div-wrapper div-wrapper-higher" style="width: 100%; float: left;">
+                          <div class="div-wrapper-row div-wrapper-row-single">
+                              <input type="checkbox" id="samOPC_EGiftCard">
+                              <label for="samOPC_EGiftCard">Use E-Gift Card</label>
+                          </div>
+                          
+                          <!--E-Gift Card Info-->
+                          <div class="samOPC_EGiftCard_Details" style="display: none;">
+                              <!--Added DIV to fix jQuery smooth animation (Padding)-->
+                              <div class="samOPC_EGiftCard_Details_Wrapper">
+                                  <input placeholder="Card Number" class="e-gift-card-number" type="tel" name="SIGCNO" id="SIGCNO" maxlength="16">
+                                  <input type="hidden" value="@&GIFT " id="SIGIFT" name="SIGIFT">
+                                  <input type="hidden" value="" id="SIGIFTN" name="SIGIFTN">
+                                  <button type="button" onclick="validateGc2('CHKGC');" class="e-gift-card-check-balance">Check Balance</button>
+                                  <input placeholder="PIN" class="e-gift-card-pin" type="tel" name="SIPIN" id="SIPIN" value="" maxlength="4">
+                                  <input placeholder="Amount" class="e-gift-card-amount" type="number" name="SIGAMT" id="SIGAMT" maxlength="7">
+                                  <button type="button" onclick="validateGc2('ADDGC');" class="e-gift-card-apply">Apply</button>
+
+                                  <span id="gcerrors" style="font-weight:bold;color:red;"></span>
+                                  <span id="available" style="padding: 0 15px;color: green;font-weight: bold;"></span>
+                              </div>
+                              <input type="hidden" id="cartTotal" value="@&CHRG ">
+                              <input type="hidden" id="numGc" name="SINMGC" value="0">
+                          </div>
+                      </div>
+                        
+                    </section>
+
+
+                    <!-- **** PURCHASE ORDER UPLOAD SECTION **** -->
+                    <section id="upload_POU" style="display: none;">   
+                        <label class="section_title">
+                            Purchase Order Required For Purchase
+                            <span class="section_title_desc">
+                                Galls requires a valid copy of a Purchase Order for any order placed On Account for the amount of $5,000 or more. If you do not wish to provide a Purchase Order for this order, you may update the payment method to a type other On Account.
+                            </span>
+                        </label>
+                        <div class="div-wrapper upload-section" id="upload-section-POU" style="margin-top: 15px;">
+                            <div class="upload-info">
+                                <strong>Upload Purchase Order</strong>
+                            </div>
+                            
+                            <iframe style="border: none;height: 201px;width: 100%;" src="/CGBCUPLD2?PMFILE=FPOECNTMP2&PMFKEY=@&CNNO2 " id="iframe-upload-section-POU"></iframe>
+
+                            <div class="phone-and-fax" style="padding: 0;">&nbsp;</div>
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- **** PROOF OF OCCUPATION SECTION **** -->
+                    <section id="upload_PO" style="display: none;">   
+                        <label class="section_title">
+                            Proof of Occupation
+                            <span class="section_title_desc">Proof of occupation is required for verification prior to shipping any restricted items.  
+                                <a href="/pages/idrestrict" target="_blank">View credential requirements and upload instructions</a>
+                            </span>
+                        </label>
+                        <div class="div-wrapper div-wrapper-higher" style="margin-top: 15px; margin-bottom: 10px;">
+                            <div class="div-wrapper-row div-wrapper-row-single" style="align-items: normal">
+                                <input type="checkbox" name="SIRSTCPO" id="SIRSTCPO" value="Y" @&SIRSTCPO  style="margin-top: 3px">
+                                <label for="SIRSTCPO">
+                                    I am shipping this order to my department/agency or I do not wish to upload my credentials at this time. I acknowledge I am still required to provide proof of occupation for verification before my order will be shipped.
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="hr-or" id="hr-or-PO">
+                            <div>OR</div>
+                        </div>
+                        <div class="div-wrapper upload-section" id="upload-section-PO">
+                            <div class="upload-info">
+                                <strong>Upload Proof of Occupation</strong>
+                                <!-- <a onclick="alert('No function created yet')"><img src="/images/checkout_page/help-circle.svg" class="upload_info_icon"></a> -->
+                            </div>
+
+                            <iframe style="border: none;height: 201px;width: 100%;" src="/CGBCUPLD2?PMFILE=FPOECNTMP&PMFKEY=@&CNNOPO " id="iframe-upload-section-PO"></iframe>
+
+                            <div class="phone-and-fax">
+                                The ID can be submitted to <a href="mailto:id@galls.com">id@galls.com</a> or by fax to <a>866.290.3389</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- **** Automatic Knife Compliance Form SECTION **** -->
+                    <section id="upload_KF" style="display: none;">   
+                      <label class="section_title">
+                          Automatic Knife Compliance Form
+                          <span class="section_title_desc">Galls requires an Automatic Knife Compliance form along with proof of occupation for verification prior to shipping.  
+                              <a href="/pages/idrestrict" target="_blank">View credential requirements and upload instructions</a>
+                          </span>
+                      </label>
+                      <div class="div-wrapper div-wrapper-higher" style="margin-top: 15px; margin-bottom: 10px;">
+                          <div class="div-wrapper-row div-wrapper-row-single" style="align-items: normal">
+                              <input type="checkbox" name="SIRSTCKF" id="SIRSTCKF" value="Y" @&SIRSTCKF  style="margin-top: 3px">
+                              <label for="SIRSTCKF">
+                                I do not wish to upload the Automatic Knife Compliance Form along with my credentials at this time. I acknowledge I am still required to provide my credentials along with the Automatic Knife Compliance Form for verification before my order will be shipped.
+                              </label> 
+                          </div>
+                      </div>
+                      <div class="hr-or" id="hr-or-KF">
+                          <div>OR</div>
+                      </div>
+                      <div class="div-wrapper upload-section" id="upload-section-KF">
+                          <div class="upload-info">
+                              <strong>Upload Automatic Knife Compliance Form</strong>
+                              <a href="/photos/documents/GallsKnifeForm.pdf" target="_blank"><img src="/images/checkout_page/help-circle.svg" class="upload_info_icon" title="Automatic Knife Compliance Form"></a>
+                          </div>
+                          
+                          <iframe style="border: none;height: 201px;width: 100%;" src="/CGBCUPLD2?PMFILE=FPOECNTMP&PMFKEY=@&CNNOKF " id="iframe-upload-section-KF"></iframe>
+
+                          <div class="phone-and-fax">
+                              The ID can be submitted to <a href="mailto:id@galls.com">id@galls.com</a> or by fax to <a>866.290.3389</a>
+                          </div>
+                      </div>
+                    </section>
+
+                    <!-- **** Physicians Authorization Form SECTION **** -->
+                    <section id="upload_PA" style="display: none;">   
+                      <label class="section_title">
+                          Physicians Authorization Form
+                          <span class="section_title_desc">Galls requires a Physicians Authorization form prior to shipping.  
+                              <a href="/pages/idrestrict" target="_blank">View credential requirements and upload instructions</a>
+                          </span>
+                      </label>
+                      <div class="div-wrapper div-wrapper-higher" style="margin-top: 15px; margin-bottom: 10px;">
+                          <div class="div-wrapper-row div-wrapper-row-single" style="align-items: normal">
+                              <input type="checkbox" name="SIRSTCPA" id="SIRSTCPA" value="Y" @&SIRSTCPA  style="margin-top: 3px">
+                              <label for="SIRSTCPA">
+                                I do not wish to upload the Physicians Authorization form at this time. I acknowledge I am still required to provide the Physicians Authorization form for verification before my order will be shipped.
+                              </label> 
+                          </div>
+                      </div>
+                      <div class="hr-or" id="hr-or-PA">
+                          <div>OR</div>
+                      </div>
+                      <div class="div-wrapper upload-section" id="upload-section-PA">
+                          <div class="upload-info">
+                              <strong>Upload Physicians Authorization Form</strong>
+                              <a href="/photos/documents/GallsMDAForm.pdf" target="_blank"><img src="/images/checkout_page/help-circle.svg" class="upload_info_icon" title="Physicians Authorization Form"></a>
+                          </div>
+                          
+                          <iframe style="border: none;height: 201px;width: 100%;" src="/CGBCUPLD2?PMFILE=FPOECNTMP&PMFKEY=@&CNNOPA " id="iframe-upload-section-PA"></iframe>
+
+                          <div class="phone-and-fax">
+                              The ID can be submitted to <a href="mailto:id@galls.com">id@galls.com</a> or by fax to <a>866.290.3389</a>
+                          </div>
+                      </div>
+                    </section>
+<!--End:Payment-->
+
+
+<!--Seg:openCartM-->
+                    <!-- **** PAY NOW **** -->
+                    <section class="samOPC_Pay_Section" style="padding-bottom: 0;">  
+
+
+                        <!--MOBILE CART ITEMS TOTAL AND SUB TOTAL AT BOTTOM-->
+                        <div class="samOPC_Mobile_Order_Summary_Bottom"> 
+
+                            <div class="total_item_bottom total_item_bottom_title">
+                                <span class="total_item_bottom_label">Order Summary (@&UNIT )</span>
+                                <span class="total_item_bottom_price total_item_bottom_toggle_display">
+                                    <span id="samOPC_Show_Order_Summary_Bottom">
+                                        <span id="samOPC_Show_Order_Summary_Bottom_Show" style="display: none;">
+                                            <span>Show</span>
+                                            <img src="/images/checkout_page/chevron-down.svg">
+                                        </span>
+                                        <span id="samOPC_Show_Order_Summary_Bottom_Hide">
+                                            <span>Hide</span>
+                                            <img src="/images/checkout_page/chevron-up.svg">
+                                        </span>
+                                    </span>  
+                                </span>
+                            </div>
+
+                            <!--CART ITEMS SECTION-->
+                            <div id="samOPC_Cart_Item_Mobile">
+<!--End:openCartM-->
+
+<!--Seg:cartRowM-->
+                                <!--Item-->
+                                <div class="samOPC_row_flex">
+                                    <!--Image-->
+                                    <div class="samOPC_row_flex_image">
+                                        <img src="@&PATH @&IMG ">
+                                        <span class="samOPC_row_flex_total">@&QTY </span>
+                                    </div>
+                                    <!--Information-->
+                                    <div class="samOPC_row_flex_info">
+                                        <span class="samOPC_row_flex_desc">@&DESC </span>
+                                        @&OPTN <!-- -->
+                                    </div>
+                                    <!--Price-->
+                                    <div class="samOPC_row_flex_price">@&PRIC </div>
+                                </div>
+<!--End:cartRowM-->
+
+<!--Seg:closeCartM-->
+                                <!--COUPON/PROMO SECTION-->
+                                <div class="coupon_item">
+                                    <input type="hidden" name="SISRCE" id="SISRCE" value="@&XLATDSRC " >
+                                    <input type="text" placeholder="Coupon or promo code" name="SISRCEM" id="SISRCEM" value="@&SISRCE ">
+                                    <button type="button" onclick="applySrce2('M');" class="samOPC_ApplyCoupon"><img src="/images/checkout_page/chevron-right.svg" class="apply_coupon_icon"></button>
+                                </div>
+                                @&ERRB <!-- -->
+
+                            </div>
+
+                            
+
+
+                            <!--CART ITEMS TOTAL AND SUB TOTAL-->
+                            <div class="total_item_bottom samOPC_Discount" style="display:@&DSPSV ">
+                              <span class="total_item_bottom_label">
+                                  Discount
+                                  <!-- <span class="total_item_bottom_label_remove"><img src="/images/checkout_page/tag.svg"></span> -->
+                              </span>
+                              <span class="total_item_bottom_price">@&SAVING </span>
+                            </div>
+                            <div class="total_item_bottom">
+                                <span class="total_item_bottom_label">Subtotal</span>
+                                <span class="total_item_bottom_price CHSUBT">@&SUBT </span>
+                            </div>
+                            <div class="total_item_bottom">
+                                <span class="total_item_bottom_label">Shipping</span>
+                                <span class="total_item_bottom_price CHFAMT">@&FAMT </span>
+                            </div>
+                            <div class="total_item_bottom">
+                                <span class="total_item_bottom_label">Taxes</span>
+                                <span class="total_item_bottom_price CHTAXT">@&STAX </span>
+                            </div>
+                            <div class="total_item_bottom samOPC_EGiftCard_Summary" id="giftTableM" style="display:none"></div>
+                            <div class="total_item_bottom total_item_bottom_total">
+                                <span class="total_item_bottom_label">Total</span>
+                                <span class="total_item_bottom_price CHTOTT"><!--<span>USD</span>-->@&TOTL </span>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <button type="button" onclick="submitOrder();" class="samOPC_PayButton" id="samOPC_PayNowBtn">Place Order</button>
+                        <button type="button" onclick="void(0);" class="samOPC_PayButton" id="samOPC_PayPalBtn" style="display: none;">Place Order</button>
+                        <button type="button" onclick="submitSezzle();" class="samOPC_PayButton" id="samOPC_SezzleBtn" style="display: none;">Place Order</button>
+                        <button type="button" onclick="submitApplePay();" class="samOPC_ApplePayButton" id="samOPC_ApplePayBtn" style="display: none;">Checkout With <img src="/images/checkout_page/ApplePay_White.svg"></button>
+                        <div>
+                            <a class="samOPC_BottomLinks_Open" id="samOPC_BL_RefundPolicy">Refund Policy</a>
+                            <a class="samOPC_BottomLinks_Open" id="samOPC_BL_ShippingPolicy">Shipping Policy</a>
+                            <a class="samOPC_BottomLinks_Open" id="samOPC_BL_PrivacyPolicy">Privacy Policy</a>
+                            <a class="samOPC_BottomLinks_Open" id="samOPC_BL_ToS">Terms of Service</a>
+                        </div>
+                    </section>
+              </form>
+            </div>
+        </div>
+
+        <!--CONTENT RIGHT-->
+        <div class="col-xs-12 col-md-5" id="samOPC_Right_Fixed">
+
+          <div class="samOPC_Mobile_Order_Summary_Top">
+              <div class="samOPC_Mobile_Order_Summary_Top_Left" id="samOPC_Mobile_Toggle_Summary_Top">
+                  <span id="samOPC_Show_Order_Summary_Top">
+                      Show order summary
+                      <img src="/images/checkout_page/chevron-down.svg">
+                  </span>
+                  <span id="samOPC_Hide_Order_Summary_Top" style="display: none;">
+                      Hide order summary
+                      <img src="/images/checkout_page/chevron-up.svg">
+                  </span>
+              </div>
+              <div class="samOPC_Mobile_Order_Summary_Top_Right">
+                  <span class="CHTOTT">@&TOTL </span>
+              </div>
+          </div>
+<!--End:closeCartM-->
+
+<!--Seg:openCart-->    
+            <div class="samOPC_Right" id="samOPC_Right_Desktop">
+
+                <!-- **** CART ITEMS SECTION **** -->
+                <section id="samOPC_Cart_Items_Section_Desktop">   
+
+                    <!--Wrapper-->
+                    <div class="samOPC_Cart_Items_Wrapper_Desktop">
+<!--End:openCart-->
+
+<!--Seg:cartRow-->
+                        <!--Item-->
+                        <div class="samOPC_row_flex">
+                            <!--Image-->
+                            <div class="samOPC_row_flex_image">
+                                <img src="@&PATH @&IMG ">
+                                <span class="samOPC_row_flex_total">@&QTY </span>
+                            </div>
+                            <!--Information-->
+                            <div class="samOPC_row_flex_info">
+                                <span class="samOPC_row_flex_desc">@&DESC </span>
+                                @&OPTN <!-- -->
+                            </div>
+                            <!--Price-->
+                            <div class="samOPC_row_flex_price">@&PRIC </div>
+                        </div>
+<!--End:cartRow-->
+
+<!--Seg:closeCart-->
+                    </div>
+                    
+                </section>
+
+                <!-- **** COUPON/PROMO AND TOTAL SECTION **** -->
+                <section id="samOPC_Total_Section_Desktop">  
+
+                    <!-- **** COUPON/PROMO SECTION **** -->
+                    <div class="coupon_item">
+                        <input type="text" placeholder="Coupon or promo code" name="SISRCEF" id="SISRCEF" value="@&SISRCE ">
+                        <button type="button" onclick="applySrce2('F');" class="samOPC_ApplyCoupon"><img src="/images/checkout_page/chevron-right.svg" class="apply_coupon_icon"></button>
+                    </div>
+                    @&ERRB <!-- -->
+
+                    <!-- **** TOTAL SECTION **** -->
+                    <div class="total_item samOPC_Discount" style="display:@&DSPSV ">
+                      <span class="total_item_label">
+                          Discount
+                          <!-- <span class="total_item_label_remove"><img src="/images/checkout_page/tag.svg"></span> -->
+                      </span>
+                      <span class="total_item_price">@&SAVING </span>
+                    </div>
+                    <div class="total_item">
+                        <span class="total_item_label">Subtotal</span>
+                        <span class="total_item_price CHSUBT">@&SUBT </span>
+                    </div>
+                    <div class="total_item">
+                        <span class="total_item_label">Shipping</span>
+                        <span class="total_item_price CHFAMT">@&FAMT </span>
+                    </div>
+                    <div class="total_item">
+                        <span class="total_item_label">Taxes</span>
+                        <span class="total_item_price CHTAXT">@&STAX </span>
+                    </div>
+                    <div class="total_item samOPC_EGiftCard_Summary" id="giftTable" style="display:none"></div>
+                    <div class="total_item total_item_total">
+                        <span class="total_item_label">Total</span>
+                        <span class="total_item_price CHTOTT"><!--<span>USD</span>-->@&TOTL </span>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+<!--End:closeCart-->
+
+<!--Seg:closePage-->
+    </div>
+</div>
+    
+<!--Bottom Links Information-->
+<div id="samOPC_BottomLinksInfo" class="samOPC_BottomLinksInfo" style="width: 0; opacity: 0">
+  <iframe style="width: 100%; height: 100%; display: none;" id="samBottomLinksIframe"></iframe>
+  <div id="samPastedFromIframe"></div>  
+  <a class="samOPC_BottomLinks_Close"><button>Close</button></a>
+</div>
+
+<script>
+
+  function geoFmt(city,sta,cnty,geo,zip) {
+    if($("#SIBZIP").is(":focus")) {
+      document.f.SIBCTY.value=city;
+      document.f.SIBSTA.value=sta;
+      document.f.SIBZIP.value=zip;
+      saveCheckoutForm('SHIPPING', $('#SIBZIP')[0]);
+    } else {
+      document.f.SISCTY.value=city;
+      document.f.SISSTA.value=sta;
+      document.f.SISZIP.value=zip;
+      saveCheckoutForm('SHIPPING', $('#SISZIP')[0]);
+    }
+  }
+
+  function clearBilling() {
+    document.f.SIFSNM.value='';
+    document.f.SILSNM.value='';
+    document.f.SIBAD1.value='';
+    document.f.SIBAD2.value='';
+    document.f.SIBCTY.value='';
+    document.f.SIBSTA.value='';
+    document.f.SIBZIP.value='';
+    document.f.SITELB.value='';
+    document.f.SIBCTR.value='';
+  }
+
+  function applySrce2(mode) {
+    if(mode == 'M' && $("#SISRCEM").val().trim() != '') {
+      $("#SISRCE").val($("#SISRCEM").val());
+      submit_form('f', 'UPDTSRCE');
+    } else if(mode == 'F' && $("#SISRCEF").val().trim() != '') {
+      $("#SISRCE").val($("#SISRCEF").val());
+      submit_form('f', 'UPDTSRCE');
+    } else if(mode == 'D') {
+      $("#SISRCE").val('');
+      submit_form('f', 'DELTSRCE');
+    }
+    
+  }
+
+  function openSignInModal() {
+    $('#fndEmail').modal('hide');
+    $('#signInModal').modal('show');
+  }
+
+  function addrS2(index) {
+    $('#SISAD1').val($('#SISAD1H'+index).val());
+    $('#SISAD2').val($('#SISAD2H'+index).val());
+    $('#SISCTY').val($('#SISCTYH'+index).val());
+    $('#SISSTA').val($('#SISSTAH'+index).val());
+    $('#SISZIP').val($('#SISZIPH'+index).val());
+    $("#upsMessage").modal('hide');
+    saveCheckoutForm('SHIPPINGF');
+  }
+
+  function useCC2() {
+    if ($('#SIONFL').is(':checked') == true) {
+      $("#tokenFrame").hide(0);
+      $("#SICCMO").hide(0);
+      $("#SICCYR").hide(0);
+      $("#SICCRF").hide(0);
+    } else {
+      $("#tokenFrame").show(0);
+      $("#SICCMO").show(0);
+      $("#SICCYR").show(0);
+      $("#SICCRF").show(0);
+    }
+  }
+  
+  function deleteCC() {
+    $.post('/@&PGM ', {SIAJAXMODE: 'Y', SIAJAXACTN: 'DELETECC'}, function (html) {$('#USECC').html('');});
+  }
+  
+  function validateGc2(actn) {
+    var cno = $('#SIGCNO').val();cno = $.trim(cno);
+    var pin = $('#SIPIN').val();pin = $.trim(pin);
+    var amt = $('#SIGAMT').val();amt = $.trim(amt);
+    $('.fldErrorgc').remove();
+    $('.fldError').remove();
+    
+    //BROSSAM - I modified this block
+    //Original Codes
+      // if(cno==""){$('#SIGCNO').after('<span class="fldErrorgc">! Required</span>');$('#SIGCNO').focus();}
+      // if(pin==""){$('#SIPIN').after('<span class="fldErrorgc">! Required</span>');if(!cno=="")$('#SIPIN').focus();return;}
+
+    if (cno == "") {
+      $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+      $('#gcerrors').html('Gift Card#/PIN required!');
+      $('#SIGCNO').focus();
+      return;
+    }
+    if (pin == "") {
+      $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+      $('#gcerrors').html('Gift Card#/PIN required!');
+      $('#SIPIN').focus();
+      return;
+    }
+    //END 
+
+    $('#gcerrors').css("display","none"); //BROSSAM - I added this line
+    $('#available').css("display","none"); //BROSSAM - I added this line
+    $('#gcerrors').html('');
+    $('#available').html('');
+
+    $.post('/@&PGM ',
+    {
+      SIAJAXACTN: actn, 
+      SIAJAXMODE: 'Y',
+      SIGCNO: cno,
+      SIPIN: pin,
+      SIGAMT: amt               
+    },
+    function (html) { 
+
+      var data = JSON.parse(decodeURIComponent(html));
+      if(data["gcerror"]!="") {
+        $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+        $('#gcerrors').html(data["gcerror"]);
+        return;
+      }
+      else {
+
+        //Brossam - I modified this block
+        //Original Codes
+          // if(actn=="CHKGC") {$('#available').html('Available ($'+data["avlamnt"]+')');return;}
+
+        if(actn=="CHKGC") {
+          $('#available').css("display","flex"); //BROSSAM - I added this line
+          $('#available').html('Available balance: $'+data["avlamnt"]);
+          return;
+        }
+        //END
+
+        if(actn=="ADDGC") {
+          var total = parseFloat($('#SICHCC').val());
+          var avlbl = parseFloat(data["avlamnt"]);
+          var amont = parseFloat(amt)|| 0;
+
+          if(amont > avlbl){
+            $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+            // $('#gcerrors').html('Only ($'+data["avlamnt"]+') available');
+            $('#gcerrors').html('Available balance: $'+data["avlamnt"]);
+            return false;
+          }
+
+          if(amont > total || total<=0){
+            $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+            $('#gcerrors').html('Amount cannot exceed ($'+total.toFixed(2)+')');
+            return false;
+          } 
+          
+          if(amont==0 && avlbl>=total)amont=total;
+          if(amont==0 && avlbl<total) amont=avlbl;
+          amont = amont.toFixed(2);
+          $('#giftTableM').show(0);
+          $('#giftTable').show(0);
+          var result = $.grep(addedGC, function(e){ return e.gcno == cno; });
+          if(result.length==0) {
+            addedGC.push({'gcno': cno,'pin':pin,'amount':amont,'available':data["avlamnt"]});
+            paintTable2();
+            $('#SIGCNO').val("");$('#SIPIN').val("");$('#SIGAMT').val("");
+          } else {
+            $('#gcerrors').css("display","flex"); //BROSSAM - I added this line
+            $('#gcerrors').html('Gift card "'+cno+'" has already been added');
+          }
+
+        }
+      }
+    });
+  }
+
+  function saveGC2() {
+  var giftn = parseFloat($("#SIGIFTN").val());
+  if (isNaN(giftn)) {
+    giftn = 0;
+  }
+  if(giftn == 0) return false;
+  var giftCards = "&SIGIFTN="+giftn;
+  for (i=1; i <= giftn; i++) {
+    giftCards += '&SIGCNO__'+i+'='+$("#SIGCNO__"+i).val()+
+                 '&SIPIN__' +i+'='+$("#SIPIN__" +i).val()+
+                 '&SIAMNT__'+i+'='+$("#SIAMNT__"+i).val();
+  }
+  $.ajax({
+    url:"/@&PGM ",
+    async: true,
+    type: "POST",
+    dataType: "html",
+    data: "SIAJAXMODE=Y&SIAJAXACTN=SAVEGC"+giftCards});
+}
+
+  function removeGC2(idno) {
+
+    //BROSSAM - I added this line
+    $('#gcerrors').css("display","none"); 
+    $('#gcerrors').html('');
+    $('#available').css("display","none");
+    $('#available').html('');
+    //END
+
+
+    addedGC = $.grep(addedGC, function(e){return e.gcno != idno; });
+    paintTable2(); 
+  }
+
+  function paintTable2() {
+    $('#SIGIFT').val(encodeURIComponent(JSON.stringify(addedGC)));
+    $('.gcrow').remove();
+    var total = parseFloat($('#cartTotal').val());
+    var ctr=0;
+    $('#giftTableM').html('');
+    $('#giftTable').html('');
+    $.each(addedGC, function( key, value ) {
+      if (total == 0) return;
+
+      total -= value.amount; 
+      if (total < 0) {
+        gcAmt = parseFloat(value.amount);
+        gcAmt += total;
+        value.amount = gcAmt.toFixed(2);
+        total = 0;
+      }
+
+      ctr+=1;
+      $('#giftTableM').append('<span class="total_item_bottom_label">Gift Card ('+value.gcno.substr(-4)+')'+
+                             '<input type="hidden" id="SIGCNO__'+ctr+'" name="SIGCNO__'+ctr+'" value="'+value.gcno+'">'+
+                             '<input type="hidden" id="SIPIN__'+ctr+'" name="SIPIN__'+ctr+'" value="'+value.pin+'">'+
+                             '<span class="total_item_bottom_label_remove"><a onclick="removeGC2(\''+value.gcno+'\')">Remove</a></span>'+
+                             '</span><span class="total_item_bottom_price">-$'+value.amount+
+                             '<input type="hidden" id="SIAMNT__'+ctr+'" name="SIAMNT__'+ctr+'" value="'+value.amount+'">'
+      );
+      $('#giftTable').append('<span class="total_item_label">Gift Card ('+value.gcno.substr(-4)+')'+
+                             '<span class="total_item_label_remove"><a onclick="removeGC2(\''+value.gcno+'\')">Remove</a></span>'+
+                             '</span><span class="total_item_price">-$'+value.amount
+      );
+
+      //BROSSAM - I added these lines
+      $('#available').css("display","flex"); 
+      $('#available').html('$' + value.amount + ' added successfully');
+      //END
+
+    });
+    $('#SICHCC').val(total.toFixed(2));
+    $('.CHTOTT').html('$'+total.toFixed(2));
+    if(addedGC.length==0) {
+      $('#giftTableM').hide(0);
+      $('#giftTable').hide(0);
+    } else {
+      $('#giftTableM').show(0);
+      $('#giftTable').show(0);
+    } 
+    $('#SIGIFTN').val(addedGC.length);
+  }
+
+  function dfltGC2() {
+    if(!($('#SIGIFT').length)) return false;    
+    if($('#SIGIFT').val()!="")
+    addedGC = JSON.parse(decodeURIComponent($('#SIGIFT').val()));
+    paintTable2();
+  }
+
+  function saveCheckoutForm(actn, inobj) {
+    var result = true;
+    if(!inobj) {
+      obj = {};
+    } else {
+      obj = inobj;
+    }
+    $("#"+obj.id).removeClass("samOPC_error");
+    $("#error_"+obj.id).remove();
+    if(actn == 'PRECHECK' || actn == 'PRECHECKCC') {
+      $(".samOPC_error").removeClass("samOPC_error");
+      $(".samOPC_errorMsg").remove();
+    }
+    if(obj.id == 'SISCTR') {
+      $('#SISCTY').val('');
+      $('#SISSTA').val('');
+      $('#SISZIP').val('');
+      $('#SISHMT').val('');
+    }
+    if(obj.id == 'SIBCTR') {
+      $('#SIBCTY').val('');
+      $('#SIBSTA').val('');
+      $('#SIBZIP').val('');
+    }
+    var data = $("#checkoutForm").serialize()+"&SIAJAXMODE=Y&SIAJAXACTN="+actn;
+    $.ajax({
+      url: '/@&PGM ',
+      type: 'post',
+      dataType: 'html',
+      async: false,
+      data: data,
+      success: resp => {
+        const json = JSON.parse(resp);
+        if(json.result == 'FAIL') result = false;
+        // console.log(json);  //Brossam (I disabled the console.log)
+        const errors = json.errors
+        for(var i=0; i<errors.length; i++) {
+          result = false;
+          if(errors[i].id == obj.id || actn == 'PRECHECK' || actn == 'PRECHECKCC' || errors[i].id == 'SISHMT') {
+            errMsg(errors[i].id, errors[i].errmsg);
+          }
+        }
+        if(actn == 'PANS') {
+          $('#SISFNM').val(json.SISFNM);
+          $('#SISLNM').val(json.SISLNM);
+          $('#SISAD1').val(json.SISAD1);
+          $('#SISAD2').val(json.SISAD2);
+          $('#SISZIP').val(json.SISZIP);
+          $('#SISSTA').val(json.SISSTA);
+          $('#SISCTY').val(json.SISCTY);
+          $('#SISCTR').val(json.SISCTR);
+        }
+        $('#PANS').html(json.PANS);
+        $("#shipping_method_div").html(json.shipMethod);
+		    $("#SSTA").html(json.SSTA);
+		    $("#BSTA").html(json.BSTA);
+        $('.CHSUBT').html(json.CHSUBT);
+        $('.CHFAMT').html(json.CHFAMT);
+        $('.CHTAXT').html(json.CHTAXT);
+        $('#cartTotal').val(json.CHTOTT);
+        $('#SIRQPO').val(json.SIRQPO);
+        $('#SIRQKF').val(json.SIRQKF);
+        $('#SIRQPA').val(json.SIRQPA);
+        paintTable2();
+        defaultUploads();
+        if(json.SIGNINPOP == 'Y') $('#fndEmail').modal('show');
+        if(json.UPSPOP != undefined && json.UPSPOP != '') {
+          result = false;
+          $('#UPSMSG').html(json.UPSPOP);
+          $('#upsMessage').modal('show');
+        }
+        if(json.POSTALPOP == 'Y') showPostalPopup();
+      },
+      error: () => {}
+    });
+    return result;
+  }
+
+  function showErrors2() {
+    if(!$('#SIERR2').length) return false;
+    var array = $('#SIERR2').val();
+    if(array != "") {
+      var data = JSON.parse(decodeURIComponent(array));
+      for (var i = 0, len = data.length; i < len; ++i) {     
+        var id = data[i].id;
+        if(i==0) $('#'+id).focus();
+        errMsg(id, data[i].errmsg);
+      } 
+    }
+  }
+
+  function errMsg(id, msg) {
+    $("#"+id).addClass("samOPC_error");
+    $("<p class='samOPC_errorMsg' id='error_"+id+"'>"+msg+"</p>").insertAfter($("#"+id).closest("div"));
+    if(id == 'SISRCEF' || id == 'SISRCEM') {
+      $("#"+id).removeClass("samOPC_error");
+      $('#error_'+id).addClass('fldErrorgc');
+    }
+  }
+  
+  window.addEventListener('message', function(event) {
+    if(event.origin.indexOf("https://@&TOKENURL ") == -1) return;
+    var token = JSON.parse(event.data);
+    var mytoken = document.getElementById('SICCNOT');
+    mytoken.value = token.message;
+    if (mytoken.value == "") {
+      if ($("#SICCNOerr").length) {
+        $("#SICCNOerr").html("Please enter a valid credit card number");
+      } else {
+        $("#SICCNO").after('<p class="samOPC_errorMsg" id="SICCNOerr">Please enter a valid credit card number</p>')
+      }  
+    } else {
+      $("#SICCNOerr").html("");
+    }
+  }, false);
+
+  $(document).ready(function() {
+    togglePaymentDetails();
+    showErrors2();
+    dfltGC2();
+    useCC2();
+    defaultUploads();
+    if(window.ApplePaySession) {
+      if(ApplePaySession.canMakePayments()) {
+        $("#ApplePayCheckedDiv").show();
+      }
+    }
+  });
+
+  function submitOrder() {
+
+    /* BROSSAM - Profession Validation */
+    if ($("#SIPTNO").val() == '') {
+      $("#error_SIPTNO").remove();
+      errMsg("SIPTNO", "Profession is Required");
+      $("html, body").animate({ scrollTop: document.getElementById('SIPTNO').offsetTop});
+
+      return;
+    }
+
+    showWait("B");
+    setTimeout(function() {
+      if(!saveCheckoutForm('PRECHECKCC')) {
+        hideWait();
+        return;
+      }
+      submit_form('f','CHECKOUTC');
+    }, 200);
+  }
+
+  function submitApplePay() {
+
+    /* BROSSAM - Profession Validation */
+    if ($("#SIPTNO").val() == '') {
+      $("#error_SIPTNO").remove();
+      errMsg("SIPTNO", "Profession is Required");
+      $("html, body").animate({ scrollTop: document.getElementById('SIPTNO').offsetTop});
+
+      return;
+    }
+
+    showWait("B");
+    var chcc = parseFloat($("#SICHCC").val());
+    if (isNaN(chcc)) chcc = 0;
+    saveGC2();
+    if(!saveCheckoutForm('PRECHECK')) {
+      hideWait();
+      return;
+    }
+    if(chcc <= 0) {
+      submit_form('f','CHECKOUTC');
+      return;
+    }
+    hideWait();
+
+    if (!ApplePaySession) return;
+
+    const request = {
+      "countryCode": "US",
+      "currencyCode": "USD",
+      "merchantCapabilities": ["supports3DS"],
+      "supportedNetworks": ["visa", "masterCard", "amex", "discover"],
+      "total": {
+        "label": "@&BRND ",
+        "amount": chcc.toFixed(2)
+      }
+    };
+    const session = new ApplePaySession(3, request);
+    session.begin();
+
+    session.onvalidatemerchant = event => {
+      $.ajax({
+        url: '/@&PGM ',
+        type: 'post',
+        dataType: 'html',
+        async: false,
+        data: {
+          "SIAJAXMODE": 'Y' ,
+          "SIAJAXACTN": 'APPLEPAYMERCH',
+          "MERCHURL": event.validationURL
+        },
+        success: resp => {
+          session.completeMerchantValidation(JSON.parse(resp));
+        },
+        error: () => {
+          session.abort();
+          hideWait();
+        }
+      });
+    };
+
+    session.onpaymentmethodselected = event => {
+      const update = {
+        "newTotal": {
+          "label": "@&BRND ",
+          "amount": chcc.toFixed(2)
+        }
+      };
+      session.completePaymentMethodSelection(update);
+    };
+
+    session.onpaymentauthorized = event => {
+      $("#SIACTN").val("CHECKOUTC");
+      var rand = Math.floor(Math.random()*1000000000000000).toString();
+      var data = $("#checkoutForm").serialize()+"&SIAJAXMODE=Y&SIAJAXACTN=APPLEPAYAUTH&TOKEN="+JSON.stringify(event.payment.token)+"&SIRAND="+rand;
+      $.ajax({
+        url: '/@&PGM ',
+        type: 'post',
+        dataType: 'html',
+        async: false,
+        data: data,
+        success: resp => {
+          if (resp == "SUCCESS") {
+            const result = {"status": ApplePaySession.STATUS_SUCCESS}
+            session.completePayment(result);
+            window.location = '/CGBCCARTV?PAMODE=*CHNG&PMCHNO=@&CHNO &PMRAND='+rand;
+          } else {
+            const result = {"status": ApplePaySession.STATUS_FAILURE}
+            session.completePayment(result);
+            location.reload();
+          }
+        },
+        error: () => {
+          session.abort();
+          hideWait();
+        }
+      });
+    };
+
+    session.oncancel = event => {};
+  }
+
+  window.paypalCheckoutReady = function () {
+    paypal.checkout.setup('@&PPID ', {
+      environment: '@&PPEV ',
+      click: function (event) {
+        event.preventDefault();
+        $.ajax({
+          url: '/@&PGM ?PAMODE=*CHNG&PMACTN=SETEXPCHECKOUT',
+          async: false,
+          success: function(token) {
+            if (token == "ERROR") {
+              hideWait();
+            } else {
+              window.location = token;
+            }
+          },
+          error: function() {
+            hideWait();
+          }
+        });
+      },
+      condition: function() {
+        showWait("B");
+        var chcc = parseFloat($("#SICHCC").val());
+        if (isNaN(chcc)) chcc = 0;
+        saveGC2();
+        if(!saveCheckoutForm('PRECHECK')) {
+          hideWait();
+          return false;
+        }
+        if(chcc <= 0) {
+          submit_form('f','CHECKOUTC');
+          return false;
+        }
+        return true;
+      },
+      button: 'samOPC_PayPalBtn'
+    });
+  }
+
+  function submitSezzle() {  
+    
+    /* BROSSAM - Profession Validation */
+    if ($("#SIPTNO").val() == '') {
+      $("#error_SIPTNO").remove();
+      errMsg("SIPTNO", "Profession is Required");
+      $("html, body").animate({ scrollTop: document.getElementById('SIPTNO').offsetTop});
+
+      return;
+    }
+    
+    showWait("B");
+    var chcc = parseFloat($("#SICHCC").val());
+    if (isNaN(chcc)) chcc = 0;
+    saveGC2();
+    if(!saveCheckoutForm('PRECHECK')) {
+      hideWait();
+      return;
+    }
+    if(chcc <= 0) {
+      submit_form('f','CHECKOUTC');
+      return;
+    }
+    $.ajax({
+      url: '/@&PGM ?PAMODE=*CHNG&PMACTN=SETSEZZLE',
+      async: false,
+      success: function(url) {
+        if (url == "ERROR") {
+          hideWait();
+        } else {
+          window.location = url;
+        }
+      },
+      error: function() {
+        hideWait();
+      }
+    });
+  }
+
+</script>
+<script src="//www.paypalobjects.com/api/checkout.js" async></script>
+<!--End:closePage-->
+
+<!--Seg:UPSMessage1-->
+<div style="color:red">The @&TYPE  address you entered couldn't be verified, and no suitable alternatives could be matched.</div>
+<br><b>Suggestions:</b>
+<ul>
+  <li style="padding:5px;">Is the primary number correct?</li>
+  <li style="padding:5px;">Make sure the city state and ZIP code don't conflict.</li>
+  <li style="padding:5px;">The address should be free of major typos/misspellings.</li>
+  <li style="padding:5px;">Make sure the address is basically formated correctly.</li>
+  <li style="padding:5px;">If the address isn't all there, try making it more complete.</li>
+</ul>
+<br><div style="padding:10px 0px"><b>We could not find a suitable address match:</b></div>
+<ul>
+  <li style="padding:10px;"><a href="javascript:void(0)" onclick="$('#upsMessage').modal('hide');">Please check your entry for possible mistakes</a></li>
+</ul>                 
+<!--End:UPSMessage1-->
+
+<!--Seg:UPSMessageM-->
+<div style="color:red">The @&TYPE  address you entered couldn't be verified, and no suitable alternatives could be matched.</div>
+<br><div style="padding:10px 0px"><b>Suggestions:</b></div>
+<ul>
+  <li style="padding:5px;">Is the primary number correct?</li>
+  <li style="padding:5px;">Make sure the city state and ZIP code don't conflict.</li>
+  <li style="padding:5px;">The address should be free of major typos/misspellings.</li>
+  <li style="padding:5px;">Make sure the address is basically formated correctly.</li>
+  <li style="padding:5px;">If the address isn't all there, try making it more complete.</li>
+</ul>
+<br><div style="padding:10px 0px"><b>We found these addresses. Please consider using one of these verified addresses:</b></div>
+<ul>@&SUGG <!-- -->
+  <li style="list-style-type: none;">&nbsp;</li>
+  <li style="padding:10px;"><a href="javascript:void(0)" onclick="$('#upsMessage').modal('hide');">No thanks, leave address as entered</a></li>
+</ul>                 
+<!--End:UPSMessageM-->

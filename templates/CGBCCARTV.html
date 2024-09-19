@@ -1,0 +1,425 @@
+<!--Seg:Open-->
+<script type="text/javascript" src="/css/sam/order_confirmation/order_confirmation.js"></script>
+
+<style>
+  #message {
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#message p {
+  padding: 0px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2714";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #a94442;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\2716";
+}
+</style>
+<main class="confirmation">
+  <div class="container">
+   <div class="row samOrderConfirm">
+    <form name="f" method="POST" action="@&PGM " novalidate id="cartForm">
+      <input type="hidden" name="SIACTN" value="" id="SIACTN">
+      <input type="hidden" name="SIMODE" value="@&SIMODE ">
+      <input type="hidden" name="SIRFNO" value="">
+<!--End:Open-->
+
+
+<!--Seg:topcartbuttons-->    
+    </div>
+      <div class="row shopping-cart__header">
+        <div class="col-xs-7 col-md-9">
+          <h3 class="shopping-cart__header--title">Shopping Cart</h3>
+        </div>
+        <div class="col-xs-5 col-md-3" id="cartheadersub">
+          <div class="shopping-cart__header--count visible-xs-sm">
+            (@&QTY ): @&SUBT </div>
+        </div>
+
+      </div>
+      <div class="row" style="margin-top:20px">
+        <div class="col-xs-12">
+          <div class="shopping-cart__gift-card-mobile visible-xs-sm" style="padding-top:30px">
+              <div style="margin-top:10px;display:@&DSPSV ">
+                <p ><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+              </div>
+          </div>
+        </div>
+      </div>
+<!--End:topcartbuttons-->
+
+<!--Seg:opencart-->
+      <div class="row row-eq-height">
+
+      	<div class="col-md-9">
+      		<div class="shopping-cart__table">
+      			<div class="row shopping-cart__table--header hidden-xs-sm">
+              <div class="col-md-10 col-md-offset-2">
+                <div class="row">
+                  <div class="col-md-6"><h6 class="shopping-cart__table--th">Items</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Unit price</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th" style="padding-left:30%;">QTY</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Total price</h6></div>
+                </div>
+              </div>
+      			</div>
+<!--End:opencart-->
+
+
+
+
+
+<!--Seg:cartrow-->
+
+<!--Brossam - Right Side (1 of 2): Products Ordered Section-->
+<div class="samFlexRow custPrint samOrderConfirm_Product">   
+  <div class="samFlexRow_Left">       
+    <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'">
+    <span class="samFlexRow_Total">@&QTY </span>
+  </div>   
+  <div class="samFlexRow_Middle">       
+    <div class="samFlexRow_FullColumn samFlexRow_FullColum_Ellipses">
+      <span><a href="@&HREF " class="review__item--name">@&DESC </a></span>
+    </div>       
+    <div class="samFlexRow_FlexColumn">
+      <span><ul class="review__item--info list-separator">@&ITEM </ul></span>
+      <span><ul class="review__item--options list-inline">@&OPTN </ul></span>
+    </div>    
+    <div class="samFlexRow_FullColumn">
+      <span>@&OPDS </span>
+    </div> 
+    <div class="samFlexRow_FullColumn @&DSPRSTR ">
+      <span>@&RSTR </span>
+    </div> 
+    <div class="samFlexRow_FullColumn">
+      <span>@&VAS </span>
+    </div> 
+    <div class="samFlexRow_FullColumn">
+      <span>@&KIT </span>
+    </div> 
+  </div>
+  <div class="samFlexRow_Right">
+    <div class="samOrderConfirm_EachTotalPrice">
+      <span>@&EXTP </span>
+    </div>
+    <div class="samOrderConfirm_EachUnitPrice">
+      <span>@&PRIC </span>
+      x
+      <span>@&QTY </span>
+      
+    </div>
+  </div>
+</div>
+<!--End:cartrow-->
+
+
+
+
+<!--Seg:Close-->
+      </form>
+    </div>
+   </div>
+  </main>
+<!--End:Close-->
+
+<!--Seg:cmpntrow-->
+<style>
+  .vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+</style>
+
+<div class="row" class="cart__kitRow" style="margin-bottom:10px;">
+  <div class="col-md-8">
+    <div class="row vertical-align">
+      <div class="col-md-3">
+        <div class="shopping-cart__item--thumbnail">
+          <img src="@&PATH @&MIMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row shopping-cart__item--details" style="padding:0;color:#818181;font-size:12px;">
+          <div class="col-xs-12"><span>@&DESC </span></div>
+          <div class="col-xs-12"><span>SKU No: @&SKU </span></div>
+          <div class="col-xs-12"><span>@&OPTIONSD </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 hidden-xs-sm" style="text-align:center;">
+    <div>&nbsp;</div>
+    <div>@&QTY </div>
+  </div>
+</div>
+<!--End:cmpntrow-->
+
+<!--Seg:opensplash-->
+
+<!--Brossam - Left Side (1 of 3): Thank You Section-->
+<div class="col-xs-12 col-md-6 samOrderConfirm_Left">
+  <!--Thank You Message-->
+  <div id="confirm__container_top">
+
+    <!--For Printing Only-->
+    <div class="row hidden showPrint">
+      <div class="col-xs-6">
+        <img src="/images/logos/Logo-Tran.png" alt="USPT Logo">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Thank You, @&FNAM !</h2>
+        <div class="samFlexRow">   
+          <div class="samFlexRow_Left">       
+            <img src="/images/order_confirmation/check-circle60-green.svg">  
+          </div>   
+          <div class="samFlexRow_Middle">       
+            <div class="samFlexRow_FullColumn">
+              <span class="samOrderConfirm_BigLabel">Your Order Is Confirmed!</span>
+            </div>       
+            <div class="samFlexRow_FlexColumn">
+              <span class="samOrderConfirm_OrderNumber">Order #: <b>@&OHNO  </b></span>
+              <span class="samOrderConfirm_OrderDate">Order Date: <b>@&DATE </b></span>
+            </div>       
+          </div>
+        </div>
+
+        <div>
+          <p>
+            Thank you for shopping with us today, we have received your order. Below is an order summary. If you need to make changes to your order, please call immediately at <b>@&GBLPH1 </b>
+          </p>
+        </div>
+
+        <div>
+          <a class="h-print_link" id="Template_T_Content_a_print" href="javascript:void(0)" onclick="window.print();">
+            <b>Print Order Details</b>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--Brossam - Left Side (2 of 3): Signup Section-->
+  <div class="samOrderConfirm_Signup">@&SGNUP </div>
+
+</div>
+<div class="col-xs-12 col-md-6 samOrderConfirm_Right">
+
+
+<!--End:opensplash-->
+
+
+<!--Seg:closeconfirm-->
+
+<!--Brossam - Right Side (2 of 2): Total Section-->
+<div class="samOrderConfirm_Empty">&nbsp;</div>
+<div class="samOrderConfirm_Summary">
+  <div class="row" style="border-bottom:1px solid #dcdcdc;margin-bottom:10px;">
+    <div class="col-xs-9">
+      <h4>Your Totals</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-9">
+      <p>Merchandise Total</p>
+    </div>
+    <div class="col-xs-3 ta-r">
+      <p>@&SUBT </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <p>@&SHMT </p>
+    </div>
+    <div class="col-xs-3 ta-r">
+      <p>@&SHIP </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <p>Sub-Total</p>
+    </div>
+    <div class="col-xs-3 ta-r">
+      <p>@&SUBT2 </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <p>Tax</p>
+    </div>
+    <div class="col-xs-3 ta-r">
+      <p>@&STAX </p>
+    </div>
+  </div>
+  <div class="row" style="border-top:1px solid #dcdcdc; padding-top:10px;">
+    <div class="col-xs-9">
+      <p><strong>Order Total</strong></p>
+    </div>
+    <div class="col-xs-3 ta-r">
+      <p style="font-weight: bold;">@&TOTT </p>
+    </div>
+  </div>
+</div>
+</div>
+<!--Close For samOrderConfirm_Right-->
+
+<!--End:closeconfirm-->
+
+<!--Seg:openvas-->
+<div class="customizations">
+    <span class="customization-heading">Customizations Added</span>
+<!--End:openvas-->
+
+<!--Seg:vasapp-->
+            <span class="customizable-product">+ @&APPLICATION </span>
+            <ul>@&QUESTIONS </ul>
+<!--End:vasapp-->
+
+<!--Seg:closevas-->
+</div>
+<!--End:closevas-->
+
+<!--Seg:BingConf-->
+<!-- BingAds Conversion Tracking -->
+<script>
+  window.uetq = window.uetq || [];
+  window.uetq.push({ 'gv': @&TOT  }); // Pass the computed goal value
+
+  //Brossam: Push Total Revenue for Convert
+  var sam_tot_value = '@&TOT ';
+  var sam_conversion_value = parseFloat(sam_tot_value);
+  window._conv_q = window._conv_q || [];  
+  _conv_q.push(["pushRevenue", sam_conversion_value, "products_cnt", "100424842"]);
+
+  //Brossam: Push Total Revenue to GTM
+  dataLayer.push({
+    'event': 'ecom.checkout.purchase',
+    'ecommerce': {
+      'purchase': {
+        'total_revenue': sam_conversion_value,
+        'transaction_id': '@&OHNO '
+      },
+    }
+  });
+
+</script>
+
+<!-- end BingAds Conversion Tracking -->
+<!--End:BingConf-->
+
+<!--Seg:signup-->
+<!--Brossam - Left Side (3 of 3): Signup Section-->
+<div class="row">
+
+  <!--Heading Section-->
+  <div class="col-xs-12">
+    <h3 class="samOCS_Heading">Save time on your next order!</h3>
+  </div>
+
+  <!--Password Section-->
+  <div class="col-xs-12">
+    <div class="samOCS_PS_ErrorMsg">
+      <p id="passerrorsp" style="display:none;">Correct the following items to continue:</p>
+      <ul id="passerrorsu" style="display:none;">
+        <li id="errorinval" style="display:none;"><u>Please enter a valid password.</u></li>
+        <li id="errormatch" style="display:none;"><u>The passwords you entered do not match.</u></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12 samFlexRow samOCS_PasswordSection">
+    <div class="samOCS_PS_Password">
+      <input placeholder="Password*" type="password" class="form__input full no-outline" name="SIPSWD" value="@&SIPSWD " id="SIPSWD" autocomplete="off" size="15" onkeypress="handleEnterEventPass(this, event, 'SIGNUP')" onkeyup="validPass('')" onblur="checkValidPass('N')">
+      <span class="fldError" id="invalpass" style="width:100%; font-weight:bold; color: red; display:none;"><small>Please enter a valid password</small></span>
+    </div>
+    <div class="samOCS_PS_ConfirmPassword">
+      <input placeholder="Confirm Password*" type="password" class="form__input full no-outline" name="SIPSWDC" value="@&SIPSWDC " id="SIPSWDC" autocomplete="off" size="15" onkeypress="handleEnterEventPass(this, event, 'SIGNUP')" onkeyup="validPass('')">
+    </div>
+    <div class="samOCS_PS_Button">
+      <a  class="btn btn--blue btn_md" href="javascript:void(0)" onclick="resetPassword('SIGNUP')">Create Account</a>
+    </div>
+  </div>
+
+  <!--Desc Section-->
+  <div class="col-xs-12 samOCS_Heading">
+    <p>Enjoy these benefits by creating an account:</p>
+    <ul>
+      <li>Save billing and shipping preferences</li>
+      <li>Access to order status and history</li>
+      <li>Create wish lists for convenient shopping</li>
+      <li>Save proof of occupation & save time on verification process</li>
+    </ul>
+  </div>
+
+  <!--Password Rules-->
+  <div class="col-xs-12 samOCS_PasswordRules">
+    <div class="form-group">
+      <div id="message">
+        <div id="samOCS_PasswordRulesDiv">
+          <span id="samOCS_Show_PasswordRules">
+            <p class="samOCS_PasswordRules_Heading">Password rules:</p>
+            <img src="/images/checkout_page/chevron-down.svg">
+          </span>
+          <span id="samOCS_Hide_PasswordRules" style="display: none;">
+            <p class="samOCS_PasswordRules_Heading">Password rules:</p>
+            <img src="/images/checkout_page/chevron-up.svg">
+          </span>
+        </div>
+        
+        <div class="samOCS_PasswordRules_Wrapper" style="display: none;">
+          <p id="haslow" class="invalid" >A <b>lowercase</b> letter</p>
+          <p id="hascap" class="invalid" >A <b>capital (uppercase)</b> letter</p>
+          <p id="hasnum"class="invalid" >A <b>number</b></p>
+          <p id="hasspcl"class="invalid" >A <b>special character</b></p>
+          <p id="haschr8" class="invalid" >Minimum <b>8 characters</b></p>
+          <p id="matchp" class="invalid" ><b>Confirm</b> password</p>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <script>
+    /* Toggle Password Rules */
+    $("#samOCS_PasswordRulesDiv").click(function(){
+        $(".samOCS_PasswordRules_Wrapper").slideToggle(500);
+        $("#samOCS_Show_PasswordRules").slideToggle(0);
+        $("#samOCS_Hide_PasswordRules").slideToggle(0);
+    });
+  </script>
+
+</div>
+  
+<!--End:signup-->

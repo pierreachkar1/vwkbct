@@ -1,0 +1,463 @@
+
+/* Fix Fullwidth Issue */
+.riziUniCustom .samWorkwear_FullWidth {
+    width: 102vw;
+    position: relative;
+    margin-left: -51vw;
+    left: 50%;
+    padding: 0;
+}
+/* END */
+
+.riziUniCustom .product__qty {
+    display: flex;
+    align-items: center;
+    max-width: 140px;
+    margin: 5px 0;
+}
+
+.riziUniCustom .SectionHidden {
+    display: none;
+}
+
+.riziUniCustom .SectionShow {
+    display: block !important;
+}
+
+.riziUniCustom .formsectionuni select,
+.riziUniCustom .formsectionuni input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 0;
+    background: #fafafa;
+}
+
+.riziUniCustom .panel.panel-default {
+    border-radius: 0;
+}
+
+.riziUniCustom .SectionHidden a h4 {
+    color: black;
+}
+
+.riziUniCustom .formsectionuni .skillBadgeHidden select {
+    margin-bottom: 5px;
+}
+
+.riziUniCustom .formsectionuni div.skillBadgeHidden {
+    display: block;
+}
+
+.riziUniCustom .formsectionuni .checkboxName {
+    display: flex;
+    align-items: center;
+}
+
+.riziUniCustom .formsectionuni .checkboxName input {
+    width: 15px;
+    margin: 5px 0;
+}
+
+.riziUniCustom .formsectionuni .checkboxName label {
+    margin: 0;
+    margin-left: 5px;
+}
+
+.riziUniCustom .rizeenCustombtns {
+    background-color: rgb(0, 0, 0);
+    margin: 15px 0 0 0;
+}
+
+.riziUniCustom .btn-red {
+    background-color: #c42033 !important;
+}
+
+.riziUniCustom .formsectionuni {
+    padding: 20px;
+}
+
+.riziUniCustom .formsectionuni .formsectionrow {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.riziUniCustom .formsectionuni .formsectiondiv {
+    width: 48%;
+    display: flex;
+    align-items: center;
+
+}
+
+.riziUniCustom ul.sizeChartOptions,
+.riziUniCustom ul.widthOptions {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.riziUniCustom ul.sizeChartOptions li,
+.riziUniCustom ul.widthOptions li {
+    border-radius: 0px;
+    font-weight: 600;
+    border: 1px solid #999;
+    padding: 20px 15px;
+    line-height: 0;
+    margin: 10px 10px 10px 0;
+    color: black;
+}
+
+.riziUniCustom ul.sizeChartOptions li:hover,
+.riziUniCustom ul.widthOptions li:hover {
+    background-color: black;
+    color: white;
+}
+
+.riziUniCustom .panel-default > .panel-heading a[aria-expanded="true"]:after {
+    content: "\2212";
+    transform: rotate(180deg);
+}
+
+.riziUniCustom .panel-default >.panel-heading a[aria-expanded="false"]:after {
+    content: "\002b";
+    transform: rotate(90deg);
+    color: black;
+}
+
+.riziUniCustom .panel-default >.panel-heading {
+    padding: 0;
+}
+
+.riziUniCustom .panel-default >.panel-heading a h4 {
+    padding: 10px 15px;
+}
+
+.riziUniCustom .panel-default >.panel-heading a:after {
+    content: "";
+    position: relative;
+    bottom: 25px;
+    right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    float: right;
+    transition: transform .25s linear;
+}
+
+.riziUniCustom .SectionHidden img {
+    width: 100%;
+}
+
+.riziUniCustom .SectionHidden .formsectionuni img {
+    margin-right: 10px;
+}
+
+.riziUniCustom .SectionHidden {
+    width: 92.5%;
+    margin: auto;
+}
+
+.riziUniCustom .topWorkwearImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.riziUniCustom.topWorkwearImage a {
+    color: black;
+}
+
+.riziUniCustom main.contact-us {
+    margin: 0;
+}
+
+.riziUniCustom .ProdAssort {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.riziUniCustom .SectionLast {
+    width: 95%;
+    margin: auto;
+}
+
+.riziUniCustom .SectionLast h2 {
+    margin-bottom: 5px;
+}
+
+.riziUniCustom .SectionLast p {
+    font-size: 16px !important;
+    margin-bottom: 15px;
+}
+
+.riziUniCustom .topWorkwearImage .topimgText h2 {
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.riziUniCustom .topWorkwearImage .topimgText {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.riziUniCustom .rizeenPopularCatTitle {
+    margin: 30px 0 20px 0;
+}
+
+.riziUniCustom .jumpSection {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.riziUniCustom .jumpSection ul {
+    list-style: none;
+}
+
+.riziUniCustom .jumpSection ul a {
+    font-size: 18px;
+}
+
+.riziUniCustom .SectionjumpSec {
+    background-color: #f2f2f2;
+}
+
+.riziUniCustom .SecBgimgNslide {
+    padding: 25px 0;
+}
+
+.riziUniCustom .SecBgimgNslide > div {
+    width: 92.5%;
+    margin: auto;
+}
+
+.riziUniCustom .SectionConstruct {
+    padding: 50px 0 25px 0;
+}
+
+.riziUniCustom .SectionCommercial {
+    padding: 25px 0 50px 0;
+}
+
+.riziUniCustom .SectionHomeServ {
+    background-color: #FAFAFA;
+}
+
+.riziUniCustom .SecBgimgNslide .bgimg {
+    height: 390px;
+    margin: 10px 0;
+    color: white;
+    padding: 20px;
+}
+
+.riziUniCustom .SecBgimgNslide .bgimg h2 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 26px !important;
+}
+
+.riziUniCustom .SecBgimgNslide .bgimg p {
+    font-size: 16px !important;
+}
+
+.riziUniCustom .carouselsBtm {
+    padding: 25px 0;
+}
+
+.riziUniCustom .SeccarouselsBtm {
+    margin: auto;
+}
+
+.riziUniCustom .SeccarouselsBtm .wrapper {
+    width: 97%;
+    margin: auto;
+}
+
+.riziUniCustom .SeccarouselsBtm h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.riziUniCustom .bgcolorf2 {
+    background-color: #f2f2f2;
+}
+
+.riziUniCustom .card a span {
+    width: 100%;
+    text-align: center;
+}
+
+.riziUniCustom .SectionPeerPerspect {
+    width: 93% !important;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background-color: #007ac3;
+}
+
+.riziUniCustom .SectionPeerPerspect .card {
+    border: 0;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+.riziUniCustom .SectionPeerPerspect .card-content {
+    text-align: center;
+    color: white;
+}
+
+
+.riziUniCustom .SectionPeerPerspect .slick-prev:before,
+.riziUniCustom .SectionPeerPerspect .slick-next:before {
+    color: white;
+}
+
+.riziUniCustom .SectionConstruct .bgimg {
+    background: linear-gradient(#c42033, #000);
+}
+
+.riziUniCustom .SectionHomeServ .bgimg {
+    background: linear-gradient(#c42033, #000);
+}
+
+.riziUniCustom .SectionCommercial .bgimg {
+    background: linear-gradient(#c42033, #000);
+}
+
+.riziUniCustom .wrapper{
+  width:100%;
+  text-align:center;
+}
+.riziUniCustom .carousel{
+  width:90%;
+  margin:0px auto;
+}
+.riziUniCustom .slick-slide{
+  margin:10px 5px;
+}
+.riziUniCustom .slick-slide img{
+    width: 100%;
+    margin: auto;
+    max-height: 200px;
+    max-width: 200px;
+}
+.riziUniCustom .slick-prev, .riziUniCustom .slick-next{
+  border-radius: 15px;
+  border-color: transparent;
+}
+.riziUniCustom .slick-prev:before, .riziUniCustom .slick-next:before {
+    font: 30px 'FontAwesome';
+    color: black;
+}
+.riziUniCustom .slick-prev:before {
+    content: '\f053';
+}
+.riziUniCustom .slick-next:before {
+    content: '\f054';
+}
+.riziUniCustom .card{
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px #00000020;
+  padding: 20px;
+  background-color: white;
+  width: 300px;
+  margin: auto;
+  height: 95%;
+}
+.riziUniCustom .card-title {
+    color: black;
+    font-size: 18px;
+}
+.riziUniCustom .card-body{
+  width: 100%;
+  vertical-align: top;
+}
+.riziUniCustom .card-content{
+  text-align: left;
+  padding-top: 10px;
+  color: #333;
+}
+.riziUniCustom .card-text{
+  font-size: 14px;
+  font-weight: 300;
+}
+.riziUniCustom .card-content div.flex-grid {
+    margin: 15px 0 10px 0;
+}
+.riziUniCustom .card-content a.flex-grid {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .riziUniCustom .jumpSection {
+    width: 60%;
+  }
+  .riziUniCustom .slick-slide {
+    margin: 10px 10px;
+  }
+  .riziUniCustom .SecBgimgNslide > div {
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+    .riziUniCustom .SecBgimgNslide .bgimg h2 {
+        position: static;
+        padding-top: 10px;
+    }
+    .riziUniCustom .SecBgimgNslide .bgimg {
+        height: auto;
+        width: 95%;
+        margin: 10px auto 20px auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .riziUniCustom .jumpSection {
+        width: 90%;
+    }
+    .riziUniCustom .topWorkwearImage img {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .riziUniCustom .formsectionuni .formsectiondiv {
+        width: 100%;
+    }
+    .riziUniCustom .formsectionuni {
+        padding: 0;
+    }
+    .riziUniCustom .formsectionuni .formsectiondiv {
+        padding: 5px 0;
+    }
+    .riziUniCustom .formsectionuni .formsectionrow {
+        display: block;
+        padding-bottom: 0;
+    }
+    .riziUniCustom .jumpSection .col-xs-4 {
+        width: 100%;
+    }
+    .riziUniCustom .jumpSection li {
+        text-align: center;
+    }
+    .riziUniCustom .SectionPeerPerspect .riziUniCustom .slick-prev:before {
+        margin-right: -20px;
+    }
+    .riziUniCustom .SectionPeerPerspect .riziUniCustom .slick-next:before {
+        margin-left: -20px;
+    }
+}

@@ -1,0 +1,166 @@
+
+.rizeenStore #images img {
+    width: 50%;
+    margin: 10px 0;
+}
+
+.rizeenStore #location img {
+    width: 50%;
+}
+
+.rizeenStore img.ristoreHeadimg {
+    width: 100%;
+}
+
+.rizeenStore .carouselsBtm {
+    padding: 25px 0;
+}
+
+.rizeenStore .SeccarouselsBtm {
+    margin: auto;
+}
+
+.rizeenStore .SeccarouselsBtm .wrapper {
+    width: 97%;
+    margin: auto;
+}
+
+.rizeenStore .SeccarouselsBtm h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.rizeenStore .SectionPeerPerspect .card {
+    border: 0;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+.rizeenStore .SectionPeerPerspect .card-content {
+    text-align: center;
+    color: white;
+}
+
+
+.rizeenStore .SectionPeerPerspect .slick-prev:before,
+.rizeenStore .SectionPeerPerspect .slick-next:before {
+    color: white;
+}
+
+.rizeenStore .wrapper{
+  width:100%;
+  text-align:center;
+}
+.rizeenStore .carousel{
+  width:90%;
+  margin:0px auto;
+}
+.rizeenStore .slick-slide{
+  margin:10px 5px;
+}
+.rizeenStore .slick-slide img{
+    width: 100%;
+    margin: auto;
+    max-height: 200px;
+    max-width: 150px;
+}
+.rizeenStore .slick-prev, .rizeenStore .slick-next{
+  border-radius: 15px;
+  border-color: transparent;
+}
+.rizeenStore .slick-prev:before, .rizeenStore .slick-next:before {
+    font: 30px 'FontAwesome';
+    color: black;
+}
+.rizeenStore .slick-prev:before {
+    content: '\f053';
+}
+.rizeenStore .slick-next:before {
+    content: '\f054';
+}
+.rizeenStore .card{
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px #00000020;
+  padding: 10px;
+  background-color: white;
+  width: 200px;
+  margin: auto;
+}
+.rizeenStore .card-title {
+    color: black;
+    font-size: 16px;
+}
+.rizeenStore .card-body{
+  width: 100%;
+  vertical-align: top;
+}
+.rizeenStore .card-content{
+  text-align: left;
+  padding-top: 10px;
+  color: #333;
+}
+.rizeenStore .card-text{
+  font-size: 14px;
+  font-weight: 300;
+}
+.rizeenStore .card-content div.flex-grid {
+    margin: 5px 0 10px 0;
+}
+.rizeenStore .card-content a.flex-grid {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .rizeenStore .slick-slide {
+    margin: 10px 10px;
+  }
+  .rizeenStore .SecBgimgNslide > div {
+    width: 97%;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .rizeenStore .SectionPeerPerspect .rizeenStore .slick-prev:before {
+        margin-right: -20px;
+    }
+    .rizeenStore .SectionPeerPerspect .rizeenStore .slick-next:before {
+        margin-left: -20px;
+    }
+}
+
+    section#shop-online {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    section#shop-online h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    section#shop-online p {
+      font-size: 18px;
+      margin-bottom: 24px;
+      color: #777;
+    }
+
+    section#shop-online .shop-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    section#shop-online .shop-btn:hover {
+      background-color: #00aced;
+    }

@@ -1,0 +1,75 @@
+/* ADJUSTING SOME STYLES */
+.slider--title {
+  text-align: left;
+  font-size: 15px;
+}
+.image--slider--container h6 {
+  margin: 5px 5px 0 5px;
+}
+.image--slider--container a:link {
+  color: #000000;
+}
+.image--slider--container a:hover {
+  color: #007ac2;
+}
+
+.image--slider--row {
+  padding-top: 20px; 
+  margin-top: -20px; 
+  margin-left: 0;
+  margin-bottom: 25px
+}
+
+/* .single--hero--banner {
+  background-image: none; height: auto; padding: 20px 0 20px 0;
+} */
+
+
+
+
+
+
+  /* SETTINGS FOR SLIDE */
+  /* html, body {
+    margin: 0;
+    padding: 0;
+  } */
+
+  /* * {
+    box-sizing: border-box;
+  } */
+
+  /* Must comment out => Changes are made in qm-new */
+  /* .slider {
+      width: 95%;
+      margin-left: 20px;
+  } */
+
+  .slick-slide {
+    margin: 0px 5px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+
+
+
+  .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: 1;
+  }
+  
+  .slick-active {
+    opacity: 1;
+  }
+
+  .slick-current {
+    opacity: 1;
+  }

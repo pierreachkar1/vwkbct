@@ -1,0 +1,97 @@
+
+.wufoo {
+	font-family: "Helvetica", Arial, serif;
+}
+.wufoo #header {
+	visibility: hidden;
+	height: 0px;
+}
+.wufoo #errorLi {
+	display: none;
+}
+#container {
+	background: #fff !important;
+}
+.wufoo input.btTxt {
+	text-transform: uppercase;
+	font-size: 18px;
+	width: 100%;
+	padding: 13px 20px;
+	border-radius: 2px;
+	letter-spacing: 0px;
+	border: 0px;
+	transition: all ease-in-out 0.5 !important;
+	background-color: #007ac2;
+	color: #fff;
+	font-weight: 700;
+	font-family: "Rajdhani", Helvetica, sans-serif !important;
+}
+.wufoo input.btTxt:hover {
+	background-color: #025e94;
+	color: #fff;
+}
+.wufoo .info h2 {
+	color: #000;
+	font-size: 35px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase !important;
+	font-family: "Rajdhani", Helvetica, sans-serif !important;
+	font-weight: 700 !important;
+}
+.wufoo .info {
+	text-align: center;
+	font-size: 16px;
+}
+.wufoo .info, .wufoo .paging-context {
+	border-bottom: 0px;
+}
+
+
+input.text, input.search, textarea.textarea, #Field5 {
+	width: 100%;
+	border: 0px solid #ccc !important;
+	border-radius: 4px;
+	color: #000;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	background: #e8e8e8 none !important;
+	box-sizing: border-box;
+	padding: 13px 20px;
+}
+
+.wufoo li.focused {
+	background-color: #f2f2f2;
+}
+
+.wufoo label.desc, .wufoo legend.desc {
+	color: #555;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.wufoo .info div {
+	font-size: 18px;
+}
+
+/* Added 8-30-18 */
+.leftLabel li, .rightLabel li {
+   width: 100% !important;
+	padding-top: 9px;
+}
+.leftLabel .wu1, .rightLabel .wu1 {
+   width: 100% !important;
+	padding-top: 9px;
+}
+
+@media (max-width: 500px) {
+	form li.leftThird, form li.middleThird {
+		width: 100% !important;
+    }
+    form li.middleThird { 
+        margin-left: -2px !important;
+    }
+    form li.rightThird {
+    	width: 98% !important;
+    	float: left;
+    }
+}

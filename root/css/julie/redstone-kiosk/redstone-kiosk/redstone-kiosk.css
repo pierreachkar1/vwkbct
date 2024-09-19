@@ -1,0 +1,1589 @@
+/* Rizeen start */
+
+div#bravery-tour-section-updates .centercol a {
+    color: inherit;
+}
+
+div#bravery-tour-section-updates .centercol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#jeep-hero-section iframe {
+    width: 100%;
+    height: calc( 100vw / 2);
+}
+
+#jeep-hero-section img.floating-text-jeep-hero {
+	position: absolute;
+    top: 48%;
+    z-index: 100;
+    width: 40%;
+    left: 20px;
+}
+
+#bravery-tour-section-map .jeep_location_list {
+    display: flex;
+    align-items: baseline;
+    position: static;
+    transform: none;
+}
+
+#bravery-tour-section-map .jeep_location_list ul {
+    list-style-type: none;
+    padding-right: 0;
+}
+
+#how-it-works-section .stfw-col-left {
+	display: flex;
+	align-items: center;
+    padding: 0 30px 0 10px;
+}
+
+#how-it-works-section .stfw-col-left img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1400px) {
+	#bravery-tour-section-map .jeep_location_list {
+		padding-top: 20px;
+	}	
+}
+
+@media only screen and (max-width: 992px) {
+	#jeep-hero-section img.floating-text-jeep-hero {
+		top: 10%;
+	}
+	#how-it-works-section .stfw-col-left {
+		padding: 0 10px;
+	}
+}
+  
+/* Rizeen end */
+
+
+
+
+
+
+
+.mc-banner {
+	display: none !important;	
+}
+#PopupSignupForm_0 {
+	display: none !important;
+}
+
+/* General */
+.sam-temp-fw {
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+	padding: 0;
+	background-color: #ffffff;
+	letter-spacing: 1px !important;
+}
+.sam-temp-fw-black {
+	background-color: #000000;
+}
+@media (max-width: 1000px) {
+	.main__wrapper {
+		padding-top: 30px
+	}
+}
+.sam-temp-fw p,
+.sam-temp-fw ul li {
+	font-size: 20px !important;
+}
+@media (max-width: 670px) {
+	.sam-temp-fw p,
+	.sam-temp-fw ul li {
+		font-size: 18px !important;
+	}
+}
+@media (max-width: 500px) {
+	.sam-temp-fw p,
+	.sam-temp-fw ul li {
+		font-size: 16px !important;
+	}
+}
+
+.iframe_player {
+	/* position: absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	width: calc(100% - 20px);
+  	height: 100%; */
+
+  	height: 500px;
+	width: 100%;
+	padding-right: 20px;
+}
+@media (max-width: 1000px) {
+	.iframe_player {
+		padding: 0;
+		margin: -20px 0 10px 0;
+	}
+}
+@media (max-width: 670px) {
+	.iframe_player {
+			height: calc( 100vw / 1.5);
+	}
+}
+
+.stfw-col-left,
+.stfw-col-right {
+	min-height: 500px;
+}
+/* END */
+
+
+/* ALL */
+#floatingEnterButton {
+	display: none;
+}
+@media (max-width: 1000px) {
+	#floatingEnterButton {
+		display: block;
+	}
+}
+#floatingEnterButton a {
+	padding: 10px 30px 12px 30px;
+	font-weight: bold;
+	transition: all 1s;
+	background-color: #bd0202;
+	color: #ffd700;
+	text-transform: uppercase;
+	z-index: 99999;
+	box-shadow: -2px 4px 12px -1px rgba(0,0,0,.50);
+	border-radius: 20px;
+	font-size: 18px;
+
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+}
+
+#the-jeep-section,
+#how-it-works-section,
+#bravery-tour-section,
+#bravery-tour-section-map,
+#bravery-tour-section-updates,
+#jeep-about-us-section,
+#final-para-section {
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+	#the-jeep-section,
+	#how-it-works-section,
+	#bravery-tour-section,
+	#bravery-tour-section-map,
+	#bravery-tour-section-updates,
+	#jeep-about-us-section,
+	#final-para-section {
+		padding: 10px 10px 20px 10px;
+	}
+}
+
+
+h2.jeep-section-title {
+	font-size: 40px !important;
+	text-align: center;
+	margin-bottom: 30px;
+	text-align: center;
+}
+h2.jeep-section-title span {
+    /* background-image: linear-gradient(to right, #ebebeb 0%, #bd0202 30%, #bd0202 70%, #ebebeb 100%);
+	padding: 2px 120px 7px 120px;
+	font-weight: 500;
+	letter-spacing: 4px;
+	color: #fff; */
+
+	font-weight: bold;
+	color: #000;
+    letter-spacing: 6px;
+}
+/* Headings */
+@media (max-width: 1500px) {
+	h2.jeep-section-title {font-size: 28px !important;}
+}
+@media (max-width: 1200px) {
+	h2.jeep-section-title {font-size: 30px !important;}
+	h2.jeep-section-title span {font-weight: 700;}
+}
+@media (max-width: 1000px) {
+	h2.jeep-section-title {font-size: 34px !important;padding-top: 10px;}
+}
+@media (max-width: 991px) {
+	h2.jeep-section-title {margin-bottom: 20px;}
+}
+@media (max-width: 670px) {
+	h2.jeep-section-title {font-size: 28px !important;}
+}
+/* @media (max-width: 500px) {
+	h2.jeep-section-title {font-size: 24px !important;}
+}
+@media (max-width: 428px) {
+	h2.jeep-section-title {font-size: 22px !important;}
+}
+@media (max-width: 390px) {
+	h2.jeep-section-title {font-size: 18px !important;}
+} */
+/* END */
+
+
+
+
+/* HEADER SECTION */
+#sam-temp-header-section {
+	/* margin-top: -40px; */
+	padding: 15px 0;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	#sam-temp-header-section {
+		z-index: 0;
+	}
+}
+#sam-temp-header-section .container {
+	position: relative;
+}
+#sam-temp-header-section img {
+	width: 150px;
+	height: auto;
+}
+#sam-temp-header-section .sam-temp-header-nav {
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#sam-temp-header-section h4 {
+	display: inline;
+	padding: 0 20px;
+	position: relative;
+}
+#sam-temp-header-section h4 a {
+	color: #ffffff;
+}
+#sam-temp-header-section h4.underline-effect a:after {
+	content: '';
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	width: calc(100% - 40px);
+	height: 30px;
+	border-bottom: 1px solid;
+	opacity: 0;
+	-webkit-transition: all 0.3s, -webkit-transform 0.35s;
+	transition: all 0.3s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+#sam-temp-header-section h4.enter-now a {
+    /*     background-image: linear-gradient(to right, #000 0%, #bd0202 30%, #bd0202 70%, #000 100%); */
+	padding: 10px 30px 12px 30px;
+	font-weight: bold;
+	transition: all 1s;
+	background-color: #bd0202;
+	/* border-radius: 20px; */
+	color: #ffd700;
+}
+@media (min-width: 1201px) {
+	#sam-temp-header-section h4.underline-effect a:hover:after {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	#sam-temp-header-section h4.enter-now a:hover {
+		/* background-image: linear-gradient(to right, #000 0%, #ffd700 30%, #ffd700 70%, #000 100%); */
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+	}
+}
+@media (max-width: 1500px) {
+	#sam-temp-header-section h4 {
+		padding: 0 15px;
+	}
+}
+@media (max-width: 1400px) {
+	#sam-temp-header-section h4 {
+		padding: 0 12px;
+	}
+}
+@media (max-width: 1000px) {
+	#sam-temp-header-section img {
+		margin-left: 25px;
+	}
+}
+
+
+/* Mobile Menu */
+.sam-temp-header-nav-mobile,
+.header__nav_mobile {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	#sam-temp-header-section h4.underline-effect {
+		display: none;
+	}
+	#sam-temp-header-section h4.enter-now {
+		font-size: 24px !important;
+	}
+	.sam-temp-header-nav-mobile,
+	.header__nav_mobile {
+		display: block;
+	}
+	.sam-temp-header-nav-mobile {
+		/* width: 30px;
+		height: 30px;
+		position: relative;
+		z-index:2;
+		overflow: hidden; */
+
+		width: 100%;
+		position: relative;
+		z-index:99;
+		top: -20px;
+	}
+	.sam-temp-header-nav-mobile .jeep__bar {
+		width: 30px;
+		height: 4px;
+		position: absolute;
+		top: 50%;
+		left: calc(50% - 50px);
+	  	border-radius: 4px;
+		transform: translate(-50%, -50%);
+		background-color: #ffffff;
+		transition: all 0.3s ease-in-out;
+	}
+	.sam-temp-header-nav-mobile .jeep__bar:nth-of-type(2) {
+		top: calc(50% - 9px);
+	}
+	.sam-temp-header-nav-mobile .jeep__bar:nth-of-type(3) {
+		top: calc(50% + 9px);
+	}
+	.sam-temp-header-nav-mobile.active .jeep__bar:nth-of-type(1) {
+	  display: none;
+	}
+	.sam-temp-header-nav-mobile.active .jeep__bar:nth-of-type(2) {
+	  top: 50%;
+	  transform: translate(-50%, 0%) rotate(45deg);  
+	}
+	.sam-temp-header-nav-mobile.active .jeep__bar:nth-of-type(3) {
+	  top: 50%;
+	  transform: translate(-50%, 0%) rotate(-45deg); 
+	}
+	.header__nav_mobile .jeep__nav {
+		position: fixed;
+		top: 72px;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	  	background: #fff;
+/* 		transform: translateX(200%); */
+		transition: transform 0.5s; 
+		z-index: 98;
+	    box-shadow: -2px 4px 12px -1px rgba(0,0,0,.50);
+	}
+	.header__nav_mobile .jeep__nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	.header__nav_mobile .jeep__nav ul li {
+		list-style-type: none;
+		padding: 15px 30px;
+		border-bottom: 1px solid #dcdcdc;
+	}
+	.header__nav_mobile .jeep__nav.active {
+		transform: translateX(100%);
+	}
+	
+	.header__nav_mobile .jeep__nav ul li a {
+		color: #000000;
+		font-size: 18px;
+	}
+	
+	
+}
+@media (max-width: 600px) {
+	#sam-temp-header-section h4 {
+		display: none;
+	}
+	.sam-temp-header-nav-mobile {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: auto;
+		right: -10px;
+	}
+}
+
+
+
+/* HERO SECTION */
+#jeep-hero-section .container-fluid {
+	padding: 0;
+	margin-top: -40px;
+}
+#jeep-hero-section .container-fluid img {
+	width: 100%;
+	height: auto;
+}
+#jeep-hero-section .jeep_form_div {
+	position: absolute;
+	width: 550px;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+	background-color: #fff;
+	box-shadow: 0px 2px 50px #bd0505;
+	border-radius: 12px;	
+}
+#jeep-hero-section .jeep_form_div h1 {
+	text-align: center;
+}
+@media (max-width: 1000px) {
+	#jeep-hero-section {
+		text-align: center;
+		background-color: #bd0505;
+		padding-top: 50px;
+	}
+	#jeep-hero-section .jeep_form_div {
+		position: relative;
+		transform: translateY(0);
+		top: 0px;
+		right: 0;
+		width: calc(100% - 50px);
+		box-shadow: none;
+		left: 25px;
+		margin-bottom: 20px;
+		box-shadow: 0px 2px 50px #000000;
+	}
+	#jeep-hero-section .jeep_form_div h2 {
+		padding-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
+/* THE JEEP */
+#the-jeep-section {
+	padding-bottom: 50px;
+}
+#the-jeep-section .stfw-col-right {
+	min-height: 650px;
+}
+#the-jeep-section .stfw-div-middle {
+	left: -30px;
+}
+#the-jeep-section .the-jeep-desc {
+	padding-bottom: 20px;
+}
+#the-jeep-section h3 {
+	font-weight: 400;
+	text-transform: initial;
+	text-align: center;
+	margin-top: -5px;
+}
+#the-jeep-section img {
+	width: 100%;
+	height: auto;
+}
+#the-jeep-section .stfw-col-left img {
+	height: 650px;
+	width: auto;
+	margin-left: -50px;
+}
+
+	/* Slider Changes */
+	.slider {padding: 10px 0 20px 0;}
+	.slick-slide {margin-right: 10px;}
+	.slick-dots {/* position: absolute; bottom: -3.5rem; */ display: block; padding: 0; margin: 0; list-style: none; line-height: 0;}
+	.slick-dots li {position: relative; display: inline-block; width: 0.9375rem; height: 0.9375rem; margin: 0 0.875rem; padding: 0; cursor: pointer;}
+	.slick-dots li:first-child {margin-left: 0;}
+	.slick-dots li:last-child {margin-right: 0;}
+	.slick-dots li button {font-size: 0; line-height: 0; display: block; width: 0.9375rem; height: 0.9375rem; padding: 0.3125rem; cursor: pointer; color: transparent; outline: none; border:none; background: rgba(47, 31, 22, 0.5); border-radius: 50%;}
+	.slick-dots li button:hover,
+	.slick-dots li button:focus,
+	.slick-dots li.slick-active button {outline: none; background-color: #2d1d15; transition: all 300ms ease 0s; color: #2d1d15;}
+	/* .slick-next:before, .slick-prev:before {color: #000 !important;} */
+
+	.slick-arrow {
+		display: none;
+	}
+	.slick-next:before,
+	.slick-prev:before{
+		content: ''
+	}
+
+#the-jeep-section .image--slider--row h2 {
+	text-align: left;
+}
+.stfw-div-middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.stfw-div-middle ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 -50px;
+}
+.stfw-div-middle ul li {
+	padding-bottom: 10px;
+	/* font-size: 20px !important; */
+}
+.stfw-div-middle ul .jeep_bullet {
+	font-weight: 600;
+	color: #005178;
+	width: 120px;
+	display: inline-block;
+	text-align: right;
+}
+.stfw-div-middle ul .jeep_desc {
+	display: inline-block;
+	padding-left: 20px;
+}
+.stfw-div-middle ul li span {
+	display: block;
+}
+
+#SamReturnToTop {
+	display: none !important;
+}
+@media (max-width: 1400px) {
+	#the-jeep-section .stfw-col-left img {
+		height: 500px;
+		width: auto;
+		margin-left: -50px;
+		margin-top: 50px;
+	}
+	#the-jeep-section .col-md-8 {
+	    width: 60%;
+	}
+	#the-jeep-section  .col-md-4 {
+	    width: 40%;
+	}
+}
+@media (max-width: 1200px) {
+	#jeep-hero-section .hidden-xs-sm {
+	    display: none;
+	}
+	#jeep-hero-section .visible-xs-sm {
+	    display: block;
+	}
+	#the-jeep-section .stfw-col-left img {
+		width: 100%;
+		height: auto;
+		margin: -80px 0 -50px 0;
+	}
+	#the-jeep-section .col-md-8 {
+	    width: 100%;
+		float: left;
+	}
+	#the-jeep-section  .col-md-4 {
+	    width: 100%;
+		float: left;
+	}
+	#the-jeep-section .stfw-col-right {
+		min-height: auto;
+		padding-bottom: 30px;
+		margin-left: 30px;
+	}
+
+
+
+	
+	.stfw-div-middle {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0,0);
+	}
+	.stfw-div-middle ul {
+		margin: 0 0 0 0px;
+	}
+	.stfw-div-middle ul li {
+		width: 50%;
+		float: left;
+	}
+	.stfw-div-middle ul li.the-jeep-fullwidth {
+		width: 100%;
+	}
+	.stfw-div-middle ul .jeep_bullet {
+		width: auto;
+	}
+	.stfw-div-middle ul .jeep_desc {
+		padding-left: 0px;
+	}
+	.stfw-div-middle ul .jeep_desc_interior {
+		float: right;
+	}
+	
+	
+}
+@media (max-width: 1000px) {
+	#the-jeep-section {
+		padding-bottom: 20px;
+	}
+	.stfw-div-middle ul li {
+		width: 100%;
+	}
+	.stfw-div-middle ul li.the-jeep-fullwidth {
+		width: 100%;
+	}
+	.stfw-div-middle ul .jeep_bullet {
+		width: 100px;
+	}
+	.stfw-div-middle ul .jeep_desc {
+		padding-left: 20px;
+	}
+	.stfw-div-middle ul .jeep_desc_interior {
+		float: none;
+	}
+}
+@media (max-width: 834px) {
+	#the-jeep-section .stfw-col-left,
+	#the-jeep-section .stfw-col-right {
+		min-height: auto;
+	}
+	
+	#the-jeep-section .stfw-col-left img {
+		margin: -20px 0 10px 0;
+	}
+}
+@media (max-width: 767px) {
+	#the-jeep-section .stfw-col-right {
+		width: calc(100% - 20px);
+		margin: 0 10px;
+		padding-left: 30px;
+		padding-bottom: 10px;
+	}
+	.stfw-div-middle ul .jeep_bullet,
+	.stfw-div-middle ul .jeep_desc {
+/* 		display: block;
+		text-align: center;
+		padding: 0;
+		width: 100%; */
+		padding-left: 10px;
+	}
+	.stfw-div-middle ul li {
+		padding-bottom: 20px;
+	}
+	#the-jeep-section h3 {
+		font-size: 18px !important;
+		padding-bottom: 10px;
+	}
+	#the-jeep-section .slick-dots {
+		/* transform: translateY(-20px); */
+		z-index: 999;
+	}
+}
+@media (max-width: 500px) {
+	#the-jeep-section .stfw-col-left,
+	#the-jeep-section .stfw-col-right {
+		width: 100%;
+		margin: 0;
+	}
+	.stfw-div-middle ul .jeep_bullet {
+		float: left;
+		width: 25%;
+		text-align: right;
+	}
+	.stfw-div-middle ul .jeep_desc {
+		float: right;
+		width: 75%;
+		padding-left: 18px;
+	}
+	.stfw-div-middle ul li {
+		padding-bottom: 10px;
+	}
+	#the-jeep-section h3 {
+		font-size: 16px !important;
+	}
+}
+@media (max-width: 414px) {
+	.stfw-div-middle ul .jeep_desc {
+		padding-left: 25px;
+	}
+}
+@media (max-width: 375px) {
+	.stfw-div-middle ul .jeep_desc {
+		padding-left: 30px;
+	}
+}
+@media (max-width: 320px) {
+	.stfw-div-middle ul .jeep_desc {
+		padding-left: 45px;
+	}
+}
+
+
+
+
+
+
+/* How It Works */
+#how-it-works-section {
+	background-color: #ebebeb;
+	padding-bottom: 120px;
+}
+#how-it-works-section h2.jeep-section-title {
+	margin-bottom: 50px;
+}
+#how-it-works-section .stfw-div-middle {
+	top: calc(50% - 5px);
+}
+#how-it-works-section img#how_it_work_img {
+	width: 80%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px 8px #000;
+}
+#how-it-works-section img#how_it_work_playbtn {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: none !important;
+	opacity: 0.8;
+}
+#how-it-works-section img#how_it_work_playbtn:hover {
+	opacity: 1.0;
+	cursor: pointer;
+}
+#how-it-works-section .stfw-div-middle h3 {
+	text-align: left;
+	color: #005178;
+}
+#how-it-works-section .stfw-div-middle p {
+	/* font-weight: 500; */
+	text-align: left;
+	padding-right: 10px;
+	/* font-size: 20px !important; */
+}
+@media (max-width: 1000px) {
+	#how-it-works-section {
+		padding-bottom: 80px;
+	}
+	#how-it-works-section img#how_it_work_img {
+		position: relative;
+		width: 100%;
+		left: 0;
+		top: 0;
+		transform: translate(0,0);
+		margin: 20px 0;
+	}
+	#how-it-works-section img#how_it_work_playbtn {
+		width: 100px;
+	}
+	#how-it-works-section .stfw-col-left,
+	#how-it-works-section .stfw-col-right {
+		min-height: auto;
+	}
+}
+@media (max-width: 670px) {
+	#how-it-works-section img#how_it_work_img {
+		margin: 10px 0;
+	}
+	#how-it-works-section img#how_it_work_playbtn {
+		width: 80px;
+	}
+}
+
+
+
+/* What Included */
+#what-included-section {
+	border-bottom: 2px solid #ebebeb;
+}
+#what-included-section .container-fluid {
+	padding: 0;
+	margin-top: -40px;
+}
+#what-included-section .container-fluid img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* What Included - Old Version */
+/* #what-included-section {
+	position: relative;
+	padding-bottom: 50px;
+}
+#what-included-section img {
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	box-shadow: 2px 2px 8px #000;
+}
+#what-included-section #jeep-and-cash,
+#what-included-section #jeep-bivy {
+	position: absolute;
+	padding: 0px 120px 5px 120px;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 40px;
+	background-image: linear-gradient(to right, #fff 0%, #4CAF50 30%, #4CAF50 70%, #fff 100%);
+}
+#what-included-section #jeep-and-cash {
+	top: 100px;
+	left: 5%;
+}
+#what-included-section #jeep-and-cash span {
+	font-size: 50px;
+	color: #ffd700;
+}
+#what-included-section #jeep-bivy {
+	bottom: 100px;
+	right: 5%;
+}
+@media (max-width: 1000px) {
+	#what-included-section #jeep-and-cash,
+	#what-included-section #jeep-bivy {
+		padding: 0px 50px 5px 50px;
+		font-size: 26px;
+	}
+	#what-included-section #jeep-and-cash {
+		top: 60px;
+		left: 50px;
+	}
+	#what-included-section #jeep-and-cash span {
+		font-size: 30px;
+	}
+	#what-included-section #jeep-bivy {
+		bottom: 40px;
+		right: 50px;
+	}
+	#what-included-section {
+		padding-bottom: 60px;
+	}
+}
+@media (max-width: 670px) {
+	#what-included-section img {
+		margin-top: 10px;
+	}
+	#what-included-section #jeep-and-cash,
+	#what-included-section #jeep-bivy {
+		padding: 5px 20px 5px 20px;
+		font-size: 20px;
+	}
+	#what-included-section #jeep-and-cash {
+		top: 40px;
+		left: 40px;
+	}
+	#what-included-section #jeep-and-cash span {
+		font-size: 26px;
+	}
+	#what-included-section #jeep-bivy {
+		bottom: 30px;
+		right: 40px;
+	}
+	#what-included-section {
+		padding-bottom: 50px;
+	}
+}
+@media (max-width: 500px) {
+	#what-included-section img {
+		margin-top: 10px;
+	}
+	#what-included-section #jeep-and-cash,
+	#what-included-section #jeep-bivy {
+		padding: 5px 0;
+		width: 90%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		font-size: 16px;
+	}
+	#what-included-section #jeep-and-cash {
+		padding: 2px 0;
+		top: 30px;
+		width: 220px;
+	}
+	#what-included-section #jeep-and-cash span {
+		font-size: 22px;
+	}
+	#what-included-section #jeep-bivy {
+		bottom: 20px;
+		right: 0;
+		padding: 5px 0;
+		width: 85%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+	}
+	#what-included-section {
+		padding-bottom: 50px;
+	}
+}
+@media (max-width: 390px) {
+	#what-included-section #jeep-and-cash,
+	#what-included-section #jeep-bivy {
+		width: 90%;
+	}
+	#what-included-section #jeep-and-cash {
+		top: 30px;
+		width: 200px;
+	}
+	#what-included-section #jeep-and-cash span {
+		font-size: 20px;
+	}
+	#what-included-section #jeep-bivy {
+		width: 90%;
+	}
+}
+@media (max-width: 320px) {
+	#what-included-section #jeep-and-cash,
+	#what-included-section #jeep-bivy {
+		font-size: 13px;
+	}
+	#what-included-section #jeep-and-cash {
+		top: 30px;
+		width: 200px;
+	}
+	#what-included-section #jeep-and-cash span {
+		font-size: 16px;
+	}
+} */
+
+/* Bravery Tour */
+#bravery-tour-section {
+	background-color: #ffffff;
+	text-align: center;
+}
+#bravery-tour-section .stfw-col-left,
+#bravery-tour-section .stfw-col-right {
+	padding-top: 50px;
+}
+#bravery-tour-section h3 {
+	text-align: left;
+}
+#bravery-tour-section p {
+	padding: 0 200px;
+	/* font-size: 20px !important; */
+}
+#bravery-tour-section h4 {
+	padding-top: 50px;
+}
+#bravery-tour-section h4 span {
+	padding: 10px 30px 13px 30px;
+	transition: all 0.3s;
+	border: 1px solid #000;
+	color: #ffffff;
+	background-color: #000;
+	font-weight: 700;
+}
+#bravery-tour-section ul {
+	list-style-type: none;
+	padding: 0;
+	text-align: left;
+}
+#bravery-tour-section ul li {
+	padding-bottom: 10px;
+	/* font-size: 20px !important; */
+	/* 	border: 1px solid blue; */
+}
+#bravery-tour-section ul li:before {
+	content: '\2022  ';
+	content: '\203A  ';
+	content: '\25B8  ';
+	content: '\2714  ';
+	content: '\2714  ';
+}
+#bravery-tour-section ul li ul {
+	padding-left: 50px;
+}
+#bravery-tour-section ul li ul li {
+	padding-top: 10px;
+}
+#bravery-tour-section ul li ul li.sam-inline-li {
+	display: inline;
+	padding-right: 20px;
+}
+@media (max-width: 1000px) {
+	#bravery-tour-section {
+		padding-bottom: 60px;
+	}
+	#bravery-tour-section p {
+		padding: 0 0;
+		line-height: 22px;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 600px) {
+	#bravery-tour-section h4 {
+		width: 100%;
+		padding-top: 30px;
+	}
+	#bravery-tour-section h4 span {
+		font-weight: 600;
+		padding: 10px;
+	}
+}
+@media (max-width: 500px) {
+	#bravery-tour-section {
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+	#bravery-tour-section h4 {
+		font-size: 16px !important;
+		padding: 6px;
+		background-color: #000;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.5px;
+	}
+	#bravery-tour-section h4 span {
+		font-weight: 600;
+		padding: 0;
+	}
+}
+
+.bravery-tour-icon-section {
+	background-color: #ebebeb;
+	color: #ffffff;
+	text-align: center;
+}
+.bravery-tour-icon-section .stfw-row {
+	background-color: #000;
+	margin-left: 10px;
+}
+.bravery-tour-icon-section img {
+	width: 700px;
+	height: auto;
+}
+.bravery-tour-icon-section .col-xs-6:first-child {
+	border-right: 4px solid #4a4a4a;
+}
+#bravery-tour-section-map {
+	background-color: #fff;
+	padding-bottom: 30px;
+}
+#bravery-tour-section-map h3 {
+	font-weight: 600;
+	border-left: 4px solid #bd0202;
+	padding-left: 20px;
+	text-align: left;
+	margin-top: 30px;
+	line-height: 40px;
+	letter-spacing: 0.5px;
+	word-spacing: -1px;
+}
+#bravery-tour-section-map h3 div {
+	padding-bottom: 10px;
+}
+#bravery-tour-section-map h3 div span {
+	color: #bd0505;
+}
+#bravery-tour-section-map .jeep-map-location-wrapper {
+	min-height: 500px;
+	padding-bottom: 10px;
+}
+#bravery-tour-section-map .jeep_tour_map {
+	height: 500px;
+	width: auto;
+}
+#bravery-tour-section-map h2 {
+	padding-bottom: 20px;
+}
+#bravery-tour-section-map .jeep_location_list ul {
+	float: left;
+	padding-right: 50px;
+}
+#bravery-tour-section-map .jeep_location_list ul li {
+	font-size: 2rem !important;
+	font-weight: 500;
+	padding-bottom: 8px;
+}
+#bravery-tour-section-map .jeep_location_list ul li span {
+	color: #bd0202;
+}
+@media (max-width: 1600px) {
+	#bravery-tour-section-map .jeep-map-location-wrapper {
+		min-height: 450px;
+	}
+	#bravery-tour-section-map .jeep_tour_map {
+		height: 450px;
+	}
+	#bravery-tour-section-map .jeep_location_list ul {
+		padding-right: 20px;
+	}
+}
+@media (max-width: 1400px) {
+	#bravery-tour-section-map .col-md-7,
+	#bravery-tour-section-map .col-md-5 {
+		width: 100%;
+	}
+	#bravery-tour-section-map .jeep-map-location-wrapper {
+		min-height: auto;
+	}
+	#bravery-tour-section-map .jeep_tour_map {
+		width: 100%;
+		height: auto;
+	}
+	#bravery-tour-section-map .jeep_location_list ul {
+		width: 50%;
+	}
+	#bravery-tour-section-map h3 {
+		font-size: 22px !important;
+	    margin-top: 20px;
+	    line-height: 30px;
+	    letter-spacing: 0.8px;
+	    word-spacing: 1px;
+		text-transform: initial;
+		font-weight: 500;
+	}
+}
+@media (max-width: 670px) {
+	#bravery-tour-section-map .jeep_tour_map {
+		margin-bottom: -15px;
+	}
+	#bravery-tour-section-map .jeep_location_list ul {
+		padding: 0 0 0 15px;
+		width: 55%;
+	}
+	#bravery-tour-section-map .jeep_location_list ul:first-child {
+		width: 45%;
+	}
+	#bravery-tour-section-map h3 {
+		font-size: 20px !important;
+	    margin-top: 10px;
+	    line-height: 28px;
+		text-align: justify;
+	    letter-spacing: 1px;
+	    word-spacing: -1px;
+	}
+}
+@media (max-width: 500px) {
+	#bravery-tour-section-map h3 {
+		font-size: 17px !important;
+	    margin-top: 10px;
+	    line-height: 26px;
+	    letter-spacing: 0.5px;
+	    word-spacing: -1px;
+		padding-left: 10px;
+	}
+	#bravery-tour-section-map .jeep_location_list ul li {
+		font-size: 1.5rem !important;
+	}	
+}
+@media (max-width: 390px) {
+	#bravery-tour-section-map h3 {
+		font-size: 16px !important;
+	}
+}
+@media (max-width: 375px) {
+	#bravery-tour-section-map .jeep_location_list ul,
+	#bravery-tour-section-map .jeep_location_list ul:first-child {
+		width: 100%;
+	}
+	#bravery-tour-section-map h3 {
+		font-size: 18px !important;
+	}
+}
+
+
+
+
+
+.bravery-tour-section-black {
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+}
+@media (max-width: 670px) {
+	.bravery-tour-section-black img {
+		width: 100%;
+		height: auto
+	}	
+}
+
+#bravery-tour-section-map img {
+	width: 100%;
+	height: auto;
+	box-shadow: 2px 2px 8px #000;
+}
+#bravery-tour-section-updates {
+	background-color: #ffffff;
+	
+}
+#bravery-tour-section-updates img {
+	width: 90%;
+	height: auto;
+	box-shadow: 2px 2px 8px #000;
+	aspect-ratio: 16/9;
+}
+#bravery-tour-section-updates .iframe_player {
+	padding: 0;
+	aspect-ratio: 16/9;
+	box-shadow: 2px 2px 8px #000;
+	height: auto;
+    width: 90%;
+}
+#bravery-tour-section-updates .stfw-col-left h3 {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: -50px;
+}
+#bravery-tour-section-updates .stfw-col-left h3 {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: -60px;
+	color: #005178;
+}
+#bravery-tour-section-updates h3.jeep-more-updates {
+	display: block;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#bravery-tour-section-updates h3.jeep-more-updates a {
+	padding: 10px 30px 13px 30px;
+	transition: all 0.3s;
+	border: 1px solid #000;
+	color: #ffffff;
+	background-color: #000;
+}
+#bravery-tour-section-updates h3.jeep-more-updates a:hover {
+	background-color: #fff;
+	color: #000;
+}
+div#storemapper #storemapper-left, 
+div#storemapper #storemapper-right {
+	height: 800px !important;
+}
+@media (max-width: 992px) {
+	#bravery-tour-section-updates h2.jeep-section-title {
+		padding-bottom: 20px;
+	}
+	#bravery-tour-section-updates .iframe_player {
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+	#bravery-tour-section-updates img {
+		width: 100%;
+		margin: 10px 0 0 0;
+		aspect-ratio: 16/9;
+	}
+	#bravery-tour-section-updates .stfw-col-left h3 {
+		position: relative;
+		bottom: 20px;
+		padding-bottom: 30px;
+		font-size: 26px !important;
+	}
+	#bravery-tour-section-updates h3.jeep-more-updates {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+}
+@media (max-width: 670px) {
+	#bravery-tour-section-updates .stfw-col-left h3 {
+		padding-bottom: 20px;
+		font-size: 20px !important;
+	}
+}
+
+
+/* About Us */
+#jeep-about-us-section {
+	text-align: center;
+	background-color: #ebebeb;
+	padding-bottom: 100px;
+}
+#jeep-about-us-section h2.jeep-section-title {
+	margin-bottom: 60px;
+}
+#jeep-about-us-section .stfw-div-middle {
+	top: calc(50% - 5px);
+}
+#jeep-about-us-section img#about_us_img {
+	width: 80%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px 8px #000;
+}
+#jeep-about-us-section img#about_us_playbtn {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: none !important;
+	opacity: 0.8;
+}
+#jeep-about-us-section img#about_us_playbtn:hover {
+	opacity: 1.0;
+	cursor: pointer;
+}
+#jeep-about-us-section .stfw-div-middle h3 {
+	text-align: left;
+	color: #005178;
+}
+#jeep-about-us-section .stfw-div-middle p {
+	/* font-weight: 500; */
+	text-align: left;
+	padding-right: 10px;
+	/* font-size: 20px !important; */
+}
+@media (max-width: 1000px) {
+	#jeep-about-us-section {
+		padding-bottom: 40px;
+	}
+	#jeep-about-us-section h2.jeep-section-title {
+		margin-bottom: 30px;
+	}
+	#jeep-about-us-section img#about_us_img {
+		position: relative;
+		width: 100%;
+		left: 0;
+		top: 0;
+		transform: translate(0,0);
+		margin: 10px 0 20px 0;
+	}
+	#jeep-about-us-section img#about_us_playbtn {
+		width: 100px;
+		top: 50%;
+	}
+	#jeep-about-us-section .stfw-col-left,
+	#jeep-about-us-section .stfw-col-right {
+		min-height: auto;
+	}
+}
+@media (max-width: 670px) {
+	#jeep-about-us-section img#about_us_playbtn {
+		width: 80px;
+	}
+}
+
+
+/* FAQ */
+#jeep-faq-section {
+	border-bottom: 1px solid #ebebeb;
+}
+#jeep-faq-section .container-fluid {
+	padding: 0;
+}
+#jeep-faq-section .container-fluid img {
+	width: 100%;
+	height: auto;
+}
+#jeep-faq-section .faq-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	opacity: 0.65;
+} 
+#jeep-faq-section h2.jeep-section-title {
+	margin-bottom: 20px;
+}
+#jeep-faq-section h2.jeep-section-title span {
+	display: block;
+	border: 1px solid #fff;
+	padding: 10px 0;
+	color:#fff;
+}
+#jeep-faq-section .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+}
+#jeep-faq-section .panel {
+	border-radius: 0;
+	opacity: 0.7;
+	border: 2px solid #ffffff;
+}
+
+
+#jeep-faq-section .panel-title>a {
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none !important;
+    background-color: #f1f1f1;
+    display: block;
+}
+#jeep-faq-section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	font-size: 16px;
+}
+#jeep-faq-section .panel-default >.panel-heading a[aria-expanded="false"]:after {
+    content: "\002b";
+    transform: rotate(90deg);
+	position: relative;
+	top: 6px;
+	font-size: 12px;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	float: right;
+	transition: transform .25s linear;
+}
+#jeep-faq-section .panel-default > .panel-heading a[aria-expanded="true"]:after {
+	content: "\2212";
+	transform: rotate(180deg);
+}
+#jeep-faq-section .panel-default >.panel-heading a:after {
+	content: "";
+	position: relative;
+	top: 4px;
+	font-size: 14px;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	float: right;
+	transition: transform .25s linear;
+}
+@media (max-width: 1000px) {
+	#jeep-faq-section .container {
+		width: calc(100% - 60px);
+	}
+}
+@media (max-width: 670px) {
+	#jeep-faq-section h2.jeep-section-title span {
+		font-size: 24px;
+	}
+	#jeep-faq-section .panel {
+		margin-bottom: 12px;
+	}
+	#jeep-faq-section .panel:last-child {
+		margin-bottom: 30px;
+	}
+	#jeep-faq-section .panel-title {
+		font-size: 16px !important;
+	}
+}
+@media (max-width: 600px) {
+	#jeep-faq-section h2.jeep-section-title span {
+		font-size: 22px;
+	}
+	#jeep-faq-section .panel-title {
+		font-size: 16px !important;
+	}
+}
+
+
+
+
+
+/* Final Paragraph */
+#final-para-section {
+	background-color: #000;
+	color: #fff;
+	border-bottom: 1px solid #ebebeb;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+#final-para-section h3 {
+	font-weight: 600;
+	border-left: 4px solid #bd0202;
+	padding-left: 20px;
+	text-align: left;
+	line-height: 36px;
+}
+#final-para-section a {
+	color: #03A9F4
+}
+#final-para-section a:hover {
+	font-style: italic;
+}
+@media (max-width: 670px) {
+	#final-para-section p {
+		text-align: justify
+	}
+}
+
+
+/* Modal */
+.modal-content {
+	width: 600px;
+	left: calc(50% - 300px);
+	box-shadow: 2px 2px 8px #000;
+	
+}
+.modal-body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.modal-footer .btn {
+	background-color: #000;
+	color: #fff;
+}
+.modal-footer .btn:hover {
+	background-color: #bd0202;
+}
+
+
+
+/* Drum Roll Please */
+#drum-roll-section {
+	padding: 30px 0 70px 0;
+}
+#drum-roll-section img {
+	width: 100%;
+	height: 100%;
+	padding-left: 30px;
+}
+@media (max-width: 1200px) {
+	#drum-roll-section {
+		padding: 30px 0 0px 0;
+	}
+}
+@media (max-width: 991px) {
+	#drum-roll-section {
+		padding: 10px 0 0 0;
+	}
+	#drum-roll-section img {
+		padding: 0 10px;
+		margin-bottom: 50px;
+	}
+	#drum-roll-section .stfw-col-left {
+		min-height: auto;
+		padding: 0 20px 20px 20px;
+	}
+	#drum-roll-section .stfw-col-right {
+		min-height: auto;
+	}
+}

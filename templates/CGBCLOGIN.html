@@ -1,0 +1,214 @@
+<!--Seg:Open-->
+<style>
+  .custom_table_header {
+    background-color: #03538C;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: none; 
+  }
+</style>
+
+<form name="f" method="POST" action="@&PGM " novalidate>
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+  <input type="hidden" name="SIVIEW" value="@&SIVIEW ">
+  <input type="hidden" name="SIEMAL"  id="SIEMAL" value="">
+  <input type="hidden" name="SIUSERP" id="SIUSERP" value="">
+  <input type="hidden" name="SIPUTSL" id="SIPUTSL" value="@&SIPUTSL ">
+  <input type="hidden" name="SISTMODE" id="SISTMODE" value="@&SISTMODE ">
+
+  <main class="sign-in">
+    <div class="container">
+      <div class="sign-in__wrapper">
+<!--End:Open-->
+
+<!--Seg:Main1-->
+    <form action="javascript:void(0)" data-parsley-validate="">    
+		<div class="row row-eq-height">
+          <div class="col-md-6 left">
+            <h3 class="sign-in__title">Sign In</h3>
+              <p class="sign-in__subtitle">If you have an account with us please enter your user name and password below and we'll log you in!</p>
+			  
+			   <div class="alert alert-danger" id="passwordMsg"  style="@&DISP ">
+				We have upgraded our site and you will be required to reset your password for security purposes. 
+				Click <a href="javascript:void(0)" onclick="submit_Rfno('f','@&USER ','RSTPASS')">HERE</a> to receive an email with password reset instructions.
+			   </div>
+                <div class="form-group"><label for="SIUSER">User Name*</label><input type="text" id="SIUSER" name="SIUSER" value="@&SIUSER " class="form__input full no-outline" required="required" autocomplete="off" onkeypress="EnterActn('LOGIN',event)"></div>
+                <div class="form-group"><label for="SIPSWD">Password*</label><input type="password" id="SIPSWD" name="SIPSWD" class="form__input full no-outline" required="required" minlength="7" autocomplete="off" onkeypress="EnterActn('LOGIN',event)"></div>
+                <div class="form-group"><a href="#" data-toggle="modal" data-target="#forgotpass">Forgot your password ?</a></div>
+                <div class="form-group"><a href="#" data-toggle="modal" data-target="#forgotuser">Forgot your username ?</a></div>
+                <div class="form-submit">
+                  <div class="create-account">New to U.S. Patriot? <a href="/CGBCSRPU?PMTYPE=I">Create Your Account</a></div>
+                  <a href="javascript:void(0)" onclick="submit_form('f','LOGIN')" class="btn btn_xs btn--orange btn_submit">Sign In</a>
+                </div>
+				<div class="form-submit"><a href="/support-request">Contact Us</a></div>
+            </div>
+            <div class="col-md-6 right" style="@&DSPNEW ">
+              <h3 class="sign-in__title">New Customers</h3>
+              <p class="sign-in__subtitle">Welcome! We're happy to have you join the family. Create your new account by clicking the link below.</p>
+              <a href="/CGBCSRPU?PMTYPE=I" class="btn btn_xs btn--orange btn_submit">Create an Account</a>
+              <h5 style="padding-top:15px;">Why Register?</h5>
+              <span>Account holders have access to customized features such as:</span>
+              <ul>
+                <li>Saved billing and shipping addresses</li>
+                <li>Saved cart - any items left in your cart are retained on your next visit</li>
+                <li>Access to account history and order status for all your orders</li>
+                <li>Shopping lists for ordering convenience</li>
+              </ul>
+            </div>
+			<div class="col-md-6 right" style="@&DSPOH ">
+              <h3 class="sign-in__title">Order Status</h3>
+              <p class="sign-in__subtitle">To check ths status of your order, please your order number and email address.</p>
+                <div class="form-group"><label for="SIEMAL2">E-mail Address*</label><input type="text" id="SIEMAL2" name="SIEMAL2" value="@&SIEMAL2 " class="form__input full no-outline" required="required" autocomplete="off" onkeypress="EnterActn('ORDER',event)"></div>
+                <div class="form-group"><label for="SIOHNO">Order Number*</label><input type="text" id="SIOHNO" name="SIOHNO" value="@&SIOHNO " class="form__input full no-outline" required="required"  autocomplete="off" onkeypress="EnterActn('ORDER',event)"></div>
+                <div class="form-submit">
+                  <a href="javascript:void(0)" onclick="submit_form('f','ORDER')" class="btn btn_xs btn--orange btn_submit">Submit</a>
+                </div>
+              
+            </div>
+          </div>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!--Modal Password-->
+
+<div class="modal about" id="forgotpass" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Reset Password</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Submit the user name associated with your account and we'll email you with password reset instructions</p>
+              <form action="javascript:void(0)" data-parsley-validate="" novalidate>
+                <div class="form_group"><label for="username">User Name*</label>
+                  <input type="text" size="30" maxlength="50" name="SIUSERPx" id="SIUSERPx" class="form__input full no-outline" required="required">
+                  <span id="modalErrorPass" style="color:red;font-weight:bold;"></span>
+                </div><br>
+                <button class="btn btn_sm btn--orange" onclick="submitPass()">Reset password</button>&nbsp;&nbsp;<button href="#" class="btn btn_sm btn--orange" data-dismiss="modal" onclick='clearFields("SIUSERPx")'>Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--Modal Username-->
+
+<div class="modal about" id="forgotuser" tabindex="-1" role="dialog" aria-labelledby="brandAboutModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Request Username</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Submit the email address associated with your account and we'll send your Username</p>
+              <form action="javascript:void(0)" data-parsley-validate="" novalidate>
+                <div class="form_group"><label for="username">Email Address*</label>
+                  <input type="text" size="30" maxlength="50" name="SIEMALx" id="SIEMALx" class="form__input full no-outline" required="required">
+                  <span id="modalErrorUser" style="color:red;font-weight:bold;"></span>
+                </div><br>
+                <button class="btn btn_sm btn--orange" onclick="submitUser()">Send username</button>&nbsp;&nbsp;<button class="btn btn_sm btn--orange" data-dismiss="modal" onclick='clearFields("SIEMALx")'>Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</form>
+
+<script>
+  function submitPass(){
+    var user = document.getElementById('SIUSERPx').value;
+    if (user === ""){
+      $('#modalErrorPass').html('User name is required');
+      return
+    };
+    document.getElementById('SIUSERP').value = user;
+    submit_form('f','SENDPSWD');
+  }
+  function submitUser(){
+    var email = document.getElementById('SIEMALx').value;
+    if (email === ""){
+      $('#modalErrorUser').html('Email is required');
+      return
+    };
+    document.getElementById('SIEMAL').value = email;
+    submit_form('f','SENDUSER');
+  }
+  function clearFields(field){
+    document.getElementById(field).value = "";
+    document.getElementById('modalErrorPass').innerText = "";
+    document.getElementById('modalErrorUser').innerText = "";
+  }
+  function validate(){
+    var usr = document.getElementById('SIUSER').value;
+    var psw = document.getElementById('SIPSWD').value;
+    var testForm = document.getElementById("mainForm");
+    if (testForm.checkValidity() === false){
+      return false;
+    } else {
+      submit_form('f','LOGIN');
+    }
+  }
+  function openThisModal(modalID){
+    if (modalID){
+      $('#'+modalID.id).modal('show');
+    }
+  }
+</script>
+<!--End:Main1-->
+
+<!--Seg:Multiple-->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive" style="margin:auto;">
+        <input type="hidden" name="SIPSWD" value="@&SIPSWD ">
+        <input type="hidden" name="SIUSER" value="@&SIUSER ">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="custom_table_header">Select</th>
+              <th class="custom_table_header">Agency#</th>
+              <th class="custom_table_header">Agency</th>
+            </tr>
+          </thead>
+          <tbody>
+<!--End:Multiple-->
+
+<!--Seg:Agencyrow-->
+            <tr>
+              <td nowrap align="left"><strong>@&SLCT </strong></td>
+              <td nowrap align="left"><strong>@&ACNO </strong></td>
+              <td nowrap align="left"><strong>@&NAME </strong></td>
+            </tr>
+<!--End:Agencyrow-->
+
+<!--Seg:closeTable-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</form>
+<!--End:closeTable--> 

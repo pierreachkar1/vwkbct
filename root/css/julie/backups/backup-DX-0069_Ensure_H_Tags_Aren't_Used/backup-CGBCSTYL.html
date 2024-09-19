@@ -1,0 +1,593 @@
+<!--Seg:Open-->
+<script language="JavaScript">
+  $( document ).ready(function() {
+  $("img.lazy").lazyload({ threshold : 3400 });
+  });
+  
+  function closeVasModel() {
+    $("#SIE1NOE").val('');
+    $("#customizeModal").modal("hide");
+  }
+  </script>
+  
+  <style>
+  .hideinactv{display:none}
+  .slick-slide.hideinactv  {visibility:hidden}
+  .slick-slide.hideinactv.slick-active{visibility:visible}
+  </style>
+  <!--TURNTO CONFIGURATION-->
+  <script>
+    var turnToConfig = {
+      sku:"@&STYL ",
+      locale: "en_US",
+      pageId: "pdp-page",
+      chatter: {
+        // onFinish: function(){
+        //   samOverlayChatterSC();
+        // }
+      },
+      qa: {
+        // onFinish: function(){}
+        // For Community Q&A Widgets
+      },
+      reviewsList: {
+        // onFinish: function(){
+        //   samTTReviewsListCompleted();
+        // }
+      }
+  };
+    window.TurnToCmd=window.TurnToCmd||function(){(TurnToCmd.q=TurnToCmd.q||[]).push(arguments)};
+  </script>
+  <script src="https://widgets.turnto.com/v5/widgets/@&SITEKEY /js/turnto.js" async></script>
+  <!--END TURNTO CONFIGURATION-->
+  
+  
+  
+  
+  
+  <form name="f" id="styleForm" method="POST" action="@&PGM ">
+  <main class="product sam-pdp-main">
+    <input type="hidden" id="SIACTN" name="SIACTN" value="">
+    <input type="hidden" name="SIRFNO" value="">
+    <input type="hidden" name="SIMODE" value="@&SIMODE ">
+    <input type="hidden" name="SIWTNO" id="SIWTNO" value="@&SIWTNO ">
+    <input type="hidden" id="style" name="SISTYL" value="@&SISTYL ">
+    <input type="hidden" id="turntoKey" name="turntoKey" value="@&SITEKEY ">
+    <input type="hidden" name="SICDNO"  id="SICDNO"  value="@&SICDNO ">
+    <input type="hidden" name="SIE1NOE"  id="SIE1NOE"  value="@&SIE1NOE ">
+    <input type="hidden" name="fromCart"  id="fromCart"  value="@&FROMCART ">
+    <input type="hidden" name="SISORE"  id="SISORE"  value="@&SISORE ">
+    <input type="hidden" name="SIINFO"  id="SIINFO"  value="@&SIINFO ">
+    <input type="hidden" id="imageList" name="imageList" value="">
+    <input type="hidden" id="thumbnailList" name="thumbnailList" value="">
+    <input type="hidden" id="imageListI" name="imageListI" value="">
+    <input type="hidden" id="thumbnailListI" name="thumbnailListI" value="">
+    <input type="hidden" id="noImageFound" name="noImageFound" value="">
+    <input type="hidden" id="drpActn"  value="">
+    <input type="hidden" name="SIVAS" value="@&SIVAS " id="SIVAS">
+    <input type="hidden" name="vasable" value="@&VASABLE " id="vasable">
+    <input type="hidden" name="requiredvas" value="@&REQUIREDVAS " id="requiredvas">
+    <input type="hidden" name="SISRCHG" value="@&SISRCH " id="SISRCH">
+    <input type="hidden" value="@&OPVARR " id="optnarray">
+    <input type="hidden" name="SICANCEL" value="@&SICANCEL " id="SICANCEL">
+  
+  
+      <div class="container">
+  <!--End:Open-->
+  
+  
+  <!--Seg:StyleMain-->
+        <div class="row">
+          <div class="col-sm-12 pdp-breadcrumb-col">
+            <ol class="breadcrumb product__breadcrumb">
+              @&BRDCR <!--BreadCrumb-->
+            </ol>
+           
+            <div id="tt-teaser-widget"></div> <!--TurnTo Teaser-->
+  
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="SIEDP" value="@&SIEDP " id="SIEDP">
+      
+      <div class="container product__header">
+        <div class="row">
+          <div class="col-md-6 left hidden-xs hidden-sm">
+            <div class="product__gallery hidden-xs hidden-sm">
+              <div class="product__thumbnails @&DSPTH ">
+  
+                <a href="javascript:void(0)" class="product__thumbnails--arrow prev btn-block text-center" id="product__thumbnails--prev"><svg class="icon caret--black-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-up"></use></svg></a>
+                <div class="product__thumbnails--scroll" id="product__thumbnails--scroll">
+                    <div  id="hiddenOverflow">
+                      @&ALTIMG  <!--GalleryImages-->
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="product__thumbnails--arrow next" id="product__thumbnails--next"><svg class="icon caret--black-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#caret--black-down"></use></svg></a>
+              </div>
+              <div class="product__gallery--image @&DSPNG " id="galleryMain">
+                <a href="javascript:void(0)" class="product__gallery--zoom" data-zoom="product__gallery--active" data-zoom-title="">
+                  <svg class="icon zoom">
+                    <use xlink:href="images/sprite.svg#zoom"></use>
+                  </svg>
+                </a>
+                <img src="@&DOMN @&PATH @&ZIMG " class="product__gallery--active" id="product__gallery--active" alt="@&FALT " data-zoom="product__gallery--active">
+                <div id="videoDiv" class="hidden"></div>
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 right">
+  
+            <!--1 of 4: For Transitional/Cancelled Message-->
+            <span id="samTranCanMsgSpanNew" style="display: none;">
+              <h4>@&PRIC </h4>
+              <span class="samTranCanMsgNew">This item has been discontinued.</span>
+            </span> 
+            
+            <div class="product__info" id="sam_main_product__info">  <!--2 of 4: For Transitional/Cancelled Message-->
+  
+              <!--Brossam: Note-->
+              GTGIFTS
+              
+  
+              <!--1. Brossam Image Zoom on Mobile Click-->
+              <span id="samPDPImageZoom"></span>
+              <!--1. END Brossam Image Zoom on Mobile Click-->
+  
+  
+  
+              <!--Product Title, Brand, Price-->
+              <div class="product__box__upper">
+                <div class="product__title--item">
+                  <span class="product__brand">@&BRND </span>
+                </div>
+                <div class="product__title">
+                  <h1>@&H1SC </h1>
+                </div>
+                <div class="product__title--item">
+                  <span class="sku">Item# @&STYL </span><span id="mfgn">@&MFGN </span><!--Manuf.-->
+                </div>
+                <span class="rizi_pdp_h4 product__price discounted" id="priceMsg">@&PRIC </span>
+              </div>
+              <!--END Product Title, Brand, Price-->
+  
+  
+              <div class="hidden" id="allmobileinitial">
+        @&ALTIMGM  <!--GalleryImages-->
+        </div>
+              <div class="product__mobile-slider visible-xs visible-sm" id="product__mobile-slider">
+                
+              </div>
+  
+              <!--2. Brossam Image Zoom on Mobile Click-->
+              <div id="samPDPZoomIconDiv"></div>
+              <!--2. END Brossam Image Zoom on Mobile Click-->
+  
+              <!--BROSSAM - Product Not Available DIV-->
+              <div id="sam--product--not--available">@&RSTR </div>
+              <!--BROSSAM - END Product Not Available DIV-->
+  
+              <div class="product__options @&DSPOPTN ">
+                <div class="markdown-box @&DSPLC ">
+                    <label class="form__checkbox">
+                        @&SICLER <span class="fake-checkbox"></span>
+                          Show only markdown color/sizes
+                    </label>
+                </div>
+            
+              <input type="hidden" name="SIOPV1P" id="SIOPV1P" value="@&SIOPV1 ">
+              <input type="hidden" name="SIOPV2P" id="SIOPV2P" value="@&SIOPV2 ">
+              <input type="hidden" name="SIOPV3P" id="SIOPV3P" value="@&SIOPV3 ">
+  
+  
+  
+    <!--OPV1/Color Section-->
+                <div class="product__options--row @&DSPOPV1 ">
+                  <div class="product__options--row-label">
+                    <label class="form__label mr-1" id="origDesc1" >@&OPD1 </label>
+                    <label class="form__label black product__options--selected" id="product__options--color-selected">@&OPD1S </label>
+                    &nbsp;&nbsp;&nbsp;@&SIZE1 &nbsp;&nbsp;&nbsp;@&COPY1 <!-- -->
+                  </div>
+                  <ul class="product__options--list product__options--@&TYPE1  choices" data-text="product__options--color-selected" id="opv1UL">
+                    @&BOXOPV1 <!--OPV1-->
+                  </ul>
+                  <input type="hidden" name="SIOPV1" id="SIOPV1" class="styleOption" requ="@&REQ1 " mesg="@&OPD1 " value="@&SIOPV1 ">
+                </div>
+    <!--Opv2 Section-->
+                <div class="product__options--row @&DSPOPV2 ">
+                  <div class="product__options--row-label">
+                    <label class="mr-1 form__label" id="origDesc2">@&OPD2 </label>
+                    <label class="mr-1 form__label black" id="product__options--size">@&OPD2S </label>
+                    &nbsp;&nbsp;&nbsp;@&SIZE2 &nbsp;&nbsp;&nbsp;@&COPY2 <!-- -->
+                  </div>
+                  <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size" id="opv2UL">
+                    @&BOXOPV2 <!--OPV2-->
+                  </ul>
+                  <input type="hidden" name="SIOPV2" id="SIOPV2" class="styleOption" requ="@&REQ2 " mesg="@&OPD2 " value="@&SIOPV2 ">
+                </div>
+    <!--Opv3 Section-->
+                <div class="product__options--row @&DSPOPV3 ">
+                  <div class="product__options--row-label">
+                    <label class="mr-1 form__label" id="origDesc3">@&OPD3 </label>
+                    <label class="mr-1 form__label black" id="product__options--size2">@&OPD3S </label>
+                  </div>
+                  <span style="color:#007ac2" class="rizi_pdp_h6 @&DSPHM " id="prehemmedMesg">Pre-hemmed Sizes</span>
+                  <ul class="product__options--list product__options--boxes product__options--size choices" data-text="product__options--size2" id="opv3UL">
+                    @&BOXOPV3 <!--OPV3-->
+                  </ul>
+                  <input type="hidden" name="SIOPV3" id="SIOPV3" class="styleOption" requ="@&REQ3 " mesg="@&OPD3 " value="@&SIOPV3 ">
+  
+                  <label for="SIHEMD" id="samHemmingLabel">
+                    <span class="rizi_pdp_h6 hemming-title @&DSPHM ">Custom hemming
+                      <label class="form__checkbox" style="margin-bottom:-3px;" for="SIHEMD">
+                        <input type="checkbox" name="SIHEMD" ID="SIHEMD" @&HEMD  value="Y" onchange="toggleHemming()">
+                        <span class="fake-checkbox"></span>
+                        <!--BROSSAM-->
+                        <small class="form__label hemming-label"><s>&#36;6.99</s> Now &#36;3.99. <span style="color: #E50000">Please allow @&LDTM  days for hemming</span></small>
+                      </label>
+                    </span>
+                  </label>
+                    <!-- <small class="form__label hemming-label" style="">Please allow @&LDTM  day(s) for hemming</small></label></h6></label> -->
+                  <ul class="product__options--list product__options--boxes product__options--size choices @&DSPHML " data-text="product__options--size2" id="opv3ULH">
+                    @&OPV3HEM <!--HEMMING-->
+                  </ul>
+                  <div id="hemmingMesg">@&HEMMSG </div>
+                </div>
+  
+    <!--VAS -->
+                <div class="product__options--row @&DSPVAS " id="vasbutton" >
+                  <a href="javascript:void(0)"  class="btn btn_sm btn--white btn_outline-blue customize-button">Customize</a>
+                </div>
+  
+                    <span class="product__stock-warning" id="stockMsg">@&STKMSG </span>  
+                    <span style="width:100%;float:left;" id="SIRIMSG">@&RIDMSG </span>
+                    <span class="clearMsg" id="clearMsg">@&CLRMSG </span>
+  
+  
+                    <span id="samTranCanMesg"></span> <!--3 of 4: For Transitional/Cancelled Message-->
+  
+  
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 product__qty @&DSPOPTN ">
+                    @&SIQTY <!--Qty DropDown--> 
+                    <span style="display: inline-block;font-size: 18px;margin-left:10px;" class="qtyPrice hidden-lg hidden-md"></span>
+                  </div>
+                    <div class="col-md-9 col-sm-12" id="samPDPAddToCartDiv">
+                      <a href="javascript:void(0)" onclick="addToCartItem()" id="samPDPAddToCartBtn" class="btn btn_lg btn-block btn--orange vwo-addtocart @&DSPLADD " >Add To Cart</a>
+                      <a href="javascript:void(0)" onclick="submit_form('f','ADDTO');" class="btn btn_lg btn--blue @&DSPLADDU ">@&ADDTOLBL </a>
+                      <a href="/CGBCSHPFL?PMKEY=RESET" class="btn btn_lg btn--white @&DSPLADDU ">@&SHNOLBL </a> 
+                    </div>
+                </div> 
+          
+          </div>
+            </div><!-- Product Info end -->
+  
+  
+            <!--4 of 4: For Transitional/Cancelled Message-->
+            <div class="product__info" id="samTranCanMsgSpanMobile" style="display: none;">
+              <h4>@&PRIC </h4>
+              <span class="samTranCanMsgNew">This item has been discontinued.</span>
+            </div> 
+            <div class="product__info" id="samTranCanSubstitute"></div>
+            <div class="product__info" id="samTranCanSimilar"></div>
+            <!--END-->
+  
+  
+            <div class="social-box clearfix">
+              <div class="addthis_inline_share_toolbox"></div>
+              <div class="wishlist-box"><a href="javascript:void(0)" onclick="addToList('I','','@&SISTYL ');" class="@&DSPLADD ">Add To Wishlist</a>  
+              <!-- Go to addthis Sharing Tool -->
+              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b214f8752ccf392"></script>
+            </div>
+            </div><!-- Product Column End -->
+          
+          <!-- </span> -->
+              
+            </div>
+        </div>
+  
+        <!--SizeChartModal-->
+        <div class="modal size-chart" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="sizeChartModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon close--modal">
+                    <use xlink:href="images/sprite.svg#close--modal"></use>
+                  </svg>
+                </button>
+                <h4 class="modal-title" id="sizeChartModalLabel">Size Chart</h4>
+              </div>
+              <div class="modal-body">@&SIZEC </div>
+            </div>
+          </div>
+        </div>
+  
+        <!--copyModal-->
+        <div class="modal size-chart" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="copyModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon close--modal">
+                    <use xlink:href="images/sprite.svg#close--modal"></use>
+                  </svg>
+                </button>
+                <h4 class="modal-title" id="copyModalLabel">Helpful info</h4>
+              </div>
+              <div class="modal-body">@&OPCP </div>
+            </div>
+          </div>
+        </div>
+  <!--End:StyleMain-->
+  
+  <!--Seg:longDescription-->
+        <div class="container-fluid pdp-product-detail-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="container pdp-product-details">
+                <div class="product__details">
+                  <div class="row">
+                    <!-- <div class="ccol-md-6 col-lg-6 col-xl-6 product__details--left"> -->
+                    <div class="col-md-6 col-lg-6 col-xl-6 product-details-desc">
+                      <h2 class="hidden-sm hidden-xs"><span>DETAILS</span></h2>
+                      <a class="mobile_collapse--toggle collapsed visible-sm visible-xs" role="button" data-toggle="collapse" href="#productDetails" aria-expanded="false" aria-controls="productDetails"><h6>Details</h6></a>
+                      <div class="mobile_collapse" id="productDetails">
+                        <!-- <h3>@&H1SC </h3> -->
+                        <p itemprop="description">@&INFO </p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6 product-details-features">
+                      <div class="product__specs">
+                        <h2 class="hidden-sm hidden-xs"><span>FEATURES</span></h2>
+                        <a class="mobile_collapse--toggle visible-sm visible-xs" role="button" data-toggle="collapse" href="#productSpecs" aria-expanded="false" aria-controls="productSpecs"><h6>Features</h6></a>
+                        <div class="mobile_collapse collapse in" id="productSpecs">
+                          <div class="row">
+                              @&BULT <!--Bullets-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="product__qa pdp-turnto-customer-qa">
+          <div class="container">
+            
+            <!--Comments Display Widget (Standalone)-->
+            <div class="samTurnToDivBlock">
+              <div id="tt-chatter-widget"></div>  
+            </div>
+  
+            <!--Community Q&A Widget-->
+            <div class="samTurnToDivBlock">
+              <h2>Questions &amp; Answers</h2>
+              <div id="tt-instant-answers-widget"></div>  <!--Instant Answers Widget-->
+              <div id="tt-qa-list"></div> <!--QA List Widget-->
+            </div>
+            
+            <!--Reviews Display Widget-->
+            <div class="samTurnToDivBlock">
+              <h2>Product Ratings &amp; Reviews</h2>
+              <div id="tt-reviews-summary"></div> <!--Reviews Summary-->
+              <div id="tt-reviews-list"></div> <!--Reviews List-->
+            </div>
+  
+            
+  
+          </div>
+        </div>
+  
+  <!--End:longDescription-->
+  
+       
+  
+  <!--Seg:Video-->
+        <img src="http://img.youtube.com/vi/@&VID /default.jpg" zoomV="@&VID " />
+  <!--End:Video-->
+  
+  <!--Seg:Close-->
+  
+        <div class="product__mobile-cta" style="display: none;">
+          <a href="javascript:void(0)" onclick="addToCartItem()" class="btn btn--orange @&DSPLADD " >Add To Cart</a>
+          <a href="javascript:void(0)" onclick="addToList('I','','@&STYL ')" class="btn btn_lg btn--white @&DSPLADD ">Add To List</a>
+          <a href="javascript:void(0)" onclick="submit_form('f','ADDTO');" class="btn btn_lg btn--blue @&DSPLADDU ">Add to My Site</a>
+          <a href="/CGBCSHPFL?PMKEY=RESET" class="btn btn_lg btn--white @&DSPLADDU ">Return to Self Serve</a> 
+        </div>
+      
+      <!--AddThis-->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538fa77131c2df3d" async="async"></script> 
+  
+  
+      <!--Brossam -->
+      GTSAMJSPDP
+  
+      
+  
+      <div class="modal zoom" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg class="icon close--modal">
+                  <use xlink:href="images/sprite.svg#close--modal"></use>
+                </svg>
+              </button>
+              <h4 class="modal-title" id="zoomModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+              <img src="" class="img-zoom img-responsive" id="zoomImage">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Customization Modal-->
+      <div class="modal customize" id="customizeModal" tabindex="-1" role="dialog" aria-labelledby="customizeModalLabel" style="padding-right: 17px;" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" onclick="closeVasModel()" aria-label="Close">
+                <svg class="icon close--modal">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/sprite.svg#close--modal"></use>
+                </svg>
+              </button>
+              <h4 class="modal-title" id="customizeModalLabel">Customize Your Item</h4>
+            </div>
+            <div class="modal-body" id="customBody">
+                  <!--Ajax-->
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+    </main>
+  </form>
+  
+        <script type="application/ld+json">
+          {
+            "@context" : "http://schema.org",
+            "@type" : "Product",
+            "name" : "@&H1SC ",
+            "sku" : "@&STYL ",
+            "mpn" : "@&MFGN ",
+            "@id" : "@&HREF2 ",
+            "url" : "@&HREF2 ",           
+            "description" : "@&INFO ",
+            "image" : "@&HOST /@&IMG ",
+            "brand" : {
+              "@type": "Brand",
+              "name": "@&BRND "
+            },
+            "offers": {
+                  "@type": "AggregateOffer",
+                  "highPrice": "@&TOPR ",
+                  "lowPrice": "@&FRPR ",
+                  "priceCurrency":"USD"
+              }@&RATJSON }
+        </script>
+  
+  <!--End:Close-->
+  
+  <!--Seg:openRecmd-->
+  <link href="/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="/css/owl.theme.default.min.css" rel="stylesheet">
+   
+  <style>
+  
+  /* Brossam - Adjust Attentive */
+  @media (max-width: 600px) {
+    #attentive_overlay #attentive_creative {
+      bottom: 80px !important;
+    }
+  }
+  /* END */
+  
+  .owl-carousel .owl-item .rates img {
+      
+      width: auto;  
+  }
+  .owl-carousel .owl-item .rates {min-height:15px}
+  .recommend.owl-carousel .owl-nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  }
+  .recommend .owl-nav .owl-prev img,.recommend .owl-nav .owl-next img{max-height:60px}
+  .recommend .owl-nav .bi{-webkit-text-stroke: 1px;font-size:3rem;}
+  .recommend.owl-carousel .owl-dots.disabled, .recommend.owl-carousel .owl-nav.disabled {display:block!important}
+  .recommend .owl-nav.disabled{position: absolute;top: 0;width: 100%;height:100%;}
+  .recommend .owl-nav .owl-prev{position: absolute;left: -10%;}
+  .recommend .owl-nav .owl-next{position: absolute;right: -10%;}
+  
+  
+  .recommend.owl-carousel .owl-nav{
+    position: absolute;
+      top: 0;
+      width: 100%;
+    height:100%;
+    z-index:1;
+  }
+  .recommend.owl-carousel .owl-item .rates img{width:auto}
+  .owl-theme .owl-nav [class*=owl-]:hover {
+      background: aliceblue;
+      color: #FFF;
+      text-decoration: none;
+  }
+  .owl-carousel .owl-prev,.owl-carousel .owl-next{
+    position: absolute;
+      z-index: 2;
+      font-size: 3em;
+      top: 50%;
+      transform: translateY(-75%);
+  }
+  .owl-stage-outer {
+      z-index: 2;
+  }
+  </style>
+  
+  <div class="owl-carousel owl-theme recommend">
+  <!--End:openRecmd-->
+  
+  <!--Seg:recmdLine-->
+  
+        <div class="item product-item product-item-cta">
+                <div class="position-relative">			  
+                    <a id="" class="product-item-link" href="@&LINK "></a>
+             <div class="parentbox text-center">
+              <div class="childbox">
+                <img src="@&PATH @&MIMG "  class="product-item__thumbnail" alt="@&DESC " title="@&DESC ">
+              </div>
+            </div>
+            <div class="product-item__details">
+              <div class="details-title">
+                <h5 class="product-name line-clamp line-clamp-2">@&DESC </h5>
+              </div>
+              
+            </div>
+            </div>
+            <div class="rates">@&RATING </div>
+            <div class="product-item__cta">
+                      <div class="product-item__price">
+                          <span class="product-price fl-l"><b>$@&PRIC </b></span>
+                      </div>
+                      
+            <a href="javascript:Quickview('@&STYL ')" class="hidden-sm hidden-xs btn btn_xs btn--orange ">Add to Cart</a>
+              <a href="@&LINK " class="hidden-lg hidden-md btn btn_xs btn--orange ">Add to Cart</a>
+                    </div>
+            
+                         
+                    
+               
+        </div>
+  <!--End:recmdLine-->
+  
+  <!--Seg:closeRecmd-->
+    </div>
+  <!--End:closeRecmd-->
+  
+  <!--Seg:openRecmdJson-->
+  [
+  <!--End:openRecmdJson-->
+  
+  <!--Seg:recmdLineJson-->
+  {
+    "rec_style": "@&STYL ",
+    "desc": "@&DESC ",
+    "price": "@&PRIC ",
+    "url": "@&HOST /@&LINK ",
+    "image": "@&HOST @&PATH @&MIMG "
+  }
+  <!--End:recmdLineJson-->
+  
+  <!--Seg:closeRecmdJson-->
+  ]
+  <!--End:closeRecmdJson-->
+  

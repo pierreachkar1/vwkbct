@@ -1,0 +1,1113 @@
+f<!--Seg:OpenHeader-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="@&DOMN1 /images/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani:500,600,700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/vendor.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/main.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN1 /css/galls/main.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN2 /css/galls/custom.css@&TS " />   
+  <script src="@&DOMN3 /js/jqueryv3.2.1.js@&TS " type="text/javascript"></script> 
+
+  @&GOOGLEJS <meta name="google-site-verification" content="LBoNHa4BX1GgLdlcLlOBxIIcH_iNOule3PFxRfYvhrI">
+  @&TITLE <!-- -->
+  @&METADESC <!-- -->
+  @&METAKEYW <!-- -->
+  @&CANON <!-- -->
+  @&JSCRIPT <!-- End Page Specific Header Tags -->
+  @&LISTRAK <!-- End Listrak Code -->
+
+<script type="text/javascript">
+$(window).scroll(function(){
+  var sticky = $('.mobile-header'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 170) sticky.addClass('mobile-fixed');
+  else sticky.removeClass('mobile-fixed');
+});
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>170)
+     {
+        $('.header-banner').hide();
+        $('.header-text').hide();
+        $('.search__preview').hide();
+        $('.body').addClass('mobile-body');
+     }
+    else
+     {
+      $('.header-banner').show();
+      $('.header-text').show();
+      $('.search__preview').show();
+      $('.body').removeClass('mobile-body');
+     }
+ });
+</script>
+
+<!-- Hotjar Tracking Code for http://itestv2.galls.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:@&HJID ,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- Fullstory Tracking Code -->
+<script> window['_fs_debug'] = false; window['_fs_host'] = 'fullstory.com'; window['_fs_org'] = 'CVZ47'; window['_fs_namespace'] = 'FS'; (function(m,n,e,t,l,o,g,y){ if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;} g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[]; o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js'; y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y); g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)}; g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)}; g.consent=function(a){g("consent",!arguments.length||a)}; g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)}; g.clearUserCookie=function(){}; })(window,document,window['_fs_namespace'],'script','user'); </script>
+
+<script>
+function getMenu(thno){
+     if ($('#div'+thno).html()== '' )
+     {
+        $('#div'+thno).html("Loading...");    
+     $.ajax({
+                 url: '/cgi/CGBCXMENU',
+		type: 'get',
+            dataType: 'html',
+                data: {SITHNO : thno },
+             success: function (html) {$("#div"+thno).html(html);}
+           })         
+    }
+} 
+</script>
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type="text/javascript">
+  var _vwo_code=(function(){
+  var account_id=237729,
+  settings_tolerance=2000,
+  library_tolerance=2500,
+  use_existing_jquery=false,
+  /* DO NOT EDIT BELOW THIS LINE */
+  f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+<!-- GEO Targeting -->
+<script>
+var geotargetlybar1520864889268 = document.createElement('script');
+geotargetlybar1520864889268.setAttribute('type','text/javascript');
+geotargetlybar1520864889268.async = 1;
+geotargetlybar1520864889268.setAttribute('src', '//geotargetly-1a441.appspot.com/geobar?id=-L7Pb7TVxgExmpBSNQGo');
+document.getElementsByTagName('head')[0].appendChild(geotargetlybar1520864889268);
+</script>
+<!-- End Geo Targeting -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '229988580833013'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" 
+src="https://www.facebook.com/tr?id=229988580833013&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<!--UnbXd Tracking-->
+<script type="text/javascript">
+  /* * * CONFIGURATION * * */
+  var UnbxdSiteName = "@&UBXDS "; //staging
+  var UnbxdApiKey = "@&UBXDK ";
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+  var ubx = document.createElement('script'); ubx.type = 'text/javascript'; ubx.async = true;
+  ubx.src = '@&UBXURL unbxdAnalytics.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ubx);
+  })();
+</script>
+<!--UnbXd Tracking-->
+</head>
+<body>
+  @&LTRKIMG <!-- begin HEADER -->
+  <header class="header desktop-header hidden-xs hidden-sm">
+    <nav class="navbar navbar-static-top utility-bar">
+      <div class="container">
+        <div class="navbar-left">
+           @&SRCEMSG <span>@&SRCE </span> 
+        </div>
+        <div class="navbar-right utility-bar__logged-out">
+          <ul class="nav navbar-nav navbar-right navbar-account  @&DSPLO ">
+            <li><a href="#signInModal" data-toggle="modal" data-target="#signInModal">Sign In</a></li>
+            <!--<li><a href="/sign-in" data-toggle="modal" >Sign In</a></li>--> 
+            <li><a href="@&HOST /Cart" title="Total @&SUBT ">
+              <svg class="icon cart--white">
+                <use xlink:href="@&HOST /images/sprite.svg#cart--white"></use>
+              </svg>
+              <span class="cart--total">(@&QTY )</span>
+            </a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-account @&DSPLI  " id="loggedIn">
+            <li><a href="@&HOST /CGBCACC">@&NAME &rsquo;s Account</a></li>
+            <li><a href="@&HOST /CGBCSIGNOF" id="utility-bar__sign-out">Sign Out</a></li>
+            <li><a href="@&HOST /Cart">
+              <svg class="icon cart--white">
+                <use xlink:href="@&HOST /images/sprite.svg#cart--white"></use>
+              </svg>
+              <span class="cart--total">(@&QTY )</span>
+            </a></li>
+          </ul> 
+          
+          <ul class="nav navbar-nav navbar-right navbar-links">
+            <li class="visible-lg hidden-md"><a href="@&HOST /pages/stores">Find a Store</a></li>
+            <li><a href="tel:@&GBLPH1 ">@&GBLPH1 </a></li>
+            <li class="boldChat"><a href="javascript:popupPatronChat()">Live Chat</a>
+            </li>
+          </uL>
+        </div>
+      </div>
+    </nav>  <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <a href="@&HOST /" class="header-logo" title="">
+              <img src="@&DOMN2 /images/logo-w.png" alt="Galls">
+            </a>
+            <h5 class="header-text">Proud to serve america&rsquo;s public safety professionals</h5>
+          </div>
+          <div class="col-md-4">
+            <div class="search__autofill search__autofill--desktop" id="headerSearchAutofill">
+            <form action="." onsubmit="Unbxd.track('search', {'query': $('#header-search').val()});getLookAheadL('F');return false;" style="display:@&DSPDN "> 
+              <a href="javascript:void(0)" onclick="getLookAheadL('F')" class="SearchLink"  unbxdattr="sq_bt"></a>
+              <input type="text" class="autofill__input autofill__input--desktop" id="header-search@&DSPDN " name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'F');" unbxdattr="sq" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              
+              <form action="/usearch" style="display:@&DSPDY " name="FORMD" id="FORMD" method="get"> 
+              <a href="javascript:void(0)" onclick="if($.trim($('header-search').val())!='')document.forms['FORMD'].submit(); return false;" class="SearchLink"  unbxdattr="sq_bt"></a>
+              <input type="text" value="" class="autofill__input autofill__input--desktop" id="header-search@&DSPDY " name="header-search" placeholder="Search" autocomplete="off" unbxdattr="sq" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              <script>             
+                var form = document.getElementById('FORMD');                
+                form.addEventListener('submit', onSubmit, false);
+                form.submit = onSubmit; 
+                function onSubmit(event) { if (event) { event.preventDefault(); }                       
+                       window.location="/usearch?header-search=" +encodeURIComponent(form.elements[0].value); }                  
+              </script>
+            </div>        </div>
+        </div>
+      </div>
+    </div>
+    @&MENUF <!--Full Menu-->
+  </header>  
+  <header class="header mobile-header visible-xs visible-sm" id="mobileHeader">
+
+    <div class="header-banner" >
+      Proud to serve america&rsquo;s public safety professionals
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3 ta-l">
+          <span class="icon menu" id="mobile-menu"></span>
+        </div>
+        <div class="col-xs-6 ta-c flx-jc">
+          <a href="/" class="header-logo">
+            <img class="img-responsive" src="@&DOMN3 /images/logo-w.png" alt="Galls">
+          </a>
+        </div>
+        <div class="col-xs-3 ta-r flx-jr">
+          <a href="#" id="mobileSearchIcon"><span class="icon search"></span></a>
+          <a href="/Cart" style="margin-right:20px"><span class="icon cart" ></span></a>
+          <span class="carTotalM">@&QTY </span>
+        </div>
+      </div>
+    </div>
+    <div class="header-text">
+        @&SRCEMSG <span class="fl-r">@&SRCE </span>
+    </div>
+    <div class="search__preview" id="mobilesearch" >
+    <a href="#" id="mobileSearchButton" class="search__preview--link" ></a>
+          <form id="" name="" method="get" action="" >                
+          <input type="text" class="search__preview--input" placeholder="Search" autocomplete="off" id="header-search-mobile" unbxdattr="sq" />
+        <a href="#"  class="search__preview--icon"  unbxdattr="sq_bt">GO</a>
+      </form>
+    </div>
+    </header>
+    <div class="search__autofill search__autofill--mobile" id="mobileSearchAutofill">
+    <form id="mobilesearch@&DSPMN " name="mobilesearch" method="get" action="/CGBCMENU" onsubmit="Unbxd.track('search', {'query': $('#header-search-mobile').val()});getLookAheadL('M');return false;" style="display:@&DSPMN ">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search@&DSPMN " name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'M');"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="getLookAheadL('M')" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+      <form id="mobilesearch@&DSPMY " name="mobilesearch" method="get" action="/usearch" style="display:@&DSPMY " name="FORMM">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search@&DSPMY " name="header-search" placeholder="Search" autocomplete="off"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="document.forms['FORMM'].submit(); return false;" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+	  <div class="autofill__popup suggestDropDownM" style="display:none" >
+      <div class="autofill__header">
+        Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+      </div>
+      <div class="autofill__body" id="suggestDropDownM">
+     <!--Mobile Suggestion Ajax-->
+		</div>
+      </div>
+	 </div>
+   <!--Mobile Navigation-->
+     <div class="mobile-nav sidebar" id="mobile-sidebar">
+    <div class="inner">
+      <div class="header">
+        <ul class="micon-nav">
+          <li><a href="/pages/EMAIL_SIGNUPM"><div class="micon micons-Mail"></div><br>Newsletter</a></li>
+          <li><a href="tel:@&GBLPH1 "><div class="micon micons-Phonelink-Ring-Filled"></div><br>Call Us</a></li>
+          <li><a href="javascript:popupPatronChat()"><div class="micon micons-Chat-Filled"></div><br>Live Chat</a></li>
+          <li>
+            <a class="@&DSPLO " href="#signInModal" data-toggle="modal" data-target="#signInModal" title="Sign In" id="mobileSignIn"><div class="micon micons-Contacts"></div><br>Sign In</a>        
+          <!--<a class="waitlink mobile-nav__sign-in @&DSPLO " href="javascript:void(0)" href1="/sign-in" title="Sign In" id="mobileSignIn"><div><span class="icon profile-pic"></span></div><div>Sign In</div></a>-->    
+          <a class="@&DSPLI  " href="javascript:void(0)" data-toggle="dropdown" title="My Account">
+            <div class="micon micons-Contacts"></div><br>Account
+          </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/CGBCACC">My Account</a>
+              <a class="dropdown-item" href="/CGBCSIGNOF">Sign Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="subnav">
+        @&MENUM <!--Menu Mobile-->
+      </ul>
+      <div class="subnav-popular"><h5><img class="micon micons-Double-Down" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNmYWxzZSIgPjxnIGlkPSJzdXJmYWNlMSI+PHBhdGggc3R5bGU9IiAiIGQ9Ik0gNC44MTI1IDQgTCAzIDYuNjg3NSBMIDEyIDEyLjkwNjI1IEwgMjEgNi42ODc1IEwgMTkuMTg3NSA0IEwgMTIgOC45MDYyNSBaIE0gNC44MTI1IDExLjA5Mzc1IEwgMyAxMy44MTI1IEwgMTIgMjAgTCAyMSAxMy44MTI1IEwgMTkuMTg3NSAxMS4wOTM3NSBMIDEyIDE2IFogIj48L3BhdGg+PC9nPjwvc3ZnPg=='/>Popular Categories</h5>
+      <ul>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/tactical-pants">Tactical Pants</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/duty-boots">Duty Boots</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/holsters">Holsters</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/duty-gear">Duty Gear</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/flashlights">Flashlights</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/bags-organizers">Bags &amp; Organizers</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/shirts">Shirts</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/belts">Belts</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/body-armor">Body Armor</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/outerwear">Outerwear</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/restraints">Handcuffs/Restraints</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/knives-tools">Knives/Tools</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/badges-insignia-customization">Badges</a></li>
+        <li><a class="waitlink" href="javascript:void(0)" href1="/gloves">Gloves</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main__wrapper">
+<!--End:OpenHeader-->
+
+
+<!--Seg:OpenHeaderS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="@&DOMN2 /images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/vendor.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN1 /css/main.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN2 /css/galls/main.css@&TS " />
+  <link type="text/css" rel="stylesheet" href="@&DOMN3 /css/galls/custom.css@&TS " /> 
+  <script src="@&DOMN3 /js/jqueryv3.2.1.js@&TS " type="text/javascript"></script> 
+  <script>
+  function getMenu(thno){
+     if ($('#div'+thno).html()== '' )
+     {
+        $('#div'+thno).html("Loading...");    
+     $.ajax({
+                 url: '/cgi/CGBCXMENU',
+		type: 'get',
+            dataType: 'html',
+                data: {SITHNO : thno },
+             success: function (html) {$("#div"+thno).html(html);}
+           })         
+    }
+  } 
+</script>
+<!--UnbXd Tracking-->
+<script type="text/javascript">
+  /* * * CONFIGURATION * * */
+  var UnbxdSiteName = "@&UBXDS "; //staging
+  var UnbxdApiKey = "@&UBXDK ";
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+  var ubx = document.createElement('script'); ubx.type = 'text/javascript'; ubx.async = true;
+  ubx.src = '@&UBXURL unbxdAnalytics.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ubx);
+  })();
+</script>
+<!--UnbXd Tracking-->
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani:600,700" rel="stylesheet">
+  @&GOOGLEJS <meta name="google-site-verification" content="LBoNHa4BX1GgLdlcLlOBxIIcH_iNOule3PFxRfYvhrI">
+  @&TITLE <!-- -->
+  @&METADESC <!-- -->
+  @&METAKEYW <!-- -->
+  @&CANON <!-- -->
+  @&JSCRIPT <!-- End Page Specific Header Tags -->
+</head>
+<body>
+  @&LTRKIMG <!-- begin HEADER -->
+  <header class="header desktop-header hidden-xs hidden-sm">
+    <nav class="navbar navbar-static-top utility-bar">
+      <div class="container">
+        <div class="navbar-left">
+           @&SRCEMSG <span>@&SRCE </span>
+        </div>
+        <div class="navbar-right utility-bar__logged-out">
+ 
+          <ul class="nav navbar-nav navbar-right navbar-account @&DSPLUP  " id="loggedIn">
+            <li>@&HEADLINKS </li>
+            <li><a href="@&HOST /Cart">
+              <svg class="icon cart--white">
+                <use xlink:href="@&HOST /images/sprite.svg#cart--white"></use>
+              </svg>
+              <span class="cart--total">(@&QTY )</span>
+            </a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-links">
+            <li class="visible-lg hidden-md"><a href="@&HOST /pages/stores">Find a Store</a></li>
+            <li><a href="tel:@&GBLPH1 ">@&GBLPH1 </a></li>
+            <li class="boldChat">
+            <script type="text/javascript">
+              var bccbId = Math.random(); document.write(unescape('%3Cdiv id=' + bccbId + '%3E%3C/div%3E'));
+              window._bcvma = window._bcvma || [];
+              _bcvma.push(["setAccountID", "537275693450078804"]);
+              _bcvma.push(["setParameter", "WebsiteID", "532629387624954113"]);
+              _bcvma.push(["setParameter", "CustomUrl", ""]);
+              _bcvma.push(["setParameter", "WindowParameters", "vr=&vi=&ve=&vp=&vn=&lc="]);
+              _bcvma.push(["addText", {type: "chat", department: "874318244883686541", window: "532629389102184595", available: "<a onclick=\"ga('send', 'event', 'header', 'click', 'cart-icon');\" href=\"#\">Live Chat</span></a>", unavailable: "", id: bccbId}]);
+              var bcLoad = function(){
+              if(window.bcLoaded) return; window.bcLoaded = true;$(".boldchat").css("visibility","visible");
+              var vms = document.createElement("script"); vms.type = "text/javascript"; vms.async = true;
+              vms.src = ('https:'==document.location.protocol?'https://':'http://') + "vmss.boldchat.com/aid/537275693450078804/bc.vms4/vms.js";
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vms, s);
+              };
+              if(window.pageViewer && pageViewer.load) pageViewer.load();
+              else if(document.readyState=="complete") bcLoad();
+              else if(window.addEventListener) window.addEventListener('load', bcLoad, false);
+              else window.attachEvent('onload', bcLoad);
+              </script>
+            </li>
+          </uL>
+        </div>
+      </div>
+    </nav>  <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <a href="@&HOST /CGBCSHPFL?PMKEY=RESET&PMROUTE=H" class="header-logo logolink" title="">
+            </a>
+            <h5 class="header-text">Proud to serve america&rsquo;s public safety professionals</h5>
+          </div>
+          <div class="col-md-4">
+            <div class="search__autofill search__autofill--desktop" id="headerSearchAutofill">
+            <form action="." onsubmit="Unbxd.track('search', {'query': $('#header-search').val()});getLookAheadL('F');return false;" style="display:@&DSPDN "> 
+              <a href="javascript:void(0)" onclick="getLookAheadL('F')" class="SearchLink"  unbxdattr="sq_bt"></a>
+              <input type="text" class="autofill__input autofill__input--desktop" id="header-search" name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'F');" unbxdattr="sq" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              
+              <form action="/usearch" style="display:@&DSPDY " name="FORMD"> 
+              <a href="javascript:void(0)" onclick="document.forms['FORMD'].submit(); return false;" class="SearchLink"  unbxdattr="sq_bt"></a>
+              <input type="text" class="autofill__input autofill__input--desktop" id="header-search" name="header-search" placeholder="Search" autocomplete="off" unbxdattr="sq" />
+              <div class="autofill__popup suggestDropDownF" style="display:none">
+                <div class="autofill__header">
+                  Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+                </div>
+                <div class="autofill__body suggestDropDownF" id="suggestDropDownF">
+                 <!--Suggestions(Full) Ajax Populated-->
+                </div>                
+              </div>
+            
+              <div class="search__autofill--mask"></div>
+              </form>
+              
+            </div>        </div>
+        </div>
+      </div>
+    </div>
+    @&MENUF <!--Full Menu-->
+  </header>  <header class="header mobile-header visible-xs visible-sm">
+    <div class="header-banner">
+      Proud to serve america&rsquo;s public safety professionals
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3 ta-l">
+          <span class="icon menu" id="mobile-menu"></span>
+        </div>
+        <div class="col-xs-6 ta-c flx-jc">
+          <a href="/" class="header-logo logolink">
+          </a>
+        </div>
+        <div class="col-xs-3 ta-r flx-jr">
+          <a href="#" id="mobileSearchIcon"><span class="icon search"></span></a>
+          <a href="/Cart"><span class="icon cart"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-text">
+        @&SRCEMSG <span class="fl-r">use code: @&SRCE </span>
+    </div>
+    </header>
+    <div class="search__autofill search__autofill--mobile" id="mobileSearchAutofill">
+    <form id="mobilesearch" name="mobilesearch" method="get" action="/CGBCMENU" onsubmit="Unbxd.track('search', {'query': $('#header-search-mobile').val()});getLookAheadL('M');return false;" style="display:@&DSPMN ">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search" name="header-search" placeholder="Search" autocomplete="off" onfocus="resetLookAhead();" onkeyup="getLookAhead(event,'M');"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="getLookAheadL('M')" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+      <form id="mobilesearch" name="mobilesearch" method="get" action="/usearch" style="display:@&DSPMY " name="FORMM">
+      <div class="autofill__mobile-header">
+      
+        
+          <input type="hidden" name="SIACTN" value="SEARCH">                 
+          <input type="text" class="autofill__input autofill__input--mobile" autocomplete="off" id="mobile-header-search" name="header-search" placeholder="Search" autocomplete="off"  />
+        
+        <svg class="icon close--black autofill__mobile--close" id="closeMobileSearch"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+        <a href="javascript:void(0)" onclick="document.forms['FORMM'].submit(); return false;" class="SearchLinkM2" >GO</a>
+      </div>
+      </form>
+      
+	  <div class="autofill__popup suggestDropDownM" style="display:none" >
+      <div class="autofill__header">
+        Search for &ldquo;<span class="autofill__search-for"></span>&rdquo;
+      </div>
+      <div class="autofill__body" id="suggestDropDownM">
+     <!--Mobile Suggestion Ajax-->
+		</div>
+      </div>
+	 </div>
+   <!--Mobile Navigation-->
+     <div class="mobile-nav sidebar" id="mobile-sidebar">
+    <div class="inner">
+      <div class="header">
+      <img class="pull-left" src="@&DOMN3 /images/Logo-White@2x.png" alt="Galls" height="35">
+        @&HEADLINKSM <!--Shop B2B-->
+        <a class="mobile-nav__sign-in @&DSPLO " href="#signInModal" data-toggle="modal" data-target="#signInModal" title="Sign In" id="mobileSignIn"><div><span class="icon profile-pic"></span></div><div>Sign In</div></a>        
+        <a class="mobile-nav-top top-right @&DSPLI  " href="javascript:void(0)" data-toggle="dropdown" title="My Account"><div><span class="icon profile-pic"></span></div><div</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/CGBCACC">My Account</a>
+              <a class="dropdown-item" href="/CGBCSIGNOF">Sign Out</a>
+            </div>              
+      </div>
+      <ul class="subnav">
+        @&MENUM <!--Menu Mobile-->
+      </ul>
+      <div class="footer">
+        <div class="footer__buttons">
+          <a href="tel:@&GBLPH1 " class="btn btn_outline-thin">
+            <svg class="icon call">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#call"></use>
+            </svg>
+            Call
+          </a>
+          <a href="javascript:void(0)" onclick="$('.bcText a div a').trigger('click')" class="btn btn_outline-thin boldChat">
+            <svg class="icon chat">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="@&HOST /images/sprite.svg#chat"></use>
+            </svg>
+            Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>.logolink{@&PRLOGO ;background-repeat: no-repeat;width:150px;height:47px;}ul#css3menu .clearanceLink{@&DSPCL }  .addToList,#atstbx{@&DSPLB } </style>
+  <div class="main__wrapper">
+<!--End:OpenHeaderS-->
+
+<!--Seg:footer--> 
+  </div>
+  <footer class="footer">
+    <div class="email-signup container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 col-md-6 ta-r">
+            <h4>Sign Up For Galls News, Sales, And Deals</h4>
+          </div>
+          <div class="col-sm-7 col-md-6">
+            <div class="input email-signup__input">
+              <form id="esignup" name="emailsignup" method="post" action="https://customers.listrak.com/q/EbaYwXhcI28cTsbQpwsRfEMCUN9rlJbl2xN-XNNU3paTh5gKaxBqMg6Mu">
+                <input type="hidden" name="crvs" value="CF1fBpDX0DID4eLwfKGug1nJuEeDUcWrYW0YS1wlFDlieJCfcQWTAYJsBEBLMK3U2fPPPigWKBMplufw73JWFGtsQL2nRKLhSSzqdt3PNWHKJM-cs2yVElNH0NwvrOPbABhlo-A52lIg-1N3BLRB-AZR09jWiHLNGNYGi_yXRtHZUldzUyZa1Dw8au_PMH0mdljgvfmGruB7jdl61mmx4w"/>
+                <input type="hidden" name="CheckBox.Source.Footer" value="on"/>
+                <input type="text" name="email" placeholder="Email Address">
+                <input type="text" name="NameF" size="10" maxlength="10" value="" tabindex="-1" autocomplete="off" style="float: left !important; position:absolute !important; left:-9000px !important; top: -9000px !important;"/>
+                <input type="text" name="NameL" size="10" maxlength="10" value="" tabindex="-1" autocomplete="off" style="float: left !important; position:absolute !important; left:-9000px !important; top: -9000px !important;"/>
+                <input type="text" name="Comment" size="10" maxlength="10" value="" tabindex="-1" autocomplete="off" style="float: left !important; position:absolute !important; left:-9000px !important; top: -9000px !important;"/>
+                <button class="btn btn--blue btn_md" type="submit" onclick="javascript:document.emailsignup.submit(); ga('send', 'event', 'footer', 'click', 'email-signup.field');">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer__container footer--black">
+      <div class="container footer__inner">
+        <div class="row flex-grid hidden-xs hidden-sm">
+          <div class="col">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="@&HOST /support-request">Contact Us</a></li>
+              <li><a href="@&HOST /order-status">Order Status</a></li>
+              <li><a href="@&HOST /pages/orderforms">Downloadable Forms</a></li>
+              <li><a href="@&HOST /pages/shippinginfo">Shipping Information</a></li>
+              <li><a href="@&HOST /pages/returns">Returns &amp; Exchanges</a></li>
+              <li><a href="@&HOST /galls-gift-certificates">Gift Cards</a></li>
+              <li><a href="@&HOST /photos/documents/galls/pdf/recall.pdf" title="BP964 Recall Notice">Recall Notice</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Online Resources</h5>
+            <ul class="list-unstyled">
+              <li><a href="@&HOST /pages/faq">FAQs</a></li>
+              <li><a href="@&HOST /quote-request">Quote Request</a></li>
+              <li><a href="@&HOST /pages/size-fit">Size &amp; Fit</a></li>
+              <li><a href="@&HOST /pages/how-to-measure">How to Measure</a></li>
+              <li><a href="@&HOST /pages/siren-tones">Siren Tones</a></li>
+              <li><a href="@&HOST /pages/customization">Apparel Personalization</a></li>
+              <li><a href="@&PROTOCOL ://gsa.galls.com/">GSA Schedule</a></li>
+              <li><a href="@&HOST /catalog-request">Request Catalog</a></li>
+              <li><a href="@&HOST /pages/texas-grant">Texas SB12 Grant</a></li>
+              <li><a href="@&HOST /pages/CUSTOMBADGES">Build a Badge</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Company Information</h5>
+            <ul class="list-unstyled">
+              <li><a href="@&HOST /pages/aboutgalls">About Us</a></li>
+              <li><a href="@&HOST /pages/stores">Find a Store</a></li>
+              <li><a href="@&HOST /pages/guarantee">No Hassle Guarantee</a></li>
+              <li><a href="@&PROTOCOL ://cdcr.galls.com/">CDCR</a></li>
+              <li><a href="@&HOST /pages/employment">Career Opportunities</a></li>
+              <li><a href="@&HOST /pages/ca-supply-chains-act">California Supply Chains Acts</a></li>
+              <li><a href="@&HOST /equip/index.html">Galls eQuip</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Stay Connected</h5>
+            <ul class="list-unstyled">
+              <li><a href="https://www.facebook.com/gallsconnect" title="Like us on Facebook">Facebook</a></li>
+              <li><a href="https://www.twitter.com/gallsconnect" title="Follow us on Twitter">Twitter</a></li>
+              <li><a href="https://www.instagram.com/gallsauthority" title="Follow us on Instragram">Instagram</a></li>
+              <li><a href="https://plus.google.com/u/0/113303718069663307736" title="Circle us on Google+">Google Plus</a></li>
+              <li><a href="https://www.youtube.com/user/GallsPublicSafety" title="Subscribe to our YouTube channel">YouTube</a></li>
+              <li><a href="http://blog.galls.com" title="Read the Galls Blog">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row footer__mobile visible-xs visible-sm">
+            <ul class="footer__mobile-nav">
+              <li>
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseCustomerService" aria-expanded="false" aria-controls="collapseCustomerService"><h4>Customer Service</h4></a>
+                <div class="footer__mobile-collapse collapse" id="collapseCustomerService">
+                  <ul class="list-unstyled">
+                    <li><a href="@&HOST /support-request">Contact Us</a></li>
+                    <li><a href="@&HOST /order-status">Order Status</a></li>
+                    <li><a href="@&HOST /pages/orderforms">Downloadable Forms</a></li>
+                    <li><a href="@&HOST /pages/shippinginfo">Shipping Information</a></li>
+                    <li><a href="@&HOST /pages/returns">Returns &amp; Exchanges</a></li>
+                    <li><a href="@&HOST /galls-gift-certificates">Gift Cards</a></li>
+                    <li><a href="@&HOST /photos/documents/galls/pdf/recall.pdf" title="BP964 Recall Notice">Recall Notice</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseOnlineResources" aria-expanded="false" aria-controls="collapseOnlineResources"><h4>Online Resources</h4></a>
+                <div class="footer__mobile-collapse collapse" id="collapseOnlineResources">
+                  <ul class="list-unstyled">
+                    <li><a href="@&HOST /pages/faq">FAQs</a></li>
+                    <li><a href="@&HOST /quote-request">Quote Request</a></li>
+                    <li><a href="@&HOST /pages/size-fit">Size &amp; Fit</a></li>
+                    <li><a href="@&HOST /pages/how-to-measure">How to Measure</a></li>
+                    <li><a href="@&HOST /pages/siren-tones">Siren Tones</a></li>
+                    <li><a href="@&HOST /pages/customization">Apparel Personalization</a></li>
+                    <li><a href="@&PROTOCOL ://gsa.galls.com/">GSA Schedule</a></li>
+                    <li><a href="@&HOST /catalog-request">Request Catalog</a></li>
+                    <li><a href="@&HOST /pages/texas-grant">Texas SB12 Grant</a></li>
+                    <li><a href="@&HOST /pages/CUSTOMBADGES">Build a Badge</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseCompanyInformation" aria-expanded="false" aria-controls="collapseCompanyInformation"><h4>Company Information</h4></a>
+                <div class="footer__mobile-collapse collapse" id="collapseCompanyInformation">
+                  <ul class="list-unstyled">
+                    <li><a href="@&HOST /pages/aboutgalls">About Us</a></li>
+                    <li><a href="@&HOST /pages/stores">Find a Store</a></li>
+                    <li><a href="@&HOST /pages/guarantee">No Hassle Guarantee</a></li>
+                    <li><a href="@&PROTOCOL ://cdcr.galls.com" title="CDCR Custom Web Portal">CDCR</a></li>
+                    <li><a href="@&HOST /pages/employment">Career Opportunities</a></li>
+                    <li><a href="@&HOST /pages/ca-supply-chains-act">California Supply Chains Acts</a></li>
+                    <li><a href="@&HOST /equip/index.html">Galls eQuip</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseStayConnected" aria-expanded="false" aria-controls="collapseStayConnected"><h4>Stay Connected</h4></a>
+                <div class="footer__mobile-collapse collapse" id="collapseStayConnected">
+                  <ul class="list-unstyled">
+                   <li><a href="https://www.facebook.com/gallsconnect" title="Like us on Facebook">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/gallsconnect" title="Follow us on Twitter">Twitter</a></li>
+                    <li><a href="https://plus.google.com/u/0/113303718069663307736" title="Circle us on Google+">Google Plus</a></li>
+                    <li><a href="https://www.youtube.com/user/GallsPublicSafety" title="Subscribe to our YouTube channel">YouTube</a></li>
+                    <li><a href="http://blog.galls.com" title="Read the Galls Blog">Blog</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+        <div class="row copyright">
+          <div class="col-sm-8 left">
+            <a href="/"><img src="@&HOST /images/Logo-White@2x.png" alt="Galls" height="40"></a>
+            <ul class="footer__links list-inline">
+              <li><a class="link link--white" href="@&HOST /pages/terms">Terms of Sale</a></li>
+              <li><a class="link link--white" href="@&HOST /pages/privacy">Privacy</a></li>
+              <li><a class="link link--white" href="@&HOST /pages/accessibility">Accessibility</a></li>
+              <li><a class="link link--white" href="@&HOST /coupons">Advantage</a></li>
+              <li><a class="link link--white" href="@&HOST /sitemap">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 right">
+            <p>Some exclusions and limitations apply. <a class="fw-b link link--red" href="@&HOST /pages/offerdetails" title="Offer Details">LEARN MORE</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Sign In  Modal-->
+<div class="modal sign-in" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header visible-xs-sm">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title" id="brandAboutModalLabel">Log In</h4>
+        </div>
+        <div class="modal-body">
+          <div class="hidden-xs-sm">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg class="icon close--black"><use xlink:href="@&HOST /images/sprite.svg#close--black"></use></svg>
+            </button>
+            <h3 class="modal-title">Sign In</h3>
+          </div>
+          <div class="alert alert-success" id="successMsg" style="display:none">
+            <strong>Success!</strong> You have successfully logged in.
+          </div>
+          <div class="alert alert-danger" id="errorMsg"  style="display:none">
+            <strong>Error!</strong> Invalid login credentials.
+          </div>
+          <div class="alert alert-warning" id="multMsg"  style="display:none">
+            <strong>Alert!</strong> User with multiple login redirecting.
+          </div>
+		  <div class="alert alert-danger" id="passwordMsg"  style="display:none">
+            We have upgraded our site and you will be required to reset your password for security purposes. 
+			Click <a href="javascript:void(0)" onclick="resetPassword();">HERE</a> to receive an email with password reset instructions.
+          </div>
+		  <div class="alert alert-success" id="emailMsg"  style="display:none">
+            <strong>Success!</strong> Email has been sent.
+          </div>
+		  <div class="alert alert-warning" id="noEmailMsg"  style="display:none">
+            <strong>Alert!</strong> User does not have an email.
+          </div>
+		  <div class="alert alert-warning" id="hasPassMsg"  style="display:none">
+            <strong>Alert!</strong> User has a new password.
+          </div>
+          <p>If you have an account with us please enter your user name and password below and we'll log you in!</p>
+          <form action="javascript:void(0)" id="signInModalForm" data-parsley-validate="" onsubmit="return false">
+            <div class="form-group">
+              <label for="username">User Name*</label>
+              <input type="text" name="usernameHead" id="usernameHead"  class="form__input full no-outline" required="required">
+            </div>
+            <div class="form-group">
+              <label for="password">Password*</label>
+              <input type="password" name="passwordHead" id="passwordHead" class="form__input full no-outline" required="required">
+            </div>
+            <div class="form-group"><a href="/sign-in?PMFORG=P">Forgot your password ?</a></div>
+            <div class="form-group"><a href="/sign-in?PMFORG=U">Forgot your user name ?</a></div>
+            <div class="form-submit">
+              <div class="create-account hidden-xs-sm">New to Galls? <a href="/CGBCSRPU?PMTYPE=I">Create Your Account</a></div>
+              <button class="btn btn_xs btn--orange btn_submit" onclick="headerLogin()">Sign In</button>
+            </div>
+            <div class="create-account visible-xs-sm">
+              <p>New to Galls, start here by creating an account</p>
+              <a href="/CGBCSRPU?PMTYPE=I" class="btn btn_sm btn--gray">Create Account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <!--Add To List Modal-->
+  <div class="modal add-to-list" id="addToListModal" tabindex="-1" role="dialog" aria-labelledby="addToListModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Add to List</h4>
+        </div>
+        <div class="modal-body">     
+          <div class="row">
+          <input type="hidden" id="styleList" value="">    
+            <div class="alert alert-success" id="successAddToList" style="display:none">
+              <strong>Success!</strong> You have successfully logged in.
+            </div>
+            <div class="col-xs-12">
+              <div action="" class="add-to-list__form">
+                <input type="text" class="form__input no-outline" name="list-name" id="list-name" placeholder="List Name Here">
+                <a href="javascript:void(0)" onclick="addToList('A','')" class="btn btn_outline-thin btn--gray">Create New List</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12" id="listBody">
+              <!--Ajax Loaded-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Quick View Modal-->
+  <div class="modal quick-view in" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalLabel" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Quick View</h4>
+        </div>
+        <div class="modal-body" style="padding-top:0">
+          <div class="row" id="QuickViewBody">
+                <!--Ajax Driven-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Gift Card-->
+<div class="modal" id="gcInfo" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title">Gift Card Details</h4>
+        </div>
+        <div class="modal-body" id="gcInfoBody"></div>
+      </div>
+    </div>
+  </div>
+ <!--Mini Cart-->
+<div class="modal" id="miniCart" tabindex="-1" role="dialog">         
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="icon close--modal">
+              <use xlink:href="@&HOST /images/sprite.svg#close--modal"></use>
+            </svg>
+          </button>
+          <h4 class="modal-title"><img width="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMsSURBVGhD7ZrNThNRGIabmLhQVIxYtuy4FPcq0aQJKxMjcBcV5C6Mwfi70hsQXSACAZe6YqUQYyK4p/X5Om+b0PbMnM6cOeNinuTLdM55v59XBmba2qipqYlHp9NpdrvdBY6rxFviI+d7ik2t2d5doqm0/wMGnGaoFWKX6HDuhWlhm1jhdFrl4mPNiXUG+WuDFYEap8QqL+Maouki8SsZIxzUPCZaalMeNLlCPFff0lCPKbUNC8Vnif2kVRT2rKfah4GCN4nvahAN62m9NUYxKGSX01fVjg69dzkUv8wo9CIpWR3MsKFx8kGBRdWqHGbJ99eM3OskB/8TmxdmOeYw+X2GpPVehYgw7HvipU5HYG9N4/lBjj12FL5jT4KZ4HCRuJBi5oTw/6lQyJ5/otE3ofb2D+k0w/qSZNkg/qK80hk20Yf1h4niPKx/liQdhE3C+ym2CLRxmXjgmoHlMw4zkrpBtNDLKJk8JvqwfUdyN4jWpC8NeuQ2YSB5rBQ36N4k8nIoasJA9kppbhB9kt4JmkPip069IaewCbGpVDfUO5B4LOwfcpjjOE94m0EbyoTV2le6GxNJPwJ7PROSmtbLDJpgJgxSvIw4Ly32bkk2gLVUM+wFNSGyLy1Ezl92G5iYl3SArdmeZANYe8chtAmr6/XLbp9mOGHfywyvSzFhkN5WOTfoMm+IFEo1Q5RmwqCE1w3R3p9nNkMy1gxbc0SZJs6IGyqbDsJt5aWC7gcxYmYYNEFMGJTZUtlsEC8rLxO0qWbYC2bCoNQjlc4Gvb2xOk1Ss0E71gxroU384TDZ212SniTpfqA/Z4bXQU0YlMt+WByGPPup2Bt+b9D3zBBlmDgirmq8ySCxpTrekPObCGrCoOQ9jZUPCmyoVmUwwzONkx/qTFFoJykZH3rbreCSxikGxar6EPub9dYYYaDgLLXtu8Ao0G8nuIk+1LfLLMYXPU+Jy2pbHjRpEUfqGwxq2vPbfbWJA33tPmNfNXs/AaRwQp02x2sqHx+am6FlYouwD8+8MK1yljitzsA4GGiGwW4TbeI18YG13n8YsNdasz3T+D2K19TUBKDR+AdbNFyhOnZjIAAAAABJRU5ErkJggg=="> Item Added to Cart!</h4>
+        </div>
+        <div class="modal-body" id="miniCartBody"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="mobile-nav overlay" id="mobile-overlay"></div> 
+
+<script src="@&DOMN3 /js/main.js@&TS " type="text/javascript"></script>
+ 
+@&USERSNAPJS 
+<!-- Listrak Framework -->
+<script type="text/javascript">
+  var biJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+  (function (d, s, id, tid, vid) {
+      var js, ljs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+      js.src = biJsHost + "cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+      ljs.parentNode.insertBefore(js, ljs);
+  })(document, 'script', 'ltkSDK', 'kTEMamOgfF4p', '1');
+</script>
+
+<script type = "text/javascript" >
+var popupPatronChat = function() {
+  var url = 'https://home-c7.incontact.com/inContact/ChatClient/ChatClient.aspx?poc=a8611c87-f3f7-4f72-9ed9-8f4b51365c8c&bu=4596587&P6=@&PAGE ';
+  window.open(url, 'icPatronChatWin', 'location=no,height=630,menubar=no,status-no,width=500', true);
+};
+</script>
+</body>
+
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Galls",
+  "url" : "https://www.galls.com",
+  "logo" : "https://www.galls.com/photos/static/galls-shield.png",
+  "description" : "Galls is the premiere provider of uniforms, apparel, equipment and tactical gear for police, fire, EMS, military, security, corrections and other public safety professionals.",
+  "address" : {
+    "@type": "PostalAddress",
+    "streetAddress": "1300 Russell Cave Rd",
+    "addressLocality": "Lexington",
+    "addressRegion": "KY",
+    "postalCode": "40505",
+    "addressCountry": "USA"
+  },
+  "sameAs" : [ "https://www.facebook.com/gallsconnect",
+    "https://www.twitter.com/gallsconnect",
+    "https://plus.google.com/113303718069663307736",
+    "https://www.youtube.com/GallsPublicSafety"]
+}
+</script>
+<!--End:Google Knowledge Graph-->
+
+<script type="text/javascript">
+function init() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+@&ONLOAD //
+};
+
+function cleanup() {
+if (arguments.callee.done) return;
+arguments.callee.done = true;
+};
+
+userDFMT="*USA    ";userNFMT=".       ";//
+//window.onload   = init;
+//window.onunload = cleanup;
+</script>
+
+
+@&RMRKT <!-- Google Remarketing 12/20/13 -->
+
+
+@&LISTRAK <!-- Resonance code resxclsa.js v2.x Copyright 2004-2010 Certona Corporation www.certona.com -->
+<script type="text/javascript">
+
+//variables for all pages
+var resx = new Object();
+resx.appid="GALLS01";
+resx.top1=100000;
+resx.top2=100000;
+
+
+resx.lkmatch =/style%3d\w+/i;
+
+@&EMAIL @&JSCRIPT </script>
+                                                                             
+<script type="text/javascript" src="@&DOMN1 /js/galls/resxclsa.js"></script>
+<!-- Resonance -->
+@&UNBXD <!--UNBXD-->
+</html>
+<!--End:footer-->
+
+<!--Seg:GoogleJS-->
+<!-- Google Website Optimizer Tracking Script -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '@&GAID ', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview'@&PGVW );
+
+</script>
+<!-- End includes for tracking scripts -->
+
+<!--End:GoogleJS-->
+
+
+
+<!--Seg:BetaGoogleJS-->
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-841988-45', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<!--End:BetaGoogleJS-->
+
+
+<!--Seg:OpenListrak-->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+    _ltk.Click.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+<!-- Listrak -->
+<!-- Listrak email capture -->
+<script type="text/javascript">
+(function(d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d);
+else {e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) {
+if (e.propertyName == 'ltkAsyncProperty'){d();}});}})(function() {
+            /********** Begin Custom Code **********/
+_ltk.SCA.CaptureEmail('SIEMAL');
+@&SETCST _ltk.SCA.Submit();
+/********** End Custom Code **********/
+        });
+</script>
+<!-- end Listrak email capture --> 
+
+<!-- End Import CSS and JS files -->
+
+<!--End:OpenListrak-->
+
+
+
+<!--Seg:GOOGLEREMRKT-->
+<!-- Google Code for Remarketing Tag -->
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: "" ,
+ecomm_pagetype: "siteview" ,
+ecomm_totalvalue: ""
+};
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066800001;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>  
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script> 
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1066800001/?value=0&amp;guid=ON&amp;script=0">
+</div>
+</noscript>
+<!--End:GOOGLEREMRKT-->
+
+<!--Seg:bloomreach-->
+<script type="text/javascript">
+  var br_data = {};
+
+  /* --- Begin parameters section: fill in below --- */
+  br_data.acct_id = "5304";
+  br_data.ptype = "other";
+  br_data.cat_id = "";
+  br_data.cat = "";
+  br_data.prod_id = "";
+  br_data.prod_name = "";
+  br_data.sku = "";
+  br_data.search_term = "";
+  br_data.is_conversion = "0";
+  br_data.basket_value = "";
+  br_data.order_id = "";
+  br_data.user_id = "@&puno ";
+  /* Extended basket tracking. To be filled in only on pages with is_conversion = 1 */
+  br_data.basket = {};
+  /* --- End parameter section --- */
+
+  (function() {
+  var brtrk = document.createElement('script');
+  brtrk.type = 'text/javascript';
+  brtrk.async = true;
+  brtrk.src = 'https:' == document.location.protocol ? "https://cdns.brsrvr.com/v1/br-trk-5304.js" : "http://cdn.brcdn.com/v1/br-trk-5304.js";
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(brtrk, s);
+  })();
+</script> 
+<!--End:bloomreach--> 
+
+<!--Seg:usersnap-->
+  <!-- Usersnap Begin-->
+  <script type="text/javascript">
+  (function() {
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = '//api.usersnap.com/load/'+
+          'bcc84b4f-cb29-4d00-9e41-7e29df472458.js';
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);
+  })();
+  </script>
+  <!-- Usersnap End -->  
+<!--End:usersnap--> 

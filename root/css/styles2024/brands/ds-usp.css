@@ -1,0 +1,142 @@
+/*================== README ================== Updated 6/17/2024
+USP styles - Overrides to base.css
+================== END README ==================
+*/
+
+/* Global Styles ------------------------------------------------------------------------------- */
+:root {
+	--base_fontFamily: 'Barlow Condensed';
+
+  /* USP */
+	--base_usp_red: #c10230;
+  --base_usp_navy: #002554;
+  --base_usp_green: #6B8451;
+  --base_usp_blue: #0485bd;
+  --base_usp_coyote: #bc955c;
+  --base_usp_sand: #8b7c5e;
+  --base_usp_gold: #ffc52f;
+  --base_usp_grey: #76777a;
+
+
+	--base_fontSize: 16px;
+  --base_lineHeight: 1.25;
+}
+
+/* Global Components ------------------------------------------------------------------------------- */
+
+/*====== BUTTONS ======*/
+.b5-active .btn {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: var(--base_lineHeight);
+	padding: 9px 18px;
+  border-radius: 0px !important;
+}
+
+/*====== PRIMARY BUTTONS ======*/
+.b5-active .btn-primary:hover {
+	background-color: var(--base_usp_red);
+  border: 1px solid var(--base_usp_red);
+}
+
+/*====== CARD ======*/
+.b5-active .card {
+  font-size: var(--base_fontSize);
+	display: flex;
+  flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	color: #000000;
+	border: 1px solid #e3e3e3;
+	box-shadow: 0px 20px 20px -8px #00000033;
+	padding: 40px;
+	background-color: #ffffff;
+	background-clip: border-box;
+  line-height: var(--base_lineHeight);
+  border-radius: 0;
+}
+.b5-active .card-title {
+	font-weight: 700;
+	padding: 8px 16px;
+	margin: -16px -16px 16px -16px;
+}
+
+/*====== NOTIFICATIONS / ALERTS ======*/
+
+/* See icons in /images/icons/design-system-feather-icons */
+/*================== README ================== Updated 6/17/2024
+USP styles - Overrides to base.css
+================== END README ==================
+*/
+
+/* Global Styles ------------------------------------------------------------------------------- */
+:root {
+	--base_fontFamily: 'Barlow Condensed';
+
+  /* USP */
+	--base_usp_red: #c10230;
+  --base_usp_navy: #002554;
+  --base_usp_green: #6B8451;
+  --base_usp_blue: #0485bd;
+  --base_usp_coyote: #bc955c;
+  --base_usp_sand: #8b7c5e;
+  --base_usp_gold: #ffc52f;
+  --base_usp_grey: #76777a;
+
+
+	--base_fontSize: 16px;
+  --base_lineHeight: 1.25;
+}
+
+/* Global Components ------------------------------------------------------------------------------- */
+
+/*====== BUTTONS ======*/
+.b5-active .btn {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: var(--base_lineHeight);
+	padding: 9px 18px;
+  border-radius: 0px !important;
+}
+
+/*====== PRIMARY BUTTONS ======*/
+.b5-active .btn-primary:hover {
+	background-color: var(--base_usp_red);
+  border: 1px solid var(--base_usp_red);
+}
+
+/*====== CARD ======*/
+.b5-active .card {
+  font-size: var(--base_fontSize);
+	display: flex;
+  flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	color: #000000;
+	border: 1px solid #e3e3e3;
+	box-shadow: 0px 20px 20px -8px #00000033;
+	padding: 40px;
+	background-color: #ffffff;
+	background-clip: border-box;
+  line-height: var(--base_lineHeight);
+  border-radius: 0;
+}
+.b5-active .card-title {
+	font-weight: 700;
+	padding: 8px 16px;
+	margin: -16px -16px 16px -16px;
+}
+
+/*====== NOTIFICATIONS / ALERTS ======*/
+.b5-active .alert {
+  display: inline-flex;
+  width: fit-content;
+  padding: 12px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+  border: 0.657px solid;
+  line-height: var(--base_lineHeight);
+  border-radius: 0;
+  flex-grow: 0;
+}

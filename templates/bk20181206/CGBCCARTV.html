@@ -1,0 +1,250 @@
+<!--Seg:Open-->
+<main class="confirmation">
+  <div class="container">
+   <div class="row">
+<!--End:Open-->
+
+
+<!--Seg:topcartbuttons-->    
+    </div>
+      <div class="row shopping-cart__header">
+        <div class="col-xs-7 col-md-9">
+          <h3 class="shopping-cart__header--title">Shopping Cart</h3>
+        </div>
+        <div class="col-xs-5 col-md-3" id="cartheadersub">
+          <div class="shopping-cart__header--count visible-xs-sm">
+            (@&QTY ): @&SUBT </div>
+        </div>
+
+      </div>
+      <div class="row" style="margin-top:20px">
+        <div class="col-xs-12">
+          <div class="shopping-cart__gift-card-mobile visible-xs-sm" style="padding-top:30px">
+              <div style="margin-top:10px;display:@&DSPSV ">
+                <p ><strong>Savings: <span style="color:green">@&SAVING </span></strong></p>
+              </div>
+          </div>
+        </div>
+      </div>
+<!--End:topcartbuttons-->
+
+<!--Seg:opencart-->
+      <div class="row row-eq-height">
+
+      	<div class="col-md-9">
+      		<div class="shopping-cart__table">
+      			<div class="row shopping-cart__table--header hidden-xs-sm">
+              <div class="col-md-10 col-md-offset-2">
+                <div class="row">
+                  <div class="col-md-6"><h6 class="shopping-cart__table--th">Items</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Unit price</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th" style="padding-left:30%;">QTY</h6></div>
+                  <div class="col-md-2"><h6 class="shopping-cart__table--th">Total price</h6></div>
+                </div>
+              </div>
+      			</div>
+<!--End:opencart-->
+
+
+
+
+
+<!--Seg:cartrow-->
+<div class="container custPrint" style="background-color:#fff; padding-bottom:20px;">
+  <div class="row">
+    <div class="col-xs-4 col-sm-3 col-md-2">
+      <div>
+        <img src="@&PATH @&IMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'" style="margin:auto;">
+      </div>
+      <div class="visible-xs-sm" style="text-align:center;">
+        <strong class="form__input shopping-cart__qty">@&QTY </strong>
+      </div>
+    </div>
+    <div class="review__table--td col-xs-8 col-sm-9 col-md-10 review__item">
+      <div class="row">
+        <div class="col-md-6 review__item--details">
+          <div class="row">
+            <div class="col-xs-12"><a href="@&HREF " class="review__item--name">@&DESC </a></div>
+            <div class="col-xs-12"><ul class="review__item--info list-separator">@&ITEM </ul></div>
+            <div class="col-xs-12"><ul class="review__item--options list-inline">@&OPTN </ul></div>
+            <div class="col-xs-8 visible-xs-sm">@&PRIC </div>
+            <div class="col-xs-4 visible-xs-sm"><strong>@&EXTP </strong></div>
+          </div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint" style="text-align:center;">
+          <div class="review__item--price">@&PRIC </div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint" style="text-align:center;">
+          <div><b>@&QTY </b><input type="hidden" name="SIINFO@&R " id="SIINFO@&R " value="@&CDNO "></div>
+        </div>
+        <div class="col-md-2 hidden-xs-sm review__table--td hidePrint">
+          <div><strong>@&EXTP </strong></div>
+        </div>
+        <div class="col-md-12 hidden showPrint">
+          <div><strong>Qty: @&QTY </strong>&nbsp;&nbsp;<strong>Total: @&EXTP </strong></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">@&OPDS </div>
+        <div class="col-xs-12 @&DSPRSTR ">@&RSTR </div>
+        @&WHNO <div class="col-xs-12">@&VAS </div>
+        <div class="col-xs-12">@&KIT </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End:cartrow-->
+
+
+
+
+<!--Seg:Close-->
+      </form>
+    </div>
+   </div>
+  </main>
+<!--End:Close-->
+
+<!--Seg:cmpntrow-->
+<style>
+  .vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+</style>
+
+<div class="row" class="cart__kitRow" style="margin-bottom:10px;">
+  <div class="col-md-8">
+    <div class="row vertical-align">
+      <div class="col-md-3">
+        <div class="shopping-cart__item--thumbnail">
+          <img src="@&PATH @&MIMG " class="img-responsive" alt="@&DESC " onerror="this.onerror=null;this.src='/images/mia.gif'">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row shopping-cart__item--details" style="padding:0;color:#818181;font-size:12px;">
+          <div class="col-xs-12"><span>@&DESC </span></div>
+          <div class="col-xs-12"><span>SKU No: @&SKU </span></div>
+          <div class="col-xs-12"><span>@&OPTIONSD </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 hidden-xs-sm" style="text-align:center;">
+    <div>&nbsp;</div>
+    <div>@&QTY </div>
+  </div>
+</div>
+<!--End:cmpntrow-->
+
+<!--Seg:opensplash-->
+<div class="container" id="confirm__container_top">
+  <div class="row hidden showPrint">
+    <div class="col-xs-6">
+      <img src="http://itestv2.galls.com/images/logo.png" alt="Galls">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Your Order Confirmation</h3>
+    </div>
+  </div>
+	<div class="row">
+    <div class="col-xs-10">
+      <p>
+        Thank you for shopping with us today, we have received your order.<br>Below is an order summary. If you need to make changes to your order, please call immediately at <b>@&GBLPH1 </b>.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div><b>Order Number: </b>@&OHNO </div>
+      <div><b>Order Date: </b>@&DATE </div>
+      <div><a class="h-print_link" id="Template_T_Content_a_print" href="javascript:void(0)" onclick="window.print();"><b>Print Order Details</b></a></div>
+    </div>
+  </div>
+</div>
+<div class="container" id="confirm__container_middle" style="padding-bottom: 15px;">
+  <div class="col-md-7 hidden-xs-sm">&nbsp;</div>
+  <div class="col-md-5 hidden-xs-sm">
+    <div class="col-md-4" style="text-align: center;"><strong>Unit Price</strong></div>
+    <div class="col-md-4" style="text-align: center"><strong>Qty</strong></div>
+    <div class="col-md-4"><strong>Total Price</strong></div>
+  </div>
+</div>
+<!--End:opensplash-->
+
+
+<!--Seg:closeconfirm-->
+<div class="container" style="background-color:#fff;padding:30px 50px;">
+  <div class="col-md-4 col-md-push-8">
+    <div class="row" style="border-bottom:1px solid #dcdcdc;margin-bottom:10px;">
+      <div class="col-xs-9">
+        <h4>Your Totals</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>Merchandise Total</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SUBT </p>
+  		</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>@&SHMT </p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SHIP </p>
+  		</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9">
+  			<p>Sub-Total</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p>@&SUBT2 </p>
+  		</div>
+    </div>
+    <div class="row">
+			<div class="col-xs-9">
+				<p>Tax</p>
+      </div>
+      <div class="col-xs-3 ta-r">
+				<p>@&STAX </p>
+			</div>
+    </div>
+    <div class="row" style="border-top:1px solid #dcdcdc; padding-top:10px;">
+  		<div class="col-xs-9">
+  			<p><strong>Order Total</strong></p>
+      </div>
+      <div class="col-xs-3 ta-r">
+  			<p style="font-weight: bold;">@&TOTT </p>
+  		</div>
+    </div>
+  </div>
+</div>
+
+<!--End:closeconfirm-->
+
+<!--Seg:openvas-->
+<div class="customizations">
+    <span class="customization-heading">Customizations Added</span>
+<!--End:openvas-->
+
+<!--Seg:vasapp-->
+            <span class="customizable-product">+ @&APPLICATION </span>
+            <ul>@&QUESTIONS </ul>
+<!--End:vasapp-->
+
+<!--Seg:closevas-->
+</div>
+<!--End:closevas--> 

@@ -1,0 +1,31 @@
+/* Overrides */
+
+/* Popover on profile icon hover */
+
+/* TODO: REMOVE AFTER JUNE 2024 */
+#samNewHeader #samHeaderTop .samHeaderTop_Status span {
+  display: none;
+}
+/* TODO END */
+
+#samNewHeader #samHeaderTop #samHeaderTop_SignInDD,
+	#samNewHeader #samHeaderTop #samHeaderTop_AccountDiv {
+		left: -100px;
+	}
+@media (max-width: 1700px) {
+	#samNewHeader #samHeaderTop #samHeaderTop_SignInDD,
+	#samNewHeader #samHeaderTop #samHeaderTop_AccountDiv {
+		left: -100px;
+	}
+}
+@media (max-width: 1500px) {
+	#samNewHeader #samHeaderTop #samHeaderTop_SignInDD,
+	#samNewHeader #samHeaderTop #samHeaderTop_AccountDiv {
+		left: -100px;
+	}
+}
+/* Search bar margin changed here to not overlap profile icon */
+#samNewHeader #samHeaderTop .samHeaderTop_Search {
+  margin: 0 30px;
+  padding: 0;
+}

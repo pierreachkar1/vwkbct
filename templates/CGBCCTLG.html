@@ -1,0 +1,232 @@
+<!--Seg:Open-->
+<style>
+  .catalog-request {
+    padding: 30px 0;
+  }
+  .catalog-request .container {
+    background-color: #fff;
+    padding: 30px;
+  }
+  .catalog-request .address_box {
+ 
+    background-color: #fff;
+  }
+  main.catalog-request .container .left {
+    border-right: 1px solid #dcdcdc;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 3%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  main.catalog-request .container .right {
+    padding-left: 3%;
+  }
+  main.catalog-request .container p {
+    color: #464646;
+  }
+  main.catalog-request .container input[type="radio"] {
+    vertical-align: top;
+  }
+
+  #radioOptions {
+    text-align:left;
+  }
+  input[autocomplete="off"]::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+</style>
+
+<form name="f" method="POST" action="@&PGM " novalidate>
+  <input type="hidden" name="SIACTN" value="">
+  <input type="hidden" name="SIRFNO" value="">
+  <input type="hidden" name="SIVIEW" value="@&SIVIEW " id="SIVIEW">
+  <input type="hidden" name="SITEL" value="@&SITEL ">
+  <input type="hidden" name="SIWSRC" value="@&SIWSRC ">
+  <input type="hidden" name="SIMODE" value="@&SIMODE ">
+
+  <main class="catalog-request"> 
+    <div class="container">
+
+<!--End:Open-->
+
+<!--Seg:openCatalog-->
+      <div class="row">
+        <div class="col-xs-12" style="text-align:center;">
+          <h4>Request a Paper Catalog</h4>
+          <h5><a href="/pages/catalog" onclick="ga('send', 'event', 'RequestCatalog', 'click', 'View_E_Catalog');">View e-Catalog</a></h5>
+          <p>Where will you be receiving your catalog?<br>Please choose one of the options below:</p>
+        </div>
+      </div>
+      <div class="row" id="radioOptions">
+        <div class="col-md-5 col-sm-4 col-xs-3">&nbsp;</div>
+        <div class="col-sm-7">
+          <div class="container-fluid">
+            <div class="row" style="margin-left:-30px;">
+              <div class="col-xs-7">
+                <div class="form-group">
+                  <label for="USCA" class="form__radio">
+                    <input class="shipping__radio" id="USCA" type="radio" value="USCA" name="SIRDIO" onchange="chkButton();" @&CHK1 >
+                    <span class="fake-radio"></span>
+                    <span>United States/Canada</span>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label for="MILT" class="form__radio">
+                    <input class="shipping__radio" id="MILT" type="radio" value="MILT" name="SIRDIO" onchange="chkButton();" @&CHK2 >
+                    <span class="fake-radio"></span>
+                    <span>US Military APO/FPO</span> 
+                  </label>
+                </div>               
+                <div class="form-group">
+                  <label for="WWWW" class="form__radio">
+                    <input class="shipping__radio" id="WWWW" type="radio" value="WWWW" name="SIRDIO" onchange="chkButton();" @&CHK3 >
+                    <span class="fake-radio"></span>
+                    <span>Outside United States</span>               
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>                
+        <div class="col-xs-2">&nbsp;</div>
+      </div>
+    </div>
+<!--End:openCatalog-->
+
+<!--Seg:Address-->
+    <div class="container address_box">
+      <div class="row">
+        <div class="col-md-6 left">
+          <div class="form-group">
+            <label for="SIFNAM">First Name*</label><input type="text" id="SIFNAM" name="SIFNAM" value="@&SIFNAM " class="form__input full no-outline" required="required" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="SILNAM">Last Name*</label><input type="text" id="SILNAM" name="SILNAM" value="@&SILNAM " class="form__input full no-outline" required="required" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="SIEMAL">E-mail*</label><input type="email" id="SIEMAL" name="SIEMAL" value="@&SIEMAL " class="form__input full no-outline" required="required" maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="SICNAM">Company Name</label><input type="text" id="SICNAM" name="SICNAM" value="@&SICNAM " class="form__input full no-outline" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="">Phone Type*</label>&nbsp;&nbsp;<div>@&SIPTYP &nbsp;</div>
+          </div>
+          <div class="form-group">
+            <label for="SITEL">Phone Number*</label><input type="text" name="SITEL" id="SITEL" value="@&SITEL " class="form__input full no-outline" placeholder="(xxx) xxx-xxxx" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="profession">Profession*</label>&nbsp;&nbsp;<div>@&PTNO &nbsp;</div>
+          </div>  
+        </div>
+
+        <div class="col-md-6 right">
+          <div class="form-group">
+            <label for="SIADR1">Address*</label><input type="text" id="SIADR1" name="SIADR1" value="@&SIADR1 " class="form__input full no-outline" required="required" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="SIADR2">Address 2</label><input type="text" id="SIADR2" name="SIADR2" value="@&SIADR2 " class="form__input full no-outline" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="SIADR3">Address 3</label><input type="text" id="SIADR3" name="SIADR3" value="@&SIADR3 " class="form__input full no-outline" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="SIZIP">Zip/Postal*</label><input type="text" id="SIZIP" name="SIZIP" value="@&SIZIP " class="form__input full no-outline" required="required" maxlength="10">
+          </div>
+          <div class="form-group">
+            <label for="SICITY" id="changeDisp">City*</label><input type="text" id="SICITY" name="SICITY" value="@&SICITY " class="form__input full no-outline" required="required" maxlength="24">
+          </div>
+          <div id="UScanada">
+            <div class="form-group">
+              <label for="SISTA">State*</label>&nbsp;&nbsp;<div>@&SISTA &nbsp;</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="SICTID">Country*</label>&nbsp;&nbsp;<div>@&SICTID &nbsp;</div>
+          </div>    
+        </div>
+      </div>
+      <div class="row row-eq-height">
+        <div class="col-xs-12" style="text-align:center;">
+        <p style="color: red;font-style: italic;margin: 20px 0px;">In an effort to ensure you receive our newest catalog, please allow 3-6 weeks for delivery.</p>
+          <a href="javascript:void(0)" onclick="submit_form('f','SUBMIT');" class="btn btn_md btn--blue">Submit</a>
+        </div>
+      </div>
+    </div>
+
+<script>
+function chkButton(){
+  var location = $("input[name=SIRDIO]:checked").val();
+  var chngDisp = document.getElementById("changeDisp");
+  var city = document.getElementById('UScanada');
+  var state = document.getElementById('SISTA');
+
+  if (location === 'USCA' || location === 'MILT'){
+    chngDisp.innerText = 'City*';
+    city.style.display = 'block';
+    state.setAttribute('required','');
+  } else {
+    chngDisp.innerText = 'City/Province/Territory*';
+    city.style.display = 'none';
+    state.removeAttribute('required');
+    state.value = "";
+  }
+}
+
+function checkInputs(){
+  var testForm = document.getElementById('mainForm');
+  var catType = $("input[name=SIRDIO]:checked").val();
+  var view = document.getElementById("SIVIEW");
+  if (testForm.checkValidity() === false){
+    return false;
+  } else {
+    view.value = catType;
+    submit_form('f','SUBMIT');
+  }
+}
+
+function geoFmt(city,sta,cnty,geo,zip){
+  document.f.SICITY.value = city;
+  document.f.SISTA.value  = sta;
+  document.f.SIZIP.value  = zip;
+  //document.f.SICNTY.value  = cnty;
+  document.f.SICTID.value  = 'US';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  chkButton();
+}, false);
+</script>
+
+<!--End:Address-->
+
+<!--Seg:closePage-->
+  </main>
+</form>
+<!--End:closePage-->
+
+<!--Seg:Submited-->
+      <div class="row">
+        <div class="col-xs-12" style="text-align:center; padding-bottom:5%;">
+          <h3>Thanks for requesting our catalog!</h3>
+          <p>Your catalog request will be processed and in the mail shortly.</p>
+          <p>Interested in receiving timely news, promotions and other valuable information in your inbox? Sign up by providing us with your email address in the blue box below.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</form>
+<!--End:Submited--> 

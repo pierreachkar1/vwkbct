@@ -1,0 +1,119 @@
+/* iFrame Container */
+body.widget .container {
+    top: -30px;
+    left: -20px;
+    width: calc(100% + 40px);
+}
+
+
+/* Section Title */
+form label,
+.form label,
+.actions div label {
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+/* Radio Section */
+form .checkbox>span {
+    width: 100% !important;
+    padding-bottom: 20px;
+}
+
+/* Form */
+.form {
+    margin: 0 20px -20px 20px;
+}
+form .email.form_item_wrapper>span input, 
+form .name.form_item_wrapper>span input, 
+form .birthday.form_item_wrapper>span select,
+form div.form-item:not(.icon) input[type],
+div.form-item:not(.icon) select {
+    border: 1px solid #333;
+    color: #333;
+}
+form p {
+    color: #333;
+}
+::placeholder { 
+    color: #333;
+    opacity: 1;
+}
+:-ms-input-placeholder { 
+    color: #333;
+}
+::-ms-input-placeholder { 
+    color: #333;
+}
+ul.promotion-details li {
+    padding: 15px 0 0 10px;
+    margin-bottom: -10px;
+    color: #333
+}
+
+
+
+/* Mobile */
+@media (max-width: 991px) {
+    body.widget.width-custom .container .promotion {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 670px) {
+	form input[type],
+    form input[type=number],
+    form input[type=password],
+    form input[type=tel],
+    form textarea,form select {
+        font-size: 14px;
+    }
+
+    form .checkbox span label p {
+        font-size: 12px;
+    }
+    .submit.enter_sweeps {
+        line-height: 45px;
+    }
+    .submit>span, 
+    a.submit>span {
+        font-size: 20px;
+    }
+    .pre-entry form .forms_under_button .content_block .content_block_content {
+        font-size: 12px;
+    }  
+}
+
+
+/* Post Entry */
+body.post .post-entry {
+    padding: 10px 0 0px 0;
+    max-height: 600px !important;
+    overflow: scroll !important;
+}
+@media (max-width: 1000px) {
+    body.post .post-entry {
+        max-height: fit-content !important;
+        overflow: none !important;
+    }
+}
+
+body.post .post-entry h2,
+body.post .post-entry h3,
+body.post .post-entry h5,
+body.post .post-entry h6 {
+    color: #000;
+}
+body.post .post-entry h2 {
+    font-size: 20px;
+    margin-bottom: -10px;
+    font-weight: 600;
+    color: #bd0202;
+}
+body.post .post-entry h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+body.post .post-entry h5 {
+    font-size: 16px;
+}
