@@ -151,6 +151,150 @@ function closeVasModel() {
               <div class="product__title--item">
                 <span class="sku">Item# @&STYL </span><span id="mfgn">@&MFGN </span><!--Manuf.-->
               </div>
+              <!--SOCIAL-PROOF-->
+              <div class="social-proof__wrapper">
+                <style>
+                  .social-proof {
+                    display: inline-flex;
+                    padding: 5px 0px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 5px 0 10px;
+                  }
+                  .social-proof .social-proof__pulse {
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    margin: 4px;
+                    border-radius: 50%;
+                    transform: scale(1);
+                    animation: pulseAnimation 2s infinite;
+                    background-color: #b82025;
+                  }
+                  @keyframes pulseAnimation {
+                    0% {
+                      transform: scale(0.95);
+                      box-shadow: 0 0 0 0 rgba(184, 32, 37, 0.7);
+                    }
+                    70% {
+                      transform: scale(1);
+                      box-shadow: 0 0 0 10px rgba(184, 32, 37, 0);
+                    }
+                    100% {
+                      transform: scale(0.95);
+                      box-shadow: 0 0 0 0 rgba(184, 32, 37, 0);
+                    }
+                  }
+                  .social-proof p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1;
+                    color: #4A4A4A;
+                    margin: 0;
+                  }
+                  .social-proof p b {
+                    color: #B82025;
+                  }
+                </style>
+                <div class="social-proof" style="display:none;" data-styl="@&STYL ">
+                  <input type="hidden" class="social-proof__styl" value="@&STYL ">
+                  <span class="social-proof__pulse"></span>
+                  <p><b class="social-proof__count-recent"></b> Viewed this Product Today</p>
+                </div>
+                <script>
+                  if (typeof window.socialProof !== 'function') {
+                    window.socialProof = (variant = 'a') => {
+                      if (document.querySelector('.social-proof__styl') && document.querySelector('.social-proof__styl').value !== '') {
+                        function abbreviateNumber(number) {
+                          const abbreviations = ['k', 'm', 'b'];
+                          const thresholds = [1000, 1000000, 1000000000];
+
+                          let index = abbreviations.length - 1;
+                          while (index > 0 && number < thresholds[index]) {
+                            index--;
+                          }
+
+                          const divisor = thresholds[index] || 1;
+                          let suffix = '';
+                          let abbreviated = number;
+                          if (number >= divisor) {
+                            suffix = abbreviations[index] || '';
+                            abbreviated = number / divisor;
+                          } else if (variant === 'b' && number < thresholds[0]) {
+                            number = thresholds[0];
+                            suffix = abbreviations[0] || '';
+                            abbreviated = number / divisor;
+                          }
+                          const rounded = (Math.ceil(abbreviated * 10) / 10).toFixed(1);
+
+                          const final = rounded.endsWith('.0') ? rounded.slice(0, -2) : rounded;
+
+                          return `${final}${suffix}`;
+                        }
+
+                        let requestOptions = {
+                          method: 'GET',
+                          redirect: 'follow'
+                        };
+                        let styl = document.querySelector('.social-proof__styl').value.split(' ')[0];
+                        console.log('styl', styl);
+                        if (styl !== null && styl !== '') {
+                          let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&reload=true&store=uspa&name=USPatriotTactical.com - GA4&productId=${ styl }`;
+                          fetch(url, requestOptions)
+                            .then((response) => {
+                              return response.json();
+                            })
+                            .then((data) => {
+                              if (data.code === 200) {
+                                document.querySelectorAll(".social-proof").forEach( socialProof => {
+                                  if (socialProof.querySelector(".social-proof__count-recent")) {
+                                    socialProof.querySelector(".social-proof__count-recent").dataset.count = data.data.itemsViewed;
+                                    socialProof.querySelector(".social-proof__count-recent").innerText = variant === 'b' ? abbreviateNumber(Number(data.data.itemsViewed)) : data.data.itemsViewed;
+                                    socialProof.style.display = '';
+                                  };
+                                });
+                              }
+                              else if (data.code === 404 && data.error === true) {
+                                document.querySelectorAll(".social-proof").forEach( socialProof => {
+                                  socialProof.innerHTML = `<b style="color:red;">${data.messages}</b>`;
+                                  socialProof.style.display = '';
+                                });
+                              }
+                            })
+                            .catch(function(error) {
+                              console.log(error);
+                            });
+                        }
+                      }
+                    };
+                  }
+                </script>
+                <div class="test-social-proof" style="
+                  position: fixed;
+                  bottom: 0;
+                  right: 0;
+                  border: 1px dashed red;
+                  padding: 5px;
+                  background: #fff;
+                  z-index: 10;
+                ">
+                  <div style="
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 5px;
+                  ">Social Proof</div>
+                  <button class="" onclick="window.socialProof();return false;">Variant A</button>
+                  <button class="" onclick="window.socialProof('b');return false;">Variant B</button>
+                  <style>
+                    .quick-view .test-social-proof {
+                      top: 0;
+                      bottom: auto !important;
+                      right: calc(50% - (177px / 2)) !important;
+                    }
+                  </style>
+                </div>
+              </div>
+              <!--SOCIAL-PROOF-->
               <span class="rizi_pdp_h4 product__price discounted" id="priceMsg">@&PRIC </span>
             </div>
             <!--END Product Title, Brand, Price-->
